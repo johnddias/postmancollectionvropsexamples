@@ -2159,21 +2159,21 @@
   ],
   "variable": [
     {
-      "id": "f3375cb0-213a-45e5-9b5c-a541ea3203d4",
+      "id": "c25e78a2-1b71-445f-a38b-422e5c373916",
       "key": "vrops",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "30bc8cf2-8f52-4305-b221-b5faeef44eae",
+      "id": "4e8bfbe1-d9e7-4b60-9b45-e4339ee2cf82",
       "key": "user",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "f75b6e0b-4674-4211-abcd-3811786643bd",
+      "id": "1adec729-4536-4675-a192-dfa697db4dde",
       "key": "pass",
       "value": "",
       "type": "string",
