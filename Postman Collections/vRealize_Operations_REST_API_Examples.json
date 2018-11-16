@@ -1688,6 +1688,20 @@
             "url": "https://{{vrops}}/suite-api/api/symptoms/query"
           },
           "response": []
+        },
+        {
+          "_postman_id": "03a182c7-7eda-4e0c-ba4c-79dabf341df3",
+          "name": "Get Resources by Query",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": ""
+          },
+          "response": []
         }
       ]
     },
@@ -2159,21 +2173,21 @@
   ],
   "variable": [
     {
-      "id": "9ad1b9d5-b286-4b9d-9efc-be122962b559",
+      "id": "d52dfea9-3c2d-4c70-a899-096c98eed577",
       "key": "vrops",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "cbf48a41-e0a5-4bb6-82a0-e3351399e3f2",
+      "id": "527b0fd6-e74f-44ea-bb8a-24833c0f176c",
       "key": "user",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "4241af2e-12b2-480b-8d12-8edbc67fef8a",
+      "id": "2d704523-b925-4395-b85a-5a8f9f336be3",
       "key": "pass",
       "value": "",
       "type": "string",
