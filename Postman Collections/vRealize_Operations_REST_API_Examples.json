@@ -1262,6 +1262,20 @@
                 "url": ""
               },
               "response": []
+            },
+            {
+              "_postman_id": "cd66077d-d0e9-401c-af96-7ce0b86fc5aa",
+              "name": "Get Properties for Multiple VMs",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": ""
+              },
+              "response": []
             }
           ],
           "_postman_isSubFolder": true
@@ -2181,21 +2195,21 @@
   ],
   "variable": [
     {
-      "id": "5b15aaaf-3015-49ce-ba61-587461024fec",
+      "id": "dbe880af-375b-4783-a1b1-c6b56f913ba4",
       "key": "vrops",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "fbbd3946-86c1-44a0-aadd-3dc1e0f3f1b6",
+      "id": "c3769c22-65f2-4820-9102-7e0c9fa388e9",
       "key": "user",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "fe020685-cec1-40f9-97d5-d364a81472ba",
+      "id": "f1426103-4492-45d8-a84b-3743ea657111",
       "key": "pass",
       "value": "",
       "type": "string",
