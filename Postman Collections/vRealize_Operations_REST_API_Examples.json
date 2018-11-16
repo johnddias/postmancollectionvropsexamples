@@ -1753,6 +1753,40 @@
             "url": "https://{{vrops}}/suite-api/api/symptoms/query"
           },
           "response": []
+        },
+        {
+          "_postman_id": "9dea563c-e57e-443c-9c61-1f0fb9418085",
+          "name": "Query Properties of Resources",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "vRealizeOpsToken {{bearerToken}}",
+                "type": "text",
+                "warning": ""
+              },
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text",
+                "warning": ""
+              },
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"resourceIds\" : [ {{resourceIds}} ],\n    \"propertyKeys\" : [ \"summary|ParentHost\",\"summary|guest|toolsVersion\"]\n}"
+            },
+            "url": "https://{{vrops}}/suite-api/api/resources/properties/latest/query",
+            "description": "Example that uses \"Get Resources by resourceKind and Load var\" to provide a list of resource IDs using the {{resourceId}} env var."
+          },
+          "response": []
         }
       ]
     },
@@ -2224,21 +2258,21 @@
   ],
   "variable": [
     {
-      "id": "f1af2334-55da-4cdd-a597-bb0ee114e513",
+      "id": "03f9d3fc-b938-4a9b-9b68-f68a7433e3de",
       "key": "vrops",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "e98fc829-bd20-40d9-8d0f-7e26c0412904",
+      "id": "41cd105b-d137-489c-b323-46da1b77d4a5",
       "key": "user",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "5984e572-3a38-44f1-a754-f127ccc52b05",
+      "id": "c111b4d1-c1b7-42cc-9b3d-521475e17b9d",
       "key": "pass",
       "value": "",
       "type": "string",
