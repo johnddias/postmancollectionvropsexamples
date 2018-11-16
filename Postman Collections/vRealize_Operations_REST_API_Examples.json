@@ -1512,7 +1512,7 @@
         },
         {
           "_postman_id": "f30e4efc-31ff-4953-99f9-7adff2f53667",
-          "name": "Get Resources by resourceKind and Save to var Copy",
+          "name": "Get Resources by resourceKind and parse by name",
           "event": [
             {
               "listen": "test",
@@ -2221,21 +2221,21 @@
   ],
   "variable": [
     {
-      "id": "a04ea125-a092-4853-87f3-eafaf18ef6ac",
+      "id": "e57c3c7d-670f-46d5-ad83-5325f4e231ea",
       "key": "vrops",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "3c92fc0d-0997-4f99-896f-966fdfbb5bbd",
+      "id": "6deb6f66-1955-4416-8a11-8939ac5abf21",
       "key": "user",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "b25b4221-a7bb-48de-bf1e-a3b9f4b91f70",
+      "id": "46cd267a-acf2-4b28-8a21-3d5a375efab1",
       "key": "pass",
       "value": "",
       "type": "string",
