@@ -1248,7 +1248,22 @@
           "_postman_id": "dc63b9e8-3560-48ed-a61f-d8cbff21c399",
           "name": "Getting Properties for Multiple Resources",
           "description": "This set of APIs provides an example of best practices when getting information from multiple resources of a particlar kind (for example, virtual machines).  \n\nBAD : \n\nUsing GET /api/resources/{resourceID}/properties for each resource \nResults in 1 to n calls which can slow down your script or code.\n\nGOOD : \n\n1. Retrieve all resources of a resource kind GET /api/resources?resourceKind=virtualMachine\n2. Parse the resources from the response (such as by names)\n3. Use POST /api/resources/properties/latest/query with the resourceIds (see ns3:properties-query)\n4. You can also specify the specific properties you would like returned using propertyKeys\n\nResults in 2 API calls total\n\n**To use this example, modify the pre-request script in the folder to include VM names for your environment.**",
-          "item": [],
+          "item": [
+            {
+              "_postman_id": "972b2c94-f384-4d2e-9ca8-fe0864d82528",
+              "name": "Get Multiple VMs by Names",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": ""
+              },
+              "response": []
+            }
+          ],
           "_postman_isSubFolder": true
         },
         {
@@ -2166,21 +2181,21 @@
   ],
   "variable": [
     {
-      "id": "c8872153-ee98-490a-a05d-bc508c89661a",
+      "id": "5b15aaaf-3015-49ce-ba61-587461024fec",
       "key": "vrops",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "4d24e1b3-c306-41fb-be18-a6de0d4ed128",
+      "id": "fbbd3946-86c1-44a0-aadd-3dc1e0f3f1b6",
       "key": "user",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "02124551-da45-43cd-a2e8-3afdd53c5a7d",
+      "id": "fe020685-cec1-40f9-97d5-d364a81472ba",
       "key": "pass",
       "value": "",
       "type": "string",
