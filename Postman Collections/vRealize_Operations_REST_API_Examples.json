@@ -1351,13 +1351,14 @@
             {
               "listen": "prerequest",
               "script": {
-                "type": "text/javascript",
+                "id": "1ad4610b-4300-4a23-b489-7eb01c40e6b9",
                 "exec": [
                   "var epoch = (new Date).getTime();",
                   "postman.setEnvironmentVariable(\"epoch\", epoch);",
                   "var epochPrev24 = epoch - (24*60*60*1000)",
                   "postman.setEnvironmentVariable(\"epochPrev24\", epochPrev24)"
-                ]
+                ],
+                "type": "text/javascript"
               }
             }
           ],
@@ -1373,9 +1374,12 @@
                 "value": "application/json"
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
             "url": {
-              "raw": "https://{{vrops}}/suite-api/api/resources/7a3a3bfc-1664-4e1d-bfe1-0e42db1d3c0e/stats?begin={{epochPrev24}}&end={{epoch}}&intervalQuantifier=1&intervalType=DAYS&rollUpType=AVG&statKey=mem|host_usage",
+              "raw": "https://{{vrops}}/suite-api/api/resources/0bb21390-a393-4d7d-921f-37b89af8f434/stats?begin={{epochPrev24}}&end={{epoch}}&intervalQuantifier=1&intervalType=HOURS&rollUpType=AVG&statKey=cpu:1|readyPct",
               "protocol": "https",
               "host": [
                 "{{vrops}}"
@@ -1384,7 +1388,7 @@
                 "suite-api",
                 "api",
                 "resources",
-                "7a3a3bfc-1664-4e1d-bfe1-0e42db1d3c0e",
+                "0bb21390-a393-4d7d-921f-37b89af8f434",
                 "stats"
               ],
               "query": [
@@ -1405,7 +1409,7 @@
                 },
                 {
                   "key": "intervalType",
-                  "value": "DAYS",
+                  "value": "HOURS",
                   "equals": true
                 },
                 {
@@ -1415,7 +1419,7 @@
                 },
                 {
                   "key": "statKey",
-                  "value": "mem|host_usage",
+                  "value": "cpu:1|readyPct",
                   "equals": true
                 }
               ]
@@ -2292,21 +2296,21 @@
   ],
   "variable": [
     {
-      "id": "37dee55f-442e-4c07-bb5a-6cb0f224f383",
+      "id": "98f24d82-8440-4181-9886-57ffb05fc965",
       "key": "vrops",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "73fe87e3-8818-4dba-9554-b7377ecffc42",
+      "id": "ca99d313-cb93-47d2-a88f-b83d2eca2627",
       "key": "user",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "249534b3-529b-4678-ae23-75623cf6e0fd",
+      "id": "704a4630-9ff4-44e3-8819-8c54992dcdea",
       "key": "pass",
       "value": "",
       "type": "string",
