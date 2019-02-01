@@ -1795,33 +1795,58 @@
         {
           "_postman_id": "44b6d296-c85b-4337-90d1-6930c2befc59",
           "name": "Query Metrics of Resources",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "f1aa9657-530a-40d7-b1a1-ce7a42fa6359",
+                "exec": [
+                  "var epoch = (new Date).getTime();",
+                  "postman.setEnvironmentVariable(\"epoch\", epoch);",
+                  "var epochPrev24 = epoch - (24*60*60*1000)",
+                  "postman.setEnvironmentVariable(\"epochPrev24\", epochPrev24)"
+                ],
+                "type": "text/javascript"
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "id": "6442848f-b4c4-45a6-a78d-c78659e20596",
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
           "request": {
             "method": "POST",
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}",
                 "type": "text",
+                "value": "vRealizeOpsToken {{bearerToken}}",
                 "warning": ""
               },
               {
                 "key": "Accept",
-                "value": "application/json",
                 "type": "text",
+                "value": "application/json",
                 "warning": ""
               },
               {
                 "key": "Content-Type",
                 "name": "Content-Type",
-                "value": "application/json",
-                "type": "text"
+                "type": "text",
+                "value": "application/json"
               }
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"resourceIds\" : [ {{resourceIds}} ],\n    \"propertyKeys\" : [ \"summary|ParentHost\",\"summary|guest|toolsVersion\"]\n}"
+              "raw": "{\n    \"resourceIds\" : [ {{resourceIds}} ],\n    \"statKey\" : [ {{cpuStatsJSON}} ],\n    \"rollUpType\" : \"AVG\",\n    \"intervalType\" : \"HOURS\",\n    \"intervalQuantifier\" : 24,\n    \"begin\" : {{epochPrev24}},\n    \"end\" : {{epoch}}\n}"
             },
-            "url": "https://{{vrops}}/suite-api/api/resources/properties/latest/query",
+            "url": "https://{{vrops}}/suite-api/api/resources/stats/query",
             "description": "Example that uses \"Get Resources by resourceKind and Load var\" to provide a list of resource IDs using the {{resourceId}} env var."
           },
           "response": []
@@ -2296,21 +2321,21 @@
   ],
   "variable": [
     {
-      "id": "98f24d82-8440-4181-9886-57ffb05fc965",
+      "id": "793a1ce2-1f43-42cd-aad1-77acd1d60f9b",
       "key": "vrops",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "ca99d313-cb93-47d2-a88f-b83d2eca2627",
+      "id": "dd3b180e-84e8-46b7-8e14-964483fa9346",
       "key": "user",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "704a4630-9ff4-44e3-8819-8c54992dcdea",
+      "id": "3a2cf59c-6788-4e05-9a19-61778a0837fd",
       "key": "pass",
       "value": "",
       "type": "string",
