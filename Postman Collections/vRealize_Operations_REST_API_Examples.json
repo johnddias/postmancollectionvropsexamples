@@ -1790,7 +1790,7 @@
         },
         {
           "_postman_id": "44b6d296-c85b-4337-90d1-6930c2befc59",
-          "name": "Query Properties of Resources Copy",
+          "name": "Query Metrics of Resources",
           "request": {
             "method": "POST",
             "header": [
@@ -2292,21 +2292,21 @@
   ],
   "variable": [
     {
-      "id": "73d0a0a4-ce4b-4e31-91e3-57755b019dd5",
+      "id": "37dee55f-442e-4c07-bb5a-6cb0f224f383",
       "key": "vrops",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "be7feb70-a453-4535-b141-a46b356b99d6",
+      "id": "73fe87e3-8818-4dba-9554-b7377ecffc42",
       "key": "user",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "c281060b-aae8-46f4-9ccf-8afc897eee34",
+      "id": "249534b3-529b-4678-ae23-75623cf6e0fd",
       "key": "pass",
       "value": "",
       "type": "string",
