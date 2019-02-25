@@ -1849,6 +1849,41 @@
             "description": "Example that uses \"Get Resources by resourceKind and Load var\" to provide a list of resource IDs using the {{resourceId}} env var."
           },
           "response": []
+        },
+        {
+          "_postman_id": "bb065373-2c8e-469b-9a50-ee31eedab0a3",
+          "name": "Create ResourceKind of AdapterKind",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "3964a5d2-845d-4536-8e25-c2ccfd140eb8",
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "vRealizeOpsToken {{bearerToken}}"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": "https://{{vrops}}/suite-api/api/resources/adapterkinds/mykey"
+          },
+          "response": []
         }
       ]
     },
@@ -2320,21 +2355,21 @@
   ],
   "variable": [
     {
-      "id": "3d4091b7-ac35-4d22-829a-41957c1a5ba3",
+      "id": "5856f460-84a9-460b-924c-894dba9cd805",
       "key": "vrops",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "24087b3d-0e37-4d6e-9597-0caf05acc18a",
+      "id": "c3c54361-db32-45a9-b1a4-97f7d0752061",
       "key": "user",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "86519883-24e0-4c38-9776-8db4fa96669f",
+      "id": "ce2d9870-eafe-45d2-b717-56645ae67b56",
       "key": "pass",
       "value": "",
       "type": "string",
