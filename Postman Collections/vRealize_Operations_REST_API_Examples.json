@@ -520,7 +520,7 @@
             },
             {
               "_postman_id": "b7421e3e-3bf1-d968-4d36-7cf8b7b82614",
-              "name": "Get OS Resource ID and Save",
+              "name": "Create ResourceKind of AdapterKind",
               "event": [
                 {
                   "listen": "test",
@@ -2320,21 +2320,21 @@
   ],
   "variable": [
     {
-      "id": "6e05e3b6-e77d-47ea-9f7c-b3ed87527c0e",
+      "id": "3d4091b7-ac35-4d22-829a-41957c1a5ba3",
       "key": "vrops",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "83e81f29-9708-44bd-9149-29ba62f679f1",
+      "id": "24087b3d-0e37-4d6e-9597-0caf05acc18a",
       "key": "user",
       "value": "",
       "type": "string",
       "description": ""
     },
     {
-      "id": "4ba3a1d4-1a5a-412b-b477-e94b237aefb5",
+      "id": "86519883-24e0-4c38-9776-8db4fa96669f",
       "key": "pass",
       "value": "",
       "type": "string",
