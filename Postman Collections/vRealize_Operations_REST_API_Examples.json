@@ -2400,6 +2400,19 @@
             "url": ""
           },
           "response": []
+        },
+        {
+          "name": "Populate Action (run before perform)",
+          "_postman_id": "43deb4fc-cf09-4bd8-8efb-6b8bfcc65172",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": ""
+          },
+          "response": []
         }
       ],
       "_postman_id": "9400fe88-fd66-49b7-8424-1ee66f6cb51b"
@@ -2429,19 +2442,19 @@
   ],
   "variable": [
     {
-      "id": "eba2bc52-dc98-4cd5-bf49-40836a8f2685",
+      "id": "7ec00dcd-3a7e-4f6d-8372-c6736813e993",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "4995176f-48ee-4fa3-8af6-e33d11f54a5f",
+      "id": "9f0b5a82-398e-4e45-afa8-154aa596c315",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "2fb6779b-07db-421e-a9dc-1b2c5d15214e",
+      "id": "3538a10b-a88f-44c9-9846-ba124c87bc5a",
       "key": "pass",
       "value": "",
       "type": "string"
