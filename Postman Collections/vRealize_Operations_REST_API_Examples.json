@@ -2387,7 +2387,21 @@
     },
     {
       "name": "Actions",
-      "item": [],
+      "item": [
+        {
+          "name": "Get All Actions Definitions",
+          "_postman_id": "09d31d6b-7e6f-4694-b645-a2f2053fd414",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": ""
+          },
+          "response": []
+        }
+      ],
       "_postman_id": "9400fe88-fd66-49b7-8424-1ee66f6cb51b"
     }
   ],
@@ -2415,19 +2429,19 @@
   ],
   "variable": [
     {
-      "id": "2421b4fb-5a70-4976-9df1-63d1353af73f",
+      "id": "79d2265b-f905-4a30-b485-4272d6dfdb04",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "bea26529-1430-4cf8-afc2-d752ede88142",
+      "id": "ad4279fc-2622-4b67-bf6a-76a556919527",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "7160c8ea-db0a-4a78-91f5-676fa4772999",
+      "id": "f71ec9bb-43db-479a-934e-a293d2dfc21f",
       "key": "pass",
       "value": "",
       "type": "string"
