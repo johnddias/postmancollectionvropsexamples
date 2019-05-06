@@ -2410,7 +2410,22 @@
           "request": {
             "method": "GET",
             "header": [],
-            "url": ""
+            "url": "",
+            "description": "You will need to have populated \n\n* resourceId env var\n* actionId env var\n\nResponse is parsed and saved as input for the performAction API"
+          },
+          "response": []
+        },
+        {
+          "name": "Populate Action (run before perform) Copy",
+          "_postman_id": "9c97e036-d1ac-4054-8a77-5184dab96de9",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "",
+            "description": "You will need to have populated \n\n* resourceId env var\n* actionId env var\n\nResponse is parsed and saved as input for the performAction API"
           },
           "response": []
         }
@@ -2442,19 +2457,19 @@
   ],
   "variable": [
     {
-      "id": "7ec00dcd-3a7e-4f6d-8372-c6736813e993",
+      "id": "4bc9b8e7-2dc7-4bb4-ad13-fffe0422805a",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "9f0b5a82-398e-4e45-afa8-154aa596c315",
+      "id": "433db6b5-5c20-4496-898a-c5d5b6dc9e08",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "3538a10b-a88f-44c9-9846-ba124c87bc5a",
+      "id": "28e97e83-6997-4bb9-b59f-b90f6ce220e4",
       "key": "pass",
       "value": "",
       "type": "string"
