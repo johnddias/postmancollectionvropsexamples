@@ -2428,6 +2428,20 @@
             "description": "Run Populate Action first get body - copy and paste the \"action-execution\" value in the body of this request.  Update values in body as desired."
           },
           "response": []
+        },
+        {
+          "name": "GET Task Status",
+          "_postman_id": "9ba9ab7f-9453-4693-99f7-1083690d75df",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "",
+            "description": "For an action that has been run, you can use this to check status.  actionExecutionId is pre-populated from the Perform Action request."
+          },
+          "response": []
         }
       ],
       "_postman_id": "9400fe88-fd66-49b7-8424-1ee66f6cb51b"
@@ -2457,19 +2471,19 @@
   ],
   "variable": [
     {
-      "id": "e7c3ece7-b472-4b82-9a8a-3200f6a161e9",
+      "id": "4e96bbf9-af05-453e-ae0d-050c881c1004",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "7a17faac-4b9b-47d2-8353-3b9467216909",
+      "id": "ffce238c-1484-4b55-a82d-562b70d90172",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "c58944da-852b-49d4-ada8-0031c8324fee",
+      "id": "ffda36e9-f38b-4cd4-9224-6e0baa570155",
       "key": "pass",
       "value": "",
       "type": "string"
