@@ -2430,7 +2430,7 @@
           "response": []
         },
         {
-          "name": "GET Task Status",
+          "name": "Get Task Status",
           "_postman_id": "9ba9ab7f-9453-4693-99f7-1083690d75df",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -2471,19 +2471,19 @@
   ],
   "variable": [
     {
-      "id": "2455b8c8-3ce3-49f5-86ec-f675ec039e71",
+      "id": "a7e529dc-1477-46d3-9e36-74cdcdf66345",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "34771118-c4d7-462c-a897-39f79567f58a",
+      "id": "cd11e767-a287-4f0b-bbc0-0c5c11a74f4b",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "a779c97a-5363-4c60-967d-0f732fe8ab72",
+      "id": "829d217a-60f2-4ad9-87bf-ca167ae991e6",
       "key": "pass",
       "value": "",
       "type": "string"
