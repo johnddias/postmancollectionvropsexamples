@@ -2425,7 +2425,7 @@
             "method": "GET",
             "header": [],
             "url": "",
-            "description": "You will need to have populated \n\n* resourceId env var\n* actionId env var\n\nResponse is parsed and saved as input for the performAction API"
+            "description": "Run Populate Action first get body - copy and paste the \"action-execution\" value in the body of this request.  Update values in body as desired."
           },
           "response": []
         }
@@ -2457,19 +2457,19 @@
   ],
   "variable": [
     {
-      "id": "923941df-0ffb-4fd4-a919-a8566f8fb568",
+      "id": "e7c3ece7-b472-4b82-9a8a-3200f6a161e9",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "11897cc7-8abc-4cae-bdb1-b07fde687ab9",
+      "id": "7a17faac-4b9b-47d2-8353-3b9467216909",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "8c33b625-001f-4ded-ba4d-1a5ec8556e0f",
+      "id": "c58944da-852b-49d4-ada8-0031c8324fee",
       "key": "pass",
       "value": "",
       "type": "string"
