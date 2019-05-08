@@ -2360,9 +2360,26 @@
             "disableBodyPruning": true
           },
           "request": {
-            "method": "GET",
-            "header": [],
-            "url": ""
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text",
+                "warning": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text",
+                "warning": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n\"old_password\" : \"oldPassword@123\",\r\n\"new_password\" : \"newPassword222!\"\r\n}\r\n"
+            },
+            "url": "https://{{vrops}}/casa/cluster/security/adminpassword"
           },
           "response": []
         }
@@ -2484,19 +2501,19 @@
   ],
   "variable": [
     {
-      "id": "34fd61c6-c1e0-4a7d-91b8-251da7321c42",
+      "id": "2fb5d63f-bede-4811-b564-245c64d6cf32",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "6b11aaf9-93b2-44b2-92c8-e4fdbce95d47",
+      "id": "533733f0-0599-42f2-8969-94fac08c9681",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "f1a8f538-38b2-4490-9963-424ee45601d1",
+      "id": "aa62e81f-e35c-4bff-947a-e5ea1113ca87",
       "key": "pass",
       "value": "",
       "type": "string"
