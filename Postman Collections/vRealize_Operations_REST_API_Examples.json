@@ -2352,6 +2352,19 @@
             "url": "https://{{vrops}}/suite-api/internal/deployment/config/properties/java_util_HashSet"
           },
           "response": []
+        },
+        {
+          "name": "Change Admin Password",
+          "_postman_id": "68c08a50-a3c4-4dc0-8efc-9e6bf9891695",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": ""
+          },
+          "response": []
         }
       ],
       "_postman_id": "b8060959-8d0a-4c6d-ab25-1aad0775277a",
@@ -2471,19 +2484,19 @@
   ],
   "variable": [
     {
-      "id": "a7e529dc-1477-46d3-9e36-74cdcdf66345",
+      "id": "9f952186-9f7b-4732-b31e-8613250090dd",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "cd11e767-a287-4f0b-bbc0-0c5c11a74f4b",
+      "id": "659b9922-a3f0-49a1-bb1c-6068f6243c93",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "829d217a-60f2-4ad9-87bf-ca167ae991e6",
+      "id": "39b499c6-63c1-4ff4-b07f-50d203fa2f2b",
       "key": "pass",
       "value": "",
       "type": "string"
