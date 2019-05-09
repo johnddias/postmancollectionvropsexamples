@@ -2426,8 +2426,27 @@
           },
           "request": {
             "method": "GET",
-            "header": [],
-            "url": ""
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "vRealizeOpsToken {{bearerToken}}",
+                "type": "text",
+                "warning": ""
+              },
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text",
+                "warning": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text",
+                "warning": ""
+              }
+            ],
+            "url": "https://{{vrops}}/suite-api/api/actiondefinitions"
           },
           "response": []
         },
@@ -2501,19 +2520,19 @@
   ],
   "variable": [
     {
-      "id": "2fb5d63f-bede-4811-b564-245c64d6cf32",
+      "id": "863817cc-f8c2-4c7b-b7b0-fa5853139d47",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "533733f0-0599-42f2-8969-94fac08c9681",
+      "id": "bbb22d1e-a89c-493d-b299-b0cbcc1509da",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "aa62e81f-e35c-4bff-947a-e5ea1113ca87",
+      "id": "2123ab71-44c5-4b33-b4ef-6f8528fc48de",
       "key": "pass",
       "value": "",
       "type": "string"
