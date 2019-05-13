@@ -1321,32 +1321,7 @@
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "formdata",
-              "formdata": []
-            },
-            "url": {
-              "raw": "https://{{vrops}}/suite-api/api/resources?name=bmutil&resourceKind=virtualmachine",
-              "protocol": "https",
-              "host": [
-                "{{vrops}}"
-              ],
-              "path": [
-                "suite-api",
-                "api",
-                "resources"
-              ],
-              "query": [
-                {
-                  "key": "name",
-                  "value": "bmutil"
-                },
-                {
-                  "key": "resourceKind",
-                  "value": "virtualmachine"
-                }
-              ]
-            }
+            "url": "https://{{vrops}}/suite-api/api/resources"
           },
           "response": []
         },
@@ -2520,19 +2495,19 @@
   ],
   "variable": [
     {
-      "id": "863817cc-f8c2-4c7b-b7b0-fa5853139d47",
+      "id": "87210512-bff7-45ab-a7ad-8f82d25b30e6",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "bbb22d1e-a89c-493d-b299-b0cbcc1509da",
+      "id": "76f9ab39-c051-4de4-bef9-21f2a66a41cf",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "2123ab71-44c5-4b33-b4ef-6f8528fc48de",
+      "id": "3c035962-75a4-4497-8034-7020723115f4",
       "key": "pass",
       "value": "",
       "type": "string"
