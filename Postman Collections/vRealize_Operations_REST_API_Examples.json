@@ -1321,7 +1321,28 @@
                 "value": "application/json"
               }
             ],
-            "url": "https://{{vrops}}/suite-api/api/resources"
+            "url": {
+              "raw": "https://{{vrops}}/suite-api/api/resources?resourceKind=virtualmachine&name=OPS83",
+              "protocol": "https",
+              "host": [
+                "{{vrops}}"
+              ],
+              "path": [
+                "suite-api",
+                "api",
+                "resources"
+              ],
+              "query": [
+                {
+                  "key": "resourceKind",
+                  "value": "virtualmachine"
+                },
+                {
+                  "key": "name",
+                  "value": "OPS83"
+                }
+              ]
+            }
           },
           "response": []
         },
@@ -2495,19 +2516,19 @@
   ],
   "variable": [
     {
-      "id": "87210512-bff7-45ab-a7ad-8f82d25b30e6",
+      "id": "87cd2ce7-6c61-481f-a5ad-4e610756e3fe",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "76f9ab39-c051-4de4-bef9-21f2a66a41cf",
+      "id": "272472fb-41a5-492b-825d-eaafae8892ce",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "3c035962-75a4-4497-8034-7020723115f4",
+      "id": "9aef15fe-0947-48ca-9ea7-e748a9256e6c",
       "key": "pass",
       "value": "",
       "type": "string"
