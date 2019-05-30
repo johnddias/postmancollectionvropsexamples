@@ -1347,7 +1347,7 @@
           "response": []
         },
         {
-          "name": "Get Properties of a Resource",
+          "name": "Get Virtual Machine by Resource Identifier",
           "_postman_id": "37a8d496-d4d5-bc97-14b4-028333c2d907",
           "request": {
             "method": "GET",
@@ -2562,19 +2562,19 @@
   ],
   "variable": [
     {
-      "id": "cf4c8efe-2fb9-42fb-adfc-b7f071ef6830",
+      "id": "ed8a0dc9-a4ba-42df-8092-a38d668b0a62",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "fd603948-341f-4f6b-a16b-e966297539d2",
+      "id": "e4014b7e-e429-4883-a4f6-766010d9b129",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "8c5dfc8d-4e1d-403f-b2c5-8bdc7cbc7071",
+      "id": "49f321d6-6709-48f1-9815-ebe9b70bd1ab",
       "key": "pass",
       "value": "",
       "type": "string"
