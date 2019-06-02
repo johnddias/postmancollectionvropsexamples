@@ -282,6 +282,57 @@
             "description": "Added in vROps 6.7"
           },
           "response": []
+        },
+        {
+          "name": "Update an Alert Definition with Multiple Symptom Sets",
+          "_postman_id": "529f50df-a98f-42c2-acfd-f1ae24fa27dc",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "vRealizeOpsToken {{bearerToken}}"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"id\": \"AlertDefinition-1e94bdb0-3457-49c8-8abf-ff2324eb11d7\",\n    \"name\": \"Autoscale Web Traffic Changed\",\n    \"adapterKindKey\": \"VMWARE\",\n    \"resourceKindKey\": \"VirtualMachine\",\n    \"waitCycles\": 1,\n    \"cancelCycles\": 1,\n    \"type\": 15,\n    \"subType\": 19,\n    \"states\": [\n        {\n            \"severity\": \"AUTO\",\n            \"base-symptom-set\": {\n                \"type\": \"SYMPTOM_SET_COMPOSITE\",\n                \"operator\": \"AND\",\n                \"symptom-sets\": [\n                    {\n                        \"type\": \"SYMPTOM_SET\",\n                        \"relation\": \"SELF\",\n                        \"aggregation\": \"ANY\",\n                        \"symptomSetOperator\": \"AND\",\n                        \"symptomDefinitionIds\": [\n                            \"SymptomDefinition-a0fed9b7-d4f4-4e7d-ba39-f91d6a2bf17e\"\n                        ]\n                    },\n                    {\n                        \"type\": \"SYMPTOM_SET\",\n                        \"relation\": \"PARENT\",\n                        \"symptomSetOperator\": \"OR\",\n                        \"aggregation\": \"ANY\",\n                        \"symptomDefinitionIds\": [\n                            \"SymptomDefinition-992eefd8-e9bb-45ff-a788-2072e67120ab\",\n                            \"SymptomDefinition-56d26c37-b852-4df7-841c-23dc97be93dc\"\n                        ]\n                    }\n                ]\n            },\n            \"impact\": {\n                \"impactType\": \"BADGE\",\n                \"detail\": \"health\"\n            }\n            \n        }\n    ]\n}"
+            },
+            "url": {
+              "raw": "https://{{vrops}}/suite-api/api/alertdefinitions/?AlertDefinition-1e94bdb0-3457-49c8-8abf-ff2324eb11d7",
+              "protocol": "https",
+              "host": [
+                "{{vrops}}"
+              ],
+              "path": [
+                "suite-api",
+                "api",
+                "alertdefinitions",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "AlertDefinition-1e94bdb0-3457-49c8-8abf-ff2324eb11d7",
+                  "value": "",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
         }
       ],
       "_postman_id": "00204451-2d7d-9d8e-221a-0bf0e83aa00f"
@@ -2562,19 +2613,19 @@
   ],
   "variable": [
     {
-      "id": "ed8a0dc9-a4ba-42df-8092-a38d668b0a62",
+      "id": "089d0819-91b0-4d68-b1fa-77105d5094ff",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "e4014b7e-e429-4883-a4f6-766010d9b129",
+      "id": "3127879e-7f09-457d-b93d-fc77b8298a8d",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "49f321d6-6709-48f1-9815-ebe9b70bd1ab",
+      "id": "fd49dc2d-00d2-4ae7-9685-a6cd161fe098",
       "key": "pass",
       "value": "",
       "type": "string"
