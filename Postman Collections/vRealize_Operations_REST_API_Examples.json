@@ -149,10 +149,6 @@
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": {
               "raw": "https://{{vrops}}/suite-api/api/alerts/7c2a4f9a-fd04-4300-b85c-cda555782e86",
               "protocol": "https",
@@ -199,10 +195,6 @@
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": {
               "raw": "https://{{vrops}}/suite-api/api/alertdefinitions/{{alertDefinitionId}}",
               "protocol": "https",
@@ -252,10 +244,6 @@
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": {
               "raw": "https://{{vrops}}/suite-api/api/symptoms?resourceId={{resourceId}}",
               "protocol": "https",
@@ -298,10 +286,6 @@
                 "value": "applicaiton/json"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": {
               "raw": "https://{{vrops}}/suite-api/api/alerts/contributingsymptoms?id=3a4851be-bcc3-4872-a4ea-8bb926f48850",
               "protocol": "https",
@@ -393,10 +377,6 @@
                     "value": "application/json"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": {
                   "raw": "https://{{vrops}}/suite-api/api/resources?resourceKind=EP Ops Agent",
                   "protocol": "https",
@@ -432,10 +412,6 @@
                     "value": "vRealizeOpsToken {{bearerToken}}"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": {
                   "raw": "https://{{vrops}}/suite-api/api/resources?adapterKind=EP Ops Adapter&propertyName=fqdn&propertyValue=DC1.mylab.dias",
                   "protocol": "https",
@@ -521,10 +497,6 @@
                     "value": "application/json"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": {
                   "raw": "https://{{vrops}}/suite-api/api/adapterkinds/EP Ops Adapter/resourcekinds/EP Ops Agent/resources?identifiers[agentID]=1432528639235-6190445699790943031-2415937788285910890",
                   "protocol": "https",
@@ -595,10 +567,6 @@
                     "value": "application/json"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": {
                   "raw": "https://{{vrops}}/suite-api/api/resources?resourceKind=EP Ops Agent&name=IIS-",
                   "protocol": "https",
@@ -659,10 +627,6 @@
                     "value": "application/json"
                   }
                 ],
-                "body": {
-                  "mode": "raw",
-                  "raw": ""
-                },
                 "url": {
                   "raw": "https://{{vrops}}/suite-api/api/resources/{{agentResourceId}}/relationships",
                   "protocol": "https",
@@ -1049,7 +1013,10 @@
                     "value": "applicaiton/json"
                   }
                 ],
-                "body": {},
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
                 "url": {
                   "raw": "https://{{vrops}}/suite-api/api/resources/{{epopsMonitorResourceId}}/monitoringstate/start",
                   "protocol": "https",
@@ -1094,10 +1061,6 @@
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": {
               "raw": "https://{{vrops}}/suite-api/internal/resources/groups",
               "protocol": "https",
@@ -1179,10 +1142,6 @@
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": {
               "raw": "https://{{vrops}}/suite-api/api/reportdefinitions",
               "protocol": "https",
@@ -1255,10 +1214,6 @@
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": {
               "raw": "https://{{vrops}}/suite-api/api/reports",
               "protocol": "https",
@@ -1293,10 +1248,6 @@
                 "value": "application/pdf"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": {
               "raw": "https://{{vrops}}/suite-api/api/reports/be9097f7-0c8c-4a33-a855-faafb6f03a1d/download?format=CSV",
               "protocol": "https",
@@ -1339,10 +1290,6 @@
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": {
               "raw": "https://{{vrops}}/suite-api/api/adapterkinds",
               "protocol": "https",
@@ -1372,10 +1319,6 @@
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": {
               "raw": "https://{{vrops}}/suite-api/api/adapters",
               "protocol": "https",
@@ -1405,10 +1348,6 @@
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": {
               "raw": "https://{{vrops}}/suite-api/api/adapters?adapterKindKey=VMWARE",
               "protocol": "https",
@@ -1604,10 +1543,6 @@
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": {
               "raw": "https://{{vrops}}/suite-api/api/resources?resourceKind=virtualmachine&name=OPS83",
               "protocol": "https",
@@ -1643,10 +1578,6 @@
                 "value": "vRealizeOpsToken {{bearerToken}}"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": {
               "raw": "https://{{vrops}}/suite-api/api/resources/{{resourceId}}/properties",
               "protocol": "https",
@@ -1674,10 +1605,6 @@
                 "value": "vRealizeOpsToken {{bearerToken}}"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": {
               "raw": "https://{{vrops}}/suite-api/api/resources/{{resourceId}}/statkeys",
               "protocol": "https",
@@ -1724,10 +1651,6 @@
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": {
               "raw": "https://{{vrops}}/suite-api/api/resources/0bb21390-a393-4d7d-921f-37b89af8f434/stats?begin={{epochPrev24}}&end={{epoch}}&intervalQuantifier=1&intervalType=HOURS&rollUpType=AVG&statKey=cpu:1|readyPct",
               "protocol": "https",
@@ -1846,10 +1769,6 @@
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": {
               "raw": "https://{{vrops}}/suite-api/api/resources?resourceKind=virtualmachine",
               "protocol": "https",
@@ -1909,10 +1828,6 @@
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": {
               "raw": "https://{{vrops}}/suite-api/api/resources?resourceKind=virtualmachine",
               "protocol": "https",
@@ -1974,10 +1889,6 @@
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": {
               "raw": "https://{{vrops}}/suite-api/api/resources/{{resourceId}}/statkeys",
               "protocol": "https",
@@ -2026,10 +1937,6 @@
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": {
               "raw": "https://{{vrops}}/suite-api/api/resources/stats/topn?begin={{epoch}}&intervalType=Hours&intervalQuantifier=24&rollUpType=AVG&statKey=",
               "protocol": "https",
@@ -2297,10 +2204,6 @@
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": {
               "raw": "https://{{vrops}}/suite-api/api/resources/adapterkinds/mykey",
               "protocol": "https",
@@ -2328,10 +2231,6 @@
           "request": {
             "method": "GET",
             "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": {
               "raw": "https://{{vrops}}/suite-api/api/auth/sources",
               "protocol": "https",
@@ -2404,10 +2303,6 @@
                 "value": "applicaiton/json"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": {
               "raw": "https://{{vrops}}/suite-api/api/auth/users?username=frank",
               "protocol": "https",
@@ -2456,10 +2351,6 @@
             },
             "method": "GET",
             "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": {
               "raw": "https://{{vrops}}/casa/node/thumbprint",
               "protocol": "https",
@@ -2529,8 +2420,8 @@
               "formdata": [
                 {
                   "key": "pemfile",
-                  "type": "file",
-                  "src": ""
+                  "value": null,
+                  "type": "file"
                 },
                 {
                   "key": "Activate",
@@ -2569,7 +2460,10 @@
                 "value": "application/json"
               }
             ],
-            "body": {},
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": {
               "raw": "https://{{vrops}}/casa/cluster/security/certificate?certType=CUSTOM&action=ACTIVATE",
               "protocol": "https",
@@ -2610,10 +2504,6 @@
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": {
               "raw": "https://{{vrops}}/casa/cluster/status",
               "protocol": "https",
@@ -2969,10 +2859,6 @@
                 "warning": ""
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": {
               "raw": "https://{{vrops}}/suite-api/api/actiondefinitions",
               "protocol": "https",
@@ -3084,10 +2970,6 @@
           "request": {
             "method": "GET",
             "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": {
               "raw": ""
             },
@@ -3128,10 +3010,6 @@
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": {
               "raw": "https://{{vrops}}/suite-api/api/adapters?adapterKindKey=Container",
               "protocol": "https",
@@ -3228,10 +3106,6 @@
                 "type": "text"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": {
               "raw": "https://{{vrops}}/suite-api/api/resources/{{applicationObjectId}}/monitoringstate/start",
               "protocol": "https",
@@ -3325,10 +3199,6 @@
                 "type": "text"
               }
             ],
-            "body": {
-              "mode": "raw",
-              "raw": ""
-            },
             "url": {
               "raw": "https://{{vrops}}/suite-api/api/resources/{{applicationTierObjectId}}/monitoringstate/start",
               "protocol": "https",
@@ -3466,19 +3336,19 @@
   ],
   "variable": [
     {
-      "id": "274cb667-ff0b-40d3-b79c-8262b3bb967f",
+      "id": "6150241d-af6d-47e5-bc06-b66059913e36",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "c2cb0df8-1425-4ac2-a291-1b7ef1ad9ed8",
+      "id": "7ee52c5d-ba5a-4064-96a7-68d007626fa6",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "a829634e-3097-4255-81f8-e5a872666353",
+      "id": "5fd6bdd8-eacc-4a9b-a615-dd60d0956302",
       "key": "pass",
       "value": "",
       "type": "string"
