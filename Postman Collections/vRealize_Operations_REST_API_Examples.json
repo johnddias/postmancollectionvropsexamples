@@ -3041,6 +3041,20 @@
                 "exec": [
                   "var jsonData = JSON.parse(responseBody);",
                   "postman.setEnvironmentVariable(\"applicationObjectId\", jsonData.identifier);",
+                  "",
+                  "postman.clearEnvironmentVariable(\"applicationName\");",
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "7f822120-a131-4657-89b3-a9024782b37e",
+                "exec": [
+                  "var applicationName = \"Postman\";",
+                  "postman.setEnvironmentVariable(\"applicationName\", applicationName);",
                   ""
                 ],
                 "type": "text/javascript"
@@ -3065,7 +3079,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"creationTime\": null,\r\n  \"resourceKey\": {\r\n    \"name\": \"Postman\",\r\n    \"adapterKindKey\": \"Container\",\r\n    \"resourceKindKey\": \"BusinessService\",\r\n    \"resourceIdentifiers\": []\r\n  },\r\n  \"resourceStatusStates\": [],\r\n  \"resourceHealth\": null,\r\n  \"resourceHealthValue\": null,\r\n  \"dtEnabled\": true,\r\n  \"monitoringInterval\": 5,\r\n  \"badges\": [],\r\n  \"relatedResources\": [],\r\n  \"identifier\": null\r\n}\r\n"
+              "raw": "{\r\n  \"creationTime\": null,\r\n  \"resourceKey\": {\r\n    \"name\": \"{{applicationName}}\",\r\n    \"adapterKindKey\": \"Container\",\r\n    \"resourceKindKey\": \"BusinessService\",\r\n    \"resourceIdentifiers\": []\r\n  },\r\n  \"resourceStatusStates\": [],\r\n  \"resourceHealth\": null,\r\n  \"resourceHealthValue\": null,\r\n  \"dtEnabled\": true,\r\n  \"monitoringInterval\": 5,\r\n  \"badges\": [],\r\n  \"relatedResources\": [],\r\n  \"identifier\": null\r\n}\r\n"
             },
             "url": {
               "raw": "https://{{vrops}}/suite-api/api/resources/adapters/{{containerAdapterInstanceId}}",
@@ -3134,6 +3148,20 @@
                 "exec": [
                   "var jsonData = JSON.parse(responseBody);",
                   "postman.setEnvironmentVariable(\"applicationTierObjectId\", jsonData.identifier);",
+                  "",
+                  "postman.clearEnvironmentVariable(\"applicationTierName\");",
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "id": "8a45193f-293f-41fe-8c9b-1eb4c3688b74",
+                "exec": [
+                  "var applicationTierName = \"App\";",
+                  "postman.setEnvironmentVariable(\"applicationTierName\", applicationTierName);",
                   ""
                 ],
                 "type": "text/javascript"
@@ -3158,7 +3186,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"creationTime\": null,\r\n  \"resourceKey\": {\r\n    \"name\": \"App\",\r\n    \"adapterKindKey\": \"Container\",\r\n    \"resourceKindKey\": \"Tier\",\r\n    \"resourceIdentifiers\": [\r\n      {\r\n        \"identifierType\": {\r\n          \"name\": \"BS_Tier Name\",\r\n          \"dataType\": \"STRING\",\r\n          \"isPartOfUniqueness\": true\r\n        },\r\n        \"value\": \"{{applicationObjectId}}_App\"\r\n      }\r\n    ]\r\n  },\r\n  \"resourceStatusStates\": [],\r\n  \"resourceHealth\": null,\r\n  \"resourceHealthValue\": null,\r\n  \"dtEnabled\": true,\r\n  \"monitoringInterval\": 5,\r\n  \"badges\": [],\r\n  \"relatedResources\": [],\r\n  \"identifier\": null\r\n}"
+              "raw": "{\r\n  \"creationTime\": null,\r\n  \"resourceKey\": {\r\n    \"name\": \"{{applicationTierName}}\",\r\n    \"adapterKindKey\": \"Container\",\r\n    \"resourceKindKey\": \"Tier\",\r\n    \"resourceIdentifiers\": [\r\n      {\r\n        \"identifierType\": {\r\n          \"name\": \"BS_Tier Name\",\r\n          \"dataType\": \"STRING\",\r\n          \"isPartOfUniqueness\": true\r\n        },\r\n        \"value\": \"{{applicationObjectId}}_{{applicationTierName}}\"\r\n      }\r\n    ]\r\n  },\r\n  \"resourceStatusStates\": [],\r\n  \"resourceHealth\": null,\r\n  \"resourceHealthValue\": null,\r\n  \"dtEnabled\": true,\r\n  \"monitoringInterval\": 5,\r\n  \"badges\": [],\r\n  \"relatedResources\": [],\r\n  \"identifier\": null\r\n}"
             },
             "url": {
               "raw": "https://{{vrops}}/suite-api/api/resources/adapters/{{containerAdapterInstanceId}}",
@@ -3336,19 +3364,19 @@
   ],
   "variable": [
     {
-      "id": "6150241d-af6d-47e5-bc06-b66059913e36",
+      "id": "5294a752-6bc6-400b-8f10-a165db97fdbf",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "7ee52c5d-ba5a-4064-96a7-68d007626fa6",
+      "id": "a024c931-2bf3-4e67-9b1a-a9e5a29bae57",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "5fd6bdd8-eacc-4a9b-a615-dd60d0956302",
+      "id": "3d7008dd-1f6f-4d03-99ff-2e13b30acf1d",
       "key": "pass",
       "value": "",
       "type": "string"
