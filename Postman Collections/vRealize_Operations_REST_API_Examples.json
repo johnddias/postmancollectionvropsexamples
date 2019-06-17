@@ -3032,7 +3032,7 @@
           "response": []
         },
         {
-          "name": "Create Application Object named \"Postman\"",
+          "name": "Create Application Object",
           "event": [
             {
               "listen": "test",
@@ -3139,7 +3139,7 @@
           "response": []
         },
         {
-          "name": "Create Application Tier named \"App\"",
+          "name": "Create Application Tier Object",
           "event": [
             {
               "listen": "test",
@@ -3206,7 +3206,7 @@
           "response": []
         },
         {
-          "name": "Start Collection Application Tier Object",
+          "name": "Start Collecting Application Tier Object",
           "request": {
             "method": "PUT",
             "header": [
@@ -3246,7 +3246,7 @@
           "response": []
         },
         {
-          "name": "Make Application Tier Object a child of the Application Object",
+          "name": "Make Application Tier Object a child of Application Object",
           "request": {
             "method": "POST",
             "header": [
@@ -3364,19 +3364,19 @@
   ],
   "variable": [
     {
-      "id": "5294a752-6bc6-400b-8f10-a165db97fdbf",
+      "id": "d3880640-ae3c-4c39-a4b0-caa86369b39c",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "a024c931-2bf3-4e67-9b1a-a9e5a29bae57",
+      "id": "e7ad1905-a882-46f7-9be8-37b5799ea404",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "3d7008dd-1f6f-4d03-99ff-2e13b30acf1d",
+      "id": "3a556160-57c2-43eb-9430-dca37cbbb763",
       "key": "pass",
       "value": "",
       "type": "string"
