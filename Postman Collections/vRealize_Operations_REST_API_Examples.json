@@ -1990,6 +1990,19 @@
             "url": ""
           },
           "response": []
+        },
+        {
+          "name": "Get Custom Groups Copy",
+          "_postman_id": "9689238f-f4a4-47fa-895d-d2187b49d977",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": ""
+          },
+          "response": []
         }
       ],
       "_postman_id": "f8811ef5-0250-82fd-4214-0f6404e27adc"
@@ -2662,19 +2675,19 @@
   ],
   "variable": [
     {
-      "id": "05439127-98c0-42e6-947b-a5c0b125efb6",
+      "id": "6988749e-44f7-4596-8261-77dbc932bf27",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "9297b7dc-1611-40d6-b826-cb0e81382219",
+      "id": "384bd202-ec69-428e-a4db-0418931ef740",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "aba7bf9a-c1fd-4438-a7d2-54a7aa0060e3",
+      "id": "30c12415-276a-4fc7-bdd7-a17b5b0884be",
       "key": "pass",
       "value": "",
       "type": "string"
