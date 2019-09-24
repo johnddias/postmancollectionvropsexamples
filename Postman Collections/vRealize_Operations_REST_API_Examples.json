@@ -1986,8 +1986,27 @@
           },
           "request": {
             "method": "GET",
-            "header": [],
-            "url": ""
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "vRealizeOpsToken {{bearerToken}}",
+                "type": "text",
+                "warning": ""
+              },
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text",
+                "warning": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text",
+                "warning": ""
+              }
+            ],
+            "url": "https://{{vrops}}/suite-api/api/resources/groups"
           },
           "response": []
         },
@@ -2675,19 +2694,19 @@
   ],
   "variable": [
     {
-      "id": "c3c3740e-9c91-4870-a7e5-a40f95c1ed21",
+      "id": "31fa7099-c6e5-4f26-97a9-555ee712f7fd",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "52f5b99e-3eff-4503-87d4-853a96c73e3a",
+      "id": "74cfe095-c8ac-4b40-af94-e6dde2ff1c14",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "d6740f46-f323-43e2-8f05-5dd06caa96e5",
+      "id": "a751b080-67e7-4dc8-a333-c7f4ce82b8cb",
       "key": "pass",
       "value": "",
       "type": "string"
