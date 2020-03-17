@@ -2022,6 +2022,42 @@
             "url": ""
           },
           "response": []
+        },
+        {
+          "name": "Get Matching Resources",
+          "_postman_id": "6fdb67ef-cb5e-40b4-a24c-720b437114b7",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "vRealizeOpsToken {{bearerToken}}",
+                "type": "text",
+                "warning": ""
+              },
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text",
+                "warning": ""
+              },
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"propertyConditions\" : {\n    \t\"conditions\" : [{\n    \t\t\"key\": \"summary|guest|ipAddress\",\n    \t\t\"operator\":\"EQ\",\n    \t\t\"stringValue\":\"172.18.0.1\"\n    \t}]\n\n    \t\n    }\n}"
+            },
+            "url": "https://{{vrops}}/suite-api/api/resources/query"
+          },
+          "response": []
         }
       ],
       "_postman_id": "f8811ef5-0250-82fd-4214-0f6404e27adc"
@@ -2632,42 +2668,6 @@
         }
       ],
       "_postman_id": "9400fe88-fd66-49b7-8424-1ee66f6cb51b"
-    },
-    {
-      "name": "Get Matching Resources",
-      "_postman_id": "6fdb67ef-cb5e-40b4-a24c-720b437114b7",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Authorization",
-            "value": "vRealizeOpsToken {{bearerToken}}",
-            "type": "text",
-            "warning": ""
-          },
-          {
-            "key": "Accept",
-            "value": "application/json",
-            "type": "text",
-            "warning": ""
-          },
-          {
-            "key": "Content-Type",
-            "name": "Content-Type",
-            "value": "application/json",
-            "type": "text"
-          }
-        ],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n    \"propertyConditions\" : {\n    \t\"conditions\" : [{\n    \t\t\"key\": \"summary|guest|ipAddress\",\n    \t\t\"operator\":\"EQ\",\n    \t\t\"stringValue\":\"172.18.0.1\"\n    \t}]\n\n    \t\n    }\n}"
-        },
-        "url": "https://{{vrops}}/suite-api/api/resources/query"
-      },
-      "response": []
     }
   ],
   "event": [
@@ -2694,19 +2694,19 @@
   ],
   "variable": [
     {
-      "id": "31fa7099-c6e5-4f26-97a9-555ee712f7fd",
+      "id": "d25a585b-8395-44d3-acdf-5b4491812d66",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "74cfe095-c8ac-4b40-af94-e6dde2ff1c14",
+      "id": "be85c3c7-6454-4f6e-a4f0-391b6e8987ff",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "a751b080-67e7-4dc8-a333-c7f4ce82b8cb",
+      "id": "faa017c8-d4f7-49f2-b909-bc9ed784383e",
       "key": "pass",
       "value": "",
       "type": "string"
