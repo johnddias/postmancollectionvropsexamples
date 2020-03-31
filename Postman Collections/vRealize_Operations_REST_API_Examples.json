@@ -47,6 +47,20 @@
         },
         {
           "name": "Generate CSP Access Token",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "7c8afb09-7508-464e-91c2-86641bc56b84",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "postman.setEnvironmentVariable(\"bearerToken\", jsonData.access_token);",
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
           "_postman_id": "cca91aba-b2cd-4324-8061-c4508f9589fb",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -2772,19 +2786,19 @@
   ],
   "variable": [
     {
-      "id": "71152d0d-19f7-49cc-9c6a-fb06a6a3adf1",
+      "id": "4bdc94e4-1148-4199-a7e5-3862d424efcb",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "d612bcec-a3a1-42e7-966d-80b8097a3709",
+      "id": "f31bda6a-f988-4888-8ec9-64fe84737175",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "9122a538-c415-4692-baa6-3df13556139f",
+      "id": "1ab47717-eb5d-4fe3-bc55-b0101ff08c47",
       "key": "pass",
       "value": "",
       "type": "string"
