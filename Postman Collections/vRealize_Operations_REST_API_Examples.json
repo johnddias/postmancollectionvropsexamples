@@ -2108,7 +2108,7 @@
               "mode": "raw",
               "raw": "{\n    \"propertyConditions\" : {\n    \t\"conditions\" : [{\n    \t\t\"key\": \"summary|guest|ipAddress\",\n    \t\t\"operator\":\"EQ\",\n    \t\t\"stringValue\":\"172.18.0.1\"\n    \t}]\n\n    \t\n    }\n}"
             },
-            "url": "https://{{vrops}}/suite-api/api/resources/query"
+            "url": "https://{{vrops}}/suite-api/api/resources/query "
           },
           "response": []
         }
@@ -2760,6 +2760,34 @@
         "url": "https://console.cloud.vmware.com/csp/gateway/am/api/auth/api-tokens/authorize"
       },
       "response": []
+    },
+    {
+      "name": "https://www.mgmt.cloud.vmware.com/vrops-cloud/suite-api/api/applications/clientCertificate/3",
+      "_postman_id": "2e6f9290-cd94-4b5a-b1a5-3ca40803b95c",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "CSPToken {{bearerToken}}",
+            "type": "text"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text",
+            "name": "Accept"
+          }
+        ],
+        "url": "https://www.mgmt.cloud.vmware.com/vrops-cloud/suite-api/api/applications/clientCertificate/3"
+      },
+      "response": []
     }
   ],
   "event": [
@@ -2786,19 +2814,19 @@
   ],
   "variable": [
     {
-      "id": "4bdc94e4-1148-4199-a7e5-3862d424efcb",
+      "id": "e7fc6363-9735-4720-ba15-fa3fa13cf464",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "f31bda6a-f988-4888-8ec9-64fe84737175",
+      "id": "2fbde0a8-f2e8-420e-bf18-0e07587bf299",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "1ab47717-eb5d-4fe3-bc55-b0101ff08c47",
+      "id": "83feda1b-867d-42c1-b2c9-8cb6d63ee257",
       "key": "pass",
       "value": "",
       "type": "string"
