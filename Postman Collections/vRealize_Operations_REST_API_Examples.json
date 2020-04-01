@@ -2781,19 +2781,19 @@
   ],
   "variable": [
     {
-      "id": "9f41aa91-dbad-4cf5-9cd6-65d52259a38d",
+      "id": "d5053cbb-5c72-4a6d-99fb-c0e030c940ed",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "b0eb9fa6-7e5f-46c5-bf13-30c219685f89",
+      "id": "e0df15fc-4a0e-47b6-8aa7-c677cf254a19",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "a05140b4-63dc-46d9-a943-13c347bde34b",
+      "id": "b703474d-7d1a-4a9d-98a9-e041ef2c73c4",
       "key": "pass",
       "value": "",
       "type": "string"
