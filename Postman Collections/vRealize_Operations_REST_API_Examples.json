@@ -10,12 +10,6 @@
       "name": "Authenticate - RUN FIRST",
       "item": [
         {
-          "name": "Application Monitoring",
-          "item": [],
-          "_postman_id": "1d7249e1-8718-4873-a9b1-dee08efe20f6",
-          "_postman_isSubFolder": true
-        },
-        {
           "name": "RUN FIRST - Get vR Ops Auth Token",
           "event": [
             {
@@ -2729,6 +2723,11 @@
       "_postman_id": "9400fe88-fd66-49b7-8424-1ee66f6cb51b"
     },
     {
+      "name": "Application Monitoring",
+      "item": [],
+      "_postman_id": "1d7249e1-8718-4873-a9b1-dee08efe20f6"
+    },
+    {
       "name": "Generate CSP Access Token",
       "_postman_id": "91cbeef0-3167-40db-8756-969831fdeb39",
       "protocolProfileBehavior": {
@@ -2820,19 +2819,19 @@
   ],
   "variable": [
     {
-      "id": "107e8feb-0e61-4c79-a883-79c261fe40f1",
+      "id": "6976ab8b-1f7d-4818-8d31-08c50f51c8e6",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "e3fceea6-eb66-4638-89d6-ac912bff7f1c",
+      "id": "878bb9a7-b366-4171-9fbf-1080aeeea283",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "b4ef4a95-e0ca-405f-86e5-4aeaff888e85",
+      "id": "a215fe32-96fb-40d4-ba74-5495f3951ff7",
       "key": "pass",
       "value": "",
       "type": "string"
