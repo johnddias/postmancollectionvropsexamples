@@ -10,6 +10,12 @@
       "name": "Authenticate - RUN FIRST",
       "item": [
         {
+          "name": "Application Monitoring",
+          "item": [],
+          "_postman_id": "1d7249e1-8718-4873-a9b1-dee08efe20f6",
+          "_postman_isSubFolder": true
+        },
+        {
           "name": "RUN FIRST - Get vR Ops Auth Token",
           "event": [
             {
@@ -2108,7 +2114,7 @@
               "mode": "raw",
               "raw": "{\n    \"propertyConditions\" : {\n    \t\"conditions\" : [{\n    \t\t\"key\": \"summary|guest|ipAddress\",\n    \t\t\"operator\":\"EQ\",\n    \t\t\"stringValue\":\"172.18.0.1\"\n    \t}]\n\n    \t\n    }\n}"
             },
-            "url": "https://{{vrops}}/suite-api/api/resources/query "
+            "url": "https://{{vrops}}/suite-api/api/resources/query"
           },
           "response": []
         }
@@ -2814,19 +2820,19 @@
   ],
   "variable": [
     {
-      "id": "25ae4b5c-6e3b-4bcc-8c26-d6d959074012",
+      "id": "5e8c5a48-5ae8-432c-bcb0-f6f1c5360669",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "3d717d96-8892-4c8a-980d-72656fb0c6ed",
+      "id": "438bb198-4081-4cd2-81ee-8407cdd203f6",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "085b8bc9-063c-43a4-be87-f8e66c3c6ea7",
+      "id": "19e5cc2b-9bcc-41f6-a26a-e1a5273b2d4a",
       "key": "pass",
       "value": "",
       "type": "string"
