@@ -2755,45 +2755,6 @@
         }
       ],
       "_postman_id": "1d7249e1-8718-4873-a9b1-dee08efe20f6"
-    },
-    {
-      "name": "Generate CSP Access Token",
-      "_postman_id": "91cbeef0-3167-40db-8756-969831fdeb39",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "Accept",
-            "value": "application/json",
-            "type": "text",
-            "name": "Accept"
-          },
-          {
-            "key": "Content-Type",
-            "value": "application/x-www-form-urlencoded",
-            "type": "text",
-            "name": "Accept"
-          }
-        ],
-        "body": {
-          "mode": "urlencoded",
-          "urlencoded": [
-            {
-              "key": "refresh_token",
-              "value": "NPMUr6XOPC1DBKYe6pc9OF8vUj8r243Uwb4u65vwZ7qPgsCrrJECtyjjmJhp8ajP",
-              "type": "text"
-            }
-          ],
-          "options": {
-            "urlencoded": {}
-          }
-        },
-        "url": "https://console.cloud.vmware.com/csp/gateway/am/api/auth/api-tokens/authorize"
-      },
-      "response": []
     }
   ],
   "event": [
@@ -2820,19 +2781,19 @@
   ],
   "variable": [
     {
-      "id": "ca252c46-35d3-4b74-a092-05d12b4849fe",
+      "id": "d6d6ae6c-3563-4f6b-8371-a4aeb564bb8c",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "53198ab0-a4a4-45b2-a8ce-ce6e45f9cdd9",
+      "id": "10c11355-7fbb-4311-87ef-3a759cdc3503",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "5e56ed24-3256-44ab-8c26-d1a22061519e",
+      "id": "f8e76525-de73-4fa2-b688-7cc4acc668f1",
       "key": "pass",
       "value": "",
       "type": "string"
