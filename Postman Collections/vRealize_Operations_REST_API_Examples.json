@@ -2726,7 +2726,7 @@
       "name": "Application Monitoring",
       "item": [
         {
-          "name": "https://www.mgmt.cloud.vmware.com/vrops-cloud/suite-api/api/applications/clientCertificate/3",
+          "name": "Sign Client Certificate",
           "_postman_id": "2e6f9290-cd94-4b5a-b1a5-3ca40803b95c",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -2781,19 +2781,19 @@
   ],
   "variable": [
     {
-      "id": "dfce04d8-b005-48ec-add3-5a4291f5c7a5",
+      "id": "1b4906a4-b32b-4d05-ad16-46d6678566be",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "a16ee839-d926-4941-862f-7bbbdbcded28",
+      "id": "924cf9e8-27a2-4438-9ef4-a60a8cc87843",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "4cb24ba4-3aa3-4e79-add3-204d50069d4f",
+      "id": "82af2327-a9ec-4d4e-82ba-b17bbf80f36f",
       "key": "pass",
       "value": "",
       "type": "string"
