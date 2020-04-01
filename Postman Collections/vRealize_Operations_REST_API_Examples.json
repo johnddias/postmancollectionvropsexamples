@@ -86,7 +86,7 @@
               "urlencoded": [
                 {
                   "key": "refresh_token",
-                  "value": "NPMUr6XOPC1DBKYe6pc9OF8vUj8r243Uwb4u65vwZ7qPgsCrrJECtyjjmJhp8ajP",
+                  "value": "{{refreshToken}}",
                   "type": "text"
                 }
               ],
@@ -2820,19 +2820,19 @@
   ],
   "variable": [
     {
-      "id": "f83cab6a-4b12-4ec7-a63b-472f72f624fe",
+      "id": "05096225-8f2a-45d4-8127-e35cc534d5d7",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "7444f554-0a34-4080-97b8-88237601918a",
+      "id": "b57f4a63-1ed6-4795-af19-02326dd71c97",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "db43f4c9-1c61-4e4c-85f6-08c6a5ee748e",
+      "id": "6b83c60b-da44-4c41-b093-8263bc3c1483",
       "key": "pass",
       "value": "",
       "type": "string"
