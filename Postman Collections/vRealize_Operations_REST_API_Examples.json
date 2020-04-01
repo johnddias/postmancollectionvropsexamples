@@ -2752,6 +2752,56 @@
             "url": "https://www.mgmt.cloud.vmware.com/vrops-cloud/suite-api/api/applications/clientCertificate/3"
           },
           "response": []
+        },
+        {
+          "name": "Get Collector",
+          "_postman_id": "20e8a838-ad24-4c4b-b22c-83ff25688cc4",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "CSPToken {{bearerToken}}",
+                "type": "text"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text",
+                "name": "Accept"
+              }
+            ],
+            "url": {
+              "raw": "https://www.mgmt.cloud.vmware.com/vrops-cloud/suite-api/api/collectors?host=10.173.22.61",
+              "protocol": "https",
+              "host": [
+                "www",
+                "mgmt",
+                "cloud",
+                "vmware",
+                "com"
+              ],
+              "path": [
+                "vrops-cloud",
+                "suite-api",
+                "api",
+                "collectors"
+              ],
+              "query": [
+                {
+                  "key": "host",
+                  "value": "10.173.22.61"
+                }
+              ]
+            }
+          },
+          "response": []
         }
       ],
       "_postman_id": "1d7249e1-8718-4873-a9b1-dee08efe20f6"
@@ -2781,19 +2831,19 @@
   ],
   "variable": [
     {
-      "id": "1b4906a4-b32b-4d05-ad16-46d6678566be",
+      "id": "b7db83a6-4b44-41d4-bfd7-275e299be1ce",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "924cf9e8-27a2-4438-9ef4-a60a8cc87843",
+      "id": "b29f26c4-f994-4130-a87c-25f7ca896d5a",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "82af2327-a9ec-4d4e-82ba-b17bbf80f36f",
+      "id": "14ce307a-34b4-46fa-967a-6d2e5a0e4d5d",
       "key": "pass",
       "value": "",
       "type": "string"
