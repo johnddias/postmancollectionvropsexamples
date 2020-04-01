@@ -61,59 +61,6 @@
               }
             }
           ],
-          "_postman_id": "cca91aba-b2cd-4324-8061-c4508f9589fb",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json",
-                "type": "text",
-                "name": "Accept"
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/x-www-form-urlencoded",
-                "type": "text",
-                "name": "Accept"
-              }
-            ],
-            "body": {
-              "mode": "urlencoded",
-              "urlencoded": [
-                {
-                  "key": "refresh_token",
-                  "value": "{{refreshToken}}",
-                  "type": "text"
-                }
-              ],
-              "options": {
-                "urlencoded": {}
-              }
-            },
-            "url": "https://console.cloud.vmware.com/csp/gateway/am/api/auth/api-tokens/authorize"
-          },
-          "response": []
-        },
-        {
-          "name": "Generate CSP Access Token",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "7c8afb09-7508-464e-91c2-86641bc56b84",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "postman.setEnvironmentVariable(\"bearerToken\", jsonData.access_token);",
-                  ""
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
           "_postman_id": "372c9c4e-6dfb-4466-bc0f-d6cd443397f6",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -2873,19 +2820,19 @@
   ],
   "variable": [
     {
-      "id": "9369c954-cc0a-4158-b55e-871a8d81165a",
+      "id": "ca252c46-35d3-4b74-a092-05d12b4849fe",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "b1d8ed06-62ac-481f-aa52-613f82ac61e1",
+      "id": "53198ab0-a4a4-45b2-a8ce-ce6e45f9cdd9",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "b26ff1a9-2fc5-4205-84cc-fc2a404e89c1",
+      "id": "5e56ed24-3256-44ab-8c26-d1a22061519e",
       "key": "pass",
       "value": "",
       "type": "string"
