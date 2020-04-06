@@ -2618,7 +2618,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}",
+                "value": "{{bearer {{bearerToken}}",
                 "type": "text",
                 "warning": ""
               },
@@ -2839,19 +2839,19 @@
   ],
   "variable": [
     {
-      "id": "4efacaab-4c91-43d1-b19a-b2f34e14d54f",
+      "id": "3d199d57-1047-4453-b149-c53a5c8abb79",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "8a48555e-a460-46c4-b1e0-566888c75a05",
+      "id": "40237c84-a20c-4af2-b2af-19adabf7cdc2",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "ecbd0ce0-dff1-4f61-8d34-362ca7e8f896",
+      "id": "04546572-a287-4a63-83b2-d017ef113e43",
       "key": "pass",
       "value": "",
       "type": "string"
