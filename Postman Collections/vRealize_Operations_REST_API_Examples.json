@@ -61,7 +61,7 @@
                 "id": "7c8afb09-7508-464e-91c2-86641bc56b84",
                 "exec": [
                   "var jsonData = JSON.parse(responseBody);",
-                  "postman.setEnvironmentVariable(\"bearerToken\", jsonData.access_token);",
+                  "postman.setEnvironmentVariable(\"bearerToken\", \"CSPToken \" + jsonData.access_token);",
                   ""
                 ],
                 "type": "text/javascript"
@@ -2917,19 +2917,19 @@
   ],
   "variable": [
     {
-      "id": "386b730f-5421-4803-84f9-d52694fdfaa8",
+      "id": "dbd2b18d-bb04-4d2c-b534-45ebda4ff95c",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "6b7469ca-adee-4ddc-93b2-b40626e3dee1",
+      "id": "27adfd23-52e3-460e-9ecb-e34e9a6a19be",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "2e13dc21-c81f-42b2-9b63-fdbcb39855b6",
+      "id": "3082972f-d01e-4e13-a494-3fbef9c82fcc",
       "key": "pass",
       "value": "",
       "type": "string"
