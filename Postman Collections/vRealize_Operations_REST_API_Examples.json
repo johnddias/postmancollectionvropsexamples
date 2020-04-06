@@ -252,22 +252,21 @@
             }
           ],
           "_postman_id": "c71fac69-19d4-f34a-e736-df9edc9fe70c",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "GET",
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Accept",
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "formdata",
-              "formdata": []
-            },
             "url": {
               "raw": "https://{{vrops}}/suite-api/api/symptoms?resourceId={{resourceId}}",
               "protocol": "https",
@@ -661,22 +660,21 @@
                 }
               ],
               "_postman_id": "b7421e3e-3bf1-d968-4d36-7cf8b7b82614",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
               "request": {
                 "method": "GET",
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "vRealizeOpsToken {{bearerToken}}"
+                    "value": "{{bearer {{bearerToken}}"
                   },
                   {
                     "key": "Accept",
                     "value": "application/json"
                   }
                 ],
-                "body": {
-                  "mode": "formdata",
-                  "formdata": []
-                },
                 "url": "https://{{vrops}}/suite-api/api/resources/{{agentResourceId}}/relationships"
               },
               "response": []
@@ -733,7 +731,7 @@
                     "header": [
                       {
                         "key": "Authorization",
-                        "value": "{{bearer {{bearerToken}}"
+                        "value": "{{bearerToken}}"
                       },
                       {
                         "key": "Accept",
@@ -867,12 +865,15 @@
                 }
               ],
               "_postman_id": "ee0aca3b-3f10-4d65-56b9-7f1b8083a4bc",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
               "request": {
                 "method": "POST",
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "vRealizeOpsToken {{bearerToken}}"
+                    "value": "{{bearer {{bearerToken}}"
                   },
                   {
                     "key": "Accept",
@@ -885,7 +886,8 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\r\n    \"description\": \"Windows Time Service Monitor\",\r\n    \"creationTime\": null,\r\n    \"resourceKey\": {\r\n        \"name\": \"Windows Time Service\",\r\n        \"adapterKindKey\": \"EP Ops Adapter\",\r\n        \"resourceKindKey\": \"Windows Service\",\r\n        \"resourceIdentifiers\": [\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"agentID\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": false\r\n                },\r\n                \"value\": \"{{agentID}}\"\r\n            },\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"discoveryMode\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": false\r\n                },\r\n                \"value\": \"MANUAL\"\r\n            },\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"monitoredResourceID\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": true\r\n                },\r\n                \"value\": \"Windows Time Service\"\r\n            },\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"Override_agent_configuration_data\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": false\r\n                },\r\n                \"value\": \"0\"\r\n            },\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"parentID\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": true\r\n                },\r\n                \"value\": \"|{{agentID}}\"\r\n            },\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"service_name\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": false\r\n                },\r\n                \"value\": \"W32Time\"\r\n            }\r\n        ]\r\n    },\r\n    \"identifier\": null\r\n}"
+                  "raw": "{\r\n    \"description\": \"Windows Time Service Monitor\",\r\n    \"creationTime\": null,\r\n    \"resourceKey\": {\r\n        \"name\": \"Windows Time Service\",\r\n        \"adapterKindKey\": \"EP Ops Adapter\",\r\n        \"resourceKindKey\": \"Windows Service\",\r\n        \"resourceIdentifiers\": [\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"agentID\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": false\r\n                },\r\n                \"value\": \"{{agentID}}\"\r\n            },\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"discoveryMode\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": false\r\n                },\r\n                \"value\": \"MANUAL\"\r\n            },\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"monitoredResourceID\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": true\r\n                },\r\n                \"value\": \"Windows Time Service\"\r\n            },\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"Override_agent_configuration_data\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": false\r\n                },\r\n                \"value\": \"0\"\r\n            },\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"parentID\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": true\r\n                },\r\n                \"value\": \"|{{agentID}}\"\r\n            },\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"service_name\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": false\r\n                },\r\n                \"value\": \"W32Time\"\r\n            }\r\n        ]\r\n    },\r\n    \"identifier\": null\r\n}",
+                  "options": {}
                 },
                 "url": "https://{{vrops}}/suite-api/api/resources/adapters/{{adapterInstanceId}}"
               },
@@ -987,12 +989,15 @@
                 }
               ],
               "_postman_id": "d032894e-cce7-d7eb-a92e-ea11530ceeac",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
               "request": {
                 "method": "PUT",
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "vRealizeOpsToken {{bearerToken}}"
+                    "value": "{{bearer {{bearerToken}}"
                   },
                   {
                     "key": "Accept",
@@ -1005,7 +1010,8 @@
                 ],
                 "body": {
                   "mode": "formdata",
-                  "formdata": []
+                  "formdata": [],
+                  "options": {}
                 },
                 "url": "https://{{vrops}}/suite-api/api/resources/{{epopsMonitorResourceId}}/monitoringstate/start"
               },
@@ -1058,7 +1064,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearer {{bearerToken}}"
+                "value": "{{bearerToken}}"
               },
               {
                 "key": "X-vRealizeOps-API-use-unsupported",
@@ -1118,12 +1124,15 @@
         {
           "name": "Generate a report",
           "_postman_id": "f0391ec2-c0a4-b205-84b7-dbb65b5113c3",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "POST",
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -1136,7 +1145,8 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"resourceId\" : \"24f55311-3d86-41fd-9c73-1c4c0e0dcbb6\",\r\n  \"reportDefinitionId\" : \"97d19754-0ad3-4de1-b35b-d8ad5d07be24\",\r\n  \"traversalSpec\" :       {\r\n        \"name\": \"vSphere Hosts and Clusters\",\r\n        \"description\": \"Enables view of resources imported from vCenter like Clusters, Hosts, VMs and ResourcePools\",\r\n        \"rootAdapterKindKey\": \"VMWARE\",\r\n        \"rootResourceKindKey\": \"vSphere World\",\r\n        \"adapterInstanceAssociation\": false\r\n  },\r\n  \"others\" : [ ],\r\n  \"otherAttributes\" : {\r\n  },\r\n  \"id\" : null\r\n}"
+              "raw": "{\r\n  \"resourceId\" : \"24f55311-3d86-41fd-9c73-1c4c0e0dcbb6\",\r\n  \"reportDefinitionId\" : \"97d19754-0ad3-4de1-b35b-d8ad5d07be24\",\r\n  \"traversalSpec\" :       {\r\n        \"name\": \"vSphere Hosts and Clusters\",\r\n        \"description\": \"Enables view of resources imported from vCenter like Clusters, Hosts, VMs and ResourcePools\",\r\n        \"rootAdapterKindKey\": \"VMWARE\",\r\n        \"rootResourceKindKey\": \"vSphere World\",\r\n        \"adapterInstanceAssociation\": false\r\n  },\r\n  \"others\" : [ ],\r\n  \"otherAttributes\" : {\r\n  },\r\n  \"id\" : null\r\n}",
+              "options": {}
             },
             "url": "https://{{vrops}}/suite-api/api/reports",
             "description": "You will need to update several items in the body such as:\n  - ID of resource you wish to run this report on\n  - ID of the report you wish to run\n  - Traversal Spec for the report (you can get this from the API query\n\"Get Report Definitions\", the travesal spec must match the resource type.\n"
@@ -1146,12 +1156,15 @@
         {
           "name": "Get Generated Reports",
           "_postman_id": "ec4c9a7b-d435-6eaa-c4ba-9df29e7a6bbb",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "GET",
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -1162,10 +1175,6 @@
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "formdata",
-              "formdata": []
-            },
             "url": "https://{{vrops}}/suite-api/api/reports",
             "description": "You can check status of report runs this way.\nTo get a specific generated report add /<report id> \n"
           },
@@ -1316,7 +1325,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearer {{bearerToken}}"
+                "value": "{{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -1410,12 +1419,15 @@
         {
           "name": "Get Resources",
           "_postman_id": "c20e1aa7-84c9-0711-059b-d50e82825882",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "POST",
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -1428,7 +1440,8 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n\"resourceIds\":[\"daee892f-6938-45dd-9ee9-e6669b5150a5\", \n        \"4541356a-2d54-411c-b276-312552f92c52\", \n        \"4a0d7bfa-e095-45f4-b158-6a0090e4684a\", \n        \"59773bb2-960d-48b9-a3a4-ca3de52a2ade\", \n        \"fe5d227e-fba3-4d5f-97ad-8c6f7c02534a\", \n        \"37045610-a3f2-4489-8bdd-4c223a243552\", \n        \"3ad8fed7-0aa1-4aee-a79b-f01cd62e96cf\", \n        \"a7e59f4f-d59c-4593-b9bd-1a8dfd4b5587\", \n        \"273e71a2-5b0e-4fae-903b-e0a7b26608e2\", \n        \"7ded588f-637c-48a6-a4e4-cbfc6b6d5713\"]\n}"
+              "raw": "{\n\"resourceIds\":[\"daee892f-6938-45dd-9ee9-e6669b5150a5\", \n        \"4541356a-2d54-411c-b276-312552f92c52\", \n        \"4a0d7bfa-e095-45f4-b158-6a0090e4684a\", \n        \"59773bb2-960d-48b9-a3a4-ca3de52a2ade\", \n        \"fe5d227e-fba3-4d5f-97ad-8c6f7c02534a\", \n        \"37045610-a3f2-4489-8bdd-4c223a243552\", \n        \"3ad8fed7-0aa1-4aee-a79b-f01cd62e96cf\", \n        \"a7e59f4f-d59c-4593-b9bd-1a8dfd4b5587\", \n        \"273e71a2-5b0e-4fae-903b-e0a7b26608e2\", \n        \"7ded588f-637c-48a6-a4e4-cbfc6b6d5713\"]\n}",
+              "options": {}
             },
             "url": "https://{{vrops}}/suite-api/api/resources/query"
           },
@@ -1716,7 +1729,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -1808,12 +1821,15 @@
             }
           ],
           "_postman_id": "c88dbe9c-b2b6-3a6c-c728-9b90d3a47a92",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "GET",
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -1824,10 +1840,6 @@
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "formdata",
-              "formdata": []
-            },
             "url": {
               "raw": "https://{{vrops}}/suite-api/api/resources/stats/topn?begin={{epoch}}&intervalType=Hours&intervalQuantifier=24&rollUpType=AVG&statKey=",
               "protocol": "https",
@@ -1882,12 +1894,15 @@
             }
           ],
           "_postman_id": "b6734870-9672-9ba2-0562-d178511db3e0",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "POST",
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Content-Type",
@@ -1900,7 +1915,8 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"stat-content\" : [ {\r\n    \"statKey\" : \"apiInjected|random5\",\r\n    \"timestamps\" : [ {{epoch}} ],\r\n    \"data\" : [ 6 ],\r\n    \"others\" : [ ],\r\n    \"otherAttributes\" : {\r\n    }\r\n  } ]\r\n}"
+              "raw": "{\r\n  \"stat-content\" : [ {\r\n    \"statKey\" : \"apiInjected|random5\",\r\n    \"timestamps\" : [ {{epoch}} ],\r\n    \"data\" : [ 6 ],\r\n    \"others\" : [ ],\r\n    \"otherAttributes\" : {\r\n    }\r\n  } ]\r\n}",
+              "options": {}
             },
             "url": "https://{{vrops}}/suite-api/api/resources/{{resourceId}}/stats"
           },
@@ -2056,7 +2072,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -2203,12 +2219,15 @@
         {
           "name": "Get Users",
           "_postman_id": "d4a0a2ee-88d9-bb2b-68b9-7d8586141148",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "GET",
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -2219,10 +2238,6 @@
                 "value": "applicaiton/json"
               }
             ],
-            "body": {
-              "mode": "formdata",
-              "formdata": []
-            },
             "url": {
               "raw": "https://{{vrops}}/suite-api/api/auth/users?username=frank",
               "protocol": "https",
@@ -2539,7 +2554,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearer {{bearerToken}}"
+                "value": "{{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -2663,7 +2678,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearer {{bearerToken}}",
+                "value": "{{bearerToken}}",
                 "type": "text",
                 "warning": ""
               },
@@ -2886,19 +2901,19 @@
   ],
   "variable": [
     {
-      "id": "5a0a521e-0728-4327-a4f8-e52b4d8292c0",
+      "id": "51699c50-fbbd-47ef-b695-f3ec4eaf1a6e",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "34962d5a-7554-4c03-b292-4ce773400e2e",
+      "id": "42983aaf-6031-4cb0-b7b4-f14c1d8af686",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "83d653ad-91e0-46b3-8b27-00793e21e149",
+      "id": "785269ee-cbdb-4e96-891e-30118acda729",
       "key": "pass",
       "value": "",
       "type": "string"
