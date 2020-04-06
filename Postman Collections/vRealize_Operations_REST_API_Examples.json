@@ -2800,7 +2800,7 @@
       "_postman_id": "9400fe88-fd66-49b7-8424-1ee66f6cb51b"
     },
     {
-      "name": "Application Monitoring",
+      "name": "Application Monitoring Agent LCM",
       "item": [
         {
           "name": "Physical OS Agent Install",
@@ -2907,7 +2907,29 @@
           "_postman_isSubFolder": true
         }
       ],
-      "_postman_id": "1d7249e1-8718-4873-a9b1-dee08efe20f6"
+      "_postman_id": "1d7249e1-8718-4873-a9b1-dee08efe20f6",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "9ceb345e-feea-4832-851f-73961264aa88",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "id": "bd6775dc-4230-4170-a486-119cc12fd37c",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        }
+      ]
     }
   ],
   "event": [
@@ -2934,19 +2956,19 @@
   ],
   "variable": [
     {
-      "id": "c6c21d72-9b64-40be-918d-f41f6aaf05fa",
+      "id": "47c0521f-5775-4b1e-9a91-bb2207d19620",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "312de65c-d1c5-4110-b316-4869a87f2029",
+      "id": "8b7fc1bd-75d5-4e4a-b4e7-30f4ab347106",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "b4345749-268f-42e9-baab-6c9686bcade7",
+      "id": "9479068b-cb9f-454f-8b93-8d70da799d6c",
       "key": "pass",
       "value": "",
       "type": "string"
