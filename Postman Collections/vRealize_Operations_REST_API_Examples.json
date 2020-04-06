@@ -252,22 +252,21 @@
             }
           ],
           "_postman_id": "c71fac69-19d4-f34a-e736-df9edc9fe70c",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "GET",
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Accept",
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "formdata",
-              "formdata": []
-            },
             "url": {
               "raw": "https://{{vrops}}/suite-api/api/symptoms?resourceId={{resourceId}}",
               "protocol": "https",
@@ -1409,12 +1408,15 @@
         {
           "name": "Get Resources",
           "_postman_id": "c20e1aa7-84c9-0711-059b-d50e82825882",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "POST",
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -1427,7 +1429,8 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n\"resourceIds\":[\"daee892f-6938-45dd-9ee9-e6669b5150a5\", \n        \"4541356a-2d54-411c-b276-312552f92c52\", \n        \"4a0d7bfa-e095-45f4-b158-6a0090e4684a\", \n        \"59773bb2-960d-48b9-a3a4-ca3de52a2ade\", \n        \"fe5d227e-fba3-4d5f-97ad-8c6f7c02534a\", \n        \"37045610-a3f2-4489-8bdd-4c223a243552\", \n        \"3ad8fed7-0aa1-4aee-a79b-f01cd62e96cf\", \n        \"a7e59f4f-d59c-4593-b9bd-1a8dfd4b5587\", \n        \"273e71a2-5b0e-4fae-903b-e0a7b26608e2\", \n        \"7ded588f-637c-48a6-a4e4-cbfc6b6d5713\"]\n}"
+              "raw": "{\n\"resourceIds\":[\"daee892f-6938-45dd-9ee9-e6669b5150a5\", \n        \"4541356a-2d54-411c-b276-312552f92c52\", \n        \"4a0d7bfa-e095-45f4-b158-6a0090e4684a\", \n        \"59773bb2-960d-48b9-a3a4-ca3de52a2ade\", \n        \"fe5d227e-fba3-4d5f-97ad-8c6f7c02534a\", \n        \"37045610-a3f2-4489-8bdd-4c223a243552\", \n        \"3ad8fed7-0aa1-4aee-a79b-f01cd62e96cf\", \n        \"a7e59f4f-d59c-4593-b9bd-1a8dfd4b5587\", \n        \"273e71a2-5b0e-4fae-903b-e0a7b26608e2\", \n        \"7ded588f-637c-48a6-a4e4-cbfc6b6d5713\"]\n}",
+              "options": {}
             },
             "url": "https://{{vrops}}/suite-api/api/resources/query"
           },
@@ -1807,12 +1810,15 @@
             }
           ],
           "_postman_id": "c88dbe9c-b2b6-3a6c-c728-9b90d3a47a92",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "GET",
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -1823,10 +1829,6 @@
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "formdata",
-              "formdata": []
-            },
             "url": {
               "raw": "https://{{vrops}}/suite-api/api/resources/stats/topn?begin={{epoch}}&intervalType=Hours&intervalQuantifier=24&rollUpType=AVG&statKey=",
               "protocol": "https",
@@ -2889,19 +2891,19 @@
   ],
   "variable": [
     {
-      "id": "05feb0bc-1734-4fbf-b347-1b7551020494",
+      "id": "cef22fa8-196a-4261-b9cc-5bb5daf8302a",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "c7a2786c-efbc-4977-94be-7f037ea5c511",
+      "id": "03bc3d89-cf36-4d10-90be-44fcc1b1dcf8",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "7a0b5d8f-fe0a-45a0-a2b7-cc18e8e4e980",
+      "id": "8dbc340b-5439-40c5-ba22-9ca3ae1bf24c",
       "key": "pass",
       "value": "",
       "type": "string"
