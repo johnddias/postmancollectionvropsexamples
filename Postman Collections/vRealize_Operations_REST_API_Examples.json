@@ -2456,12 +2456,15 @@
         {
           "name": "Start an adapter instance",
           "_postman_id": "3a976d54-e845-4f3e-bce9-19e200f8824d",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "PUT",
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -2474,7 +2477,8 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": ""
+              "raw": "",
+              "options": {}
             },
             "url": "https://{{vrops}}/suite-api/api/adapters/15464308-f586-4a93-b772-8656d0a7e5f5/monitoringstate/start",
             "description": "Replace the UUID with the ID of the adapter instance you want to start\nThis can be retrieved using Get Adapter Instances"
@@ -2856,19 +2860,19 @@
   ],
   "variable": [
     {
-      "id": "6c7008c9-c1fc-4733-a206-b4a05fb2ccf5",
+      "id": "c963c536-f22b-4905-8b79-45885af729c0",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "362d737e-7cd6-46a9-98a3-b282c87e6548",
+      "id": "ee2c8619-9e9b-4236-8c40-0c22ed354208",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "f3f23818-f8b5-4a61-8c7f-2adc5103def0",
+      "id": "b2467b97-02d9-4297-aeda-c6090e015032",
       "key": "pass",
       "value": "",
       "type": "string"
