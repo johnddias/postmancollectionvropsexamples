@@ -208,22 +208,21 @@
             }
           ],
           "_postman_id": "272f50b8-7d9d-cc61-97e6-442f1fb2db47",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "GET",
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Accept",
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "formdata",
-              "formdata": []
-            },
             "url": "https://{{vrops}}/suite-api/api/alertdefinitions/{{alertDefinitionId}}"
           },
           "response": []
@@ -347,7 +346,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -362,7 +361,8 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"id\": \"AlertDefinition-1e94bdb0-3457-49c8-8abf-ff2324eb11d7\",\n    \"name\": \"Autoscale Web Traffic Changed\",\n    \"adapterKindKey\": \"VMWARE\",\n    \"resourceKindKey\": \"VirtualMachine\",\n    \"waitCycles\": 1,\n    \"cancelCycles\": 1,\n    \"type\": 15,\n    \"subType\": 19,\n    \"states\": [\n        {\n            \"severity\": \"AUTO\",\n            \"base-symptom-set\": {\n                \"type\": \"SYMPTOM_SET_COMPOSITE\",\n                \"operator\": \"AND\",\n                \"symptom-sets\": [\n                    {\n                        \"type\": \"SYMPTOM_SET\",\n                        \"relation\": \"SELF\",\n                        \"aggregation\": \"ANY\",\n                        \"symptomSetOperator\": \"AND\",\n                        \"symptomDefinitionIds\": [\n                            \"SymptomDefinition-a0fed9b7-d4f4-4e7d-ba39-f91d6a2bf17e\"\n                        ]\n                    },\n                    {\n                        \"type\": \"SYMPTOM_SET\",\n                        \"relation\": \"PARENT\",\n                        \"symptomSetOperator\": \"OR\",\n                        \"aggregation\": \"ANY\",\n                        \"symptomDefinitionIds\": [\n                            \"SymptomDefinition-992eefd8-e9bb-45ff-a788-2072e67120ab\",\n                            \"SymptomDefinition-56d26c37-b852-4df7-841c-23dc97be93dc\"\n                        ]\n                    }\n                ]\n            },\n            \"impact\": {\n                \"impactType\": \"BADGE\",\n                \"detail\": \"health\"\n            }\n            \n        }\n    ]\n}"
+              "raw": "{\n    \"id\": \"AlertDefinition-1e94bdb0-3457-49c8-8abf-ff2324eb11d7\",\n    \"name\": \"Autoscale Web Traffic Changed\",\n    \"adapterKindKey\": \"VMWARE\",\n    \"resourceKindKey\": \"VirtualMachine\",\n    \"waitCycles\": 1,\n    \"cancelCycles\": 1,\n    \"type\": 15,\n    \"subType\": 19,\n    \"states\": [\n        {\n            \"severity\": \"AUTO\",\n            \"base-symptom-set\": {\n                \"type\": \"SYMPTOM_SET_COMPOSITE\",\n                \"operator\": \"AND\",\n                \"symptom-sets\": [\n                    {\n                        \"type\": \"SYMPTOM_SET\",\n                        \"relation\": \"SELF\",\n                        \"aggregation\": \"ANY\",\n                        \"symptomSetOperator\": \"AND\",\n                        \"symptomDefinitionIds\": [\n                            \"SymptomDefinition-a0fed9b7-d4f4-4e7d-ba39-f91d6a2bf17e\"\n                        ]\n                    },\n                    {\n                        \"type\": \"SYMPTOM_SET\",\n                        \"relation\": \"PARENT\",\n                        \"symptomSetOperator\": \"OR\",\n                        \"aggregation\": \"ANY\",\n                        \"symptomDefinitionIds\": [\n                            \"SymptomDefinition-992eefd8-e9bb-45ff-a788-2072e67120ab\",\n                            \"SymptomDefinition-56d26c37-b852-4df7-841c-23dc97be93dc\"\n                        ]\n                    }\n                ]\n            },\n            \"impact\": {\n                \"impactType\": \"BADGE\",\n                \"detail\": \"health\"\n            }\n            \n        }\n    ]\n}",
+              "options": {}
             },
             "url": {
               "raw": "https://{{vrops}}/suite-api/api/alertdefinitions/?AlertDefinition-1e94bdb0-3457-49c8-8abf-ff2324eb11d7",
@@ -930,6 +930,9 @@
             {
               "name": "Add Child Resource to a Resource",
               "_postman_id": "366f661b-f918-8bf1-b82a-cec96de2de7e",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
               "request": {
                 "method": "POST",
                 "header": [
@@ -943,12 +946,13 @@
                   },
                   {
                     "key": "Authorization",
-                    "value": "vRealizeOpsToken {{bearerToken}}"
+                    "value": "{{bearer {{bearerToken}}"
                   }
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n    \"uuids\" : [\"{{epopsMonitorResourceId}}\"]\n}"
+                  "raw": "{\n    \"uuids\" : [\"{{epopsMonitorResourceId}}\"]\n}",
+                  "options": {}
                 },
                 "url": "https://{{vrops}}/suite-api/api/resources/{{osResourceId}}/relationships/children",
                 "description": "This operation adds a child resource to a resource.  \n\nAPI documentation states that POST is additive while PUT is destructive (i.e. overwites existing relationships).\n\nJSON body includes an array of child objects to add.  \n\nThe call does not provide a lot of detail for failure, but it seems\nthat if you have an invalid UUID for a child or the child is already related\nthen it will fail with 400.\n\n204 is a successful call."
@@ -1012,12 +1016,15 @@
         {
           "name": "Get Custom Groups",
           "_postman_id": "46710acf-4048-767e-0fa3-221027f950d2",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "GET",
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "X-vRealizeOps-API-use-unsupported",
@@ -1028,10 +1035,6 @@
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "formdata",
-              "formdata": []
-            },
             "url": "https://{{vrops}}/suite-api/internal/resources/groups"
           },
           "response": []
@@ -1238,22 +1241,21 @@
         {
           "name": "Get Adapter Instances ",
           "_postman_id": "3b38346f-db2f-3d04-2c1c-fb7ef440556a",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "GET",
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Accept",
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "formdata",
-              "formdata": []
-            },
             "url": "https://{{vrops}}/suite-api/api/adapters"
           },
           "response": []
@@ -1332,12 +1334,15 @@
         {
           "name": "Create a Python Adapter Instance",
           "_postman_id": "43d26944-4742-928e-13a9-b85e2afa7ff9",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "POST",
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -1350,7 +1355,8 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"name\" : \"Python Adapter Instance\",\r\n  \"description\" : \"A Python Adapter Instance\",\r\n  \"collectorId\" : \"1\",\r\n  \"adapterKindKey\" : \"PythonRemediationVcenterAdapter\",\r\n  \"resourceIdentifiers\" : [ {\r\n    \"name\" : \"AUTODISCOVERY\",\r\n    \"value\" : \"true\"\r\n  }, {\r\n    \"name\" : \"PROCESSCHANGEEVENTS\",\r\n    \"value\" : \"true\"\r\n  }, {\r\n    \"name\" : \"VCURL\",\r\n    \"value\" : \"https://vc-vapp.mylab.dias\"\r\n  } ],\r\n  \"credential\" : {\r\n    \"id\" : null,\r\n    \"name\" : \"Python Credential\",\r\n    \"adapterKindKey\" : \"PythonRemediationVcenterAdapter\",\r\n    \"credentialKindKey\" : \"PRINCIPALCREDENTIAL\",\r\n    \"fields\" : [ {\r\n      \"name\" : \"UserName\",\r\n      \"value\" : \"administrator@mylab.dias\"\r\n    }, {\r\n      \"name\" : \"Password\",\r\n      \"value\" : \"VMware1!\"\r\n    } ],\r\n    \"others\" : [ ],\r\n    \"otherAttributes\" : {\r\n    }\r\n  },\r\n  \"others\" : [ ],\r\n  \"otherAttributes\" : {\r\n  }\r\n}"
+              "raw": "{\r\n  \"name\" : \"Python Adapter Instance\",\r\n  \"description\" : \"A Python Adapter Instance\",\r\n  \"collectorId\" : \"1\",\r\n  \"adapterKindKey\" : \"PythonRemediationVcenterAdapter\",\r\n  \"resourceIdentifiers\" : [ {\r\n    \"name\" : \"AUTODISCOVERY\",\r\n    \"value\" : \"true\"\r\n  }, {\r\n    \"name\" : \"PROCESSCHANGEEVENTS\",\r\n    \"value\" : \"true\"\r\n  }, {\r\n    \"name\" : \"VCURL\",\r\n    \"value\" : \"https://vc-vapp.mylab.dias\"\r\n  } ],\r\n  \"credential\" : {\r\n    \"id\" : null,\r\n    \"name\" : \"Python Credential\",\r\n    \"adapterKindKey\" : \"PythonRemediationVcenterAdapter\",\r\n    \"credentialKindKey\" : \"PRINCIPALCREDENTIAL\",\r\n    \"fields\" : [ {\r\n      \"name\" : \"UserName\",\r\n      \"value\" : \"administrator@mylab.dias\"\r\n    }, {\r\n      \"name\" : \"Password\",\r\n      \"value\" : \"VMware1!\"\r\n    } ],\r\n    \"others\" : [ ],\r\n    \"otherAttributes\" : {\r\n    }\r\n  },\r\n  \"others\" : [ ],\r\n  \"otherAttributes\" : {\r\n  }\r\n}",
+              "options": {}
             },
             "url": "https://{{vrops}}/suite-api/api/adapters",
             "description": "Be sure to check values in the JSON body for credentials.\nAlso note you will need to start the adapter using \"Star an adapter instance\" \nafter creation using the UUID from the response.\n\nIf you aren't using a CA, the certificate will have to be added via the UI\nI do not know of a way to do this via the REST API"
@@ -1360,12 +1366,15 @@
         {
           "name": "Start an adapter instance",
           "_postman_id": "341cf5ec-5795-d852-1ed1-39cd7e54e328",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "PUT",
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -1378,7 +1387,8 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": ""
+              "raw": "",
+              "options": {}
             },
             "url": "https://{{vrops}}/suite-api/api/adapters/617d20fd-536a-4bea-9f5e-4c01dd845ddc/monitoringstate/start",
             "description": "Replace the UUID with the ID of the adapter instance you want to start\nThis can be retrieved using Get Adapter Instances"
@@ -1421,12 +1431,15 @@
         {
           "name": "Get VirtualMachine Res by Name",
           "_postman_id": "2f348843-de21-c497-f693-a28210702ea0",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "GET",
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -1461,18 +1474,17 @@
         {
           "name": "Get Virtual Machine by Resource Identifier",
           "_postman_id": "37a8d496-d4d5-bc97-14b4-028333c2d907",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "GET",
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               }
             ],
-            "body": {
-              "mode": "formdata",
-              "formdata": []
-            },
             "url": "https://{{vrops}}/suite-api/api/resources/{{resourceId}}/properties"
           },
           "response": []
@@ -1982,7 +1994,7 @@
                 "warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
                 "key": "Authorization",
                 "type": "text",
-                "value": "vRealizeOpsToken {{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -1998,7 +2010,8 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"begin\": {{epochPrev24}},\n    \"end\": {{epoch}},\n    \"intervalType\": \"HOURS\",\n    \"intervalQuantifier\": 1,\n    \"rollUpType\": \"AVG\",\n    \"resourceId\": [ \n    \t{{resourceIds}} \n    ],\n    \"statKey\": [\n    \t{{cpuStatsJSON}} \n    ]\n}"
+              "raw": "{\n    \"begin\": {{epochPrev24}},\n    \"end\": {{epoch}},\n    \"intervalType\": \"HOURS\",\n    \"intervalQuantifier\": 1,\n    \"rollUpType\": \"AVG\",\n    \"resourceId\": [ \n    \t{{resourceIds}} \n    ],\n    \"statKey\": [\n    \t{{cpuStatsJSON}} \n    ]\n}",
+              "options": {}
             },
             "url": "https://{{vrops}}/suite-api/api/resources/stats/query",
             "description": "Example that uses \"Get Resources by resourceKind and Load var\" to provide a list of resource IDs using the {{resourceId}} env var."
@@ -2143,12 +2156,15 @@
         {
           "name": "Create Local User",
           "_postman_id": "46abbc30-bc7c-9a95-cc2c-21476fb2e684",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "POST",
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Content-Type",
@@ -2161,7 +2177,8 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"username\" : \"frank\",\r\n  \"firstName\" : \"Frank\",\r\n  \"lastName\" : \"Barnes\",\r\n  \"password\" : \"VMware1!\",\r\n  \"enabled\" : \"true\",\r\n  \"role-permissions\": [\r\n    {\r\n        \"roleName\": \"GeneralUser-1\",\r\n        \"allowAllObjects\": true\r\n    }]\r\n}"
+              "raw": "{\r\n  \"username\" : \"frank\",\r\n  \"firstName\" : \"Frank\",\r\n  \"lastName\" : \"Barnes\",\r\n  \"password\" : \"VMware1!\",\r\n  \"enabled\" : \"true\",\r\n  \"role-permissions\": [\r\n    {\r\n        \"roleName\": \"GeneralUser-1\",\r\n        \"allowAllObjects\": true\r\n    }]\r\n}",
+              "options": {}
             },
             "url": "https://{{vrops}}/suite-api/api/auth/users"
           },
@@ -2379,12 +2396,15 @@
         {
           "name": "Create a vCenter Adapter Instance",
           "_postman_id": "25514a6b-e712-4f4a-b5ed-bfb4ab7e08cc",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "POST",
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -2397,7 +2417,8 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"name\": \"WDC vCenter Adapter\",\n  \"description\": \"A vCenter Adapter Instance\",\n  \"collectorId\": \"1\",\n  \"adapterKindKey\": \"VMWARE\",\n  \"resourceIdentifiers\": [\n    {\n      \"name\": \"AUTODISCOVERY\",\n      \"value\": \"true\"\n    },\n    {\n      \"name\": \"PROCESSCHANGEEVENTS\",\n      \"value\": \"true\"\n    },\n    {\n      \"name\": \"VCURL\",\n      \"value\": \"10.196.206.10\"\n    }\n  ],\n  \"credential\": {\n    \"id\": null,\n    \"name\": \"WDC Credentials\",\n    \"adapterKindKey\": \"VMWARE\",\n    \"credentialKindKey\": \"PRINCIPALCREDENTIAL\",\n    \"fields\": [\n      {\n        \"name\": \"USER\",\n        \"value\": \"administrator@vsphere.local\"\n      },\n      {\n        \"name\": \"PASSWORD\",\n        \"value\": \"xxxxxx\"\n      }\n    ],\n    \"others\": [],\n    \"otherAttributes\": {}\n  },\n  \"others\": [],\n  \"otherAttributes\": {}\n}"
+              "raw": "{\n  \"name\": \"WDC vCenter Adapter\",\n  \"description\": \"A vCenter Adapter Instance\",\n  \"collectorId\": \"1\",\n  \"adapterKindKey\": \"VMWARE\",\n  \"resourceIdentifiers\": [\n    {\n      \"name\": \"AUTODISCOVERY\",\n      \"value\": \"true\"\n    },\n    {\n      \"name\": \"PROCESSCHANGEEVENTS\",\n      \"value\": \"true\"\n    },\n    {\n      \"name\": \"VCURL\",\n      \"value\": \"10.196.206.10\"\n    }\n  ],\n  \"credential\": {\n    \"id\": null,\n    \"name\": \"WDC Credentials\",\n    \"adapterKindKey\": \"VMWARE\",\n    \"credentialKindKey\": \"PRINCIPALCREDENTIAL\",\n    \"fields\": [\n      {\n        \"name\": \"USER\",\n        \"value\": \"administrator@vsphere.local\"\n      },\n      {\n        \"name\": \"PASSWORD\",\n        \"value\": \"xxxxxx\"\n      }\n    ],\n    \"others\": [],\n    \"otherAttributes\": {}\n  },\n  \"others\": [],\n  \"otherAttributes\": {}\n}",
+              "options": {}
             },
             "url": "https://{{vrops}}/suite-api/api/adapters",
             "description": "Be sure to check values in the JSON body for credentials.\nAlso note you will need to start the adapter using \"Star an adapter instance\" \nafter creation using the UUID from the response.\n\nIf you aren't using a CA, the certificate will have to be added via the UI\nI do not know of a way to do this via the REST API"
@@ -2443,12 +2464,15 @@
         {
           "name": "Start an adapter instance",
           "_postman_id": "3a976d54-e845-4f3e-bce9-19e200f8824d",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "PUT",
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -2461,7 +2485,8 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": ""
+              "raw": "",
+              "options": {}
             },
             "url": "https://{{vrops}}/suite-api/api/adapters/15464308-f586-4a93-b772-8656d0a7e5f5/monitoringstate/start",
             "description": "Replace the UUID with the ID of the adapter instance you want to start\nThis can be retrieved using Get Adapter Instances"
@@ -2654,7 +2679,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}",
+                "value": "{{bearer {{bearerToken}}",
                 "type": "text",
                 "warning": ""
               },
@@ -2673,7 +2698,8 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"contextResourceId\" : [ \"bc14eb84-05df-47f9-979c-f811f0da1c1d\" ],\r\n  \"others\" : [ ],\r\n  \"otherAttributes\" : { }\r\n}"
+              "raw": "{\r\n  \"contextResourceId\" : [ \"bc14eb84-05df-47f9-979c-f811f0da1c1d\" ],\r\n  \"others\" : [ ],\r\n  \"otherAttributes\" : { }\r\n}",
+              "options": {}
             },
             "url": "https://{{vrops}}/suite-api/api/actions/{{actionId}}/query",
             "description": "You will need to have populated \n\n* resourceId env var\n* actionId env var\n\nResponse is parsed and saved as input for the performAction API"
@@ -2843,19 +2869,19 @@
   ],
   "variable": [
     {
-      "id": "3c4850d3-7965-4ca9-8b13-f21fadada739",
+      "id": "01beb9da-77c4-445a-92c9-bab346c9cc42",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "3342746b-81dc-4998-a053-ee1d48409199",
+      "id": "2785630d-20b2-4821-b3ea-c5252beda77c",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "c434c171-a954-4850-8468-d972ed0d2ac0",
+      "id": "e3259f0d-6f13-41d6-9756-0fce8f546f7f",
       "key": "pass",
       "value": "",
       "type": "string"
