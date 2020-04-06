@@ -137,7 +137,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -302,7 +302,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -498,7 +498,7 @@
                   },
                   {
                     "key": "Authorization",
-                    "value": "{{bearerToken}}"
+                    "value": "{{bearer {{bearerToken}}"
                   },
                   {
                     "key": "X-vRealizeOps-API-use-unsupported",
@@ -1105,7 +1105,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -1191,7 +1191,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Content-Type",
@@ -1552,7 +1552,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -1933,7 +1933,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Content-Type",
@@ -2094,7 +2094,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearerToken}}",
+                "value": "{{bearer {{bearerToken}}",
                 "type": "text",
                 "warning": ""
               },
@@ -2901,19 +2901,19 @@
   ],
   "variable": [
     {
-      "id": "9353487d-743a-4125-9ade-20296c929ba6",
+      "id": "bfcf183b-7784-48aa-b299-bb47796d80c1",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "826022a9-986f-4304-bc2c-d1922baa34cb",
+      "id": "a407a796-3555-4239-814e-bfb670eae7f4",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "7f7014b4-9e9d-433b-8af1-956d3c98c9fd",
+      "id": "ffd290c2-f51d-4efb-b9ca-5b4dfc3d1fc3",
       "key": "pass",
       "value": "",
       "type": "string"
