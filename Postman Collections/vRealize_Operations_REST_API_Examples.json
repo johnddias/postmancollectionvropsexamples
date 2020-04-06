@@ -2878,20 +2878,20 @@
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "CSPToken {{bearerToken}}",
-                    "type": "text"
+                    "type": "text",
+                    "value": "{{bearerToken}}"
                   },
                   {
                     "key": "Accept",
-                    "value": "application/json",
+                    "name": "Accept",
                     "type": "text",
-                    "name": "Accept"
+                    "value": "application/json"
                   }
                 ],
                 "body": {
                   "mode": "file",
                   "file": {
-                    "src": "/C:/Users/diasj/Downloads/csr.pem"
+                    "src": ""
                   },
                   "options": {
                     "file": {}
@@ -2933,19 +2933,19 @@
   ],
   "variable": [
     {
-      "id": "9576bc13-33a8-4b3f-831a-06db6ddd014c",
+      "id": "c2d8a0fa-bce3-4ec7-9a53-b84c5ac859a5",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "2af0080e-9cdb-43f8-9a5c-329777ad6ca1",
+      "id": "28ac4bd7-be9f-4b28-9713-f3df2815304e",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "cbb2e80c-cbb4-44fc-be78-297eaa1428e9",
+      "id": "2ddecb55-b372-4dad-8ba7-cea91dc29eea",
       "key": "pass",
       "value": "",
       "type": "string"
