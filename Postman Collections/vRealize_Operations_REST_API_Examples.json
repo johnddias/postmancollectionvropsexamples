@@ -2803,6 +2803,12 @@
       "name": "Application Monitoring",
       "item": [
         {
+          "name": "Physical OS Agent Install",
+          "item": [],
+          "_postman_id": "90dd3d21-e416-4cf9-af65-eafa0ccb4809",
+          "_postman_isSubFolder": true
+        },
+        {
           "name": "Sign Client Certificate",
           "_postman_id": "2e6f9290-cd94-4b5a-b1a5-3ca40803b95c",
           "protocolProfileBehavior": {
@@ -2917,19 +2923,19 @@
   ],
   "variable": [
     {
-      "id": "dbd2b18d-bb04-4d2c-b534-45ebda4ff95c",
+      "id": "34c4d969-c541-40c9-af4a-2d32c76a00f3",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "27adfd23-52e3-460e-9ecb-e34e9a6a19be",
+      "id": "8d510002-3360-438c-b890-69075346031e",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "3082972f-d01e-4e13-a494-3fbef9c82fcc",
+      "id": "ea43661f-7d44-4635-88d6-c8740ce16f3b",
       "key": "pass",
       "value": "",
       "type": "string"
