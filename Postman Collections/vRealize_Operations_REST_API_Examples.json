@@ -522,22 +522,21 @@
             {
               "name": "Get Agent Status on Upgrade",
               "_postman_id": "b1368c8f-4d89-81c1-43f1-4dc0e4dc5848",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
               "request": {
                 "method": "GET",
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "vRealizeOpsToken {{bearerToken}}"
+                    "value": "{{bearer {{bearerToken}}"
                   },
                   {
                     "key": "Accept",
                     "value": "application/json"
                   }
                 ],
-                "body": {
-                  "mode": "formdata",
-                  "formdata": []
-                },
                 "url": {
                   "raw": "https://{{vrops}}/suite-api/api/adapterkinds/EP Ops Adapter/resourcekinds/EP Ops Agent/resources?identifiers[agentID]=1432528639235-6190445699790943031-2415937788285910890",
                   "protocol": "https",
@@ -662,22 +661,21 @@
                 }
               ],
               "_postman_id": "b7421e3e-3bf1-d968-4d36-7cf8b7b82614",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
               "request": {
                 "method": "GET",
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "vRealizeOpsToken {{bearerToken}}"
+                    "value": "{{bearer {{bearerToken}}"
                   },
                   {
                     "key": "Accept",
                     "value": "application/json"
                   }
                 ],
-                "body": {
-                  "mode": "formdata",
-                  "formdata": []
-                },
                 "url": "https://{{vrops}}/suite-api/api/resources/{{agentResourceId}}/relationships"
               },
               "response": []
@@ -1883,12 +1881,15 @@
             }
           ],
           "_postman_id": "b6734870-9672-9ba2-0562-d178511db3e0",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "POST",
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Content-Type",
@@ -1901,7 +1902,8 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"stat-content\" : [ {\r\n    \"statKey\" : \"apiInjected|random5\",\r\n    \"timestamps\" : [ {{epoch}} ],\r\n    \"data\" : [ 6 ],\r\n    \"others\" : [ ],\r\n    \"otherAttributes\" : {\r\n    }\r\n  } ]\r\n}"
+              "raw": "{\r\n  \"stat-content\" : [ {\r\n    \"statKey\" : \"apiInjected|random5\",\r\n    \"timestamps\" : [ {{epoch}} ],\r\n    \"data\" : [ 6 ],\r\n    \"others\" : [ ],\r\n    \"otherAttributes\" : {\r\n    }\r\n  } ]\r\n}",
+              "options": {}
             },
             "url": "https://{{vrops}}/suite-api/api/resources/{{resourceId}}/stats"
           },
@@ -2057,7 +2059,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -2887,19 +2889,19 @@
   ],
   "variable": [
     {
-      "id": "cbbc8e9c-46a3-4967-96d1-f8c40a665baa",
+      "id": "05feb0bc-1734-4fbf-b347-1b7551020494",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "7b02114c-2681-467c-85aa-73a523be0266",
+      "id": "c7a2786c-efbc-4977-94be-7f037ea5c511",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "c0f6220d-dbdd-4088-8a05-f12da549e328",
+      "id": "7a0b5d8f-fe0a-45a0-a2b7-cc18e8e4e980",
       "key": "pass",
       "value": "",
       "type": "string"
