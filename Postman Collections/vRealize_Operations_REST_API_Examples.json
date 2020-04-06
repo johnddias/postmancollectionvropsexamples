@@ -2806,43 +2806,6 @@
           "name": "Physical OS Agent Install",
           "item": [
             {
-              "name": "2 - Sign Client Certificate",
-              "_postman_id": "2e6f9290-cd94-4b5a-b1a5-3ca40803b95c",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "auth": {
-                  "type": "noauth"
-                },
-                "method": "POST",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "CSPToken {{bearerToken}}",
-                    "type": "text"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json",
-                    "type": "text",
-                    "name": "Accept"
-                  }
-                ],
-                "body": {
-                  "mode": "file",
-                  "file": {
-                    "src": "/C:/Users/diasj/Downloads/csr.pem"
-                  },
-                  "options": {
-                    "file": {}
-                  }
-                },
-                "url": "https://{{vrops}}/suite-api/api/applications/clientCertificate/{{cloudProxyId}}"
-              },
-              "response": []
-            },
-            {
               "name": "1 - Get Collector",
               "_postman_id": "20e8a838-ad24-4c4b-b22c-83ff25688cc4",
               "protocolProfileBehavior": {
@@ -2891,6 +2854,43 @@
                 }
               },
               "response": []
+            },
+            {
+              "name": "2 - Sign Client Certificate",
+              "_postman_id": "2e6f9290-cd94-4b5a-b1a5-3ca40803b95c",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "CSPToken {{bearerToken}}",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text",
+                    "name": "Accept"
+                  }
+                ],
+                "body": {
+                  "mode": "file",
+                  "file": {
+                    "src": "/C:/Users/diasj/Downloads/csr.pem"
+                  },
+                  "options": {
+                    "file": {}
+                  }
+                },
+                "url": "https://{{vrops}}/suite-api/api/applications/clientCertificate/{{cloudProxyId}}"
+              },
+              "response": []
             }
           ],
           "_postman_id": "90dd3d21-e416-4cf9-af65-eafa0ccb4809",
@@ -2924,19 +2924,19 @@
   ],
   "variable": [
     {
-      "id": "dd8277c5-49b6-4638-8b56-e50405150e69",
+      "id": "28b2fa76-7fd1-4edb-b9cc-d95d2bb20ac2",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "bc0c1cab-ca28-434a-80eb-87170243ea8e",
+      "id": "23046d35-23f1-4c4f-a0bd-b1dc800f13e1",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "cd4dd240-af27-4c57-ac3d-f20404d10f0b",
+      "id": "2242eb62-6bf4-4e74-9029-4fc07dbbeb49",
       "key": "pass",
       "value": "",
       "type": "string"
