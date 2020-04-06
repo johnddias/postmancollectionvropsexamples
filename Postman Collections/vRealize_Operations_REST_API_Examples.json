@@ -2826,7 +2826,16 @@
                 "name": "Accept"
               }
             ],
-            "url": "https://www.mgmt.cloud.vmware.com/vrops-cloud/suite-api/api/applications/clientCertificate/3"
+            "body": {
+              "mode": "file",
+              "file": {
+                "src": "/C:/Users/diasj/Downloads/csr.pem"
+              },
+              "options": {
+                "file": {}
+              }
+            },
+            "url": "https://{{vrops}}/suite-api/api/applications/clientCertificate/{{cloudProxyId}}"
           },
           "response": []
         },
@@ -2908,19 +2917,19 @@
   ],
   "variable": [
     {
-      "id": "5c17aeca-1a9a-4bc3-92e6-11af1ca5f22c",
+      "id": "386b730f-5421-4803-84f9-d52694fdfaa8",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "3699042d-3a5a-4dd5-95d3-3c320ceca6a4",
+      "id": "6b7469ca-adee-4ddc-93b2-b40626e3dee1",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "c3b5d28c-2a61-462b-bf21-5bfce7ab7257",
+      "id": "2e13dc21-c81f-42b2-9b63-fdbcb39855b6",
       "key": "pass",
       "value": "",
       "type": "string"
