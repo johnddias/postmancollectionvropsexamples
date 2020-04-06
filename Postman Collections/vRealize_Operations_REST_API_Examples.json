@@ -408,7 +408,7 @@
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "{{bearerToken}}"
+                    "value": "{{bearer {{bearerToken}}"
                   },
                   {
                     "key": "Accept",
@@ -917,7 +917,7 @@
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "{{bearerToken}}"
+                    "value": "{{bearer {{bearerToken}}"
                   },
                   {
                     "key": "Accept",
@@ -1242,7 +1242,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -1286,7 +1286,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -1325,7 +1325,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -2678,7 +2678,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearerToken}}",
+                "value": "{{bearer {{bearerToken}}",
                 "type": "text",
                 "warning": ""
               },
@@ -2901,19 +2901,19 @@
   ],
   "variable": [
     {
-      "id": "38a00cee-0fb9-4dd4-9de4-5603140a7e53",
+      "id": "1238fd00-6387-4020-805a-4a1646aee071",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "2216e9af-f900-457a-a09c-be8c5bc2efce",
+      "id": "8a9e9299-8b05-40f4-a7fb-6085b7ab1e7e",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "3f46b4c7-ef76-44f5-ab89-2fefc064d16b",
+      "id": "833c06a2-8a34-4f9d-a979-682ecd6a6c5e",
       "key": "pass",
       "value": "",
       "type": "string"
