@@ -727,7 +727,7 @@
                     "header": [
                       {
                         "key": "Authorization",
-                        "value": "vRealizeOpsToken {{bearerToken}}"
+                        "value": "{{bearer {{bearerToken}}"
                       },
                       {
                         "key": "Accept",
@@ -740,7 +740,7 @@
                     ],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\n      \"description\": \"\",\n      \"creationTime\": null,\n      \"resourceKey\": {\n        \"name\": \"vc-west\",\n        \"adapterKindKey\": \"EP Ops Adapter\",\n        \"resourceKindKey\": \"ICMP Check\",\n        \"resourceIdentifiers\": [\n          {\n            \"identifierType\": {\n              \"name\": \"agentID\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": false\n            },\n            \"value\": \"1477442044192-8820317972786024825-462474138079878128\"\n          },\n          {\n            \"identifierType\": {\n              \"name\": \"discoveryMode\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": false\n            },\n            \"value\": \"MANUAL\"\n          },\n          {\n            \"identifierType\": {\n              \"name\": \"hostname\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": false\n            },\n            \"value\": \"msbu-vc-west.mgmt.local\"\n          },\n          {\n            \"identifierType\": {\n              \"name\": \"monitoredResourceID\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": true\n            },\n            \"value\": \"vc-west ICMP Monitor\"\n          },\n          {\n            \"identifierType\": {\n              \"name\": \"Override_agent_configuration_data\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": false\n            },\n            \"value\": \"0\"\n          },\n          {\n            \"identifierType\": {\n              \"name\": \"parentID\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": true\n            },\n            \"value\": \"|1477442044192-8820317972786024825-462474138079878128\"\n          },\n          {\n            \"identifierType\": {\n              \"name\": \"sotimeout\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": false\n            },\n            \"value\": \"10\"\n          }\n        ]\n      }\n}"
+                      "raw": "{\n      \"description\": \"\",\n      \"creationTime\": null,\n      \"resourceKey\": {\n        \"name\": \"vc-east-icmp\",\n        \"adapterKindKey\": \"EP Ops Adapter\",\n        \"resourceKindKey\": \"ICMP Check\",\n        \"resourceIdentifiers\": [\n          {\n            \"identifierType\": {\n              \"name\": \"agentID\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": false\n            },\n            \"value\": \"{{agentID}}\"\n            },\n          {\n            \"identifierType\": {\n              \"name\": \"discoveryMode\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": false\n            },\n            \"value\": \"MANUAL\"\n          },\n          {\n            \"identifierType\": {\n              \"name\": \"hostname\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": false\n            },\n            \"value\": \"msbu-vc-east.mgmt.local\"\n          },\n          {\n            \"identifierType\": {\n              \"name\": \"monitoredResourceID\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": true\n            },\n            \"value\": \"vc-west\"\n          },\n          {\n            \"identifierType\": {\n              \"name\": \"Override_agent_configuration_data\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": false\n            },\n            \"value\": \"0\"\n          },\n          {\n            \"identifierType\": {\n              \"name\": \"parentID\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": true\n            },\n            \"value\": \"|{{agentID}}\"\n          },\n          {\n            \"identifierType\": {\n              \"name\": \"sotimeout\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": false\n            },\n            \"value\": \"10\"\n          }\n        ]\n      }\n}"
                     },
                     "url": "https://{{vrops}}/suite-api/api/resources/adapters/{{adapterInstanceId}}"
                   },
@@ -752,91 +752,91 @@
                       "key": "Access-Control-Allow-Origin",
                       "value": "*",
                       "name": "Access-Control-Allow-Origin",
-                      "description": ""
+                      "description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
                     },
                     {
                       "key": "Cache-Control",
                       "value": "no-cache, no-store, max-age=0, must-revalidate",
                       "name": "Cache-Control",
-                      "description": ""
+                      "description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
                     },
                     {
                       "key": "Connection",
                       "value": "Keep-Alive",
                       "name": "Connection",
-                      "description": ""
+                      "description": "Options that are desired for the connection"
                     },
                     {
                       "key": "Content-Type",
                       "value": "application/json;charset=UTF-8",
                       "name": "Content-Type",
-                      "description": ""
+                      "description": "The mime type of this content"
                     },
                     {
                       "key": "Date",
                       "value": "Tue, 17 Oct 2017 18:40:45 GMT",
                       "name": "Date",
-                      "description": ""
+                      "description": "The date and time that the message was sent"
                     },
                     {
                       "key": "Expires",
                       "value": "0",
                       "name": "Expires",
-                      "description": ""
+                      "description": "Gives the date/time after which the response is considered stale"
                     },
                     {
                       "key": "Keep-Alive",
                       "value": "timeout=15, max=100",
                       "name": "Keep-Alive",
-                      "description": ""
+                      "description": "Custom header"
                     },
                     {
                       "key": "Pragma",
                       "value": "no-cache",
                       "name": "Pragma",
-                      "description": ""
+                      "description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
                     },
                     {
                       "key": "Server",
                       "value": "Apache",
                       "name": "Server",
-                      "description": ""
+                      "description": "A name for the server"
                     },
                     {
                       "key": "Strict-Transport-Security",
                       "value": "max-age=31536000 ; includeSubDomains",
                       "name": "Strict-Transport-Security",
-                      "description": ""
+                      "description": "A HSTS Policy informing the HTTP client how long to cache the HTTPS only policy and whether this applies to subdomains."
                     },
                     {
                       "key": "Transfer-Encoding",
                       "value": "chunked",
                       "name": "Transfer-Encoding",
-                      "description": ""
+                      "description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
                     },
                     {
                       "key": "X-Content-Type-Options",
                       "value": "nosniff",
                       "name": "X-Content-Type-Options",
-                      "description": ""
+                      "description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
                     },
                     {
                       "key": "X-Frame-Options",
                       "value": "DENY",
                       "name": "X-Frame-Options",
-                      "description": ""
+                      "description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
                     },
                     {
                       "key": "X-Request-ID",
                       "value": "CBbxtzHfLCXqZ0R5s2DtCzeKbDEOHvce",
                       "name": "X-Request-ID",
-                      "description": ""
+                      "description": "Custom header"
                     },
                     {
                       "key": "X-XSS-Protection",
                       "value": "1; mode=block",
                       "name": "X-XSS-Protection",
-                      "description": ""
+                      "description": "Cross-site scripting (XSS) filter"
                     }
                   ],
                   "cookie": [],
@@ -1037,12 +1037,15 @@
         {
           "name": "Create Custom Group",
           "_postman_id": "00d6cf99-eab9-1b6a-5be4-4353ffc5e1a5",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "POST",
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "X-vRealizeOps-API-use-unsupported",
@@ -1059,7 +1062,8 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "    {\n      \"resourceKey\": {\n        \"name\": \"test group 100\",\n        \"adapterKindKey\": \"Container\",\n        \"resourceKindKey\": \"Function\",\n        \"resourceIdentifiers\": []\n      },\n      \"membershipDefinition\": {\n        \"includedResources\": [],\n        \"excludedResources\": [],\n        \"rules\" : [ {\n      \"resourceKindKey\" : {\n        \"resourceKind\" : \"VirtualMachine\",\n        \"adapterKind\" : \"VMWARE\"\n      },\n      \"attributeRules\" : [],\n      \"resourceNameRules\" : [ {\n        \"name\" : \"lnx\",\n        \"compareOperator\" : \"CONTAINS\"\n        } ],\n      \"relationshipRules\" : [],\n      \"others\" : [],\n      \"otherAttributes\" : {\n      }\n        }]\n      } \n    }"
+              "raw": "    {\n      \"resourceKey\": {\n        \"name\": \"test group 100\",\n        \"adapterKindKey\": \"Container\",\n        \"resourceKindKey\": \"Function\",\n        \"resourceIdentifiers\": []\n      },\n      \"membershipDefinition\": {\n        \"includedResources\": [],\n        \"excludedResources\": [],\n        \"rules\" : [ {\n      \"resourceKindKey\" : {\n        \"resourceKind\" : \"VirtualMachine\",\n        \"adapterKind\" : \"VMWARE\"\n      },\n      \"attributeRules\" : [],\n      \"resourceNameRules\" : [ {\n        \"name\" : \"lnx\",\n        \"compareOperator\" : \"CONTAINS\"\n        } ],\n      \"relationshipRules\" : [],\n      \"others\" : [],\n      \"otherAttributes\" : {\n      }\n        }]\n      } \n    }",
+              "options": {}
             },
             "url": "https://{{vrops}}/suite-api/internal/resources/groups"
           },
@@ -2831,19 +2835,19 @@
   ],
   "variable": [
     {
-      "id": "1fd21ff8-a075-4f37-86b9-3566031022a4",
+      "id": "30a85a14-bcdb-4623-9d48-54dcd172ec09",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "0b286bb8-c45d-4687-b0af-d85c9af164b0",
+      "id": "7c6cba60-08bb-4095-802b-e4c4515ddbf9",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "186dfed2-aedb-4037-b11d-7fcbb72d0e29",
+      "id": "70d999c1-5833-44d5-a740-7512d7b1a40c",
       "key": "pass",
       "value": "",
       "type": "string"
