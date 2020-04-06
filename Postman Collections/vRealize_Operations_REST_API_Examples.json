@@ -252,21 +252,22 @@
             }
           ],
           "_postman_id": "c71fac69-19d4-f34a-e736-df9edc9fe70c",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
           "request": {
             "method": "GET",
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearer {{bearerToken}}"
+                "value": "vRealizeOpsToken {{bearerToken}}"
               },
               {
                 "key": "Accept",
                 "value": "application/json"
               }
             ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": {
               "raw": "https://{{vrops}}/suite-api/api/symptoms?resourceId={{resourceId}}",
               "protocol": "https",
@@ -1408,15 +1409,12 @@
         {
           "name": "Get Resources",
           "_postman_id": "c20e1aa7-84c9-0711-059b-d50e82825882",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
           "request": {
             "method": "POST",
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearer {{bearerToken}}"
+                "value": "vRealizeOpsToken {{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -1429,8 +1427,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n\"resourceIds\":[\"daee892f-6938-45dd-9ee9-e6669b5150a5\", \n        \"4541356a-2d54-411c-b276-312552f92c52\", \n        \"4a0d7bfa-e095-45f4-b158-6a0090e4684a\", \n        \"59773bb2-960d-48b9-a3a4-ca3de52a2ade\", \n        \"fe5d227e-fba3-4d5f-97ad-8c6f7c02534a\", \n        \"37045610-a3f2-4489-8bdd-4c223a243552\", \n        \"3ad8fed7-0aa1-4aee-a79b-f01cd62e96cf\", \n        \"a7e59f4f-d59c-4593-b9bd-1a8dfd4b5587\", \n        \"273e71a2-5b0e-4fae-903b-e0a7b26608e2\", \n        \"7ded588f-637c-48a6-a4e4-cbfc6b6d5713\"]\n}",
-              "options": {}
+              "raw": "{\n\"resourceIds\":[\"daee892f-6938-45dd-9ee9-e6669b5150a5\", \n        \"4541356a-2d54-411c-b276-312552f92c52\", \n        \"4a0d7bfa-e095-45f4-b158-6a0090e4684a\", \n        \"59773bb2-960d-48b9-a3a4-ca3de52a2ade\", \n        \"fe5d227e-fba3-4d5f-97ad-8c6f7c02534a\", \n        \"37045610-a3f2-4489-8bdd-4c223a243552\", \n        \"3ad8fed7-0aa1-4aee-a79b-f01cd62e96cf\", \n        \"a7e59f4f-d59c-4593-b9bd-1a8dfd4b5587\", \n        \"273e71a2-5b0e-4fae-903b-e0a7b26608e2\", \n        \"7ded588f-637c-48a6-a4e4-cbfc6b6d5713\"]\n}"
             },
             "url": "https://{{vrops}}/suite-api/api/resources/query"
           },
@@ -2062,7 +2059,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearer {{bearerToken}}"
+                "value": "vRealizeOpsToken {{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -2892,19 +2889,19 @@
   ],
   "variable": [
     {
-      "id": "8d8a146f-dabe-47dc-8ff3-ae8d92d76656",
+      "id": "1d2b34fe-2309-41b7-a249-823c95df4500",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "4e9169cc-0246-4ddb-bdd8-7e9ea70d74d8",
+      "id": "0be8e640-4b99-473a-815a-3127edb7faf7",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "09592d8a-2874-4d20-99e5-4bdf63cb1cb7",
+      "id": "41d24615-7a16-4964-b074-eae3ab7c45e4",
       "key": "pass",
       "value": "",
       "type": "string"
