@@ -1519,7 +1519,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearer {{bearerToken}}"
+                "value": "{{bearerToken}}"
               }
             ],
             "url": "https://{{vrops}}/suite-api/api/resources/{{resourceId}}/statkeys"
@@ -1960,7 +1960,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearer {{bearerToken}}",
+                "value": "{{bearerToken}}",
                 "type": "text",
                 "warning": ""
               },
@@ -2901,19 +2901,19 @@
   ],
   "variable": [
     {
-      "id": "a7db746a-c4e9-4c07-8b3a-775b800e709e",
+      "id": "ae560edf-8aa9-4764-b8cb-7308c19a7b93",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "a9296181-86fc-4439-8462-54bfc3316b65",
+      "id": "fad8f6f2-ff8e-4594-9241-6c2efeb3ee31",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "b0fec1ca-7102-4565-a90e-b25a31987755",
+      "id": "e510ef76-8a85-4cda-bd47-f325edfd2e3b",
       "key": "pass",
       "value": "",
       "type": "string"
