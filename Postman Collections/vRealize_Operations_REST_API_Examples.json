@@ -252,21 +252,22 @@
             }
           ],
           "_postman_id": "c71fac69-19d4-f34a-e736-df9edc9fe70c",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
           "request": {
             "method": "GET",
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearer {{bearerToken}}"
+                "value": "vRealizeOpsToken {{bearerToken}}"
               },
               {
                 "key": "Accept",
                 "value": "application/json"
               }
             ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": {
               "raw": "https://{{vrops}}/suite-api/api/symptoms?resourceId={{resourceId}}",
               "protocol": "https",
@@ -521,21 +522,22 @@
             {
               "name": "Get Agent Status on Upgrade",
               "_postman_id": "b1368c8f-4d89-81c1-43f1-4dc0e4dc5848",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
               "request": {
                 "method": "GET",
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "{{bearer {{bearerToken}}"
+                    "value": "vRealizeOpsToken {{bearerToken}}"
                   },
                   {
                     "key": "Accept",
                     "value": "application/json"
                   }
                 ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
                 "url": {
                   "raw": "https://{{vrops}}/suite-api/api/adapterkinds/EP Ops Adapter/resourcekinds/EP Ops Agent/resources?identifiers[agentID]=1432528639235-6190445699790943031-2415937788285910890",
                   "protocol": "https",
@@ -660,21 +662,22 @@
                 }
               ],
               "_postman_id": "b7421e3e-3bf1-d968-4d36-7cf8b7b82614",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
               "request": {
                 "method": "GET",
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "{{bearer {{bearerToken}}"
+                    "value": "vRealizeOpsToken {{bearerToken}}"
                   },
                   {
                     "key": "Accept",
                     "value": "application/json"
                   }
                 ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
                 "url": "https://{{vrops}}/suite-api/api/resources/{{agentResourceId}}/relationships"
               },
               "response": []
@@ -1408,15 +1411,12 @@
         {
           "name": "Get Resources",
           "_postman_id": "c20e1aa7-84c9-0711-059b-d50e82825882",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
           "request": {
             "method": "POST",
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearer {{bearerToken}}"
+                "value": "vRealizeOpsToken {{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -1429,8 +1429,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n\"resourceIds\":[\"daee892f-6938-45dd-9ee9-e6669b5150a5\", \n        \"4541356a-2d54-411c-b276-312552f92c52\", \n        \"4a0d7bfa-e095-45f4-b158-6a0090e4684a\", \n        \"59773bb2-960d-48b9-a3a4-ca3de52a2ade\", \n        \"fe5d227e-fba3-4d5f-97ad-8c6f7c02534a\", \n        \"37045610-a3f2-4489-8bdd-4c223a243552\", \n        \"3ad8fed7-0aa1-4aee-a79b-f01cd62e96cf\", \n        \"a7e59f4f-d59c-4593-b9bd-1a8dfd4b5587\", \n        \"273e71a2-5b0e-4fae-903b-e0a7b26608e2\", \n        \"7ded588f-637c-48a6-a4e4-cbfc6b6d5713\"]\n}",
-              "options": {}
+              "raw": "{\n\"resourceIds\":[\"daee892f-6938-45dd-9ee9-e6669b5150a5\", \n        \"4541356a-2d54-411c-b276-312552f92c52\", \n        \"4a0d7bfa-e095-45f4-b158-6a0090e4684a\", \n        \"59773bb2-960d-48b9-a3a4-ca3de52a2ade\", \n        \"fe5d227e-fba3-4d5f-97ad-8c6f7c02534a\", \n        \"37045610-a3f2-4489-8bdd-4c223a243552\", \n        \"3ad8fed7-0aa1-4aee-a79b-f01cd62e96cf\", \n        \"a7e59f4f-d59c-4593-b9bd-1a8dfd4b5587\", \n        \"273e71a2-5b0e-4fae-903b-e0a7b26608e2\", \n        \"7ded588f-637c-48a6-a4e4-cbfc6b6d5713\"]\n}"
             },
             "url": "https://{{vrops}}/suite-api/api/resources/query"
           },
@@ -1775,21 +1774,22 @@
             }
           ],
           "_postman_id": "a96af710-9a33-7e74-c579-096ba276ee9b",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
           "request": {
             "method": "GET",
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearer {{bearerToken}}"
+                "value": "vRealizeOpsToken {{bearerToken}}"
               },
               {
                 "key": "Accept",
                 "value": "application/json"
               }
             ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": "https://{{vrops}}/suite-api/api/resources/{{resourceId}}/statkeys",
             "description": "Grabs CPU statKeys for a VM resource using the {{resourceId}} env var.\nPopulates two env vars:\ncpuStatKeys for GET stats for small requests (1 to ~10 VMs)\ncpuStatKeysJSON for POST stats for large requests (use in conjunction with {{resourceIds}}"
           },
@@ -1810,15 +1810,12 @@
             }
           ],
           "_postman_id": "c88dbe9c-b2b6-3a6c-c728-9b90d3a47a92",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
           "request": {
             "method": "GET",
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearer {{bearerToken}}"
+                "value": "vRealizeOpsToken {{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -1829,6 +1826,10 @@
                 "value": "application/json"
               }
             ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": {
               "raw": "https://{{vrops}}/suite-api/api/resources/stats/topn?begin={{epoch}}&intervalType=Hours&intervalQuantifier=24&rollUpType=AVG&statKey=",
               "protocol": "https",
@@ -1883,15 +1884,12 @@
             }
           ],
           "_postman_id": "b6734870-9672-9ba2-0562-d178511db3e0",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
           "request": {
             "method": "POST",
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearer {{bearerToken}}"
+                "value": "vRealizeOpsToken {{bearerToken}}"
               },
               {
                 "key": "Content-Type",
@@ -1904,8 +1902,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"stat-content\" : [ {\r\n    \"statKey\" : \"apiInjected|random5\",\r\n    \"timestamps\" : [ {{epoch}} ],\r\n    \"data\" : [ 6 ],\r\n    \"others\" : [ ],\r\n    \"otherAttributes\" : {\r\n    }\r\n  } ]\r\n}",
-              "options": {}
+              "raw": "{\r\n  \"stat-content\" : [ {\r\n    \"statKey\" : \"apiInjected|random5\",\r\n    \"timestamps\" : [ {{epoch}} ],\r\n    \"data\" : [ 6 ],\r\n    \"others\" : [ ],\r\n    \"otherAttributes\" : {\r\n    }\r\n  } ]\r\n}"
             },
             "url": "https://{{vrops}}/suite-api/api/resources/{{resourceId}}/stats"
           },
@@ -2061,7 +2058,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearer {{bearerToken}}"
+                "value": "vRealizeOpsToken {{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -2891,19 +2888,19 @@
   ],
   "variable": [
     {
-      "id": "cef22fa8-196a-4261-b9cc-5bb5daf8302a",
+      "id": "fe351b70-230f-453c-b400-6b138ffd5213",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "03bc3d89-cf36-4d10-90be-44fcc1b1dcf8",
+      "id": "bc4513a2-5958-4d62-ac94-83946d96b829",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "8dbc340b-5439-40c5-ba22-9ca3ae1bf24c",
+      "id": "4d616259-dcb3-4abd-8e60-ff9e1d602a8a",
       "key": "pass",
       "value": "",
       "type": "string"
