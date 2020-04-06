@@ -169,22 +169,21 @@
             }
           ],
           "_postman_id": "5543f9bf-dc60-762a-a214-8f0781a53f5d",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "GET",
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Accept",
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "formdata",
-              "formdata": []
-            },
             "url": "https://{{vrops}}/suite-api/api/alerts/7c2a4f9a-fd04-4300-b85c-cda555782e86"
           },
           "response": []
@@ -289,6 +288,9 @@
         {
           "name": "Get Alert Contributing Symptoms",
           "_postman_id": "76c96828-6f63-4257-9289-df32842c7d36",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "auth": {
               "type": "noauth"
@@ -297,7 +299,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -308,10 +310,6 @@
                 "value": "applicaiton/json"
               }
             ],
-            "body": {
-              "mode": "formdata",
-              "formdata": []
-            },
             "url": {
               "raw": "https://{{vrops}}/suite-api/api/alerts/contributingsymptoms?id=3a4851be-bcc3-4872-a4ea-8bb926f48850",
               "protocol": "https",
@@ -346,7 +344,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -361,7 +359,8 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"id\": \"AlertDefinition-1e94bdb0-3457-49c8-8abf-ff2324eb11d7\",\n    \"name\": \"Autoscale Web Traffic Changed\",\n    \"adapterKindKey\": \"VMWARE\",\n    \"resourceKindKey\": \"VirtualMachine\",\n    \"waitCycles\": 1,\n    \"cancelCycles\": 1,\n    \"type\": 15,\n    \"subType\": 19,\n    \"states\": [\n        {\n            \"severity\": \"AUTO\",\n            \"base-symptom-set\": {\n                \"type\": \"SYMPTOM_SET_COMPOSITE\",\n                \"operator\": \"AND\",\n                \"symptom-sets\": [\n                    {\n                        \"type\": \"SYMPTOM_SET\",\n                        \"relation\": \"SELF\",\n                        \"aggregation\": \"ANY\",\n                        \"symptomSetOperator\": \"AND\",\n                        \"symptomDefinitionIds\": [\n                            \"SymptomDefinition-a0fed9b7-d4f4-4e7d-ba39-f91d6a2bf17e\"\n                        ]\n                    },\n                    {\n                        \"type\": \"SYMPTOM_SET\",\n                        \"relation\": \"PARENT\",\n                        \"symptomSetOperator\": \"OR\",\n                        \"aggregation\": \"ANY\",\n                        \"symptomDefinitionIds\": [\n                            \"SymptomDefinition-992eefd8-e9bb-45ff-a788-2072e67120ab\",\n                            \"SymptomDefinition-56d26c37-b852-4df7-841c-23dc97be93dc\"\n                        ]\n                    }\n                ]\n            },\n            \"impact\": {\n                \"impactType\": \"BADGE\",\n                \"detail\": \"health\"\n            }\n            \n        }\n    ]\n}"
+              "raw": "{\n    \"id\": \"AlertDefinition-1e94bdb0-3457-49c8-8abf-ff2324eb11d7\",\n    \"name\": \"Autoscale Web Traffic Changed\",\n    \"adapterKindKey\": \"VMWARE\",\n    \"resourceKindKey\": \"VirtualMachine\",\n    \"waitCycles\": 1,\n    \"cancelCycles\": 1,\n    \"type\": 15,\n    \"subType\": 19,\n    \"states\": [\n        {\n            \"severity\": \"AUTO\",\n            \"base-symptom-set\": {\n                \"type\": \"SYMPTOM_SET_COMPOSITE\",\n                \"operator\": \"AND\",\n                \"symptom-sets\": [\n                    {\n                        \"type\": \"SYMPTOM_SET\",\n                        \"relation\": \"SELF\",\n                        \"aggregation\": \"ANY\",\n                        \"symptomSetOperator\": \"AND\",\n                        \"symptomDefinitionIds\": [\n                            \"SymptomDefinition-a0fed9b7-d4f4-4e7d-ba39-f91d6a2bf17e\"\n                        ]\n                    },\n                    {\n                        \"type\": \"SYMPTOM_SET\",\n                        \"relation\": \"PARENT\",\n                        \"symptomSetOperator\": \"OR\",\n                        \"aggregation\": \"ANY\",\n                        \"symptomDefinitionIds\": [\n                            \"SymptomDefinition-992eefd8-e9bb-45ff-a788-2072e67120ab\",\n                            \"SymptomDefinition-56d26c37-b852-4df7-841c-23dc97be93dc\"\n                        ]\n                    }\n                ]\n            },\n            \"impact\": {\n                \"impactType\": \"BADGE\",\n                \"detail\": \"health\"\n            }\n            \n        }\n    ]\n}",
+              "options": {}
             },
             "url": {
               "raw": "https://{{vrops}}/suite-api/api/alertdefinitions/?AlertDefinition-1e94bdb0-3457-49c8-8abf-ff2324eb11d7",
@@ -693,12 +692,15 @@
                 }
               ],
               "_postman_id": "63312491-9531-7605-ebe0-1849a3d5aed9",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
               "request": {
                 "method": "POST",
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "vRealizeOpsToken {{bearerToken}}"
+                    "value": "{{bearer {{bearerToken}}"
                   },
                   {
                     "key": "Accept",
@@ -711,7 +713,8 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n      \"description\": \"\",\n      \"creationTime\": null,\n      \"resourceKey\": {\n        \"name\": \"vc-east-icmp\",\n        \"adapterKindKey\": \"EP Ops Adapter\",\n        \"resourceKindKey\": \"ICMP Check\",\n        \"resourceIdentifiers\": [\n          {\n            \"identifierType\": {\n              \"name\": \"agentID\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": false\n            },\n            \"value\": \"{{agentID}}\"\n            },\n          {\n            \"identifierType\": {\n              \"name\": \"discoveryMode\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": false\n            },\n            \"value\": \"MANUAL\"\n          },\n          {\n            \"identifierType\": {\n              \"name\": \"hostname\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": false\n            },\n            \"value\": \"msbu-vc-east.mgmt.local\"\n          },\n          {\n            \"identifierType\": {\n              \"name\": \"monitoredResourceID\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": true\n            },\n            \"value\": \"vc-west\"\n          },\n          {\n            \"identifierType\": {\n              \"name\": \"Override_agent_configuration_data\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": false\n            },\n            \"value\": \"0\"\n          },\n          {\n            \"identifierType\": {\n              \"name\": \"parentID\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": true\n            },\n            \"value\": \"|{{agentID}}\"\n          },\n          {\n            \"identifierType\": {\n              \"name\": \"sotimeout\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": false\n            },\n            \"value\": \"10\"\n          }\n        ]\n      }\n}"
+                  "raw": "{\n      \"description\": \"\",\n      \"creationTime\": null,\n      \"resourceKey\": {\n        \"name\": \"vc-east-icmp\",\n        \"adapterKindKey\": \"EP Ops Adapter\",\n        \"resourceKindKey\": \"ICMP Check\",\n        \"resourceIdentifiers\": [\n          {\n            \"identifierType\": {\n              \"name\": \"agentID\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": false\n            },\n            \"value\": \"{{agentID}}\"\n            },\n          {\n            \"identifierType\": {\n              \"name\": \"discoveryMode\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": false\n            },\n            \"value\": \"MANUAL\"\n          },\n          {\n            \"identifierType\": {\n              \"name\": \"hostname\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": false\n            },\n            \"value\": \"msbu-vc-east.mgmt.local\"\n          },\n          {\n            \"identifierType\": {\n              \"name\": \"monitoredResourceID\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": true\n            },\n            \"value\": \"vc-west\"\n          },\n          {\n            \"identifierType\": {\n              \"name\": \"Override_agent_configuration_data\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": false\n            },\n            \"value\": \"0\"\n          },\n          {\n            \"identifierType\": {\n              \"name\": \"parentID\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": true\n            },\n            \"value\": \"|{{agentID}}\"\n          },\n          {\n            \"identifierType\": {\n              \"name\": \"sotimeout\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": false\n            },\n            \"value\": \"10\"\n          }\n        ]\n      }\n}",
+                  "options": {}
                 },
                 "url": "https://{{vrops}}/suite-api/api/resources/adapters/{{adapterInstanceId}}"
               },
@@ -1082,12 +1085,15 @@
         {
           "name": "Get Report Definitions",
           "_postman_id": "716312eb-aeaa-a42f-6915-850fbbed2754",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "GET",
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -1098,10 +1104,6 @@
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "formdata",
-              "formdata": []
-            },
             "url": "https://{{vrops}}/suite-api/api/reportdefinitions",
             "description": "Gets all - to get a single report ID, just add /<report def id>\n"
           },
@@ -1166,12 +1168,15 @@
         {
           "name": "Download Report",
           "_postman_id": "7235446c-bfca-d4ef-20b6-f358fbb1583c",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "GET",
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Content-Type",
@@ -1182,10 +1187,6 @@
                 "value": "application/pdf"
               }
             ],
-            "body": {
-              "mode": "formdata",
-              "formdata": []
-            },
             "url": {
               "raw": "https://{{vrops}}/suite-api/api/reports/be9097f7-0c8c-4a33-a855-faafb6f03a1d/download?format=CSV",
               "protocol": "https",
@@ -1584,12 +1585,15 @@
         {
           "name": "Add or Update Properties of a Resource",
           "_postman_id": "5cf05895-9cea-4c80-c720-dcb622037228",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "POST",
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Content-Type",
@@ -1602,7 +1606,8 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"property-content\" : [ {\r\n    \"statKey\" : \"apiInjected|random\",\r\n    \"timestamps\" : [ 1477432000 ],\r\n    \"values\" : [ 0 ],\r\n    \"others\" : [ ],\r\n    \"otherAttributes\" : {\r\n    }\r\n  } ]\r\n}"
+              "raw": "{\r\n  \"property-content\" : [ {\r\n    \"statKey\" : \"apiInjected|random\",\r\n    \"timestamps\" : [ 1477432000 ],\r\n    \"values\" : [ 0 ],\r\n    \"others\" : [ ],\r\n    \"otherAttributes\" : {\r\n    }\r\n  } ]\r\n}",
+              "options": {}
             },
             "url": "https://{{vrops}}/suite-api/api/resources/{{resourceId}}/properties"
           },
@@ -1632,22 +1637,21 @@
             }
           ],
           "_postman_id": "64439376-20c6-f13c-4f26-021e662006fd",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "GET",
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Accept",
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "formdata",
-              "formdata": []
-            },
             "url": {
               "raw": "https://{{vrops}}/suite-api/api/resources?resourceKind=virtualmachine",
               "protocol": "https",
@@ -1898,12 +1902,15 @@
         {
           "name": "Query Symptoms",
           "_postman_id": "826af6fa-9969-0e09-c6e3-0ce849d123f1",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "POST",
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Content-Type",
@@ -1912,7 +1919,8 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"compositeOperator\" : \"AND\",\r\n  \"symptomId\" : [ ],\r\n  \"resource-query\" : {\r\n    \"name\" : null,\r\n    \"regex\" : null,\r\n    \"adapterKind\" : null,\r\n    \"resourceKind\" : null,\r\n    \"collectorName\" : null,\r\n    \"collectorId\" : null,\r\n    \"maintenanceScheduleId\" : null,\r\n    \"adapterInstanceId\" : null,\r\n    \"recentlyAdded\" : null,\r\n    \"resourceState\" : null,\r\n    \"resourceStatus\" : null,\r\n    \"resourceHealth\" : null,\r\n    \"parentId\" : null,\r\n    \"credentialId\" : null,\r\n    \"resourceId\" : [ \"5748438c-41d5-4397-a59b-efe973674653\" ],\r\n    \"propertyName\" : null,\r\n    \"propertyValue\" : null,\r\n    \"statKey\" : null,\r\n    \"statKeyLowerBound\" : null,\r\n    \"statKeyUpperBound\" : null,\r\n    \"statKeyInclusive\" : true,\r\n    \"others\" : [ ],\r\n    \"otherAttributes\" : {\r\n    }\r\n  },\r\n  \"includeChildrenResources\" : false,\r\n  \"activeOnly\" : true,\r\n  \"alarmType\" : [ ],\r\n  \"alarmCriticality\" : [ \"CRITICAL\", \"IMMEDIATE\", \"WARNING\", \"INFORMATION\" ],\r\n  \"symptomDefinitionId\" : [ ],\r\n  \"statKey\" : [ ],\r\n  \"others\" : [ ],\r\n  \"otherAttributes\" : {\r\n  }\r\n}"
+              "raw": "{\r\n  \"compositeOperator\" : \"AND\",\r\n  \"symptomId\" : [ ],\r\n  \"resource-query\" : {\r\n    \"name\" : null,\r\n    \"regex\" : null,\r\n    \"adapterKind\" : null,\r\n    \"resourceKind\" : null,\r\n    \"collectorName\" : null,\r\n    \"collectorId\" : null,\r\n    \"maintenanceScheduleId\" : null,\r\n    \"adapterInstanceId\" : null,\r\n    \"recentlyAdded\" : null,\r\n    \"resourceState\" : null,\r\n    \"resourceStatus\" : null,\r\n    \"resourceHealth\" : null,\r\n    \"parentId\" : null,\r\n    \"credentialId\" : null,\r\n    \"resourceId\" : [ \"5748438c-41d5-4397-a59b-efe973674653\" ],\r\n    \"propertyName\" : null,\r\n    \"propertyValue\" : null,\r\n    \"statKey\" : null,\r\n    \"statKeyLowerBound\" : null,\r\n    \"statKeyUpperBound\" : null,\r\n    \"statKeyInclusive\" : true,\r\n    \"others\" : [ ],\r\n    \"otherAttributes\" : {\r\n    }\r\n  },\r\n  \"includeChildrenResources\" : false,\r\n  \"activeOnly\" : true,\r\n  \"alarmType\" : [ ],\r\n  \"alarmCriticality\" : [ \"CRITICAL\", \"IMMEDIATE\", \"WARNING\", \"INFORMATION\" ],\r\n  \"symptomDefinitionId\" : [ ],\r\n  \"statKey\" : [ ],\r\n  \"others\" : [ ],\r\n  \"otherAttributes\" : {\r\n  }\r\n}",
+              "options": {}
             },
             "url": "https://{{vrops}}/suite-api/api/symptoms/query"
           },
@@ -2107,7 +2115,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}",
+                "value": "{{bearer {{bearerToken}}",
                 "type": "text",
                 "warning": ""
               },
@@ -2126,7 +2134,8 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"propertyConditions\" : {\n    \t\"conditions\" : [{\n    \t\t\"key\": \"summary|guest|ipAddress\",\n    \t\t\"operator\":\"EQ\",\n    \t\t\"stringValue\":\"172.18.0.1\"\n    \t}]\n\n    \t\n    }\n}"
+              "raw": "{\n    \"propertyConditions\" : {\n    \t\"conditions\" : [{\n    \t\t\"key\": \"summary|guest|ipAddress\",\n    \t\t\"operator\":\"EQ\",\n    \t\t\"stringValue\":\"172.18.0.1\"\n    \t}]\n\n    \t\n    }\n}",
+              "options": {}
             },
             "url": "https://{{vrops}}/suite-api/api/resources/query "
           },
@@ -2868,19 +2877,19 @@
   ],
   "variable": [
     {
-      "id": "b1e33bf8-9d7f-43fa-b382-40d1fd1d8eeb",
+      "id": "4218b22d-3062-4bd0-9ade-175a07d5db7e",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "88e9d56a-c36c-486e-bfd7-015439e8d2db",
+      "id": "b0a20c77-92c3-49a8-a643-43fa1b4558ec",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "f1b05f07-2fe5-4674-972a-7125c424f00a",
+      "id": "31e0f457-6af7-4417-8bfa-8c0c4e534e4b",
       "key": "pass",
       "value": "",
       "type": "string"
