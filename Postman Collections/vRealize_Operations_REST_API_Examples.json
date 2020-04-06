@@ -137,7 +137,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearer {{bearerToken}}"
+                "value": "{{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -181,7 +181,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearer {{bearerToken}}"
+                "value": "{{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -302,7 +302,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearer {{bearerToken}}"
+                "value": "{{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -347,7 +347,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearer {{bearerToken}}"
+                "value": "{{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -498,7 +498,7 @@
                   },
                   {
                     "key": "Authorization",
-                    "value": "{{bearer {{bearerToken}}"
+                    "value": "{{bearerToken}}"
                   },
                   {
                     "key": "X-vRealizeOps-API-use-unsupported",
@@ -704,7 +704,7 @@
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "{{bearer {{bearerToken}}"
+                    "value": "{{bearerToken}}"
                   },
                   {
                     "key": "Accept",
@@ -1105,7 +1105,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearer {{bearerToken}}"
+                "value": "{{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -1191,7 +1191,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearer {{bearerToken}}"
+                "value": "{{bearerToken}}"
               },
               {
                 "key": "Content-Type",
@@ -1552,7 +1552,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearer {{bearerToken}}"
+                "value": "{{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -1614,7 +1614,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearer {{bearerToken}}"
+                "value": "{{bearerToken}}"
               },
               {
                 "key": "Content-Type",
@@ -1666,7 +1666,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearer {{bearerToken}}"
+                "value": "{{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -1933,7 +1933,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearer {{bearerToken}}"
+                "value": "{{bearerToken}}"
               },
               {
                 "key": "Content-Type",
@@ -2094,7 +2094,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearer {{bearerToken}}",
+                "value": "{{bearerToken}}",
                 "type": "text",
                 "warning": ""
               },
@@ -2139,7 +2139,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearer {{bearerToken}}",
+                "value": "{{bearerToken}}",
                 "type": "text",
                 "warning": ""
               },
@@ -2901,19 +2901,19 @@
   ],
   "variable": [
     {
-      "id": "8d6b8886-8aec-4094-a1fb-74645d615c32",
+      "id": "9353487d-743a-4125-9ade-20296c929ba6",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "596c3803-201f-4f3e-aff9-42406fbaa907",
+      "id": "826022a9-986f-4304-bc2c-d1922baa34cb",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "5269def0-f6ab-4128-8aaa-789cff424ca8",
+      "id": "7f7014b4-9e9d-433b-8af1-956d3c98c9fd",
       "key": "pass",
       "value": "",
       "type": "string"
