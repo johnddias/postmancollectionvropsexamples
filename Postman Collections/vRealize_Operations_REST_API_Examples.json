@@ -1241,22 +1241,21 @@
         {
           "name": "Get Adapter Instances ",
           "_postman_id": "3b38346f-db2f-3d04-2c1c-fb7ef440556a",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "GET",
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Accept",
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "formdata",
-              "formdata": []
-            },
             "url": "https://{{vrops}}/suite-api/api/adapters"
           },
           "response": []
@@ -1335,12 +1334,15 @@
         {
           "name": "Create a Python Adapter Instance",
           "_postman_id": "43d26944-4742-928e-13a9-b85e2afa7ff9",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "POST",
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -1353,7 +1355,8 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"name\" : \"Python Adapter Instance\",\r\n  \"description\" : \"A Python Adapter Instance\",\r\n  \"collectorId\" : \"1\",\r\n  \"adapterKindKey\" : \"PythonRemediationVcenterAdapter\",\r\n  \"resourceIdentifiers\" : [ {\r\n    \"name\" : \"AUTODISCOVERY\",\r\n    \"value\" : \"true\"\r\n  }, {\r\n    \"name\" : \"PROCESSCHANGEEVENTS\",\r\n    \"value\" : \"true\"\r\n  }, {\r\n    \"name\" : \"VCURL\",\r\n    \"value\" : \"https://vc-vapp.mylab.dias\"\r\n  } ],\r\n  \"credential\" : {\r\n    \"id\" : null,\r\n    \"name\" : \"Python Credential\",\r\n    \"adapterKindKey\" : \"PythonRemediationVcenterAdapter\",\r\n    \"credentialKindKey\" : \"PRINCIPALCREDENTIAL\",\r\n    \"fields\" : [ {\r\n      \"name\" : \"UserName\",\r\n      \"value\" : \"administrator@mylab.dias\"\r\n    }, {\r\n      \"name\" : \"Password\",\r\n      \"value\" : \"VMware1!\"\r\n    } ],\r\n    \"others\" : [ ],\r\n    \"otherAttributes\" : {\r\n    }\r\n  },\r\n  \"others\" : [ ],\r\n  \"otherAttributes\" : {\r\n  }\r\n}"
+              "raw": "{\r\n  \"name\" : \"Python Adapter Instance\",\r\n  \"description\" : \"A Python Adapter Instance\",\r\n  \"collectorId\" : \"1\",\r\n  \"adapterKindKey\" : \"PythonRemediationVcenterAdapter\",\r\n  \"resourceIdentifiers\" : [ {\r\n    \"name\" : \"AUTODISCOVERY\",\r\n    \"value\" : \"true\"\r\n  }, {\r\n    \"name\" : \"PROCESSCHANGEEVENTS\",\r\n    \"value\" : \"true\"\r\n  }, {\r\n    \"name\" : \"VCURL\",\r\n    \"value\" : \"https://vc-vapp.mylab.dias\"\r\n  } ],\r\n  \"credential\" : {\r\n    \"id\" : null,\r\n    \"name\" : \"Python Credential\",\r\n    \"adapterKindKey\" : \"PythonRemediationVcenterAdapter\",\r\n    \"credentialKindKey\" : \"PRINCIPALCREDENTIAL\",\r\n    \"fields\" : [ {\r\n      \"name\" : \"UserName\",\r\n      \"value\" : \"administrator@mylab.dias\"\r\n    }, {\r\n      \"name\" : \"Password\",\r\n      \"value\" : \"VMware1!\"\r\n    } ],\r\n    \"others\" : [ ],\r\n    \"otherAttributes\" : {\r\n    }\r\n  },\r\n  \"others\" : [ ],\r\n  \"otherAttributes\" : {\r\n  }\r\n}",
+              "options": {}
             },
             "url": "https://{{vrops}}/suite-api/api/adapters",
             "description": "Be sure to check values in the JSON body for credentials.\nAlso note you will need to start the adapter using \"Star an adapter instance\" \nafter creation using the UUID from the response.\n\nIf you aren't using a CA, the certificate will have to be added via the UI\nI do not know of a way to do this via the REST API"
@@ -2860,19 +2863,19 @@
   ],
   "variable": [
     {
-      "id": "c963c536-f22b-4905-8b79-45885af729c0",
+      "id": "c1d7d5a0-21ef-4ad5-b4d0-c49ae1b04021",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "ee2c8619-9e9b-4236-8c40-0c22ed354208",
+      "id": "cff89287-fcb7-4860-8ff6-f0973ac69297",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "b2467b97-02d9-4297-aeda-c6090e015032",
+      "id": "02b3bad2-4b78-4936-b63b-05f818295189",
       "key": "pass",
       "value": "",
       "type": "string"
