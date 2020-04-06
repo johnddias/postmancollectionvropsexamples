@@ -181,7 +181,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -347,7 +347,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -704,7 +704,7 @@
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "{{bearerToken}}"
+                    "value": "{{bearer {{bearerToken}}"
                   },
                   {
                     "key": "Accept",
@@ -1614,7 +1614,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Content-Type",
@@ -1666,7 +1666,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -2901,19 +2901,19 @@
   ],
   "variable": [
     {
-      "id": "c65b171d-27dc-4fb8-acde-b3847d5ac0d3",
+      "id": "8d6b8886-8aec-4094-a1fb-74645d615c32",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "6d3acb19-f2e7-41e7-a255-7702ccb009ef",
+      "id": "596c3803-201f-4f3e-aff9-42406fbaa907",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "af54d0b8-564f-4f99-8fe2-d0d30e585bba",
+      "id": "5269def0-f6ab-4128-8aaa-789cff424ca8",
       "key": "pass",
       "value": "",
       "type": "string"
