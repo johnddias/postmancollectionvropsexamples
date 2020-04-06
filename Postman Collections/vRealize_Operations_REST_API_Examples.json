@@ -10,7 +10,7 @@
       "name": "Authenticate - RUN FIRST",
       "item": [
         {
-          "name": "RUN FIRST - Get vR Ops Auth Token",
+          "name": "On-Prem RUN FIRST - Get vR Ops Auth Token",
           "event": [
             {
               "listen": "test",
@@ -2831,19 +2831,19 @@
   ],
   "variable": [
     {
-      "id": "dde80e25-01b8-4a5f-b1c0-a2d7cbc5f740",
+      "id": "1dc8f069-f847-4f89-917e-38034caeff6a",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "c220964a-e836-4506-9794-bd4fbb77aa1b",
+      "id": "b202c04d-7bc5-414f-8bce-fc6ade7c25ab",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "e339970a-34e7-4214-8b6a-da46c984a340",
+      "id": "5edc04af-3653-465f-a145-3256ba83eb7a",
       "key": "pass",
       "value": "",
       "type": "string"
