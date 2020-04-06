@@ -219,7 +219,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearer {{bearerToken}}"
+                "value": "{{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -2435,7 +2435,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearer {{bearerToken}}"
+                "value": "{{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -2901,19 +2901,19 @@
   ],
   "variable": [
     {
-      "id": "c61c12a7-3636-431d-b09c-6f9bce8d5df8",
+      "id": "9ed608e1-e55f-48c1-a6da-0dfa6776147c",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "3aafd2eb-10a2-4598-9c0d-85161b7a09d5",
+      "id": "0def9acc-1924-4187-8d48-fb8f2ebafbd6",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "309d2316-53cb-42a7-b584-c0788821cd19",
+      "id": "5a5eb674-a013-4fb5-bf5d-09766938dd2e",
       "key": "pass",
       "value": "",
       "type": "string"
