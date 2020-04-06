@@ -1519,7 +1519,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               }
             ],
             "url": "https://{{vrops}}/suite-api/api/resources/{{resourceId}}/statkeys"
@@ -1552,7 +1552,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -1960,7 +1960,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearerToken}}",
+                "value": "{{bearer {{bearerToken}}",
                 "type": "text",
                 "warning": ""
               },
@@ -2094,7 +2094,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearerToken}}",
+                "value": "{{bearer {{bearerToken}}",
                 "type": "text",
                 "warning": ""
               },
@@ -2748,7 +2748,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearerToken}}",
+                "value": "{{bearer {{bearerToken}}",
                 "type": "text",
                 "warning": ""
               },
@@ -2901,19 +2901,19 @@
   ],
   "variable": [
     {
-      "id": "ae560edf-8aa9-4764-b8cb-7308c19a7b93",
+      "id": "e11ec33e-fc1c-49c5-810b-417fbb1175d7",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "fad8f6f2-ff8e-4594-9241-6c2efeb3ee31",
+      "id": "4e543b4e-484e-41fe-9de4-8a0d32c1b29a",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "e510ef76-8a85-4cda-bd47-f325edfd2e3b",
+      "id": "32aa20d7-c953-4848-9454-743ff5a9e520",
       "key": "pass",
       "value": "",
       "type": "string"
