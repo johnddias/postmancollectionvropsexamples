@@ -522,22 +522,21 @@
             {
               "name": "Get Agent Status on Upgrade",
               "_postman_id": "b1368c8f-4d89-81c1-43f1-4dc0e4dc5848",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
               "request": {
                 "method": "GET",
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "vRealizeOpsToken {{bearerToken}}"
+                    "value": "{{bearer {{bearerToken}}"
                   },
                   {
                     "key": "Accept",
                     "value": "application/json"
                   }
                 ],
-                "body": {
-                  "mode": "formdata",
-                  "formdata": []
-                },
                 "url": {
                   "raw": "https://{{vrops}}/suite-api/api/adapterkinds/EP Ops Adapter/resourcekinds/EP Ops Agent/resources?identifiers[agentID]=1432528639235-6190445699790943031-2415937788285910890",
                   "protocol": "https",
@@ -1774,22 +1773,21 @@
             }
           ],
           "_postman_id": "a96af710-9a33-7e74-c579-096ba276ee9b",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "GET",
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Accept",
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "formdata",
-              "formdata": []
-            },
             "url": "https://{{vrops}}/suite-api/api/resources/{{resourceId}}/statkeys",
             "description": "Grabs CPU statKeys for a VM resource using the {{resourceId}} env var.\nPopulates two env vars:\ncpuStatKeys for GET stats for small requests (1 to ~10 VMs)\ncpuStatKeysJSON for POST stats for large requests (use in conjunction with {{resourceIds}}"
           },
@@ -1884,12 +1882,15 @@
             }
           ],
           "_postman_id": "b6734870-9672-9ba2-0562-d178511db3e0",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "POST",
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Content-Type",
@@ -1902,7 +1903,8 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"stat-content\" : [ {\r\n    \"statKey\" : \"apiInjected|random5\",\r\n    \"timestamps\" : [ {{epoch}} ],\r\n    \"data\" : [ 6 ],\r\n    \"others\" : [ ],\r\n    \"otherAttributes\" : {\r\n    }\r\n  } ]\r\n}"
+              "raw": "{\r\n  \"stat-content\" : [ {\r\n    \"statKey\" : \"apiInjected|random5\",\r\n    \"timestamps\" : [ {{epoch}} ],\r\n    \"data\" : [ 6 ],\r\n    \"others\" : [ ],\r\n    \"otherAttributes\" : {\r\n    }\r\n  } ]\r\n}",
+              "options": {}
             },
             "url": "https://{{vrops}}/suite-api/api/resources/{{resourceId}}/stats"
           },
@@ -2888,19 +2890,19 @@
   ],
   "variable": [
     {
-      "id": "fe351b70-230f-453c-b400-6b138ffd5213",
+      "id": "f8534bd4-c850-48f0-b4dc-89fb6b75def1",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "bc4513a2-5958-4d62-ac94-83946d96b829",
+      "id": "7372e5a2-4492-4a0b-869f-f8c7cd8fee37",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "4d616259-dcb3-4abd-8e60-ff9e1d602a8a",
+      "id": "f23e5b89-c901-458f-88f4-f9d8b0672d17",
       "key": "pass",
       "value": "",
       "type": "string"
