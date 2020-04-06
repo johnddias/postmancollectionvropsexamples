@@ -444,18 +444,17 @@
             {
               "name": "Get EP Ops Agent ID by FQDN",
               "_postman_id": "a7f22526-d733-fce7-8175-2c1a7b49cf9e",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
               "request": {
                 "method": "GET",
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "vRealizeOpsToken {{bearerToken}}"
+                    "value": "{{bearer {{bearerToken}}"
                   }
                 ],
-                "body": {
-                  "mode": "formdata",
-                  "formdata": []
-                },
                 "url": {
                   "raw": "https://{{vrops}}/suite-api/api/resources?adapterKind=EP Ops Adapter&propertyName=fqdn&propertyValue=DC1.mylab.dias",
                   "protocol": "https",
@@ -1500,18 +1499,17 @@
         {
           "name": "Get StatKeys of a Resource",
           "_postman_id": "a63941a7-1f0d-c12d-a3cb-0f415de9718b",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "GET",
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               }
             ],
-            "body": {
-              "mode": "formdata",
-              "formdata": []
-            },
             "url": "https://{{vrops}}/suite-api/api/resources/{{resourceId}}/statkeys"
           },
           "response": []
@@ -1776,22 +1774,21 @@
             }
           ],
           "_postman_id": "a96af710-9a33-7e74-c579-096ba276ee9b",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "GET",
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Accept",
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "formdata",
-              "formdata": []
-            },
             "url": "https://{{vrops}}/suite-api/api/resources/{{resourceId}}/statkeys",
             "description": "Grabs CPU statKeys for a VM resource using the {{resourceId}} env var.\nPopulates two env vars:\ncpuStatKeys for GET stats for small requests (1 to ~10 VMs)\ncpuStatKeysJSON for POST stats for large requests (use in conjunction with {{resourceIds}}"
           },
@@ -1948,7 +1945,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}",
+                "value": "{{bearer {{bearerToken}}",
                 "type": "text",
                 "warning": ""
               },
@@ -1967,7 +1964,8 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"resourceIds\" : [ {{resourceIds}} ],\n    \"propertyKeys\" : [ \"summary|ParentHost\",\"summary|guest|toolsVersion\"]\n}"
+              "raw": "{\n    \"resourceIds\" : [ {{resourceIds}} ],\n    \"propertyKeys\" : [ \"summary|ParentHost\",\"summary|guest|toolsVersion\"]\n}",
+              "options": {}
             },
             "url": "https://{{vrops}}/suite-api/api/resources/properties/latest/query",
             "description": "Example that uses \"Get Resources by resourceKind and Load var\" to provide a list of resource IDs using the {{resourceId}} env var."
@@ -2736,7 +2734,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}",
+                "value": "{{bearer {{bearerToken}}",
                 "type": "text",
                 "warning": ""
               },
@@ -2755,7 +2753,8 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n        \"contextId\": \"importPackage\",\n        \"contextResourceId\": [\n            \"bc14eb84-05df-47f9-979c-f811f0da1c1d\"\n        ],\n        \"parameterGroup\": [\n            {\n                \"resourceId\": \"bc14eb84-05df-47f9-979c-f811f0da1c1d\",\n                \"parameterValue\": [\n                    {\n                        \"name\": \"overwrite\",\n                        \"value\": \"1\"\n                    }\n                ]\n            }\n        ]\n    }"
+              "raw": "{\n        \"contextId\": \"importPackage\",\n        \"contextResourceId\": [\n            \"bc14eb84-05df-47f9-979c-f811f0da1c1d\"\n        ],\n        \"parameterGroup\": [\n            {\n                \"resourceId\": \"bc14eb84-05df-47f9-979c-f811f0da1c1d\",\n                \"parameterValue\": [\n                    {\n                        \"name\": \"overwrite\",\n                        \"value\": \"1\"\n                    }\n                ]\n            }\n        ]\n    }",
+              "options": {}
             },
             "url": "https://{{vrops}}/suite-api/api/actions/{{actionId}}",
             "description": "Run Populate Action first get body - copy and paste the \"action-execution\" value in the body of this request.  Update values in body as desired."
@@ -2888,19 +2887,19 @@
   ],
   "variable": [
     {
-      "id": "eb6715ec-63d1-4c50-b210-74e33837b11a",
+      "id": "cbbc8e9c-46a3-4967-96d1-f8c40a665baa",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "c3f39e01-215d-4278-8ffb-4aa79f2ede21",
+      "id": "7b02114c-2681-467c-85aa-73a523be0266",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "8d5f21ff-0b70-42f1-be75-86a76b30c013",
+      "id": "c0f6220d-dbdd-4088-8a05-f12da549e328",
       "key": "pass",
       "value": "",
       "type": "string"
