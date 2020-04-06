@@ -208,22 +208,21 @@
             }
           ],
           "_postman_id": "272f50b8-7d9d-cc61-97e6-442f1fb2db47",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "GET",
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Accept",
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "formdata",
-              "formdata": []
-            },
             "url": "https://{{vrops}}/suite-api/api/alertdefinitions/{{alertDefinitionId}}"
           },
           "response": []
@@ -593,22 +592,21 @@
                 }
               ],
               "_postman_id": "21f351d0-9316-84e3-0b35-462e04829c99",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
               "request": {
                 "method": "GET",
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "vRealizeOpsToken {{bearerToken}}"
+                    "value": "{{bearer {{bearerToken}}"
                   },
                   {
                     "key": "Accept",
                     "value": "application/json"
                   }
                 ],
-                "body": {
-                  "mode": "formdata",
-                  "formdata": []
-                },
                 "url": {
                   "raw": "https://{{vrops}}/suite-api/api/resources?resourceKind=EP Ops Agent&name=IIS-",
                   "protocol": "https",
@@ -2380,12 +2378,15 @@
         {
           "name": "Create a vCenter Adapter Instance",
           "_postman_id": "25514a6b-e712-4f4a-b5ed-bfb4ab7e08cc",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "POST",
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -2398,7 +2399,8 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"name\": \"WDC vCenter Adapter\",\n  \"description\": \"A vCenter Adapter Instance\",\n  \"collectorId\": \"1\",\n  \"adapterKindKey\": \"VMWARE\",\n  \"resourceIdentifiers\": [\n    {\n      \"name\": \"AUTODISCOVERY\",\n      \"value\": \"true\"\n    },\n    {\n      \"name\": \"PROCESSCHANGEEVENTS\",\n      \"value\": \"true\"\n    },\n    {\n      \"name\": \"VCURL\",\n      \"value\": \"10.196.206.10\"\n    }\n  ],\n  \"credential\": {\n    \"id\": null,\n    \"name\": \"WDC Credentials\",\n    \"adapterKindKey\": \"VMWARE\",\n    \"credentialKindKey\": \"PRINCIPALCREDENTIAL\",\n    \"fields\": [\n      {\n        \"name\": \"USER\",\n        \"value\": \"administrator@vsphere.local\"\n      },\n      {\n        \"name\": \"PASSWORD\",\n        \"value\": \"xxxxxx\"\n      }\n    ],\n    \"others\": [],\n    \"otherAttributes\": {}\n  },\n  \"others\": [],\n  \"otherAttributes\": {}\n}"
+              "raw": "{\n  \"name\": \"WDC vCenter Adapter\",\n  \"description\": \"A vCenter Adapter Instance\",\n  \"collectorId\": \"1\",\n  \"adapterKindKey\": \"VMWARE\",\n  \"resourceIdentifiers\": [\n    {\n      \"name\": \"AUTODISCOVERY\",\n      \"value\": \"true\"\n    },\n    {\n      \"name\": \"PROCESSCHANGEEVENTS\",\n      \"value\": \"true\"\n    },\n    {\n      \"name\": \"VCURL\",\n      \"value\": \"10.196.206.10\"\n    }\n  ],\n  \"credential\": {\n    \"id\": null,\n    \"name\": \"WDC Credentials\",\n    \"adapterKindKey\": \"VMWARE\",\n    \"credentialKindKey\": \"PRINCIPALCREDENTIAL\",\n    \"fields\": [\n      {\n        \"name\": \"USER\",\n        \"value\": \"administrator@vsphere.local\"\n      },\n      {\n        \"name\": \"PASSWORD\",\n        \"value\": \"xxxxxx\"\n      }\n    ],\n    \"others\": [],\n    \"otherAttributes\": {}\n  },\n  \"others\": [],\n  \"otherAttributes\": {}\n}",
+              "options": {}
             },
             "url": "https://{{vrops}}/suite-api/api/adapters",
             "description": "Be sure to check values in the JSON body for credentials.\nAlso note you will need to start the adapter using \"Star an adapter instance\" \nafter creation using the UUID from the response.\n\nIf you aren't using a CA, the certificate will have to be added via the UI\nI do not know of a way to do this via the REST API"
@@ -2844,19 +2846,19 @@
   ],
   "variable": [
     {
-      "id": "d6069baa-c11e-43fa-ad67-1efe81b935a8",
+      "id": "a9e5d7d5-e530-490a-8ca9-71d8d63eb91f",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "a41aa0b5-fd3a-4025-8850-d145a777be28",
+      "id": "eeb9412f-c372-4ad1-9740-3615cae86010",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "6d43b64d-6f84-4878-8bfb-74f494ed9570",
+      "id": "f058579d-b844-42ef-9fd4-5ac1e8420360",
       "key": "pass",
       "value": "",
       "type": "string"
