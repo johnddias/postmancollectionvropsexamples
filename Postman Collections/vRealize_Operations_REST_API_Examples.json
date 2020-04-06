@@ -208,21 +208,22 @@
             }
           ],
           "_postman_id": "272f50b8-7d9d-cc61-97e6-442f1fb2db47",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
           "request": {
             "method": "GET",
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearer {{bearerToken}}"
+                "value": "vRealizeOpsToken {{bearerToken}}"
               },
               {
                 "key": "Accept",
                 "value": "application/json"
               }
             ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": "https://{{vrops}}/suite-api/api/alertdefinitions/{{alertDefinitionId}}"
           },
           "response": []
@@ -398,21 +399,22 @@
             {
               "name": "Get All EP Ops Agents",
               "_postman_id": "20987c22-7262-f710-2fd7-b963d6262585",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
               "request": {
                 "method": "GET",
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "{{bearer {{bearerToken}}"
+                    "value": "vRealizeOpsToken {{bearerToken}}"
                   },
                   {
                     "key": "Accept",
                     "value": "application/json"
                   }
                 ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
                 "url": {
                   "raw": "https://{{vrops}}/suite-api/api/resources?resourceKind=EP Ops Agent&",
                   "protocol": "https",
@@ -592,21 +594,22 @@
                 }
               ],
               "_postman_id": "21f351d0-9316-84e3-0b35-462e04829c99",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
               "request": {
                 "method": "GET",
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "{{bearer {{bearerToken}}"
+                    "value": "vRealizeOpsToken {{bearerToken}}"
                   },
                   {
                     "key": "Accept",
                     "value": "application/json"
                   }
                 ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
                 "url": {
                   "raw": "https://{{vrops}}/suite-api/api/resources?resourceKind=EP Ops Agent&name=IIS-",
                   "protocol": "https",
@@ -1420,15 +1423,12 @@
         {
           "name": "Get VirtualMachine Res by Name",
           "_postman_id": "2f348843-de21-c497-f693-a28210702ea0",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
           "request": {
             "method": "GET",
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearer {{bearerToken}}"
+                "value": "vRealizeOpsToken {{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -2381,15 +2381,12 @@
         {
           "name": "Create a vCenter Adapter Instance",
           "_postman_id": "25514a6b-e712-4f4a-b5ed-bfb4ab7e08cc",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
           "request": {
             "method": "POST",
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearer {{bearerToken}}"
+                "value": "vRealizeOpsToken {{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -2402,8 +2399,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"name\": \"WDC vCenter Adapter\",\n  \"description\": \"A vCenter Adapter Instance\",\n  \"collectorId\": \"1\",\n  \"adapterKindKey\": \"VMWARE\",\n  \"resourceIdentifiers\": [\n    {\n      \"name\": \"AUTODISCOVERY\",\n      \"value\": \"true\"\n    },\n    {\n      \"name\": \"PROCESSCHANGEEVENTS\",\n      \"value\": \"true\"\n    },\n    {\n      \"name\": \"VCURL\",\n      \"value\": \"10.196.206.10\"\n    }\n  ],\n  \"credential\": {\n    \"id\": null,\n    \"name\": \"WDC Credentials\",\n    \"adapterKindKey\": \"VMWARE\",\n    \"credentialKindKey\": \"PRINCIPALCREDENTIAL\",\n    \"fields\": [\n      {\n        \"name\": \"USER\",\n        \"value\": \"administrator@vsphere.local\"\n      },\n      {\n        \"name\": \"PASSWORD\",\n        \"value\": \"xxxxxx\"\n      }\n    ],\n    \"others\": [],\n    \"otherAttributes\": {}\n  },\n  \"others\": [],\n  \"otherAttributes\": {}\n}",
-              "options": {}
+              "raw": "{\n  \"name\": \"WDC vCenter Adapter\",\n  \"description\": \"A vCenter Adapter Instance\",\n  \"collectorId\": \"1\",\n  \"adapterKindKey\": \"VMWARE\",\n  \"resourceIdentifiers\": [\n    {\n      \"name\": \"AUTODISCOVERY\",\n      \"value\": \"true\"\n    },\n    {\n      \"name\": \"PROCESSCHANGEEVENTS\",\n      \"value\": \"true\"\n    },\n    {\n      \"name\": \"VCURL\",\n      \"value\": \"10.196.206.10\"\n    }\n  ],\n  \"credential\": {\n    \"id\": null,\n    \"name\": \"WDC Credentials\",\n    \"adapterKindKey\": \"VMWARE\",\n    \"credentialKindKey\": \"PRINCIPALCREDENTIAL\",\n    \"fields\": [\n      {\n        \"name\": \"USER\",\n        \"value\": \"administrator@vsphere.local\"\n      },\n      {\n        \"name\": \"PASSWORD\",\n        \"value\": \"xxxxxx\"\n      }\n    ],\n    \"others\": [],\n    \"otherAttributes\": {}\n  },\n  \"others\": [],\n  \"otherAttributes\": {}\n}"
             },
             "url": "https://{{vrops}}/suite-api/api/adapters",
             "description": "Be sure to check values in the JSON body for credentials.\nAlso note you will need to start the adapter using \"Star an adapter instance\" \nafter creation using the UUID from the response.\n\nIf you aren't using a CA, the certificate will have to be added via the UI\nI do not know of a way to do this via the REST API"
@@ -2849,19 +2845,19 @@
   ],
   "variable": [
     {
-      "id": "4edbf920-e0b8-4335-a446-b0066c9e62f7",
+      "id": "e2e17543-5914-4a22-a6b5-fb6729dac857",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "e61b3566-6944-4054-ab28-cdbb183654fb",
+      "id": "004b7a2d-71fb-4e44-b901-4f84806a8c9d",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "6959d345-9ed5-4727-8463-5c39ed8ba48b",
+      "id": "8c35c193-3a74-462a-857e-f7b850dee314",
       "key": "pass",
       "value": "",
       "type": "string"
