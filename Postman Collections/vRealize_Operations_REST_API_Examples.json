@@ -2841,60 +2841,60 @@
                 "url": "https://{{vrops}}/suite-api/api/applications/clientCertificate/{{cloudProxyId}}"
               },
               "response": []
+            },
+            {
+              "name": "1 - Get Collector",
+              "_postman_id": "20e8a838-ad24-4c4b-b22c-83ff25688cc4",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "CSPToken {{bearerToken}}",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text",
+                    "name": "Accept"
+                  }
+                ],
+                "url": {
+                  "raw": "https://www.mgmt.cloud.vmware.com/vrops-cloud/suite-api/api/collectors?host=10.173.22.61",
+                  "protocol": "https",
+                  "host": [
+                    "www",
+                    "mgmt",
+                    "cloud",
+                    "vmware",
+                    "com"
+                  ],
+                  "path": [
+                    "vrops-cloud",
+                    "suite-api",
+                    "api",
+                    "collectors"
+                  ],
+                  "query": [
+                    {
+                      "key": "host",
+                      "value": "10.173.22.61"
+                    }
+                  ]
+                }
+              },
+              "response": []
             }
           ],
           "_postman_id": "90dd3d21-e416-4cf9-af65-eafa0ccb4809",
           "_postman_isSubFolder": true
-        },
-        {
-          "name": "Get Collector",
-          "_postman_id": "20e8a838-ad24-4c4b-b22c-83ff25688cc4",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "noauth"
-            },
-            "method": "GET",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "CSPToken {{bearerToken}}",
-                "type": "text"
-              },
-              {
-                "key": "Accept",
-                "value": "application/json",
-                "type": "text",
-                "name": "Accept"
-              }
-            ],
-            "url": {
-              "raw": "https://www.mgmt.cloud.vmware.com/vrops-cloud/suite-api/api/collectors?host=10.173.22.61",
-              "protocol": "https",
-              "host": [
-                "www",
-                "mgmt",
-                "cloud",
-                "vmware",
-                "com"
-              ],
-              "path": [
-                "vrops-cloud",
-                "suite-api",
-                "api",
-                "collectors"
-              ],
-              "query": [
-                {
-                  "key": "host",
-                  "value": "10.173.22.61"
-                }
-              ]
-            }
-          },
-          "response": []
         }
       ],
       "_postman_id": "1d7249e1-8718-4873-a9b1-dee08efe20f6"
@@ -2924,19 +2924,19 @@
   ],
   "variable": [
     {
-      "id": "42ab248e-63ed-421b-8858-37024d4806c5",
+      "id": "b6cf3104-470d-4a54-a199-56e59a749718",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "b61022be-5480-4b51-9e10-167c6aabb308",
+      "id": "fbbe1371-ee16-4bf3-9020-1afa0d140eef",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "97f28c39-b784-4ab1-a1e7-707e60346d4d",
+      "id": "3d435ad4-c0d4-49a0-81d7-0b9b700323eb",
       "key": "pass",
       "value": "",
       "type": "string"
