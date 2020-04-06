@@ -1902,15 +1902,12 @@
         {
           "name": "Query Symptoms",
           "_postman_id": "826af6fa-9969-0e09-c6e3-0ce849d123f1",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
           "request": {
             "method": "POST",
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearer {{bearerToken}}"
+                "value": "vRealizeOpsToken {{bearerToken}}"
               },
               {
                 "key": "Content-Type",
@@ -1919,8 +1916,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"compositeOperator\" : \"AND\",\r\n  \"symptomId\" : [ ],\r\n  \"resource-query\" : {\r\n    \"name\" : null,\r\n    \"regex\" : null,\r\n    \"adapterKind\" : null,\r\n    \"resourceKind\" : null,\r\n    \"collectorName\" : null,\r\n    \"collectorId\" : null,\r\n    \"maintenanceScheduleId\" : null,\r\n    \"adapterInstanceId\" : null,\r\n    \"recentlyAdded\" : null,\r\n    \"resourceState\" : null,\r\n    \"resourceStatus\" : null,\r\n    \"resourceHealth\" : null,\r\n    \"parentId\" : null,\r\n    \"credentialId\" : null,\r\n    \"resourceId\" : [ \"5748438c-41d5-4397-a59b-efe973674653\" ],\r\n    \"propertyName\" : null,\r\n    \"propertyValue\" : null,\r\n    \"statKey\" : null,\r\n    \"statKeyLowerBound\" : null,\r\n    \"statKeyUpperBound\" : null,\r\n    \"statKeyInclusive\" : true,\r\n    \"others\" : [ ],\r\n    \"otherAttributes\" : {\r\n    }\r\n  },\r\n  \"includeChildrenResources\" : false,\r\n  \"activeOnly\" : true,\r\n  \"alarmType\" : [ ],\r\n  \"alarmCriticality\" : [ \"CRITICAL\", \"IMMEDIATE\", \"WARNING\", \"INFORMATION\" ],\r\n  \"symptomDefinitionId\" : [ ],\r\n  \"statKey\" : [ ],\r\n  \"others\" : [ ],\r\n  \"otherAttributes\" : {\r\n  }\r\n}",
-              "options": {}
+              "raw": "{\r\n  \"compositeOperator\" : \"AND\",\r\n  \"symptomId\" : [ ],\r\n  \"resource-query\" : {\r\n    \"name\" : null,\r\n    \"regex\" : null,\r\n    \"adapterKind\" : null,\r\n    \"resourceKind\" : null,\r\n    \"collectorName\" : null,\r\n    \"collectorId\" : null,\r\n    \"maintenanceScheduleId\" : null,\r\n    \"adapterInstanceId\" : null,\r\n    \"recentlyAdded\" : null,\r\n    \"resourceState\" : null,\r\n    \"resourceStatus\" : null,\r\n    \"resourceHealth\" : null,\r\n    \"parentId\" : null,\r\n    \"credentialId\" : null,\r\n    \"resourceId\" : [ \"5748438c-41d5-4397-a59b-efe973674653\" ],\r\n    \"propertyName\" : null,\r\n    \"propertyValue\" : null,\r\n    \"statKey\" : null,\r\n    \"statKeyLowerBound\" : null,\r\n    \"statKeyUpperBound\" : null,\r\n    \"statKeyInclusive\" : true,\r\n    \"others\" : [ ],\r\n    \"otherAttributes\" : {\r\n    }\r\n  },\r\n  \"includeChildrenResources\" : false,\r\n  \"activeOnly\" : true,\r\n  \"alarmType\" : [ ],\r\n  \"alarmCriticality\" : [ \"CRITICAL\", \"IMMEDIATE\", \"WARNING\", \"INFORMATION\" ],\r\n  \"symptomDefinitionId\" : [ ],\r\n  \"statKey\" : [ ],\r\n  \"others\" : [ ],\r\n  \"otherAttributes\" : {\r\n  }\r\n}"
             },
             "url": "https://{{vrops}}/suite-api/api/symptoms/query"
           },
@@ -2877,19 +2873,19 @@
   ],
   "variable": [
     {
-      "id": "4218b22d-3062-4bd0-9ade-175a07d5db7e",
+      "id": "56c0c9d0-646f-4772-9d6e-4211422d95b9",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "b0a20c77-92c3-49a8-a643-43fa1b4558ec",
+      "id": "492f6828-6205-4f58-ae13-96fead81053a",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "31e0f457-6af7-4417-8bfa-8c0c4e534e4b",
+      "id": "969b0e5b-0eb9-4507-bdf5-45cb3e2496cc",
       "key": "pass",
       "value": "",
       "type": "string"
