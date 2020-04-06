@@ -2807,6 +2807,20 @@
           "item": [
             {
               "name": "1 - Get Collector",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "8a583551-b7d8-451d-8585-059dd39c667b",
+                    "exec": [
+                      "var jsonData = JSON.parse(responseBody);",
+                      "postman.setEnvironmentVariable(\"cloudProxyId\", jsonData.collector[0].id);",
+                      ""
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
               "_postman_id": "20e8a838-ad24-4c4b-b22c-83ff25688cc4",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
@@ -2819,7 +2833,7 @@
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "CSPToken {{bearerToken}}",
+                    "value": "{{bearerToken}}",
                     "type": "text"
                   },
                   {
@@ -2830,17 +2844,12 @@
                   }
                 ],
                 "url": {
-                  "raw": "https://www.mgmt.cloud.vmware.com/vrops-cloud/suite-api/api/collectors?host=10.173.22.61",
+                  "raw": "https://{{vrops}}/suite-api/api/collectors?host={{cpIp}}",
                   "protocol": "https",
                   "host": [
-                    "www",
-                    "mgmt",
-                    "cloud",
-                    "vmware",
-                    "com"
+                    "{{vrops}}"
                   ],
                   "path": [
-                    "vrops-cloud",
                     "suite-api",
                     "api",
                     "collectors"
@@ -2848,7 +2857,7 @@
                   "query": [
                     {
                       "key": "host",
-                      "value": "10.173.22.61"
+                      "value": "{{cpIp}}"
                     }
                   ]
                 }
@@ -2924,19 +2933,19 @@
   ],
   "variable": [
     {
-      "id": "28b2fa76-7fd1-4edb-b9cc-d95d2bb20ac2",
+      "id": "9576bc13-33a8-4b3f-831a-06db6ddd014c",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "23046d35-23f1-4c4f-a0bd-b1dc800f13e1",
+      "id": "2af0080e-9cdb-43f8-9a5c-329777ad6ca1",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "2242eb62-6bf4-4e74-9029-4fc07dbbeb49",
+      "id": "cbb2e80c-cbb4-44fc-be78-297eaa1428e9",
       "key": "pass",
       "value": "",
       "type": "string"
