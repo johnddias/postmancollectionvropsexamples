@@ -169,21 +169,22 @@
             }
           ],
           "_postman_id": "5543f9bf-dc60-762a-a214-8f0781a53f5d",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
           "request": {
             "method": "GET",
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearer {{bearerToken}}"
+                "value": "vRealizeOpsToken {{bearerToken}}"
               },
               {
                 "key": "Accept",
                 "value": "application/json"
               }
             ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": "https://{{vrops}}/suite-api/api/alerts/7c2a4f9a-fd04-4300-b85c-cda555782e86"
           },
           "response": []
@@ -345,7 +346,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearer {{bearerToken}}"
+                "value": "vRealizeOpsToken {{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -360,8 +361,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"id\": \"AlertDefinition-1e94bdb0-3457-49c8-8abf-ff2324eb11d7\",\n    \"name\": \"Autoscale Web Traffic Changed\",\n    \"adapterKindKey\": \"VMWARE\",\n    \"resourceKindKey\": \"VirtualMachine\",\n    \"waitCycles\": 1,\n    \"cancelCycles\": 1,\n    \"type\": 15,\n    \"subType\": 19,\n    \"states\": [\n        {\n            \"severity\": \"AUTO\",\n            \"base-symptom-set\": {\n                \"type\": \"SYMPTOM_SET_COMPOSITE\",\n                \"operator\": \"AND\",\n                \"symptom-sets\": [\n                    {\n                        \"type\": \"SYMPTOM_SET\",\n                        \"relation\": \"SELF\",\n                        \"aggregation\": \"ANY\",\n                        \"symptomSetOperator\": \"AND\",\n                        \"symptomDefinitionIds\": [\n                            \"SymptomDefinition-a0fed9b7-d4f4-4e7d-ba39-f91d6a2bf17e\"\n                        ]\n                    },\n                    {\n                        \"type\": \"SYMPTOM_SET\",\n                        \"relation\": \"PARENT\",\n                        \"symptomSetOperator\": \"OR\",\n                        \"aggregation\": \"ANY\",\n                        \"symptomDefinitionIds\": [\n                            \"SymptomDefinition-992eefd8-e9bb-45ff-a788-2072e67120ab\",\n                            \"SymptomDefinition-56d26c37-b852-4df7-841c-23dc97be93dc\"\n                        ]\n                    }\n                ]\n            },\n            \"impact\": {\n                \"impactType\": \"BADGE\",\n                \"detail\": \"health\"\n            }\n            \n        }\n    ]\n}",
-              "options": {}
+              "raw": "{\n    \"id\": \"AlertDefinition-1e94bdb0-3457-49c8-8abf-ff2324eb11d7\",\n    \"name\": \"Autoscale Web Traffic Changed\",\n    \"adapterKindKey\": \"VMWARE\",\n    \"resourceKindKey\": \"VirtualMachine\",\n    \"waitCycles\": 1,\n    \"cancelCycles\": 1,\n    \"type\": 15,\n    \"subType\": 19,\n    \"states\": [\n        {\n            \"severity\": \"AUTO\",\n            \"base-symptom-set\": {\n                \"type\": \"SYMPTOM_SET_COMPOSITE\",\n                \"operator\": \"AND\",\n                \"symptom-sets\": [\n                    {\n                        \"type\": \"SYMPTOM_SET\",\n                        \"relation\": \"SELF\",\n                        \"aggregation\": \"ANY\",\n                        \"symptomSetOperator\": \"AND\",\n                        \"symptomDefinitionIds\": [\n                            \"SymptomDefinition-a0fed9b7-d4f4-4e7d-ba39-f91d6a2bf17e\"\n                        ]\n                    },\n                    {\n                        \"type\": \"SYMPTOM_SET\",\n                        \"relation\": \"PARENT\",\n                        \"symptomSetOperator\": \"OR\",\n                        \"aggregation\": \"ANY\",\n                        \"symptomDefinitionIds\": [\n                            \"SymptomDefinition-992eefd8-e9bb-45ff-a788-2072e67120ab\",\n                            \"SymptomDefinition-56d26c37-b852-4df7-841c-23dc97be93dc\"\n                        ]\n                    }\n                ]\n            },\n            \"impact\": {\n                \"impactType\": \"BADGE\",\n                \"detail\": \"health\"\n            }\n            \n        }\n    ]\n}"
             },
             "url": {
               "raw": "https://{{vrops}}/suite-api/api/alertdefinitions/?AlertDefinition-1e94bdb0-3457-49c8-8abf-ff2324eb11d7",
@@ -693,15 +693,12 @@
                 }
               ],
               "_postman_id": "63312491-9531-7605-ebe0-1849a3d5aed9",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
               "request": {
                 "method": "POST",
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "{{bearer {{bearerToken}}"
+                    "value": "vRealizeOpsToken {{bearerToken}}"
                   },
                   {
                     "key": "Accept",
@@ -714,8 +711,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n      \"description\": \"\",\n      \"creationTime\": null,\n      \"resourceKey\": {\n        \"name\": \"vc-east-icmp\",\n        \"adapterKindKey\": \"EP Ops Adapter\",\n        \"resourceKindKey\": \"ICMP Check\",\n        \"resourceIdentifiers\": [\n          {\n            \"identifierType\": {\n              \"name\": \"agentID\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": false\n            },\n            \"value\": \"{{agentID}}\"\n            },\n          {\n            \"identifierType\": {\n              \"name\": \"discoveryMode\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": false\n            },\n            \"value\": \"MANUAL\"\n          },\n          {\n            \"identifierType\": {\n              \"name\": \"hostname\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": false\n            },\n            \"value\": \"msbu-vc-east.mgmt.local\"\n          },\n          {\n            \"identifierType\": {\n              \"name\": \"monitoredResourceID\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": true\n            },\n            \"value\": \"vc-west\"\n          },\n          {\n            \"identifierType\": {\n              \"name\": \"Override_agent_configuration_data\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": false\n            },\n            \"value\": \"0\"\n          },\n          {\n            \"identifierType\": {\n              \"name\": \"parentID\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": true\n            },\n            \"value\": \"|{{agentID}}\"\n          },\n          {\n            \"identifierType\": {\n              \"name\": \"sotimeout\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": false\n            },\n            \"value\": \"10\"\n          }\n        ]\n      }\n}",
-                  "options": {}
+                  "raw": "{\n      \"description\": \"\",\n      \"creationTime\": null,\n      \"resourceKey\": {\n        \"name\": \"vc-east-icmp\",\n        \"adapterKindKey\": \"EP Ops Adapter\",\n        \"resourceKindKey\": \"ICMP Check\",\n        \"resourceIdentifiers\": [\n          {\n            \"identifierType\": {\n              \"name\": \"agentID\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": false\n            },\n            \"value\": \"{{agentID}}\"\n            },\n          {\n            \"identifierType\": {\n              \"name\": \"discoveryMode\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": false\n            },\n            \"value\": \"MANUAL\"\n          },\n          {\n            \"identifierType\": {\n              \"name\": \"hostname\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": false\n            },\n            \"value\": \"msbu-vc-east.mgmt.local\"\n          },\n          {\n            \"identifierType\": {\n              \"name\": \"monitoredResourceID\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": true\n            },\n            \"value\": \"vc-west\"\n          },\n          {\n            \"identifierType\": {\n              \"name\": \"Override_agent_configuration_data\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": false\n            },\n            \"value\": \"0\"\n          },\n          {\n            \"identifierType\": {\n              \"name\": \"parentID\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": true\n            },\n            \"value\": \"|{{agentID}}\"\n          },\n          {\n            \"identifierType\": {\n              \"name\": \"sotimeout\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": false\n            },\n            \"value\": \"10\"\n          }\n        ]\n      }\n}"
                 },
                 "url": "https://{{vrops}}/suite-api/api/resources/adapters/{{adapterInstanceId}}"
               },
@@ -1019,15 +1015,12 @@
         {
           "name": "Get Custom Groups",
           "_postman_id": "46710acf-4048-767e-0fa3-221027f950d2",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
           "request": {
             "method": "GET",
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearer {{bearerToken}}"
+                "value": "vRealizeOpsToken {{bearerToken}}"
               },
               {
                 "key": "X-vRealizeOps-API-use-unsupported",
@@ -1038,6 +1031,10 @@
                 "value": "application/json"
               }
             ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
             "url": "https://{{vrops}}/suite-api/internal/resources/groups"
           },
           "response": []
@@ -1588,15 +1585,12 @@
         {
           "name": "Add or Update Properties of a Resource",
           "_postman_id": "5cf05895-9cea-4c80-c720-dcb622037228",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
           "request": {
             "method": "POST",
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearer {{bearerToken}}"
+                "value": "vRealizeOpsToken {{bearerToken}}"
               },
               {
                 "key": "Content-Type",
@@ -1609,8 +1603,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"property-content\" : [ {\r\n    \"statKey\" : \"apiInjected|random\",\r\n    \"timestamps\" : [ 1477432000 ],\r\n    \"values\" : [ 0 ],\r\n    \"others\" : [ ],\r\n    \"otherAttributes\" : {\r\n    }\r\n  } ]\r\n}",
-              "options": {}
+              "raw": "{\r\n  \"property-content\" : [ {\r\n    \"statKey\" : \"apiInjected|random\",\r\n    \"timestamps\" : [ 1477432000 ],\r\n    \"values\" : [ 0 ],\r\n    \"others\" : [ ],\r\n    \"otherAttributes\" : {\r\n    }\r\n  } ]\r\n}"
             },
             "url": "https://{{vrops}}/suite-api/api/resources/{{resourceId}}/properties"
           },
@@ -2163,15 +2156,12 @@
         {
           "name": "Create Local User",
           "_postman_id": "46abbc30-bc7c-9a95-cc2c-21476fb2e684",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
           "request": {
             "method": "POST",
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearer {{bearerToken}}"
+                "value": "vRealizeOpsToken {{bearerToken}}"
               },
               {
                 "key": "Content-Type",
@@ -2184,8 +2174,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"username\" : \"frank\",\r\n  \"firstName\" : \"Frank\",\r\n  \"lastName\" : \"Barnes\",\r\n  \"password\" : \"VMware1!\",\r\n  \"enabled\" : \"true\",\r\n  \"role-permissions\": [\r\n    {\r\n        \"roleName\": \"GeneralUser-1\",\r\n        \"allowAllObjects\": true\r\n    }]\r\n}",
-              "options": {}
+              "raw": "{\r\n  \"username\" : \"frank\",\r\n  \"firstName\" : \"Frank\",\r\n  \"lastName\" : \"Barnes\",\r\n  \"password\" : \"VMware1!\",\r\n  \"enabled\" : \"true\",\r\n  \"role-permissions\": [\r\n    {\r\n        \"roleName\": \"GeneralUser-1\",\r\n        \"allowAllObjects\": true\r\n    }]\r\n}"
             },
             "url": "https://{{vrops}}/suite-api/api/auth/users"
           },
@@ -2876,19 +2865,19 @@
   ],
   "variable": [
     {
-      "id": "665e5f59-0cb3-4ecf-bc8b-fb40831ffb9f",
+      "id": "55478ef5-f3dd-4897-97f7-1952e828a0a1",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "a4d25e45-f21b-47c8-afa5-59430547e08b",
+      "id": "bbe71ac7-2da9-4884-b42e-4e146af5d3f6",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "39e8d039-faac-4610-a88b-fbf35a99ec5b",
+      "id": "b0f87858-dad9-47c7-af57-bb4fa00c6a74",
       "key": "pass",
       "value": "",
       "type": "string"
