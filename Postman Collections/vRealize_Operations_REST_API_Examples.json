@@ -901,12 +901,15 @@
                 }
               ],
               "_postman_id": "13343777-9923-5f1f-1af7-3990eaac4b71",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
               "request": {
                 "method": "POST",
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "vRealizeOpsToken {{bearerToken}}"
+                    "value": "{{bearer {{bearerToken}}"
                   },
                   {
                     "key": "Accept",
@@ -919,7 +922,8 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\r\n    \"description\": \"VMTools\",\r\n    \"creationTime\": null,\r\n    \"resourceKey\": {\r\n        \"name\": \"vmtoolsd\",\r\n        \"adapterKindKey\": \"EP Ops Adapter\",\r\n        \"resourceKindKey\": \"MultiProcess\",\r\n        \"resourceIdentifiers\": [\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"agentID\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": false\r\n                },\r\n                \"value\": \"{{agentID}}\"\r\n            },\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"discoveryMode\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": false\r\n                },\r\n                \"value\": \"MANUAL\"\r\n            },\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"monitoredResourceID\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": true\r\n                },\r\n                \"value\": \"VMtools\"\r\n            },\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"Override_agent_configuration_data\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": false\r\n                },\r\n                \"value\": \"0\"\r\n            },\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"parentID\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": true\r\n                },\r\n                \"value\": \"|{{agentID}}\"\r\n            },\r\n                {\r\n                    \"identifierType\": {\r\n                        \"name\": \"process.query\",\r\n                        \"dataType\": \"STRING\",\r\n                        \"isPartOfUniqueness\": false\r\n                    },\r\n                    \"value\": \"State.Name.eq=vmtoolsd\"\r\n                    \r\n            }\r\n        ]\r\n    },\r\n    \"identifier\": null\r\n}"
+                  "raw": "{\r\n    \"description\": \"VMTools\",\r\n    \"creationTime\": null,\r\n    \"resourceKey\": {\r\n        \"name\": \"vmtoolsd\",\r\n        \"adapterKindKey\": \"EP Ops Adapter\",\r\n        \"resourceKindKey\": \"MultiProcess\",\r\n        \"resourceIdentifiers\": [\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"agentID\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": false\r\n                },\r\n                \"value\": \"{{agentID}}\"\r\n            },\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"discoveryMode\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": false\r\n                },\r\n                \"value\": \"MANUAL\"\r\n            },\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"monitoredResourceID\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": true\r\n                },\r\n                \"value\": \"VMtools\"\r\n            },\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"Override_agent_configuration_data\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": false\r\n                },\r\n                \"value\": \"0\"\r\n            },\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"parentID\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": true\r\n                },\r\n                \"value\": \"|{{agentID}}\"\r\n            },\r\n                {\r\n                    \"identifierType\": {\r\n                        \"name\": \"process.query\",\r\n                        \"dataType\": \"STRING\",\r\n                        \"isPartOfUniqueness\": false\r\n                    },\r\n                    \"value\": \"State.Name.eq=vmtoolsd\"\r\n                    \r\n            }\r\n        ]\r\n    },\r\n    \"identifier\": null\r\n}",
+                  "options": {}
                 },
                 "url": "https://{{vrops}}/suite-api/api/resources/adapters/{{adapterInstanceId}}"
               },
@@ -1214,22 +1218,21 @@
         {
           "name": "Get Adapter Types (Kinds)",
           "_postman_id": "189dee7e-796f-fa79-316b-554a00810133",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "GET",
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Accept",
                 "value": "application/json"
               }
             ],
-            "body": {
-              "mode": "formdata",
-              "formdata": []
-            },
             "url": "https://{{vrops}}/suite-api/api/adapterkinds"
           },
           "response": []
@@ -1300,12 +1303,15 @@
         {
           "name": "Create a vCenter Adapter Instance",
           "_postman_id": "0d740c83-d24a-fc27-b4fb-b21e42b2dec8",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "POST",
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -1318,7 +1324,8 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"name\" : \"VC Adapter Instance\",\r\n  \"description\" : \"A vCenter Adapter Instance\",\r\n  \"collectorId\" : \"1\",\r\n  \"adapterKindKey\" : \"VMWARE\",\r\n  \"resourceIdentifiers\" : [ {\r\n    \"name\" : \"AUTODISCOVERY\",\r\n    \"value\" : \"true\"\r\n  }, {\r\n    \"name\" : \"PROCESSCHANGEEVENTS\",\r\n    \"value\" : \"true\"\r\n  }, {\r\n    \"name\" : \"VCURL\",\r\n    \"value\" : \"https://vc-vapp.mylab.dias/sdk\"\r\n  } ],\r\n  \"credential\" : {\r\n    \"id\" : null,\r\n    \"name\" : \"New Principal Credential\",\r\n    \"adapterKindKey\" : \"VMWARE\",\r\n    \"credentialKindKey\" : \"PRINCIPALCREDENTIAL\",\r\n    \"fields\" : [ {\r\n      \"name\" : \"USER\",\r\n      \"value\" : \"administrator@mylab.dias\"\r\n    }, {\r\n      \"name\" : \"PASSWORD\",\r\n      \"value\" : \"VMware1!\"\r\n    } ],\r\n    \"others\" : [ ],\r\n    \"otherAttributes\" : {\r\n    }\r\n  },\r\n  \"others\" : [ ],\r\n  \"otherAttributes\" : {\r\n  }\r\n}"
+              "raw": "{\r\n  \"name\" : \"VC Adapter Instance\",\r\n  \"description\" : \"A vCenter Adapter Instance\",\r\n  \"collectorId\" : \"1\",\r\n  \"adapterKindKey\" : \"VMWARE\",\r\n  \"resourceIdentifiers\" : [ {\r\n    \"name\" : \"AUTODISCOVERY\",\r\n    \"value\" : \"true\"\r\n  }, {\r\n    \"name\" : \"PROCESSCHANGEEVENTS\",\r\n    \"value\" : \"true\"\r\n  }, {\r\n    \"name\" : \"VCURL\",\r\n    \"value\" : \"https://vc-vapp.mylab.dias/sdk\"\r\n  } ],\r\n  \"credential\" : {\r\n    \"id\" : null,\r\n    \"name\" : \"New Principal Credential\",\r\n    \"adapterKindKey\" : \"VMWARE\",\r\n    \"credentialKindKey\" : \"PRINCIPALCREDENTIAL\",\r\n    \"fields\" : [ {\r\n      \"name\" : \"USER\",\r\n      \"value\" : \"administrator@mylab.dias\"\r\n    }, {\r\n      \"name\" : \"PASSWORD\",\r\n      \"value\" : \"VMware1!\"\r\n    } ],\r\n    \"others\" : [ ],\r\n    \"otherAttributes\" : {\r\n    }\r\n  },\r\n  \"others\" : [ ],\r\n  \"otherAttributes\" : {\r\n  }\r\n}",
+              "options": {}
             },
             "url": "https://{{vrops}}/suite-api/api/adapters",
             "description": "Be sure to check values in the JSON body for credentials.\nAlso note you will need to start the adapter using \"Star an adapter instance\" \nafter creation using the UUID from the response.\n\nIf you aren't using a CA, the certificate will have to be added via the UI\nI do not know of a way to do this via the REST API"
@@ -2839,19 +2846,19 @@
   ],
   "variable": [
     {
-      "id": "3d199d57-1047-4453-b149-c53a5c8abb79",
+      "id": "796869c4-a470-47f3-b45f-5b0e80dd8e03",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "40237c84-a20c-4af2-b2af-19adabf7cdc2",
+      "id": "625b93ee-7636-469b-b135-5445795630c8",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "04546572-a287-4a63-83b2-d017ef113e43",
+      "id": "f31c95d0-a4bb-42ba-a87f-21dfbda9d5b2",
       "key": "pass",
       "value": "",
       "type": "string"
