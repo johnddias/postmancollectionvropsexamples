@@ -70,15 +70,15 @@
             "header": [
               {
                 "key": "Accept",
-                "value": "application/json",
+                "name": "Accept",
                 "type": "text",
-                "name": "Accept"
+                "value": "application/json"
               },
               {
                 "key": "Content-Type",
-                "value": "application/x-www-form-urlencoded",
+                "name": "Accept",
                 "type": "text",
-                "name": "Accept"
+                "value": "application/x-www-form-urlencoded"
               }
             ],
             "body": {
@@ -86,8 +86,8 @@
               "urlencoded": [
                 {
                   "key": "refresh_token",
-                  "value": "{{refreshToken}}",
-                  "type": "text"
+                  "type": "text",
+                  "value": "{{refreshToken}}"
                 }
               ],
               "options": {
@@ -2831,19 +2831,19 @@
   ],
   "variable": [
     {
-      "id": "983762c5-86cb-490c-8dc7-cea69efa2cc5",
+      "id": "dde80e25-01b8-4a5f-b1c0-a2d7cbc5f740",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "0577308b-9190-4571-b0c5-8b77ca940829",
+      "id": "c220964a-e836-4506-9794-bd4fbb77aa1b",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "5c26d8db-db1c-46f3-ac47-8bc48a500d01",
+      "id": "e339970a-34e7-4214-8b6a-da46c984a340",
       "key": "pass",
       "value": "",
       "type": "string"
