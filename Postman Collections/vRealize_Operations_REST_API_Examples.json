@@ -2674,7 +2674,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}",
+                "value": "{{bearer {{bearerToken}}",
                 "type": "text",
                 "warning": ""
               },
@@ -2693,7 +2693,8 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"contextResourceId\" : [ \"bc14eb84-05df-47f9-979c-f811f0da1c1d\" ],\r\n  \"others\" : [ ],\r\n  \"otherAttributes\" : { }\r\n}"
+              "raw": "{\r\n  \"contextResourceId\" : [ \"bc14eb84-05df-47f9-979c-f811f0da1c1d\" ],\r\n  \"others\" : [ ],\r\n  \"otherAttributes\" : { }\r\n}",
+              "options": {}
             },
             "url": "https://{{vrops}}/suite-api/api/actions/{{actionId}}/query",
             "description": "You will need to have populated \n\n* resourceId env var\n* actionId env var\n\nResponse is parsed and saved as input for the performAction API"
@@ -2863,19 +2864,19 @@
   ],
   "variable": [
     {
-      "id": "c1d7d5a0-21ef-4ad5-b4d0-c49ae1b04021",
+      "id": "0c2a06fa-692e-4e5f-8054-ccb6ce874a5d",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "cff89287-fcb7-4860-8ff6-f0973ac69297",
+      "id": "759eaa1f-748c-4d85-8b59-abcdc0ae71b1",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "02b3bad2-4b78-4936-b63b-05f818295189",
+      "id": "07a1cf41-bd93-457f-8efc-273725f4fb62",
       "key": "pass",
       "value": "",
       "type": "string"
