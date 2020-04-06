@@ -451,7 +451,7 @@
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "{{bearer {{bearerToken}}"
+                    "value": "{{bearerToken}}"
                   }
                 ],
                 "url": {
@@ -529,7 +529,7 @@
                 "header": [
                   {
                     "key": "Authorization",
-                    "value": "{{bearer {{bearerToken}}"
+                    "value": "{{bearerToken}}"
                   },
                   {
                     "key": "Accept",
@@ -1519,7 +1519,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearer {{bearerToken}}"
+                "value": "{{bearerToken}}"
               }
             ],
             "url": "https://{{vrops}}/suite-api/api/resources/{{resourceId}}/statkeys"
@@ -1794,7 +1794,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearer {{bearerToken}}"
+                "value": "{{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -1902,7 +1902,7 @@
             "header": [
               {
                 "key": "Authorization",
-                "value": "{{bearer {{bearerToken}}"
+                "value": "{{bearerToken}}"
               },
               {
                 "key": "Content-Type",
@@ -2901,19 +2901,19 @@
   ],
   "variable": [
     {
-      "id": "21d82782-22a5-4435-9264-616d8ec60eb9",
+      "id": "b6cf5ae5-304a-4f98-b764-f737377e6b2e",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "8f6ff919-8ac3-4cff-ba22-48e5baa7bbea",
+      "id": "16e2a9a4-86bc-474b-bbd1-02eca4ab774e",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "ff08aedc-d57f-43e3-9052-b589ff4b05ee",
+      "id": "80df135b-174a-4382-9380-b154f9cee9f1",
       "key": "pass",
       "value": "",
       "type": "string"
