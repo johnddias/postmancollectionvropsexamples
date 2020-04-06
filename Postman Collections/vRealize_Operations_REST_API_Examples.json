@@ -1420,12 +1420,15 @@
         {
           "name": "Get VirtualMachine Res by Name",
           "_postman_id": "2f348843-de21-c497-f693-a28210702ea0",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "GET",
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -2846,19 +2849,19 @@
   ],
   "variable": [
     {
-      "id": "a9e5d7d5-e530-490a-8ca9-71d8d63eb91f",
+      "id": "4edbf920-e0b8-4335-a446-b0066c9e62f7",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "eeb9412f-c372-4ad1-9740-3615cae86010",
+      "id": "e61b3566-6944-4054-ab28-cdbb183654fb",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "f058579d-b844-42ef-9fd4-5ac1e8420360",
+      "id": "6959d345-9ed5-4727-8463-5c39ed8ba48b",
       "key": "pass",
       "value": "",
       "type": "string"
