@@ -2486,12 +2486,15 @@
         {
           "name": "Apply License Key to Weekly vROps",
           "_postman_id": "08928f24-77f6-4d14-9414-2178b415869c",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "POST",
             "header": [
               {
                 "key": "Authorization",
-                "value": "vRealizeOpsToken {{bearerToken}}"
+                "value": "{{bearer {{bearerToken}}"
               },
               {
                 "key": "Accept",
@@ -2504,7 +2507,8 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"solutionLicenses\" : [ {\n    \"licenseKey\" : \"XXXXX-XXXXX-XXXXX-XXXXX-XXXXX\"\n  } ]\n}"
+              "raw": "{\n  \"solutionLicenses\" : [ {\n    \"licenseKey\" : \"XXXXX-XXXXX-XXXXX-XXXXX-XXXXX\"\n  } ]\n}",
+              "options": {}
             },
             "url": "https://{{vrops}}/suite-api/api/deployment/licenses",
             "description": "Be sure to check values in the JSON body for credentials.\nAlso note you will need to start the adapter using \"Star an adapter instance\" \nafter creation using the UUID from the response.\n\nIf you aren't using a CA, the certificate will have to be added via the UI\nI do not know of a way to do this via the REST API"
@@ -2835,19 +2839,19 @@
   ],
   "variable": [
     {
-      "id": "30a85a14-bcdb-4623-9d48-54dcd172ec09",
+      "id": "4efacaab-4c91-43d1-b19a-b2f34e14d54f",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "7c6cba60-08bb-4095-802b-e4c4515ddbf9",
+      "id": "8a48555e-a460-46c4-b1e0-566888c75a05",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "70d999c1-5833-44d5-a740-7512d7b1a40c",
+      "id": "ecbd0ce0-dff1-4f61-8d34-362ca7e8f896",
       "key": "pass",
       "value": "",
       "type": "string"
