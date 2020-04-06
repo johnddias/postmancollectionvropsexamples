@@ -2806,7 +2806,7 @@
           "name": "Physical OS Agent Install",
           "item": [
             {
-              "name": "Sign Client Certificate",
+              "name": "2 - Sign Client Certificate",
               "_postman_id": "2e6f9290-cd94-4b5a-b1a5-3ca40803b95c",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
@@ -2924,19 +2924,19 @@
   ],
   "variable": [
     {
-      "id": "b6cf3104-470d-4a54-a199-56e59a749718",
+      "id": "dd8277c5-49b6-4638-8b56-e50405150e69",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "fbbe1371-ee16-4bf3-9020-1afa0d140eef",
+      "id": "bc0c1cab-ca28-434a-80eb-87170243ea8e",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "3d435ad4-c0d4-49a0-81d7-0b9b700323eb",
+      "id": "cd4dd240-af27-4c57-ac3d-f20404d10f0b",
       "key": "pass",
       "value": "",
       "type": "string"
