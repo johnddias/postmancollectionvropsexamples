@@ -2943,6 +2943,44 @@
             "url": "https://{{vrops}}/suite-api/api/applications/agent"
           },
           "response": []
+        },
+        {
+          "name": "Stop Agent",
+          "_postman_id": "08cb3085-dd7c-474b-b90c-f774579f8904",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{bearerToken}}",
+                "type": "text"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"contextResourceIDs\" : [ {{resourceId}} ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "https://{{vrops}}/suite-api/api/applications/agents/stop"
+          },
+          "response": []
         }
       ],
       "_postman_id": "1d7249e1-8718-4873-a9b1-dee08efe20f6",
@@ -2994,19 +3032,19 @@
   ],
   "variable": [
     {
-      "id": "bbddb3ea-e559-418a-8cc7-7046c7944eab",
+      "id": "ff9d7115-43c6-43c4-a859-0bc66178cb9c",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "c1f38f06-b0ab-4121-9824-66020afd9c8b",
+      "id": "a5924fd8-971e-40b5-a910-fc5876829558",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "47208008-f4f8-44db-bd6b-e61ae0f11271",
+      "id": "ae79db23-2439-4efd-810f-e24c53902576",
       "key": "pass",
       "value": "",
       "type": "string"
