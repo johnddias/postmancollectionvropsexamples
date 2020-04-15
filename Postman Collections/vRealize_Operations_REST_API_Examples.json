@@ -1102,9 +1102,52 @@
             "disableBodyPruning": true
           },
           "request": {
-            "method": "GET",
-            "header": [],
-            "url": "",
+            "method": "PUT",
+            "header": [
+              {
+                "key": "X-vRealizeOps-API-use-unsupported",
+                "value": "true",
+                "type": "text",
+                "name": "X-vRealizeOps-API-use-unsupported"
+              },
+              {
+                "key": "Authorization",
+                "value": "{{bearerToken}}",
+                "type": "text",
+                "warning": ""
+              },
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text",
+                "warning": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text",
+                "warning": ""
+              }
+            ],
+            "url": {
+              "raw": "https://{{vrops}}/suite-api/internal/auth/basic?basicAuth=true",
+              "protocol": "https",
+              "host": [
+                "{{vrops}}"
+              ],
+              "path": [
+                "suite-api",
+                "internal",
+                "auth",
+                "basic"
+              ],
+              "query": [
+                {
+                  "key": "basicAuth",
+                  "value": "true"
+                }
+              ]
+            },
             "description": "In 8.1 basicAuth is disabled by default.  If you have scripts that still use basicAuth you should update them.  However, if you need basicAuth in the meanwhile you can re-enable it.  \n\nIt is strongly advised to update your scripts to use tokenAuth, as this capability will be removed in a future release."
           },
           "response": []
@@ -3046,19 +3089,19 @@
   ],
   "variable": [
     {
-      "id": "4c1b88d3-6c90-44d4-9d69-bd2385f330c5",
+      "id": "5acbb853-5f5b-4968-b1e9-6b61d3c2a9e0",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "e27aed52-51a1-4dd1-90e3-46bedf313dd3",
+      "id": "644ba11e-1a3b-4855-b7f3-f7e98dfa0779",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "dc93b917-6033-4762-99c7-a1df94b8daa7",
+      "id": "23e467e7-87e2-47f3-978e-e731717f0e78",
       "key": "pass",
       "value": "",
       "type": "string"
