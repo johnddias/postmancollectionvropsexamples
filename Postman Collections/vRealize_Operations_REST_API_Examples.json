@@ -2281,7 +2281,7 @@
           "response": []
         },
         {
-          "name": "Get Users",
+          "name": "Change User Password",
           "_postman_id": "d4a0a2ee-88d9-bb2b-68b9-7d8586141148",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -3038,6 +3038,38 @@
             "url": "https://{{vrops}}/suite-api/api/applications/agents/stop"
           },
           "response": []
+        },
+        {
+          "name": "Get Agent Task Status",
+          "_postman_id": "84a7a6b2-716f-407d-82fc-5febc5c83fd1",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{bearerToken}}",
+                "type": "text",
+                "warning": ""
+              },
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text",
+                "warning": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text",
+                "warning": ""
+              }
+            ],
+            "url": "https://{{vrops}}/suite-api/api/applications/agents/c0d33547-0323-4b63-9764-c3a78a535557/status"
+          },
+          "response": []
         }
       ],
       "_postman_id": "1d7249e1-8718-4873-a9b1-dee08efe20f6",
@@ -3089,19 +3121,19 @@
   ],
   "variable": [
     {
-      "id": "5acbb853-5f5b-4968-b1e9-6b61d3c2a9e0",
+      "id": "b1766c6d-8b59-46c8-a0b2-b04fb009f827",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "644ba11e-1a3b-4855-b7f3-f7e98dfa0779",
+      "id": "59fc91c9-e1f5-423b-a8a7-a52152db750f",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "23e467e7-87e2-47f3-978e-e731717f0e78",
+      "id": "fb260fc3-d03e-462e-bebf-3833e73fac17",
       "key": "pass",
       "value": "",
       "type": "string"
