@@ -3389,7 +3389,112 @@
     },
     {
       "name": "Kim Bottu's Collection",
-      "item": [],
+      "item": [
+        {
+          "name": "1 Request authentication token",
+          "item": [
+            {
+              "name": "Get vROps Auth Token using a local user",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "6d4ce1cf-eebc-4434-abcd-b3ee366cb00c",
+                    "exec": [
+                      "var jsonData = JSON.parse(responseBody);",
+                      "postman.setEnvironmentVariable(\"bearerToken\", \"vRealizeOpsToken \" + jsonData.token);",
+                      "",
+                      ""
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "_postman_id": "dbbfbe3b-5bc8-4dda-b6b2-b9f9f5c5d051",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "basic",
+                  "basic": {
+                    "password": "VMw@re1!",
+                    "username": "admin"
+                  }
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {}
+                  }
+                },
+                "url": "https://{{vrops}}/suite-api/api/auth/token/acquire",
+                "description": "Type = Basic Authentication\r\nUser = admin\r\npassword = password of local vROps admin"
+              },
+              "response": []
+            },
+            {
+              "name": "Get vROps Auth Token using a local vIDM user",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "c863c154-aa38-4672-9902-600f19d2dfe5",
+                    "exec": [
+                      "var jsonData = JSON.parse(responseBody);",
+                      "postman.setEnvironmentVariable(\"bearerToken\", \"vRealizeOpsToken \" + jsonData.token);",
+                      "",
+                      ""
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "_postman_id": "5efbb757-fe87-4682-b6c8-9af47fa4ab01",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"username\": \"user@system domain\",\r\n\t\"password\" : \"VMw@re1!\",\r\n\t\"authSource\" : \"vIDMAuthSource\"\r\n}",
+                  "options": {
+                    "raw": {}
+                  }
+                },
+                "url": "https://{{vrops}}/suite-api/api/auth/token/acquire",
+                "description": "content-type= application json\r\n\r\nChange the BODY as needed. Format is raw JSON. \r\n{\r\n  \"username\" : \"{{user}}@system domain\" ( replace \"{{user}}\" and leave \"@system domain\" in place, this is the local VIDM Authentication Source),\r\n  \"authSource\" : \"vIDMAuthSource\",\r\n  \"password\" : \"yourpassword\"\r\n}"
+              },
+              "response": []
+            }
+          ],
+          "_postman_id": "40b08a36-1c3b-47b0-aeb5-58d833113ab2",
+          "_postman_isSubFolder": true
+        }
+      ],
       "_postman_id": "f77a8b22-4618-4c91-b597-478ead647072",
       "description": "vROps API examples from vExpert Kim Bottu \r\n@Kim_Bottu\r\nhttps://vmusketeers.com/"
     }
@@ -3418,19 +3523,19 @@
   ],
   "variable": [
     {
-      "id": "f33704a9-3d65-47ae-818c-f8bc10ea8a81",
+      "id": "a1befd56-9135-4c54-b536-675609bcad66",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "38b3e76b-8fe6-4a15-b916-8f22dca2e658",
+      "id": "2e200b49-5157-47cc-9c0e-8256cb306c6e",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "5b72b605-211f-43ab-8a07-409f0ba5dac7",
+      "id": "eed8646f-dc77-4a92-a554-e95781142f4d",
       "key": "pass",
       "value": "",
       "type": "string"
