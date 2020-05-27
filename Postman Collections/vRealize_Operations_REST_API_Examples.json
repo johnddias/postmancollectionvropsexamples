@@ -10,6 +10,109 @@
       "name": "Full Alert Info",
       "item": [
         {
+          "name": "Authenticate - RUN FIRST",
+          "item": [
+            {
+              "name": "On-Prem RUN FIRST - Get vR Ops Auth Token",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "b8610863-48a2-43e2-93e4-be5ace8b0c5b",
+                    "exec": [
+                      "var jsonData = JSON.parse(responseBody);",
+                      "postman.setEnvironmentVariable(\"bearerToken\", \"vRealizeOpsToken \" + jsonData.token);",
+                      ""
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "_postman_id": "f3d1ffe3-8bcf-4625-9138-d30b3540f894",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"username\" : \"{{user}}\",\r\n  \"authSource\" : \"local\",\r\n  \"password\" : \"{{pass}}\"\r\n}",
+                  "options": {
+                    "raw": {}
+                  }
+                },
+                "url": "https://{{vrops}}/suite-api/api/auth/token/acquire"
+              },
+              "response": []
+            },
+            {
+              "name": "Cloud RUN FIRST Generate CSP Access Token",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "8e7cfbb8-a876-4f1d-aeb0-135f93610ee9",
+                    "exec": [
+                      "var jsonData = JSON.parse(responseBody);",
+                      "postman.setEnvironmentVariable(\"bearerToken\", \"CSPToken \" + jsonData.access_token);",
+                      ""
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "_postman_id": "09952c72-e29a-4952-ba17-e54c609fcfa2",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "name": "Accept",
+                    "type": "text",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "name": "Accept",
+                    "type": "text",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "key": "refresh_token",
+                      "type": "text",
+                      "value": "{{refreshToken}}"
+                    }
+                  ],
+                  "options": {
+                    "urlencoded": {}
+                  }
+                },
+                "url": "https://console.cloud.vmware.com/csp/gateway/am/api/auth/api-tokens/authorize"
+              },
+              "response": []
+            }
+          ],
+          "_postman_id": "2ef60b54-fec1-4453-9109-cf614aea6196",
+          "_postman_isSubFolder": true
+        },
+        {
           "name": "Query Alerts",
           "event": [
             {
@@ -4148,108 +4251,6 @@
           }
         }
       ]
-    },
-    {
-      "name": "Authenticate - RUN FIRST",
-      "item": [
-        {
-          "name": "On-Prem RUN FIRST - Get vR Ops Auth Token",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "b8610863-48a2-43e2-93e4-be5ace8b0c5b",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "postman.setEnvironmentVariable(\"bearerToken\", \"vRealizeOpsToken \" + jsonData.token);",
-                  ""
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "_postman_id": "f3d1ffe3-8bcf-4625-9138-d30b3540f894",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json"
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n  \"username\" : \"{{user}}\",\r\n  \"authSource\" : \"local\",\r\n  \"password\" : \"{{pass}}\"\r\n}",
-              "options": {
-                "raw": {}
-              }
-            },
-            "url": "https://{{vrops}}/suite-api/api/auth/token/acquire"
-          },
-          "response": []
-        },
-        {
-          "name": "Cloud RUN FIRST Generate CSP Access Token",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "8e7cfbb8-a876-4f1d-aeb0-135f93610ee9",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);",
-                  "postman.setEnvironmentVariable(\"bearerToken\", \"CSPToken \" + jsonData.access_token);",
-                  ""
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "_postman_id": "09952c72-e29a-4952-ba17-e54c609fcfa2",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Accept",
-                "name": "Accept",
-                "type": "text",
-                "value": "application/json"
-              },
-              {
-                "key": "Content-Type",
-                "name": "Accept",
-                "type": "text",
-                "value": "application/x-www-form-urlencoded"
-              }
-            ],
-            "body": {
-              "mode": "urlencoded",
-              "urlencoded": [
-                {
-                  "key": "refresh_token",
-                  "type": "text",
-                  "value": "{{refreshToken}}"
-                }
-              ],
-              "options": {
-                "urlencoded": {}
-              }
-            },
-            "url": "https://console.cloud.vmware.com/csp/gateway/am/api/auth/api-tokens/authorize"
-          },
-          "response": []
-        }
-      ],
-      "_postman_id": "2ef60b54-fec1-4453-9109-cf614aea6196"
     }
   ],
   "event": [
@@ -4276,19 +4277,19 @@
   ],
   "variable": [
     {
-      "id": "d600398e-4ced-467e-b550-96f6777d8c3b",
+      "id": "d4c4e24f-f618-4b63-9b2d-9d3272b8a9a8",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "d1d72a9b-c6c2-4b8b-b231-b0cb7f201a65",
+      "id": "1f818e7a-0373-4dd3-a857-c58d46cef65d",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "2e1a1828-f774-419a-8011-4dd1be803154",
+      "id": "7af93c07-cf02-4faf-a013-a1da347cd276",
       "key": "pass",
       "value": "",
       "type": "string"
