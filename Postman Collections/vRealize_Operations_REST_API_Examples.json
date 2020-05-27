@@ -2,7 +2,7 @@
   "info": {
     "_postman_id": "8725de8d-4ad6-2dc9-887a-54fe8e1f879b",
     "name": "vRealize Operations REST API Examples",
-    "description": "**Description**\n\nA collection of vRealize Operations REST APIs organized by use case.  This collection is updated frequently and typically using the latest release of vRealize Operations.\n\nAlso now include are some examples for deploying a new vRealize Operations cluster using the CASA API.  CASA stands for Cluster and Slice Administration.  This API allows you to install and manage your cluster. \n\nAuthorization for the REST APIs are handled via OAuth and an API call is included that will request and store a token for the other REST calls.  Be sure to set the included variables for your env.  Basic auth is only used by the REST API \"Run First\" call.\n\nAuthentication for CASA uses basic and you will also need to get the master node thumbprint for some of these workflows.\n\nAlso, many of the REST calls have tests, which store additional information as part of a workflow.  Be sure to set headers to send/rec payloads in JSON format, as the tests assume this format.  Default for vROps API is XML so any post-tests will fail and any pre-tests provide env vars in JSON format.\n\n**Documentation**\n\nDocumentation for the APIs can be found on the vROps appliance:\n\n/suite-api for the REST APIs\n/casa/api-guide.html for the CASA REST APIs\n\n**Contributors:**\n\nJohn Dias, diasj@vmware.com\nChris McClanahan, mcclanahanc@vmware.com",
+    "description": "Description\n\nA collection of vRealize Operations REST APIs organized by use case. This collection is updated frequently and typically using the latest release of vRealize Operations.\n\nAlso now include are some examples for deploying a new vRealize Operations cluster using the CASA API. CASA stands for Cluster and Slice Administration. This API allows you to install and manage your cluster.\n\nAuthorization for the REST APIs are handled via OAuth and an API call is included that will request and store a token for the other REST calls. Be sure to set the included variables for your env. Basic auth is only used by the REST API \"Run First\" call.\n\nAuthentication for CASA uses basic and you will also need to get the master node thumbprint for some of these workflows.\n\nAlso, many of the REST calls have tests, which store additional information as part of a workflow. Be sure to set headers to send/rec payloads in JSON format, as the tests assume this format. Default for vROps API is XML so any post-tests will fail and any pre-tests provide env vars in JSON format.\n\nDocumentation\n\nDocumentation for the APIs can be found on the vROps appliance:\n\n/suite-api for the REST APIs /casa/api-guide.html for the CASA REST APIs\n\nContributors:\n\nJohn Dias, diasj@vmware.com Chris McClanahan, mcclanahanc@vmware.com Brandon Gordon, gbrandon@vmware.com, Kim Bottu @kim_bottu",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
   },
   "item": [
@@ -3418,19 +3418,19 @@
   ],
   "variable": [
     {
-      "id": "e49e6b10-1b89-4f86-b11b-cda224c71c0f",
+      "id": "f33704a9-3d65-47ae-818c-f8bc10ea8a81",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "f663a2da-f081-43f7-8b61-6de3c8eb24f6",
+      "id": "38b3e76b-8fe6-4a15-b916-8f22dca2e658",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "7c05d7b3-dc85-49d9-b741-3dc9331be6e6",
+      "id": "5b72b605-211f-43ab-8a07-409f0ba5dac7",
       "key": "pass",
       "value": "",
       "type": "string"
