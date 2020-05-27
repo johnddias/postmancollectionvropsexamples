@@ -3493,6 +3493,250 @@
           ],
           "_postman_id": "40b08a36-1c3b-47b0-aeb5-58d833113ab2",
           "_postman_isSubFolder": true
+        },
+        {
+          "name": "2 vIDM Authentication Source",
+          "item": [
+            {
+              "name": "1 Create a vIDM3.3.2 Authentication Source",
+              "item": [
+                {
+                  "name": "Find all configured Authorization Sources in vROps",
+                  "_postman_id": "243c5bde-9f67-41ca-ba2d-0a5f27b11021",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "vRealizeOpsToken  {{YourToken}}",
+                        "type": "text"
+                      }
+                    ],
+                    "url": "https://{{vrops}}/suite-api/api/auth/sources",
+                    "description": "https://{{vrops}}/suite-api/api/auth/sources\r\nFind all configured Authentication Sources in vROps using a Authorization token:\r\nIn Headers, add the KEY Authorization VALUE = vRealizeOpsToken + token -> 6e143a16-d67e-4863-8b81-dcc7c5d72e09::407b8217-85c9-48d9-b30c-ff4dfc2fbcad"
+                  },
+                  "response": []
+                },
+                {
+                  "name": "Create vIDM Authentication Source",
+                  "_postman_id": "83119256-cee8-49d5-9a54-1c31eace3b7e",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Authentication",
+                        "value": "vRealizeOpsToken  {{YourToken}}",
+                        "type": "text"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\r\n<ops:auth-source lastModified=\"1523035908002\" created=\"1523035908002\" xmlns:ops=\"http://webservice.vmware.com/vRealizeOpsMgr/1.0/\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n    <ops:name>vIDM332</ops:name>\r\n    <ops:sourceType id=\"VIDM\">\r\n        <ops:name>VIDM</ops:name>\r\n        <ops:description>DESC</ops:description>\r\n    </ops:sourceType>\r\n    <ops:name-value name=\"display-name\">{{vIDM-fqdn}}</ops:name-value>\r\n    <ops:name-value name=\"host\">{{vIDM-fqdn}}</ops:name-value>\r\n    <ops:name-value name=\"port\">443</ops:name-value>\r\n    <ops:name-value name=\"redirect-host\">https://192.168.1.225/ui/vidmClient/vidm/</ops:name-value>\r\n    <ops:name-value name=\"user-name\">{{vIDM-User}}</ops:name-value>\r\n    <ops:name-value name=\"password\">{{vIDM-User password}}</ops:name-value>\r\n   </ops:auth-source>",
+                      "options": {
+                        "raw": {
+                          "language": "xml"
+                        }
+                      }
+                    },
+                    "url": "https://{{vrops}}/suite-api/api/auth/sources",
+                    "description": "POST https://{{vrops}}/suite-api/api/auth/sources\r\nCreate a VIDM Authentication Sources in vROps using a Authorization token: In Headers, add the KEY Authorization VALUE = vRealizeOpsToken + token -> 6e143a16-d67e-4863-8b81-dcc7c5d72e09::407b8217-85c9-48d9-b30c-ff4dfc2fbcad\r\n\r\nChange the BODY as needed. BODY = XML\r\n\r\n<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\r\n<ops:auth-source lastModified=\"1523035908002\" created=\"1523035908002\" xmlns:ops=\"http://webservice.vmware.com/vRealizeOpsMgr/1.0/\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n    <ops:name>vIDM81</ops:name>\r\n    <ops:sourceType id=\"VIDM\">\r\n        <ops:name>VIDM</ops:name>\r\n        <ops:description>DESC</ops:description>\r\n    </ops:sourceType>\r\n    <ops:name-value name=\"display-name\">{{vidm-fqdn}}</ops:name-value>\r\n    <ops:name-value name=\"host\">{{vidm-fqdn}}</ops:name-value>\r\n    <ops:name-value name=\"port\">443</ops:name-value>\r\n    <ops:name-value name=\"redirect-host\">https://192.168.1.225/ui/vidmClient/vidm/</ops:name-value>\r\n    <ops:name-value name=\"user-name\">kim</ops:name-value>\r\n    <ops:name-value name=\"password\">VMw@re1!</ops:name-value>\r\n   </ops:auth-source>"
+                  },
+                  "response": []
+                }
+              ],
+              "_postman_id": "fe203663-0f4b-4d26-81de-f2e57c8afde3",
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "2 Use a vIDM user to connect to vROps",
+              "item": [
+                {
+                  "name": "Get Users from vROps using a VIDM AD user",
+                  "_postman_id": "07d9a5dc-8931-4266-ae35-f946e8bdb06e",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "auth": {
+                      "type": "basic",
+                      "basic": {
+                        "username": "administrator@{{yourDomain}}@VIDMAuthSource",
+                        "password": "M@l@clypse_01"
+                      }
+                    },
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "vRealizeOpsToken {{bearerToken}}"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "applicaiton/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "https://{{vrops}}/suite-api/api/auth/users?username=kim",
+                      "protocol": "https",
+                      "host": [
+                        "{{vrops}}"
+                      ],
+                      "path": [
+                        "suite-api",
+                        "api",
+                        "auth",
+                        "users"
+                      ],
+                      "query": [
+                        {
+                          "key": "username",
+                          "value": "kim"
+                        }
+                      ]
+                    },
+                    "description": "To use a vIDM specified AD user as a User in vROps specify BASIC Authentication.\nUsername= administrator@{{yourDomain}}@VIDMAuthSource"
+                  },
+                  "response": []
+                },
+                {
+                  "name": "Get Users using VIDM local user",
+                  "_postman_id": "a548a5ee-5c29-4702-b5d7-c4c60a3d09b0",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "auth": {
+                      "type": "basic",
+                      "basic": {
+                        "username": "kim@system domain@VIDMAuthSource",
+                        "password": "VMw@re1!"
+                      }
+                    },
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "vRealizeOpsToken {{bearerToken}}"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      },
+                      {
+                        "key": "Content-Type",
+                        "value": "applicaiton/json"
+                      }
+                    ],
+                    "url": "https://{{yourDomain}}/suite-api/api/auth/users",
+                    "description": "To use a vIDM specified local user as a User in vROps specify BASIC Authentication.\nUsername= kim@system domain@VIDMAuthSource\n\nFor token based authentication: In \"Headers\", add the KEY \"Authorization\" and set the value to \"vRealizeOpsToken + TOKEN\". The \"collectorgroup id\" is neccesary to create a new \"cloud account\"."
+                  },
+                  "response": []
+                }
+              ],
+              "_postman_id": "5830f9e5-cf98-4801-80ce-c1a10fb647b2",
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "3 Create vCenter7.0 Cloud Account",
+              "item": [
+                {
+                  "name": "Find the Collector Group ID",
+                  "_postman_id": "52637a3d-29ee-4512-923b-ec7eb9533ba6",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "vRealizeOpsToken  {{YourToken}}",
+                        "type": "text"
+                      }
+                    ],
+                    "url": "https://{{vrops}}/suite-api/api/collectors",
+                    "description": "Basic Authentication has been re-emabled:  https://kb.vmware.com/s/article/77271\n\nFor token based authentication:\nIn \"Headers\", add the KEY \"Authorization\"  and set the value to \"vRealizeOpsToken + TOKEN\".\nThe \"collectorgroup id\" is neccesary to create a new \"cloud account\"."
+                  },
+                  "response": []
+                },
+                {
+                  "name": "Find the resources of the Collector Group ID you want to use",
+                  "_postman_id": "7a32f299-5289-4eda-b38f-0501fc6de9ec",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "type": "text",
+                        "value": "vRealizeOpsToken  {{YourToken}}"
+                      }
+                    ],
+                    "url": "https://{{vrops}}/suite-api/api/adapters/{{collectorID}}/resources",
+                    "description": "https://{{vrops}}/suite-api/api/adapters/1b27552f-6a20-41cf-8b7e-c9dcba0ffda1/resources\n1b27552f-6a20-41cf-8b7e-c9dcba0ffda1 = vCenter Cloud ccount adapter\nresources = all the resources you can configure when setting up the \"vCenter Cloud Account\"\n\nFor token based authentication: In \"Headers\", add the KEY \"Authorization\" and set the value to \"vRealizeOpsToken + TOKEN\". The \"collectorgroup id\" is neccesary to create a new \"cloud account\"."
+                  },
+                  "response": []
+                },
+                {
+                  "name": "Create the vCenter Cloud Account + Credential",
+                  "_postman_id": "86bce4e9-a431-4915-bcc0-6dec60e0a2e5",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "vRealizeOpsToken  {{YourToken}}",
+                        "type": "text"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n    \"name\": \"vCenterAdapter\",\n    \"description\": \"vSphere adapter description\",\n    \"collectorGroupId\": \"f81e51de-5101-4c10-af6f-f9cd9cf7b77a\",\n    \"adapterKindKey\": \"VMWARE\",\n    \"resourceIdentifiers\": [\n        {\n            \"name\": \"VCURL\",\n            \"value\": \"vcenter7.vmusketeers.local\"\n        },\n        {\n            \"name\": \"PDRS_STATS_PROVIDER\",\n            \"value\": true\n        },\n        {\n            \"name\": \"AUTODISCOVERY\",\n            \"value\": true\n        },\n        {\n            \"name\": \"PROCESSCHANGEEVENTS\",\n            \"value\": true\n        },\n        {\n            \"name\": \"CLOUD_TYPE\",\n            \"value\": \"PRIVATE_CLOUD\"\n        },\n        {\n            \"name\": \"DV_PORT_GROUP_DISABLED\",\n            \"value\": false\n        },\n        {\n            \"name\": \"DVS_DISABLED\",\n            \"value\": false\n        },\n        {\n            \"name\": \"VM_FOLDER_DISABLED\",\n            \"value\": false\n        },\n        {\n            \"name\": \"VM_LIMIT\",\n            \"value\": \"2000000000\"\n        },\n        {\n            \"name\": \"ENABLE_ACTIONS\",\n            \"value\": true\n        }\n    ],\n    \"credential\": {\n        \"name\": \"vSphere adapter credential\",\n        \"credentialKindKey\": \"PRINCIPALCREDENTIAL\",\n        \"adapterKindKey\": \"VMWARE\",\n        \"fields\": [\n            {\n                \"name\": \"USER\",\n                \"value\": \"administrator@vsphere.local\"\n            },\n            {\n                \"name\": \"PASSWORD\",\n                \"value\": \"VMw@re1!\"\n            }\n        ],\n        \"others\": [],\n        \"otherAttributes\": {}\n    },\n    \"others\": [],\n    \"otherAttributes\": {}\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": "https://{{vrops}}/suite-api/api/adapters",
+                    "description": "Create a VC Adapter using the API.\nCan be done using BASIC Authentication\n\nFor token based authentication: In \"Headers\", add the KEY \"Authorization\" and set the value to \"vRealizeOpsToken + TOKEN\". The \"collectorgroup id\" is neccesary to create a new \"cloud account\".\n\nModify the BODY as needed (raw JSON format)"
+                  },
+                  "response": []
+                }
+              ],
+              "_postman_id": "52ee6b5d-aa24-4488-b2a4-9a3e00a62335",
+              "_postman_isSubFolder": true
+            }
+          ],
+          "_postman_id": "e5e96b49-a083-41da-968e-aa892afe07b7",
+          "_postman_isSubFolder": true
         }
       ],
       "_postman_id": "f77a8b22-4618-4c91-b597-478ead647072",
@@ -3523,19 +3767,19 @@
   ],
   "variable": [
     {
-      "id": "7145d0ed-fd29-4bca-aa44-ccd62a9d30c6",
+      "id": "5a6471ae-05e2-4c5a-8104-55d718db4180",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "5497f045-dc46-4b03-a3a3-169bfc8e18df",
+      "id": "726a5f38-4661-4ace-b871-9fba71cfc60a",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "c8866d81-55fc-422b-b6b5-87e83b016c85",
+      "id": "b723f3c9-8f49-4d15-8bb6-d099c10c6e47",
       "key": "pass",
       "value": "",
       "type": "string"
