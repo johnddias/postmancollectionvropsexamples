@@ -3958,6 +3958,227 @@
           ],
           "_postman_id": "e3ba5d56-0638-4d81-90ef-492a81b188c8",
           "_postman_isSubFolder": true
+        },
+        {
+          "name": "4 Integrations",
+          "item": [
+            {
+              "name": "1 Create vRLI8.1 Integration",
+              "item": [
+                {
+                  "name": "Find the Collector Group ID",
+                  "_postman_id": "a9039453-f517-48ec-9d10-8057771a50e0",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authentication",
+                        "value": "vRealizeOpsToken  6e143a16-d67e-4863-8b81-dcc7c5d72e09::407b8217-85c9-48d9-b30c-ff4dfc2fbcad",
+                        "type": "text"
+                      }
+                    ],
+                    "url": "https://{{vrops}}/suite-api/api/collectors",
+                    "description": "Basic Authentication has been re-emabled:  https://kb.vmware.com/s/article/77271\nThe \"collectorgroup id\" is neccesary to create a new \"cloud account\".\n\nFor token based authentication: In \"Headers\", add the KEY \"Authorization\" and set the value to \"vRealizeOpsToken + TOKEN\". The \"collectorgroup id\" is neccesary to create a new \"cloud account\"."
+                  },
+                  "response": []
+                },
+                {
+                  "name": "Find the resources of the Collector Group ID you want to use",
+                  "_postman_id": "c3dcc8c9-ef36-4080-95ad-151820cce2f2",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "vRealizeOpsToken  6e143a16-d67e-4863-8b81-dcc7c5d72e09::407b8217-85c9-48d9-b30c-ff4dfc2fbcad",
+                        "type": "text"
+                      }
+                    ],
+                    "url": "https://{{vrops}}/suite-api/api/adapters/1b27552f-6a20-41cf-8b7e-c9dcba0ffda1/resources",
+                    "description": "https://{{vrops}}/suite-api/api/adapters/1b27552f-6a20-41cf-8b7e-c9dcba0ffda1/resources\n1b27552f-6a20-41cf-8b7e-c9dcba0ffda1 = vCenter Cloud ccount adapter\nresources = all the resources you can configure when setting up the \"vCenter Cloud Account\"\n\nFor token based authentication: In \"Headers\", add the KEY \"Authorization\" and set the value to \"vRealizeOpsToken + TOKEN\". The \"collectorgroup id\" is neccesary to create a new \"cloud account\"."
+                  },
+                  "response": []
+                },
+                {
+                  "name": "Create the vRLI81 Integration",
+                  "_postman_id": "bf3c02e2-7c04-4692-b926-780a03421bd9",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "type": "text",
+                        "value": "vRealizeOpsToken 6e143a16-d67e-4863-8b81-dcc7c5d72e09::527ee7d7-17cd-4382-a06c-2ebb1f16fe0a"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n    \"name\": \"IntegratedAccount_LogInsightAdapter\",\n    \"description\": \"IntegratedAccount for the LogInsight Adapter \",\n    \"collectorGroupId\": \"{{YourCollectorGroupID}}\",\n    \"adapterKindKey\": \"LogInsightAdapter\",\n    \"resourceIdentifiers\": [\n        {\n            \"name\": \"LOGINSIGHTURL\",\n            \"value\": \"{{vRLI-fqdn}}\"\n        },\n        {\n            \"name\": \"IS_SINGLETON\",\n            \"value\": true\n        }\n    ]\n}\n",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": "https://vrops-api.vmusketeers.local/suite-api/api/adapters",
+                    "description": "Create a vRLI81 Integration , using the API.\nCan be done using BASIC Authentication\n\nFor token based authentication: In \"Headers\", add the KEY \"Authorization\" and set the value to \"vRealizeOpsToken + TOKEN\". The \"collectorgroup id\" is neccesary to create a new \"cloud account\".\n\nModify the BODY as needed (raw JSON format)"
+                  },
+                  "response": []
+                }
+              ],
+              "_postman_id": "31baba91-1954-41c5-b818-a6eb21d53288",
+              "event": [
+                {
+                  "listen": "prerequest",
+                  "script": {
+                    "id": "ab61ea37-2932-49a9-b210-c659d92c39b2",
+                    "type": "text/javascript",
+                    "exec": [
+                      ""
+                    ]
+                  }
+                },
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "ade34509-6ea6-4dfb-b2e2-6de2a1a20b46",
+                    "type": "text/javascript",
+                    "exec": [
+                      ""
+                    ]
+                  }
+                }
+              ],
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "2 Create vRA8.1 Integration",
+              "item": [
+                {
+                  "name": "Find the Collector Group ID",
+                  "_postman_id": "168d58d9-8e2d-47e9-8ba9-ba5e2a348e51",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "vRealizeOpsToken  {{YourToken}}",
+                        "type": "text"
+                      }
+                    ],
+                    "url": "https://{{vrops}}/suite-api/api/collectors",
+                    "description": "Basic Authentication has been re-emabled:  https://kb.vmware.com/s/article/77271\nThe \"collectorgroup id\" is neccesary to create a new \"cloud account\".\n\nFor token based authentication: In \"Headers\", add the KEY \"Authorization\" and set the value to \"vRealizeOpsToken + TOKEN\". The \"collectorgroup id\" is neccesary to create a new \"cloud account\"."
+                  },
+                  "response": []
+                },
+                {
+                  "name": "Find the resources of the Collector Group ID you want to use",
+                  "_postman_id": "2c191d1e-dbbe-40e3-a270-15b8f7c02f34",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "vRealizeOpsToken  {{YourToken}}",
+                        "type": "text"
+                      }
+                    ],
+                    "url": "https://{{vrops}}/suite-api/api/adapters/1b27552f-6a20-41cf-8b7e-c9dcba0ffda1/resources",
+                    "description": "https://vrops-api.vmusketeers.local/suite-api/api/adapters/1b27552f-6a20-41cf-8b7e-c9dcba0ffda1/resources\n1b27552f-6a20-41cf-8b7e-c9dcba0ffda1 = vCenter Cloud ccount adapter\nresources = all the resources you can configure when setting up the \"vCenter Cloud Account\"\n\nFor token based authentication: In \"Headers\", add the KEY \"Authorization\" and set the value to \"vRealizeOpsToken + TOKEN\". The \"collectorgroup id\" is neccesary to create a new \"cloud account\"."
+                  },
+                  "response": []
+                },
+                {
+                  "name": "Create the vRA81 Integration + Credential",
+                  "_postman_id": "548e5f45-1ddf-4046-998c-694a22e2a940",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Authorization",
+                        "value": "vRealizeOpsToken  {{YourToken}}",
+                        "type": "text"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n    \"name\": \"IntegratedAccount_CASAdapter\",\n    \"description\": \"vRA81Integration with vROps-API \",\n    \"collectorGroupId\": \"f81e51de-5101-4c10-af6f-f9cd9cf7b77a\",\n    \"adapterKindKey\": \"CASAdapter\",\n    \"resourceIdentifiers\": [\n        {\n            \"name\": \"CASURL\",\n            \"value\": \"{{vRA-fqdn}}\"\n        },\n        {\n            \"name\": \"SUPPORT_AUTODISCOVERY\",\n            \"value\": true\n        }\n    ],\n    \"credential\": {\n        \"name\": \"vRA 81 CAS Credential\",\n        \"credentialKindKey\": \"CMPCREDENTIALS\",\n        \"adapterKindKey\": \"CASAdapter\",\n        \"fields\": [\n            {\n                \"name\": \"USERNAME\",\n                \"value\": \"{{vIDM-User}}\"\n            },\n            {\n                \"name\": \"PASSWORD\",\n                \"value\": \"{{vIDM-password}}\"\n            }\n        ],\n        \"others\": [],\n        \"otherAttributes\": {}\n    },\n    \"others\": [],\n    \"otherAttributes\": {}\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": "https://{{vrops}}/suite-api/api/adapters",
+                    "description": "Create a vRA81 CAS Integration and the credential needed, using the API.\nCan be done using BASIC Authentication\n\nFor token based authentication: In \"Headers\", add the KEY \"Authorization\" and set the value to \"vRealizeOpsToken + TOKEN\". The \"collectorgroup id\" is neccesary to create a new \"cloud account\".\n\nModify the BODY as needed (raw JSON format)"
+                  },
+                  "response": []
+                }
+              ],
+              "_postman_id": "80c66bc1-ac62-4a40-87b1-dd8bdf36bbc6",
+              "event": [
+                {
+                  "listen": "prerequest",
+                  "script": {
+                    "id": "f5db1c3d-f460-4df0-b414-1b740534b56f",
+                    "type": "text/javascript",
+                    "exec": [
+                      ""
+                    ]
+                  }
+                },
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "6f5e3e33-ce87-4f48-a100-28c2231ce2e6",
+                    "type": "text/javascript",
+                    "exec": [
+                      ""
+                    ]
+                  }
+                }
+              ],
+              "_postman_isSubFolder": true
+            }
+          ],
+          "_postman_id": "5ee0d608-1049-4854-9ad7-edf1b20ad258",
+          "_postman_isSubFolder": true
         }
       ],
       "_postman_id": "f77a8b22-4618-4c91-b597-478ead647072",
@@ -3988,19 +4209,19 @@
   ],
   "variable": [
     {
-      "id": "1b1e4540-641f-43dc-87f6-fb4e44ad9bfc",
+      "id": "470645be-5044-4bb2-9e5f-60cddbd857f7",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "456ea60f-9e53-4e76-a394-906004098e46",
+      "id": "f453c1c2-b431-418c-b6a3-0885c8ad3474",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "5d45ff6c-2ea7-4aa2-b074-30d71bad3859",
+      "id": "0e08d537-f6f7-49d2-a827-ff52c20ded78",
       "key": "pass",
       "value": "",
       "type": "string"
