@@ -3095,6 +3095,297 @@
           }
         }
       ]
+    },
+    {
+      "name": "Applications",
+      "item": [
+        {
+          "name": "Get Container Adapter Instance ID",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "0f31bddc-f5dd-4b54-80ec-fe958bcdb52c",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "postman.setEnvironmentVariable(\"containerAdapterInstanceId\", jsonData.adapterInstancesInfoDto[0].id);",
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "9a737a3e-5766-4bf0-952a-0a1126045c55",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "vRealizeOpsToken {{bearerToken}}"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "https://{{vrops}}/suite-api/api/adapters?adapterKindKey=Container",
+              "protocol": "https",
+              "host": [
+                "{{vrops}}"
+              ],
+              "path": [
+                "suite-api",
+                "api",
+                "adapters"
+              ],
+              "query": [
+                {
+                  "key": "adapterKindKey",
+                  "value": "Container"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Application Object named \"Postman\"",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "758fec7a-bfde-406f-ad15-26d4217a3b46",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "postman.setEnvironmentVariable(\"applicationObjectId\", jsonData.identifier);",
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "dbcb6ab7-542c-4302-a87b-575af7f8946d",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "vRealizeOpsToken {{bearerToken}}"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"creationTime\": null,\r\n  \"resourceKey\": {\r\n    \"name\": \"Postman\",\r\n    \"adapterKindKey\": \"Container\",\r\n    \"resourceKindKey\": \"BusinessService\",\r\n    \"resourceIdentifiers\": []\r\n  },\r\n  \"resourceStatusStates\": [],\r\n  \"resourceHealth\": null,\r\n  \"resourceHealthValue\": null,\r\n  \"dtEnabled\": true,\r\n  \"monitoringInterval\": 5,\r\n  \"badges\": [],\r\n  \"relatedResources\": [],\r\n  \"identifier\": null\r\n}\r\n",
+              "options": {
+                "raw": {}
+              }
+            },
+            "url": "https://{{vrops}}/suite-api/api/resources/adapters/{{containerAdapterInstanceId}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Start Collecting Application Object",
+          "_postman_id": "2bec40c8-cbb6-4f08-9dc5-0cf0ac8ec409",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "vRealizeOpsToken {{bearerToken}}",
+                "type": "text",
+                "warning": ""
+              },
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": "https://{{vrops}}/suite-api/api/resources/{{applicationObjectId}}/monitoringstate/start"
+          },
+          "response": []
+        },
+        {
+          "name": "Create Application Tier named \"App\"",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "50ca2281-63bc-4655-b9ef-24f1a2e1c129",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);",
+                  "postman.setEnvironmentVariable(\"applicationTierObjectId\", jsonData.identifier);",
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "eeb66d64-1ea4-4d6b-b672-b5be463b1c18",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "vRealizeOpsToken {{bearerToken}}"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"creationTime\": null,\r\n  \"resourceKey\": {\r\n    \"name\": \"App\",\r\n    \"adapterKindKey\": \"Container\",\r\n    \"resourceKindKey\": \"Tier\",\r\n    \"resourceIdentifiers\": [\r\n      {\r\n        \"identifierType\": {\r\n          \"name\": \"BS_Tier Name\",\r\n          \"dataType\": \"STRING\",\r\n          \"isPartOfUniqueness\": true\r\n        },\r\n        \"value\": \"{{applicationObjectId}}_App\"\r\n      }\r\n    ]\r\n  },\r\n  \"resourceStatusStates\": [],\r\n  \"resourceHealth\": null,\r\n  \"resourceHealthValue\": null,\r\n  \"dtEnabled\": true,\r\n  \"monitoringInterval\": 5,\r\n  \"badges\": [],\r\n  \"relatedResources\": [],\r\n  \"identifier\": null\r\n}",
+              "options": {
+                "raw": {}
+              }
+            },
+            "url": "https://{{vrops}}/suite-api/api/resources/adapters/{{containerAdapterInstanceId}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Start Collection Application Tier Object",
+          "_postman_id": "f3309e71-a968-4eaf-8ade-0dbae48a85dd",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "vRealizeOpsToken {{bearerToken}}",
+                "type": "text",
+                "warning": ""
+              },
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": "https://{{vrops}}/suite-api/api/resources/{{applicationTierObjectId}}/monitoringstate/start"
+          },
+          "response": []
+        },
+        {
+          "name": "Make Application Tier Object a child of the Application Object",
+          "_postman_id": "50879452-590d-4a2b-b172-da74e460ed8e",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "vRealizeOpsToken {{bearerToken}}"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "",
+                "value": "",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"uuids\" : [ \"{{applicationObjectId}}\" ]\r\n}",
+              "options": {
+                "raw": {}
+              }
+            },
+            "url": "https://{{vrops}}/suite-api/api/resources/{{applicationTierObjectId}}/relationships/parents"
+          },
+          "response": []
+        },
+        {
+          "name": "Add Objects as child of Application Tier Object",
+          "_postman_id": "9f04d158-5c39-4132-8324-0cdcff02e77c",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "vRealizeOpsToken {{bearerToken}}"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "",
+                "value": "",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"uuids\" : [ \"832e49a8-e85d-4777-9a83-1c15b4660ec1\", \"f2c1d832-91e6-44fc-9499-3aff354c199f\" ]\r\n}",
+              "options": {
+                "raw": {}
+              }
+            },
+            "url": "https://{{vrops}}/suite-api/api/resources/{{applicationTierObjectId}}/relationships/children"
+          },
+          "response": []
+        }
+      ],
+      "_postman_id": "d8cd271e-659a-4c23-aa34-c74999ed6f27"
     }
   ],
   "event": [
@@ -3121,19 +3412,19 @@
   ],
   "variable": [
     {
-      "id": "2fad71cc-208b-4b53-afab-f1109de90919",
+      "id": "cb6b2998-740a-4520-aa2c-95dcff761bdb",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "4c263bfc-881b-47e9-b999-a0f8bb99ecd1",
+      "id": "ac4a9b57-d232-43f7-88e2-86004054ba4c",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "35a385f5-85e3-402c-9839-80060456fa31",
+      "id": "4350eb00-c680-40aa-970e-5e7dfc837dd9",
       "key": "pass",
       "value": "",
       "type": "string"
