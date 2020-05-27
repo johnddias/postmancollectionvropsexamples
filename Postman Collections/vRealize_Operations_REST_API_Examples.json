@@ -3386,6 +3386,12 @@
         }
       ],
       "_postman_id": "d8cd271e-659a-4c23-aa34-c74999ed6f27"
+    },
+    {
+      "name": "Kim Bottu's Collection",
+      "item": [],
+      "_postman_id": "f77a8b22-4618-4c91-b597-478ead647072",
+      "description": "vROps API examples from vExpert Kim Bottu \r\n@Kim_Bottu\r\nhttps://vmusketeers.com/"
     }
   ],
   "event": [
@@ -3412,19 +3418,19 @@
   ],
   "variable": [
     {
-      "id": "b99934ca-7fda-471b-9959-f02bd7c865cd",
+      "id": "0637ac35-530b-44a1-8e3d-caabdcc68432",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "6da28173-669a-47c8-81ad-65e04e94d0de",
+      "id": "8e917dd3-050c-4926-8ee0-53b0d048192d",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "5d5990b4-635a-4972-a2eb-6020c23d2292",
+      "id": "e90a8bfb-2c94-4fae-8269-0b3f5e6cc674",
       "key": "pass",
       "value": "",
       "type": "string"
