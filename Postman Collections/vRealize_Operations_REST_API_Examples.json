@@ -4179,6 +4179,51 @@
           ],
           "_postman_id": "5ee0d608-1049-4854-9ad7-edf1b20ad258",
           "_postman_isSubFolder": true
+        },
+        {
+          "name": "Get Users Copy",
+          "_postman_id": "0c13c848-459a-45a0-a7fb-66f878b60fd8",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "vRealizeOpsToken {{bearerToken}}"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "applicaiton/json"
+              }
+            ],
+            "url": {
+              "raw": "https://{{vrops}}/suite-api/api/auth/users?username=frank",
+              "protocol": "https",
+              "host": [
+                "{{vrops}}"
+              ],
+              "path": [
+                "suite-api",
+                "api",
+                "auth",
+                "users"
+              ],
+              "query": [
+                {
+                  "key": "username",
+                  "value": "frank"
+                }
+              ]
+            },
+            "description": "May also include query such as id, roleName and username"
+          },
+          "response": []
         }
       ],
       "_postman_id": "f77a8b22-4618-4c91-b597-478ead647072",
@@ -4209,19 +4254,19 @@
   ],
   "variable": [
     {
-      "id": "470645be-5044-4bb2-9e5f-60cddbd857f7",
+      "id": "53c63df7-b124-4f05-a4f2-e2949081b9b1",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "f453c1c2-b431-418c-b6a3-0885c8ad3474",
+      "id": "6cf8d5d7-722e-423e-ac0e-69fe6c1beab0",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "0e08d537-f6f7-49d2-a827-ff52c20ded78",
+      "id": "33954bda-0ba1-46c2-80ab-a4aaa19c57ef",
       "key": "pass",
       "value": "",
       "type": "string"
