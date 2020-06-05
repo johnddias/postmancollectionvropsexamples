@@ -2228,6 +2228,45 @@
             "url": "https://{{vrops}}/suite-api/api/resources/query "
           },
           "response": []
+        },
+        {
+          "name": "https://{{vrops}}/suite-api/api/resources/query ",
+          "_postman_id": "ca821a9b-40bd-4765-a510-c738857a4386",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{bearerToken}}",
+                "type": "text",
+                "warning": ""
+              },
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text",
+                "warning": ""
+              },
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"propertyConditions\" : {\n    \t\"conditions\" : [{\n    \t\t\"key\": \"summary|UUID\",\n    \t\t\"operator\":\"EQ\",\n    \t\t\"stringValue\":\"dae3aaf1-b603-40ee-af83-06be4e87a5bb\"\n    \t}]\n\n    \t\n    }\n}",
+              "options": {
+                "raw": {}
+              }
+            },
+            "url": "https://{{vrops}}/suite-api/api/resources/query "
+          },
+          "response": []
         }
       ],
       "_postman_id": "f8811ef5-0250-82fd-4214-0f6404e27adc"
@@ -4276,19 +4315,19 @@
   ],
   "variable": [
     {
-      "id": "5aa61ce1-4136-4857-8351-7cf7e393d642",
+      "id": "4b324f9d-98e8-40bb-8db3-8912bc6a5f64",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "e2775960-95bb-4132-a990-58e4eeed81f6",
+      "id": "bfbbf5ea-abc6-4e6c-8d24-808e8e3c9881",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "590deaa5-bc6f-4f3b-90bc-91505fc0d9f6",
+      "id": "71ad7225-d7cf-40a7-bf78-4e0b0c3f5cd1",
       "key": "pass",
       "value": "",
       "type": "string"
