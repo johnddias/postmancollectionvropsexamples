@@ -1481,6 +1481,45 @@
       "name": "Resources",
       "item": [
         {
+          "name": "https://{{vrops}}/suite-api/api/resources/query ",
+          "_postman_id": "ca821a9b-40bd-4765-a510-c738857a4386",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{bearerToken}}",
+                "type": "text",
+                "warning": ""
+              },
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text",
+                "warning": ""
+              },
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"propertyConditions\" : {\n    \t\"conditions\" : [{\n    \t\t\"key\": \"summary|UUID\",\n    \t\t\"operator\":\"EQ\",\n    \t\t\"stringValue\":\"dae3aaf1-b603-40ee-af83-06be4e87a5bb\"\n    \t}]\n\n    \t\n    }\n}",
+              "options": {
+                "raw": {}
+              }
+            },
+            "url": "https://{{vrops}}/suite-api/api/resources/query "
+          },
+          "response": []
+        },
+        {
           "name": "Get Resources",
           "_postman_id": "c20e1aa7-84c9-0711-059b-d50e82825882",
           "protocolProfileBehavior": {
@@ -2224,45 +2263,6 @@
               "mode": "raw",
               "raw": "{\n    \"propertyConditions\" : {\n    \t\"conditions\" : [{\n    \t\t\"key\": \"summary|guest|ipAddress\",\n    \t\t\"operator\":\"EQ\",\n    \t\t\"stringValue\":\"172.18.0.1\"\n    \t}]\n\n    \t\n    }\n}",
               "options": {}
-            },
-            "url": "https://{{vrops}}/suite-api/api/resources/query "
-          },
-          "response": []
-        },
-        {
-          "name": "https://{{vrops}}/suite-api/api/resources/query ",
-          "_postman_id": "ca821a9b-40bd-4765-a510-c738857a4386",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "{{bearerToken}}",
-                "type": "text",
-                "warning": ""
-              },
-              {
-                "key": "Accept",
-                "value": "application/json",
-                "type": "text",
-                "warning": ""
-              },
-              {
-                "key": "Content-Type",
-                "name": "Content-Type",
-                "value": "application/json",
-                "type": "text"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"propertyConditions\" : {\n    \t\"conditions\" : [{\n    \t\t\"key\": \"summary|UUID\",\n    \t\t\"operator\":\"EQ\",\n    \t\t\"stringValue\":\"dae3aaf1-b603-40ee-af83-06be4e87a5bb\"\n    \t}]\n\n    \t\n    }\n}",
-              "options": {
-                "raw": {}
-              }
             },
             "url": "https://{{vrops}}/suite-api/api/resources/query "
           },
@@ -4315,19 +4315,19 @@
   ],
   "variable": [
     {
-      "id": "0556e04a-a520-4eee-b078-ce08de2cdaf8",
+      "id": "01b80cd9-4771-4cc4-b7d7-cb390f5e972e",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "6f19f9ae-e21b-4775-bb20-13f39ef7e6c1",
+      "id": "ffd0d53e-0dbe-4345-9167-78f335beb404",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "49a8e903-30cb-48b3-ac3e-6357644f6ade",
+      "id": "6fd90c03-8866-4434-9bc2-1b0c18664eea",
       "key": "pass",
       "value": "",
       "type": "string"
