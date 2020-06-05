@@ -1594,24 +1594,6 @@
           "response": []
         },
         {
-          "name": "Get Virtual Machine by Resource Identifier",
-          "_postman_id": "37a8d496-d4d5-bc97-14b4-028333c2d907",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "{{bearerToken}}"
-              }
-            ],
-            "url": "https://{{vrops}}/suite-api/api/resources/{{resourceId}}/properties"
-          },
-          "response": []
-        },
-        {
           "name": "Get StatKeys of a Resource",
           "_postman_id": "a63941a7-1f0d-c12d-a3cb-0f415de9718b",
           "protocolProfileBehavior": {
@@ -4315,19 +4297,19 @@
   ],
   "variable": [
     {
-      "id": "01b80cd9-4771-4cc4-b7d7-cb390f5e972e",
+      "id": "6a0f74bb-933b-4121-b403-85495cf658c2",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "ffd0d53e-0dbe-4345-9167-78f335beb404",
+      "id": "f83535df-3c3e-4fb3-a3f5-34129bb92e0b",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "6fd90c03-8866-4434-9bc2-1b0c18664eea",
+      "id": "ad25456e-5ab8-443e-a1de-f96cf87ce914",
       "key": "pass",
       "value": "",
       "type": "string"
