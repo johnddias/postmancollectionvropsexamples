@@ -1481,7 +1481,7 @@
       "name": "Resources",
       "item": [
         {
-          "name": "https://{{vrops}}/suite-api/api/resources/query ",
+          "name": "Get Virtual Machine by Resource Identifier",
           "_postman_id": "ca821a9b-40bd-4765-a510-c738857a4386",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -4297,19 +4297,19 @@
   ],
   "variable": [
     {
-      "id": "43b539db-cfb7-4b59-a3f2-247d6a890a0d",
+      "id": "fff480c3-ee1b-4294-bc4f-b919ae9c682c",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "7a821806-6fb8-4b46-a2fc-2ff5fc0db438",
+      "id": "be8a252b-c63a-468e-849c-0de8284676b8",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "131d2081-2328-4ff0-89a3-df04f2b5c25c",
+      "id": "bde76628-7e19-49fb-bf86-a7eb187d27da",
       "key": "pass",
       "value": "",
       "type": "string"
