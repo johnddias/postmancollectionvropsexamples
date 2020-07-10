@@ -43,7 +43,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"username\" : \"{{user}}\",\r\n  \"authSource\" : \"local\",\r\n  \"password\" : \"{{pass}}\"\r\n}",
+              "raw": "{\r\n  \"username\" : \"{{user}}\",\r\n  \"authSource\" : \"{{authSource}}\",\r\n  \"password\" : \"{{pass}}\"\r\n}",
               "options": {
                 "raw": {}
               }
@@ -4676,19 +4676,19 @@
   ],
   "variable": [
     {
-      "id": "767526d0-8248-49cd-8fe8-f4e5a10b7894",
+      "id": "11358d19-f173-49d6-b164-9e8bffc49c30",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "7cee675e-0ddf-4beb-bc89-eb5c4d023ddb",
+      "id": "d944f644-5072-4c90-a13f-555b3bd2678a",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "9fd0575a-9bfd-4258-8bce-9bc43fa66a58",
+      "id": "e389c22c-c712-4309-b47a-516295642e4d",
       "key": "pass",
       "value": "",
       "type": "string"
