@@ -2249,6 +2249,28 @@
             "url": "https://{{vrops}}/suite-api/api/resources/query "
           },
           "response": []
+        },
+        {
+          "name": "Get All Stat Keys for Virtual Machines",
+          "_postman_id": "c3d746db-645c-4338-ad2e-4dec8b081644",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{bearerToken}}"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": "https://{{vrops}}/suite-api/api/adapterkinds/VMWARE/resourcekinds/VirtualMachine/statkeys"
+          },
+          "response": []
         }
       ],
       "_postman_id": "f8811ef5-0250-82fd-4214-0f6404e27adc"
@@ -4676,19 +4698,19 @@
   ],
   "variable": [
     {
-      "id": "11358d19-f173-49d6-b164-9e8bffc49c30",
+      "id": "a791efb2-6176-499a-9e7d-42384c128489",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "d944f644-5072-4c90-a13f-555b3bd2678a",
+      "id": "0ace4e2f-8a72-4bc7-a248-0520dcabb62b",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "e389c22c-c712-4309-b47a-516295642e4d",
+      "id": "3c7b31d0-7e4d-4b61-820f-7020e383da99",
       "key": "pass",
       "value": "",
       "type": "string"
