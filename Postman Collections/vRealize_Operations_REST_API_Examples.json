@@ -2271,6 +2271,56 @@
             "url": "https://{{vrops}}/suite-api/api/adapterkinds/VMWARE/resourcekinds/VirtualMachine/statkeys"
           },
           "response": []
+        },
+        {
+          "name": "Get VMC SDDC by Identifier[Id]",
+          "_postman_id": "d9d59370-6484-47d2-bdba-db7a6fcd6f78",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{bearerToken}}"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {}
+              }
+            },
+            "url": {
+              "raw": "https://{{vrops}}/suite-api/api/adapterkinds/VmcAdapter/resourcekinds/SDDC/resources?identifiers[Id]=00000000-0000-0000-0000-000000000000",
+              "protocol": "https",
+              "host": [
+                "{{vrops}}"
+              ],
+              "path": [
+                "suite-api",
+                "api",
+                "adapterkinds",
+                "VmcAdapter",
+                "resourcekinds",
+                "SDDC",
+                "resources"
+              ],
+              "query": [
+                {
+                  "key": "identifiers[Id]",
+                  "value": "00000000-0000-0000-0000-000000000000"
+                }
+              ]
+            }
+          },
+          "response": []
         }
       ],
       "_postman_id": "f8811ef5-0250-82fd-4214-0f6404e27adc"
@@ -4698,19 +4748,19 @@
   ],
   "variable": [
     {
-      "id": "a791efb2-6176-499a-9e7d-42384c128489",
+      "id": "6ec89683-581a-438f-8abf-da47f4c6c317",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "0ace4e2f-8a72-4bc7-a248-0520dcabb62b",
+      "id": "45dabff2-9eb0-4b2b-8af5-62df1b9199c9",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "3c7b31d0-7e4d-4b61-820f-7020e383da99",
+      "id": "6e51353f-4f1d-4aac-8812-ed45619d0629",
       "key": "pass",
       "value": "",
       "type": "string"
