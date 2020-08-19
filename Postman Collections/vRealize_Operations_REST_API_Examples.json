@@ -2329,6 +2329,12 @@
       "name": "Users and Authentication",
       "item": [
         {
+          "name": "Roles",
+          "item": [],
+          "_postman_id": "e1b514a9-1fde-45f2-be7b-f30b99236d6c",
+          "_postman_isSubFolder": true
+        },
+        {
           "name": "Get Auth Sources",
           "_postman_id": "3ed7c42a-6f3d-84d5-3942-a5e3312f0192",
           "request": {
@@ -4748,19 +4754,19 @@
   ],
   "variable": [
     {
-      "id": "6ec89683-581a-438f-8abf-da47f4c6c317",
+      "id": "adfe6de1-698e-4329-ad9c-8735aa5e7e92",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "45dabff2-9eb0-4b2b-8af5-62df1b9199c9",
+      "id": "37389fd0-ab9f-429e-8543-10aef9341299",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "6e51353f-4f1d-4aac-8812-ed45619d0629",
+      "id": "b7db332c-e1bb-4952-a9a0-cffaee7c2ca1",
       "key": "pass",
       "value": "",
       "type": "string"
