@@ -2330,7 +2330,40 @@
       "item": [
         {
           "name": "Roles",
-          "item": [],
+          "item": [
+            {
+              "name": "Get User Roles",
+              "_postman_id": "a5b94cc7-82ef-409b-af1b-49b13e0ba495",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{bearerToken}}",
+                    "type": "text",
+                    "warning": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text",
+                    "warning": ""
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text",
+                    "warning": ""
+                  }
+                ],
+                "url": "https://{{vrops}}/suite-api/api/auth/roles"
+              },
+              "response": []
+            }
+          ],
           "_postman_id": "e1b514a9-1fde-45f2-be7b-f30b99236d6c",
           "_postman_isSubFolder": true
         },
@@ -4754,19 +4787,19 @@
   ],
   "variable": [
     {
-      "id": "165a4ce6-be1d-4104-a2dd-48f035a2ea5f",
+      "id": "86e4e0e7-473b-4a96-9d49-49521020cabb",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "fc838528-fc7e-4545-af84-8f23771e05ba",
+      "id": "1b774bfb-6bd4-4a2a-a9a8-c144e3adf0e5",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "12e04455-32d7-40a1-aef0-56db8e7179af",
+      "id": "5124f638-b1b8-477b-a3b8-adb53d87224b",
       "key": "pass",
       "value": "",
       "type": "string"
