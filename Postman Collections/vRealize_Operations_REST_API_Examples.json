@@ -2370,13 +2370,31 @@
         {
           "name": "Get Auth Sources",
           "_postman_id": "3ed7c42a-6f3d-84d5-3942-a5e3312f0192",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
             "method": "GET",
-            "header": [],
-            "body": {
-              "mode": "formdata",
-              "formdata": []
-            },
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{bearerToken}}",
+                "type": "text",
+                "warning": ""
+              },
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text",
+                "warning": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text",
+                "warning": ""
+              }
+            ],
             "url": "https://{{vrops}}/suite-api/api/auth/sources"
           },
           "response": []
@@ -4787,19 +4805,19 @@
   ],
   "variable": [
     {
-      "id": "86e4e0e7-473b-4a96-9d49-49521020cabb",
+      "id": "158e38a4-a310-4d24-a828-7c6b60131631",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "1b774bfb-6bd4-4a2a-a9a8-c144e3adf0e5",
+      "id": "af4ba3f5-9e09-4fc9-b4e5-96cccff22760",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "5124f638-b1b8-477b-a3b8-adb53d87224b",
+      "id": "4fff09fb-51fd-4871-8356-282f4e6f56b4",
       "key": "pass",
       "value": "",
       "type": "string"
