@@ -2359,7 +2359,25 @@
                     "warning": ""
                   }
                 ],
-                "url": "https://{{vrops}}/suite-api/api/auth/roles"
+                "url": {
+                  "raw": "https://{{vrops}}/suite-api/api/auth/roles?roleName=Field Users",
+                  "protocol": "https",
+                  "host": [
+                    "{{vrops}}"
+                  ],
+                  "path": [
+                    "suite-api",
+                    "api",
+                    "auth",
+                    "roles"
+                  ],
+                  "query": [
+                    {
+                      "key": "roleName",
+                      "value": "Field Users"
+                    }
+                  ]
+                }
               },
               "response": []
             }
@@ -4805,19 +4823,19 @@
   ],
   "variable": [
     {
-      "id": "158e38a4-a310-4d24-a828-7c6b60131631",
+      "id": "5335a445-0566-4532-af68-b0f7e96181a7",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "af4ba3f5-9e09-4fc9-b4e5-96cccff22760",
+      "id": "9da89cff-5951-4c1d-91ed-81900315cde7",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "4fff09fb-51fd-4871-8356-282f4e6f56b4",
+      "id": "8c7af7e2-85aa-455b-a6eb-77ad6c381783",
       "key": "pass",
       "value": "",
       "type": "string"
