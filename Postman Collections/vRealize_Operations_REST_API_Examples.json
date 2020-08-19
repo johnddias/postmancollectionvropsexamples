@@ -2430,6 +2430,47 @@
                 }
               },
               "response": []
+            },
+            {
+              "name": "Set User Role Privileges",
+              "_postman_id": "2a489192-0a6a-42ea-a36a-2c984db2d843",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{bearerToken}}",
+                    "type": "text",
+                    "warning": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text",
+                    "warning": ""
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text",
+                    "warning": ""
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{{rolePayload}}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "https://{{vrops}}/suite-api/api/auth/roles"
+              },
+              "response": []
             }
           ],
           "_postman_id": "e1b514a9-1fde-45f2-be7b-f30b99236d6c",
@@ -4873,25 +4914,25 @@
   ],
   "variable": [
     {
-      "id": "8b7c02e6-8b8f-4a30-b771-b0d5a156196e",
+      "id": "8e5254d6-01b9-4d07-9d75-3d4cc94abfc7",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "eeb5b3dd-dbef-4ff7-933d-a79c66fe4d97",
+      "id": "40c313b5-7260-41d3-9752-36c859283fe2",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "f8789bc2-ca10-4409-835f-ba5055b592b8",
+      "id": "29b603bb-c2ab-488b-a50c-4ef830261b8b",
       "key": "pass",
       "value": "",
       "type": "string"
     },
     {
-      "id": "e8f32e92-e990-41e7-b02b-a9fd3f561488",
+      "id": "7eb14e4e-2b9b-49a8-af6f-a9a38850b503",
       "key": "rolePayload",
       "value": "",
       "type": "string"
