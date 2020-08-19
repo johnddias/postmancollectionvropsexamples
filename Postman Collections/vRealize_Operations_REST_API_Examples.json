@@ -2332,7 +2332,7 @@
           "name": "Roles",
           "item": [
             {
-              "name": "Get User Roles",
+              "name": "Get User Role",
               "_postman_id": "a5b94cc7-82ef-409b-af1b-49b13e0ba495",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
@@ -4873,19 +4873,19 @@
   ],
   "variable": [
     {
-      "id": "2c3819e6-3def-493d-babd-e3b7e4e74760",
+      "id": "b58c42d0-0f76-4ab5-bca3-3a12b3c833ba",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "44352bad-9a4c-46c2-9847-5a1b101739ce",
+      "id": "4cba8e20-c546-46bd-9bdf-756072f01ad5",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "01cf2bd1-68f5-496e-8398-2247821a9b73",
+      "id": "b8084bca-0557-4d8d-803e-db06d91a3eff",
       "key": "pass",
       "value": "",
       "type": "string"
