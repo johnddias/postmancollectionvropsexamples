@@ -2380,6 +2380,56 @@
                 }
               },
               "response": []
+            },
+            {
+              "name": "Create User Role",
+              "_postman_id": "57bb3e95-f11c-406b-a844-42369e2b36b0",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{bearerToken}}",
+                    "type": "text",
+                    "warning": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text",
+                    "warning": ""
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text",
+                    "warning": ""
+                  }
+                ],
+                "url": {
+                  "raw": "https://{{vrops}}/suite-api/api/auth/roles?roleName=Field Users",
+                  "protocol": "https",
+                  "host": [
+                    "{{vrops}}"
+                  ],
+                  "path": [
+                    "suite-api",
+                    "api",
+                    "auth",
+                    "roles"
+                  ],
+                  "query": [
+                    {
+                      "key": "roleName",
+                      "value": "Field Users"
+                    }
+                  ]
+                }
+              },
+              "response": []
             }
           ],
           "_postman_id": "e1b514a9-1fde-45f2-be7b-f30b99236d6c",
@@ -4823,19 +4873,19 @@
   ],
   "variable": [
     {
-      "id": "5335a445-0566-4532-af68-b0f7e96181a7",
+      "id": "68883370-7d9b-4dfd-87e0-47fe3cc600a3",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "9da89cff-5951-4c1d-91ed-81900315cde7",
+      "id": "abbf297a-d94a-45f2-8c1c-779ebc4fc7eb",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "8c7af7e2-85aa-455b-a6eb-77ad6c381783",
+      "id": "d6388104-0957-4128-8755-66a7178a8774",
       "key": "pass",
       "value": "",
       "type": "string"
