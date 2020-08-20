@@ -2433,6 +2433,20 @@
             },
             {
               "name": "Set User Role Privileges",
+              "event": [
+                {
+                  "listen": "prerequest",
+                  "script": {
+                    "id": "d424569b-d413-4253-af38-4b79e1f2d7f1",
+                    "exec": [
+                      "var roleData = JSON.parse(pm.collectionVariables.get(\"rolePayload\"));\r",
+                      "var privKeys = roleData[\"privilege-keys\"];\r",
+                      "pm.variables.set(\"payload\", JSON.stringify(privKeys));"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
               "_postman_id": "2a489192-0a6a-42ea-a36a-2c984db2d843",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
@@ -2461,14 +2475,14 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{{rolePayload}}",
+                  "raw": "{\r\n    \"privilege-key\" : {{payload}}\r\n}",
                   "options": {
                     "raw": {
                       "language": "json"
                     }
                   }
                 },
-                "url": "https://{{vrops}}/suite-api/api/auth/roles"
+                "url": "https://{{vrops}}/suite-api/api/auth/roles/Field Users/privileges"
               },
               "response": []
             }
@@ -4914,25 +4928,25 @@
   ],
   "variable": [
     {
-      "id": "10c40cf0-3c0c-4fca-8674-94466dd862f9",
+      "id": "d4a2a780-2a97-4f51-866c-f50fe118fc0b",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "7b9260e5-2575-4b45-b268-23d01bbcceab",
+      "id": "cfe841b7-4eb2-48b1-bb69-051c906964e1",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "ebe6e69d-e97b-4712-bd69-a6cc876eb9c8",
+      "id": "ba4e7731-f29a-45ca-824d-ab2422488a95",
       "key": "pass",
       "value": "",
       "type": "string"
     },
     {
-      "id": "e03d0ec1-7b70-4ee7-84a4-67492c41c8bb",
+      "id": "a124e14c-8f95-40a5-a03c-a7e6479e8617",
       "key": "rolePayload",
       "value": "",
       "type": "string"
