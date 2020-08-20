@@ -2488,7 +2488,7 @@
             }
           ],
           "_postman_id": "e1b514a9-1fde-45f2-be7b-f30b99236d6c",
-          "description": "In these examples, you can export a user role from one vROps instance and import it into another. \r\n\r\n* Get User Role on the source vROps to populate a collection variable with the payload for the POST. Be sure to update the role name in the URL template with the role name you wish (i.e. ?)\r\n* Create User Role on the destination vROps (which uses the above)",
+          "description": "In these examples, you can export a user role from one vROps instance and import it into another. \r\n\r\n* Get User Role on the source vROps to populate a collection variable with the payload for the POST. Be sure to update the role name in the URL template with the role name you wish (i.e. suite-api/api/auth/roles?roleName=userRoleName).\r\n* Create User Role on the destination vROps (which uses the above collection variable).\r\n\r\nOptionally, you can update an existing user role permissions. For example, if you have a permission change on the source vROps instance and you want to update the destination:\r\n\r\n* Get user Role on the source to fetch the role properties.\r\n* Set User Role Privileges on the destination will parse the properties and update with the new permission set.\r\n\r\n",
           "event": [
             {
               "listen": "prerequest",
@@ -4951,25 +4951,25 @@
   ],
   "variable": [
     {
-      "id": "b53518a1-4775-4b9d-8217-d70062d2fbb8",
+      "id": "1f666b1e-b911-4793-8959-70963c2656bb",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "e4b40a53-9898-479e-9677-e91a289e1466",
+      "id": "afc6848d-81fc-4f6f-9ba2-c71311711244",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "b191e61b-d064-4e3f-b0f7-78a28bd7d317",
+      "id": "2d6fd918-d489-4287-8974-a2b587b40cca",
       "key": "pass",
       "value": "",
       "type": "string"
     },
     {
-      "id": "70d13d4b-2071-420e-832b-262af4741211",
+      "id": "8ff89cf8-63db-4d94-894a-14748026a28e",
       "key": "rolePayload",
       "value": "",
       "type": "string"
