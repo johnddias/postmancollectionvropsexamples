@@ -1473,6 +1473,37 @@
             "description": "Replace the UUID with the ID of the adapter instance you want to start\nThis can be retrieved using Get Adapter Instances"
           },
           "response": []
+        },
+        {
+          "name": "Patch a vCenter Adapter Instance",
+          "_postman_id": "2e88c1cd-2728-4041-9238-a1c32cb57e8b",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{bearerToken}}"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"resourceKey\": {\r\n    \"name\": \"SC2VC03\",\r\n    \"adapterKindKey\": \"VMWARE\",\r\n    \"resourceKindKey\": \"VMwareAdapter Instance\",\r\n    \"resourceIdentifiers\": [\r\n      {\r\n        \"identifierType\": {\r\n          \"name\": \"AUTODISCOVERY\",\r\n          \"dataType\": \"STRING\",\r\n          \"isPartOfUniqueness\": false\r\n        },\r\n        \"value\": \"true\"\r\n      },\r\n      {\r\n        \"identifierType\": {\r\n          \"name\": \"CLOUD_TYPE\",\r\n          \"dataType\": \"STRING\",\r\n          \"isPartOfUniqueness\": false\r\n        },\r\n        \"value\": \"\"\r\n      },\r\n      {\r\n        \"identifierType\": {\r\n          \"name\": \"DV_PORT_GROUP_DISABLED\",\r\n          \"dataType\": \"STRING\",\r\n          \"isPartOfUniqueness\": false\r\n        },\r\n        \"value\": \"\"\r\n      },\r\n      {\r\n        \"identifierType\": {\r\n          \"name\": \"DVS_DISABLED\",\r\n          \"dataType\": \"STRING\",\r\n          \"isPartOfUniqueness\": false\r\n        },\r\n        \"value\": \"\"\r\n      },\r\n      {\r\n        \"identifierType\": {\r\n          \"name\": \"ENABLE_ACTIONS\",\r\n          \"dataType\": \"STRING\",\r\n          \"isPartOfUniqueness\": false\r\n        },\r\n        \"value\": \"\"\r\n      },\r\n      {\r\n        \"identifierType\": {\r\n          \"name\": \"GFS_SKIP_PATTERNS\",\r\n          \"dataType\": \"STRING\",\r\n          \"isPartOfUniqueness\": false\r\n        },\r\n        \"value\": \"\"\r\n      },\r\n      {\r\n        \"identifierType\": {\r\n          \"name\": \"PDRS_STATS_PROVIDER\",\r\n          \"dataType\": \"STRING\",\r\n          \"isPartOfUniqueness\": false\r\n        },\r\n        \"value\": \"\"\r\n      },\r\n      {\r\n        \"identifierType\": {\r\n          \"name\": \"PROCESSCHANGEEVENTS\",\r\n          \"dataType\": \"STRING\",\r\n          \"isPartOfUniqueness\": false\r\n        },\r\n        \"value\": \"true\"\r\n      },\r\n      {\r\n        \"identifierType\": {\r\n          \"name\": \"VCURL\",\r\n          \"dataType\": \"STRING\",\r\n          \"isPartOfUniqueness\": true\r\n        },\r\n        \"value\": \"https://sc2vc03.cmbu.local/sdk\"\r\n      },\r\n      {\r\n        \"identifierType\": {\r\n          \"name\": \"VM_FOLDER_DISABLED\",\r\n          \"dataType\": \"STRING\",\r\n          \"isPartOfUniqueness\": false\r\n        },\r\n        \"value\": \"\"\r\n      },\r\n      {\r\n        \"identifierType\": {\r\n          \"name\": \"VM_LIMIT\",\r\n          \"dataType\": \"STRING\",\r\n          \"isPartOfUniqueness\": false\r\n        },\r\n        \"value\": \"\"\r\n      },\r\n      {\r\n        \"identifierType\": {\r\n          \"name\": \"VMEntityVCID\",\r\n          \"dataType\": \"STRING\",\r\n          \"isPartOfUniqueness\": false\r\n        },\r\n        \"value\": \"\"\r\n      }\r\n    ]\r\n  },\r\n  \"description\": \"VCF Lab\",\r\n  \"collectorId\": 1,\r\n  \"credentialInstanceId\": \"52be11e5-b938-43c6-b023-70b206152b2a\",\r\n  \"monitoringInterval\": 5,\r\n  \"adapter-certificates\": [\r\n    {\r\n      \"thumbprint\": \"A9:20:D6:2E:BE:37:A2:D4:C2:B4:B4:F2:8C:02:61:BC:3D:BE:68:57\"\r\n    }\r\n  ],\r\n  \"links\": [\r\n    {\r\n      \"href\": \"/suite-api/api/adapters/f5a83ffe-b95f-45aa-9297-544f7fa64c3c\",\r\n      \"rel\": \"SELF\",\r\n      \"name\": \"linkToSelf\"\r\n    },\r\n    {\r\n      \"href\": \"/suite-api/api/credentials/52be11e5-b938-43c6-b023-70b206152b2a\",\r\n      \"rel\": \"RELATED\",\r\n      \"name\": \"linkToCredential\"\r\n    }\r\n  ],\r\n  \"id\": \"f5a83ffe-b95f-45aa-9297-544f7fa64c3c\"\r\n}",
+              "options": {}
+            },
+            "url": "https://{{vrops}}/suite-api/api/adapters"
+          },
+          "response": []
         }
       ],
       "_postman_id": "81428591-dd37-f8d8-279e-4d8837465cd9"
@@ -4951,25 +4982,25 @@
   ],
   "variable": [
     {
-      "id": "52b50e00-e9de-4830-a9ca-29deb0c2cf8d",
+      "id": "19a12470-5465-4e82-9f58-b274f85fb210",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "e6d9770c-9965-4507-9eab-55948c24f040",
+      "id": "9c6962f6-625a-42bc-955f-32095b7b9d85",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "ba8fa93b-7d89-4f6a-aa70-4444a08692f1",
+      "id": "0b6e1aaf-3a44-43e9-9cde-8ecf087259fb",
       "key": "pass",
       "value": "",
       "type": "string"
     },
     {
-      "id": "190c051e-c60c-40dd-b0be-ded0601b9d13",
+      "id": "9560e612-1135-49f5-9d07-40cfe79b17ab",
       "key": "rolePayload",
       "value": "",
       "type": "string"
