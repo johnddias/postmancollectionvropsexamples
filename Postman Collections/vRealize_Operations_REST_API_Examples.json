@@ -2364,6 +2364,20 @@
           "item": [
             {
               "name": "Get User Role",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "id": "ab744d2c-cf74-4ff6-abbc-a6ee2d8e1f80",
+                    "exec": [
+                      "var jsonData = JSON.parse(responseBody);\r",
+                      "var role = jsonData[\"userRoles\"][0];\r",
+                      "pm.collectionVariables.set(\"rolePayload\", JSON.stringify(role));"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
               "_postman_id": "a5b94cc7-82ef-409b-af1b-49b13e0ba495",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
@@ -4982,25 +4996,25 @@
   ],
   "variable": [
     {
-      "id": "fd1c5b9e-5cb9-49dd-82c7-c211fd2d7481",
+      "id": "c9695b1b-0fa1-4604-b219-e5609fc44344",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "1a77014c-db23-4668-a7db-8a4650a6156f",
+      "id": "26b0b668-6ef4-4504-8cde-a419409c6966",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "f9972b94-e5c4-4420-8065-9805217768a1",
+      "id": "58709d66-3a75-42fb-9506-4cb185e7d279",
       "key": "pass",
       "value": "",
       "type": "string"
     },
     {
-      "id": "8fc8345c-6678-4894-843b-7f9ed419ed12",
+      "id": "b7b589df-e510-4c27-a0f1-84bc6514cd07",
       "key": "rolePayload",
       "value": "",
       "type": "string"
