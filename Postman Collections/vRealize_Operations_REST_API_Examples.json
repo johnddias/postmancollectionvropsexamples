@@ -2428,6 +2428,18 @@
             },
             {
               "name": "Create User Role",
+              "event": [
+                {
+                  "listen": "prerequest",
+                  "script": {
+                    "id": "ee0c7c94-0ba4-4da7-ac31-fd824b09694e",
+                    "exec": [
+                      ""
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
               "_postman_id": "57bb3e95-f11c-406b-a844-42369e2b36b0",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
@@ -2454,25 +2466,14 @@
                     "warning": ""
                   }
                 ],
-                "url": {
-                  "raw": "https://{{vrops}}/suite-api/api/auth/roles?roleName=Field Users",
-                  "protocol": "https",
-                  "host": [
-                    "{{vrops}}"
-                  ],
-                  "path": [
-                    "suite-api",
-                    "api",
-                    "auth",
-                    "roles"
-                  ],
-                  "query": [
-                    {
-                      "key": "roleName",
-                      "value": "Field Users"
-                    }
-                  ]
-                }
+                "body": {
+                  "mode": "raw",
+                  "raw": "{{rolePayload}}",
+                  "options": {
+                    "raw": {}
+                  }
+                },
+                "url": "https://{{vrops}}/suite-api/api/auth/roles"
               },
               "response": []
             },
@@ -4996,25 +4997,25 @@
   ],
   "variable": [
     {
-      "id": "c9695b1b-0fa1-4604-b219-e5609fc44344",
+      "id": "56d37047-ee1a-49a9-adca-5e6379d14c04",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "26b0b668-6ef4-4504-8cde-a419409c6966",
+      "id": "d72c5ca0-a497-4a59-a3c1-36b17235f439",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "58709d66-3a75-42fb-9506-4cb185e7d279",
+      "id": "12815a84-872e-42eb-a6fb-e9fc4fecc0fd",
       "key": "pass",
       "value": "",
       "type": "string"
     },
     {
-      "id": "b7b589df-e510-4c27-a0f1-84bc6514cd07",
+      "id": "7bf64a23-69bd-449b-96a9-dc31decfd6b1",
       "key": "rolePayload",
       "value": "",
       "type": "string"
