@@ -1402,7 +1402,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"name\" : \"VC Adapter Instance\",\r\n  \"description\" : \"A vCenter Adapter Instance\",\r\n  \"collectorId\" : \"1\",\r\n  \"adapterKindKey\" : \"VMWARE\",\r\n  \"resourceIdentifiers\" : [ {\r\n    \"name\" : \"AUTODISCOVERY\",\r\n    \"value\" : \"true\"\r\n  }, {\r\n    \"name\" : \"PROCESSCHANGEEVENTS\",\r\n    \"value\" : \"true\"\r\n  }, {\r\n    \"name\" : \"VCURL\",\r\n    \"value\" : \"https://vc-vapp.mylab.dias/sdk\"\r\n  } ],\r\n  \"credential\" : {\r\n    \"id\" : null,\r\n    \"name\" : \"New Principal Credential\",\r\n    \"adapterKindKey\" : \"VMWARE\",\r\n    \"credentialKindKey\" : \"PRINCIPALCREDENTIAL\",\r\n    \"fields\" : [ {\r\n      \"name\" : \"USER\",\r\n      \"value\" : \"administrator@mylab.dias\"\r\n    }, {\r\n      \"name\" : \"PASSWORD\",\r\n      \"value\" : \"VMware1!\"\r\n    } ],\r\n    \"others\" : [ ],\r\n    \"otherAttributes\" : {\r\n    }\r\n  },\r\n  \"others\" : [ ],\r\n  \"otherAttributes\" : {\r\n  }\r\n}",
+              "raw": "{\r\n  \"name\" : \"Santa Clara\",\r\n  \"description\" : \"\",\r\n  \"collectorId\" : \"1\",\r\n  \"adapterKindKey\" : \"VMWARE\",\r\n  \"resourceIdentifiers\" : [ {\r\n    \"name\" : \"AUTODISCOVERY\",\r\n    \"value\" : \"true\"\r\n  }, {\r\n    \"name\" : \"PROCESSCHANGEEVENTS\",\r\n    \"value\" : \"true\"\r\n  }, {\r\n    \"name\" : \"VCURL\",\r\n    \"value\" : \"https://sc2vc01.cmbu.local/sdk\"\r\n  } ],\r\n  \"credential\" : {\r\n    \"id\" : null,\r\n    \"name\" : \"sc2vc01\",\r\n    \"adapterKindKey\" : \"VMWARE\",\r\n    \"credentialKindKey\" : \"PRINCIPALCREDENTIAL\",\r\n    \"fields\" : [ {\r\n      \"name\" : \"USER\",\r\n      \"value\" : \"vropsro@cmbu.local\"\r\n    }, {\r\n      \"name\" : \"PASSWORD\",\r\n      \"value\" : \"VMware1!\"\r\n    } ],\r\n    \"others\" : [ ],\r\n    \"otherAttributes\" : {\r\n    }\r\n  },\r\n  \"others\" : [ ],\r\n  \"otherAttributes\" : {\r\n  }\r\n}",
               "options": {}
             },
             "url": "https://{{vrops}}/suite-api/api/adapters",
@@ -4982,25 +4982,25 @@
   ],
   "variable": [
     {
-      "id": "ffbf26aa-c678-4a7a-b59a-34aa13420f75",
+      "id": "acdaad5c-553e-4423-bf38-6dabe492f6fa",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "d94ac980-e494-4ca5-9e34-d0a9263201ec",
+      "id": "6ccfc7e9-6bc5-400d-a4c2-4851bf9f16fa",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "6f4e4d31-60ba-45f1-ba87-0bd3bf8bb8e0",
+      "id": "a8e34759-b2c1-42a4-bb18-ab8a9e61d3e3",
       "key": "pass",
       "value": "",
       "type": "string"
     },
     {
-      "id": "7e8d468e-3321-4e22-9de2-a32385b4ce2a",
+      "id": "ab6fcc2d-fb13-473b-a5c7-6058534b2340",
       "key": "rolePayload",
       "value": "",
       "type": "string"
