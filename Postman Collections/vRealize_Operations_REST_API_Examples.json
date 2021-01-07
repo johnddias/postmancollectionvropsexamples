@@ -10,6 +10,12 @@
       "name": "Authenticate - RUN FIRST",
       "item": [
         {
+          "name": "Credentials",
+          "item": [],
+          "_postman_id": "39e8301c-3cd7-4afa-9434-ebfa4eb392be",
+          "_postman_isSubFolder": true
+        },
+        {
           "name": "On-Prem RUN FIRST - Get vR Ops Auth Token",
           "event": [
             {
@@ -5028,25 +5034,25 @@
   ],
   "variable": [
     {
-      "id": "f76114ac-13a5-421b-a65c-22de036544f0",
+      "id": "a9240a13-a37b-468d-abab-260249d5b827",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "f160d9a8-e71e-4364-95b8-e507da1b34ba",
+      "id": "ff184781-a04a-4233-8695-eb8656d895b0",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "7684741c-8be1-4098-a840-b550a1d02931",
+      "id": "f28d0b6f-cc36-4960-96e9-54f993f12781",
       "key": "pass",
       "value": "",
       "type": "string"
     },
     {
-      "id": "817e1e53-f45a-4220-8603-47538dd2aeda",
+      "id": "e6e87240-f04c-4ae7-bf9c-cf3c9efeabc1",
       "key": "rolePayload",
       "value": "",
       "type": "string"
