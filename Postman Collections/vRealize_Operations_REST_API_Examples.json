@@ -1504,6 +1504,38 @@
             "url": "https://{{vrops}}/suite-api/api/adapters"
           },
           "response": []
+        },
+        {
+          "name": "Create a vCenter Adapter Instance",
+          "_postman_id": "25514a6b-e712-4f4a-b5ed-bfb4ab7e08cc",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{bearerToken}}"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"WDC vCenter Adapter\",\n  \"description\": \"A vCenter Adapter Instance\",\n  \"collectorId\": \"1\",\n  \"adapterKindKey\": \"VMWARE\",\n  \"resourceIdentifiers\": [\n    {\n      \"name\": \"AUTODISCOVERY\",\n      \"value\": \"true\"\n    },\n    {\n      \"name\": \"PROCESSCHANGEEVENTS\",\n      \"value\": \"true\"\n    },\n    {\n      \"name\": \"VCURL\",\n      \"value\": \"10.196.206.10\"\n    }\n  ],\n  \"credential\": {\n    \"id\": null,\n    \"name\": \"WDC Credentials\",\n    \"adapterKindKey\": \"VMWARE\",\n    \"credentialKindKey\": \"PRINCIPALCREDENTIAL\",\n    \"fields\": [\n      {\n        \"name\": \"USER\",\n        \"value\": \"administrator@vsphere.local\"\n      },\n      {\n        \"name\": \"PASSWORD\",\n        \"value\": \"xxxxxx\"\n      }\n    ],\n    \"others\": [],\n    \"otherAttributes\": {}\n  },\n  \"others\": [],\n  \"otherAttributes\": {}\n}",
+              "options": {}
+            },
+            "url": "https://{{vrops}}/suite-api/api/adapters",
+            "description": "Be sure to check values in the JSON body for credentials.\nAlso note you will need to start the adapter using \"Star an adapter instance\" \nafter creation using the UUID from the response.\n\nIf you aren't using a CA, the certificate will have to be added via the UI\nI do not know of a way to do this via the REST API"
+          },
+          "response": []
         }
       ],
       "_postman_id": "81428591-dd37-f8d8-279e-4d8837465cd9"
@@ -2828,38 +2860,6 @@
               "formdata": []
             },
             "url": "https://{{vrops}}/casa/cluster/status"
-          },
-          "response": []
-        },
-        {
-          "name": "Create a vCenter Adapter Instance",
-          "_postman_id": "25514a6b-e712-4f4a-b5ed-bfb4ab7e08cc",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "{{bearerToken}}"
-              },
-              {
-                "key": "Accept",
-                "value": "application/json"
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"name\": \"WDC vCenter Adapter\",\n  \"description\": \"A vCenter Adapter Instance\",\n  \"collectorId\": \"1\",\n  \"adapterKindKey\": \"VMWARE\",\n  \"resourceIdentifiers\": [\n    {\n      \"name\": \"AUTODISCOVERY\",\n      \"value\": \"true\"\n    },\n    {\n      \"name\": \"PROCESSCHANGEEVENTS\",\n      \"value\": \"true\"\n    },\n    {\n      \"name\": \"VCURL\",\n      \"value\": \"10.196.206.10\"\n    }\n  ],\n  \"credential\": {\n    \"id\": null,\n    \"name\": \"WDC Credentials\",\n    \"adapterKindKey\": \"VMWARE\",\n    \"credentialKindKey\": \"PRINCIPALCREDENTIAL\",\n    \"fields\": [\n      {\n        \"name\": \"USER\",\n        \"value\": \"administrator@vsphere.local\"\n      },\n      {\n        \"name\": \"PASSWORD\",\n        \"value\": \"xxxxxx\"\n      }\n    ],\n    \"others\": [],\n    \"otherAttributes\": {}\n  },\n  \"others\": [],\n  \"otherAttributes\": {}\n}",
-              "options": {}
-            },
-            "url": "https://{{vrops}}/suite-api/api/adapters",
-            "description": "Be sure to check values in the JSON body for credentials.\nAlso note you will need to start the adapter using \"Star an adapter instance\" \nafter creation using the UUID from the response.\n\nIf you aren't using a CA, the certificate will have to be added via the UI\nI do not know of a way to do this via the REST API"
           },
           "response": []
         },
@@ -4997,25 +4997,25 @@
   ],
   "variable": [
     {
-      "id": "56d37047-ee1a-49a9-adca-5e6379d14c04",
+      "id": "385b0cca-af39-493d-aa9f-b89759611b22",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "d72c5ca0-a497-4a59-a3c1-36b17235f439",
+      "id": "54e1d5db-5c85-4611-9f67-4487429e9239",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "12815a84-872e-42eb-a6fb-e9fc4fecc0fd",
+      "id": "a34555c0-f121-422f-be55-a69b256d4a4a",
       "key": "pass",
       "value": "",
       "type": "string"
     },
     {
-      "id": "7bf64a23-69bd-449b-96a9-dc31decfd6b1",
+      "id": "2ba72c9d-ddd0-4b79-ae73-334e37fbb9be",
       "key": "rolePayload",
       "value": "",
       "type": "string"
