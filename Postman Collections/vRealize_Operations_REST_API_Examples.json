@@ -1536,6 +1536,37 @@
             "description": "Be sure to check values in the JSON body for credentials.\nAlso note you will need to start the adapter using \"Star an adapter instance\" \nafter creation using the UUID from the response.\n\nIf you aren't using a CA, the certificate will have to be added via the UI\nI do not know of a way to do this via the REST API"
           },
           "response": []
+        },
+        {
+          "name": "Create a vSAN Adapter Instance",
+          "_postman_id": "c1192cec-5bd3-40bd-afef-7bde9b7afdf8",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{bearerToken}}"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"resourceKey\": {\n        \"name\": \"WDC vCenter Adapter - vSAN\",\n        \"adapterKindKey\": \"VirtualAndPhysicalSANAdapter\",\n        \"resourceKindKey\": \"VirtualAndPhysicalSANAdapter Instance\",\n        \"resourceIdentifiers\": [\n            {\n                \"identifierType\": {\n                    \"name\": \"AutoDiscovery\",\n                    \"dataType\": \"STRING\",\n                    \"isPartOfUniqueness\": false\n                },\n                \"value\": \"true\"\n            },\n            {\n                \"identifierType\": {\n                    \"name\": \"EnableCimApi\",\n                    \"dataType\": \"STRING\",\n                    \"isPartOfUniqueness\": false\n                },\n                \"value\": \"false\"\n            },\n            {\n                \"identifierType\": {\n                    \"name\": \"VCID\",\n                    \"dataType\": \"STRING\",\n                    \"isPartOfUniqueness\": false\n                },\n                \"value\": \"\"\n            },\n            {\n                \"identifierType\": {\n                    \"name\": \"VCServer\",\n                    \"dataType\": \"STRING\",\n                    \"isPartOfUniqueness\": true\n                },\n                \"value\": \"10.196.206.10\"\n            }\n        ]\n    },\n    \"collectorId\": 1,\n    \"credentialInstanceId\": \"a41d1fbe-e71b-4943-baf0-02cdd345749a\",\n    \"monitoringInterval\": 5,\n    \"lastHeartbeat\": 1610059571754,\n    \"messageFromAdapterInstance\": \"\",\n    \"links\": [\n        {\n            \"href\": \"/suite-api/api/adapters/d266804d-b37a-459b-87ce-806ac4ed67d3\",\n            \"rel\": \"SELF\",\n            \"name\": \"linkToSelf\"\n        },\n        {\n            \"href\": \"/suite-api/api/credentials/a41d1fbe-e71b-4943-baf0-02cdd345749a\",\n            \"rel\": \"RELATED\",\n            \"name\": \"linkToCredential\"\n        }\n    ],\n    \"id\": \"d266804d-b37a-459b-87ce-806ac4ed67d3\"\n},",
+              "options": {}
+            },
+            "url": "https://{{vrops}}/suite-api/api/adapters"
+          },
+          "response": []
         }
       ],
       "_postman_id": "81428591-dd37-f8d8-279e-4d8837465cd9"
@@ -4997,25 +5028,25 @@
   ],
   "variable": [
     {
-      "id": "4f440177-c691-44fa-be0e-f91cae7d44bf",
+      "id": "78081fe8-2639-4527-8d54-005b82871976",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "68ef9ddb-c567-46e1-8463-d27abff6d24f",
+      "id": "b6fb4e68-5108-4849-a40b-68e61d776eb6",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "5696f41a-b1e3-448c-aa52-20ab68c3b90d",
+      "id": "d8ae01c1-1e90-4510-82fe-1f9a4776ab7c",
       "key": "pass",
       "value": "",
       "type": "string"
     },
     {
-      "id": "07de4be9-157f-4e86-b3da-4f67f8f92535",
+      "id": "1095a6bf-ce71-4643-a0a8-2f4c75582302",
       "key": "rolePayload",
       "value": "",
       "type": "string"
