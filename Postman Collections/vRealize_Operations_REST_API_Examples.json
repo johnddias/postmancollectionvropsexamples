@@ -30,7 +30,7 @@
                     "value": "application/json"
                   }
                 ],
-                "url": "https://{{vrops}}/suite-api/api/adapters"
+                "url": "https://{{vrops}}/suite-api/api/credentialkinds"
               },
               "response": []
             },
@@ -5079,25 +5079,25 @@
   ],
   "variable": [
     {
-      "id": "887d84b8-71e6-4f4f-9acb-4919f0a13380",
+      "id": "f87eec38-bfaa-4565-a852-2056dd170df2",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "f89acb45-3a0d-45e4-b3f7-071e58da64a8",
+      "id": "acf2bd06-358b-414e-b404-0950ba75e386",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "59f2af0f-c09d-46e8-bce7-b721f6f32d11",
+      "id": "e9b4d96a-2c57-42b1-8063-01eb41e63871",
       "key": "pass",
       "value": "",
       "type": "string"
     },
     {
-      "id": "417c2353-ab74-4f60-8849-389477981b74",
+      "id": "4abc0704-4c70-4a8e-9af8-6556d196f3e5",
       "key": "rolePayload",
       "value": "",
       "type": "string"
