@@ -35,7 +35,7 @@
               "response": []
             },
             {
-              "name": "Get Credentials",
+              "name": "Get All Credentials",
               "_postman_id": "e4b15f13-b7db-4ef3-9196-44b25966ef99",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
@@ -5079,25 +5079,25 @@
   ],
   "variable": [
     {
-      "id": "4f26a9c9-3088-4487-a0ff-cb843252ba59",
+      "id": "887d84b8-71e6-4f4f-9acb-4919f0a13380",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "f7ef6ca1-66a5-4f62-baf3-bde614840ad3",
+      "id": "f89acb45-3a0d-45e4-b3f7-071e58da64a8",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "3003b3be-fe86-42c7-b40e-4b785e58aa27",
+      "id": "59f2af0f-c09d-46e8-bce7-b721f6f32d11",
       "key": "pass",
       "value": "",
       "type": "string"
     },
     {
-      "id": "c825a9eb-cd12-4be7-b001-96ec19f44945",
+      "id": "417c2353-ab74-4f60-8849-389477981b74",
       "key": "rolePayload",
       "value": "",
       "type": "string"
