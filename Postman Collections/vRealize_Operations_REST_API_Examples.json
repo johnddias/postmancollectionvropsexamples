@@ -1506,7 +1506,7 @@
           "response": []
         },
         {
-          "name": "Create a vSAN Adapter Instance",
+          "name": "Create a vCenter Adapter Instance",
           "_postman_id": "25514a6b-e712-4f4a-b5ed-bfb4ab7e08cc",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -4997,25 +4997,25 @@
   ],
   "variable": [
     {
-      "id": "f7c0fd2b-8bbe-46b9-8ebe-020f5b706f38",
+      "id": "4f440177-c691-44fa-be0e-f91cae7d44bf",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "30b6c6fe-2558-4f6d-8cba-0c0c16c9e6e2",
+      "id": "68ef9ddb-c567-46e1-8463-d27abff6d24f",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "c1739c4d-5011-4d01-85c5-1c6b89a3ca41",
+      "id": "5696f41a-b1e3-448c-aa52-20ab68c3b90d",
       "key": "pass",
       "value": "",
       "type": "string"
     },
     {
-      "id": "bcdd962a-30a3-4ce4-a5a3-5c8a1d972527",
+      "id": "07de4be9-157f-4e86-b3da-4f67f8f92535",
       "key": "rolePayload",
       "value": "",
       "type": "string"
