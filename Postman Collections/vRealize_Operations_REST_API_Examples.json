@@ -85,7 +85,7 @@
                 "disableBodyPruning": true
               },
               "request": {
-                "method": "GET",
+                "method": "POST",
                 "header": [
                   {
                     "key": "Authorization",
@@ -96,7 +96,16 @@
                     "value": "application/json"
                   }
                 ],
-                "url": "https://{{vrops}}/suite-api/api/credentialkinds"
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"name\" : \"vSAN Creds\",\r\n  \"adapterKindKey\" : \"VirtualAndPhysicalSANAdapter\",\r\n  \"credentialKindKey\" : \"VCCredential\",\r\n  \"fields\" : [ {\r\n    \"name\" : \"VCuser\",\r\n    \"value\" : \"root\"\r\n  }, {\r\n    \"name\" : \"VCPassword\"\r\n  } ]\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "https://{{vrops}}/suite-api/api/credentials"
               },
               "response": []
             }
@@ -5123,25 +5132,25 @@
   ],
   "variable": [
     {
-      "id": "3e2dd926-d960-447d-b353-178303e4305f",
+      "id": "1a36ef0b-8125-4713-b144-09ffe63449e1",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "5f4a26ae-185a-4781-9e48-64aa651a9c4e",
+      "id": "f42aa44a-aa96-45de-b415-58d0905c8a27",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "0da2c82d-f470-4fb5-9ca3-36af1b89b551",
+      "id": "d3457714-9376-4730-ad38-44c53de830f3",
       "key": "pass",
       "value": "",
       "type": "string"
     },
     {
-      "id": "3922fec4-b6d9-4ff7-bc4c-37d63df9f736",
+      "id": "5e209dda-3aee-4d04-aa92-106aed1266d1",
       "key": "rolePayload",
       "value": "",
       "type": "string"
