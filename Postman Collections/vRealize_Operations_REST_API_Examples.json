@@ -1633,7 +1633,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"name\": \"WDC vCenter Adapter\",\n  \"description\": \"A vCenter Adapter Instance\",\n  \"collectorId\": \"1\",\n  \"adapterKindKey\": \"VMWARE\",\n  \"resourceIdentifiers\": [\n    {\n      \"name\": \"AUTODISCOVERY\",\n      \"value\": \"true\"\n    },\n    {\n      \"name\": \"PROCESSCHANGEEVENTS\",\n      \"value\": \"true\"\n    },\n    {\n      \"name\": \"VCURL\",\n      \"value\": \"10.196.206.10\"\n    }\n  ],\n  \"credential\": {\n    \"id\": null,\n    \"name\": \"WDC Credentials\",\n    \"adapterKindKey\": \"VMWARE\",\n    \"credentialKindKey\": \"PRINCIPALCREDENTIAL\",\n    \"fields\": [\n      {\n        \"name\": \"USER\",\n        \"value\": \"administrator@vsphere.local\"\n      },\n      {\n        \"name\": \"PASSWORD\",\n        \"value\": \"xxxxxx\"\n      }\n    ],\n    \"others\": [],\n    \"otherAttributes\": {}\n  },\n  \"others\": [],\n  \"otherAttributes\": {}\n}",
+              "raw": "{\n  \"name\": \"WDC vCenter Adapter\",\n  \"description\": \"A vCenter Adapter Instance\",\n  \"collectorId\": \"1\",\n  \"adapterKindKey\": \"VMWARE\",\n  \"resourceIdentifiers\": [\n    {\n      \"name\": \"AUTODISCOVERY\",\n      \"value\": \"true\"\n    },\n    {\n      \"name\": \"PROCESSCHANGEEVENTS\",\n      \"value\": \"true\"\n    },\n    {\n      \"name\": \"VCURL\",\n      \"value\": \"10.196.206.10\"\n    },\n    {\n      \"name\": \"CLOUD_TYPE\",\n      \"value\": \"PRIVATE_CLOUD\"\n    }\n  ],\n  \"credential\": {\n    \"id\": null,\n    \"name\": \"WDC Credentials\",\n    \"adapterKindKey\": \"VMWARE\",\n    \"credentialKindKey\": \"PRINCIPALCREDENTIAL\",\n    \"fields\": [\n      {\n        \"name\": \"USER\",\n        \"value\": \"administrator@vsphere.local\"\n      },\n      {\n        \"name\": \"PASSWORD\",\n        \"value\": \"xxxxxx\"\n      }\n    ],\n    \"others\": [],\n    \"otherAttributes\": {}\n  },\n  \"others\": [],\n  \"otherAttributes\": {}\n}",
               "options": {}
             },
             "url": "https://{{vrops}}/suite-api/api/adapters",
@@ -1665,7 +1665,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"resourceKey\": {\n        \"name\": \"WDC vCenter Adapter - vSAN\",\n        \"adapterKindKey\": \"VirtualAndPhysicalSANAdapter\",\n        \"resourceKindKey\": \"VirtualAndPhysicalSANAdapter Instance\",\n        \"resourceIdentifiers\": [\n            {\n                \"identifierType\": {\n                    \"name\": \"AutoDiscovery\",\n                    \"dataType\": \"STRING\",\n                    \"isPartOfUniqueness\": false\n                },\n                \"value\": \"true\"\n            },\n            {\n                \"identifierType\": {\n                    \"name\": \"EnableCimApi\",\n                    \"dataType\": \"STRING\",\n                    \"isPartOfUniqueness\": false\n                },\n                \"value\": \"false\"\n            },\n            {\n                \"identifierType\": {\n                    \"name\": \"VCID\",\n                    \"dataType\": \"STRING\",\n                    \"isPartOfUniqueness\": false\n                },\n                \"value\": \"\"\n            },\n            {\n                \"identifierType\": {\n                    \"name\": \"VCServer\",\n                    \"dataType\": \"STRING\",\n                    \"isPartOfUniqueness\": true\n                },\n                \"value\": \"10.196.206.10\"\n            }\n        ]\n    },\n    \"collectorId\": 1,\n    \"credentialInstanceId\": \"a41d1fbe-e71b-4943-baf0-02cdd345749a\",\n    \"monitoringInterval\": 5,\n    \"lastHeartbeat\": 1610059571754,\n    \"messageFromAdapterInstance\": \"\",\n    \"links\": [\n        {\n            \"href\": \"/suite-api/api/adapters/d266804d-b37a-459b-87ce-806ac4ed67d3\",\n            \"rel\": \"SELF\",\n            \"name\": \"linkToSelf\"\n        },\n        {\n            \"href\": \"/suite-api/api/credentials/a41d1fbe-e71b-4943-baf0-02cdd345749a\",\n            \"rel\": \"RELATED\",\n            \"name\": \"linkToCredential\"\n        }\n    ],\n    \"id\": \"d266804d-b37a-459b-87ce-806ac4ed67d3\"\n},",
+              "raw": "{\n    \"name\": \"WDC vCenter Adapter - vSAN\",\n    \"adapterKindKey\": \"VirtualAndPhysicalSANAdapter\",\n    \"resourceKindKey\": \"VirtualAndPhysicalSANAdapter Instance\",\n    \"resourceIdentifiers\": [\n        {\n            \"name\": \"AutoDiscovery\",\n            \"value\": \"true\"\n        },\n        {\n            \"name\": \"EnableCimApi\",\n            \"value\": \"false\"\n        },\n        {\n            \"name\": \"VCID\",\n            \"value\": \"\"\n        },\n        {\n            \"name\": \"VCServer\",\n            \"value\": \"10.196.206.10\"\n        }\n    ],\n    \"credential\": {\n        \"id\": \"5bca76bc-90da-4af0-b9b9-8b523e5fde79\",\n        \"name\": \"vSAN Creds\",\n        \"adapterKindKey\": \"VirtualAndPhysicalSANAdapter\",\n        \"credentialKindKey\": \"VCCredential\"\n    }\n}",
               "options": {}
             },
             "url": "https://{{vrops}}/suite-api/api/adapters"
@@ -5132,25 +5132,25 @@
   ],
   "variable": [
     {
-      "id": "1a36ef0b-8125-4713-b144-09ffe63449e1",
+      "id": "92a21abc-84fd-46bb-b9ab-69dee35745b0",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "f42aa44a-aa96-45de-b415-58d0905c8a27",
+      "id": "4c396e2b-2236-42c2-a7d1-0cfcae78cd46",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "d3457714-9376-4730-ad38-44c53de830f3",
+      "id": "f4f0d05b-71f6-4a26-9f82-ebef18a6e8ae",
       "key": "pass",
       "value": "",
       "type": "string"
     },
     {
-      "id": "5e209dda-3aee-4d04-aa92-106aed1266d1",
+      "id": "d5117f42-15b3-4bf9-8bbb-f0676c0899db",
       "key": "rolePayload",
       "value": "",
       "type": "string"
