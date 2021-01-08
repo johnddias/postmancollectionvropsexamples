@@ -35,28 +35,6 @@
               "response": []
             },
             {
-              "name": "Get Credential Kinds Copy",
-              "_postman_id": "ac70fc91-43b8-4962-9420-2fe59e138bca",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Authorization",
-                    "value": "{{bearerToken}}"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "url": "https://{{vrops}}/suite-api/api/credentialkinds"
-              },
-              "response": []
-            },
-            {
               "name": "Get All Credentials",
               "_postman_id": "e4b15f13-b7db-4ef3-9196-44b25966ef99",
               "protocolProfileBehavior": {
@@ -5163,25 +5141,25 @@
   ],
   "variable": [
     {
-      "id": "83289e0d-735a-422f-aab8-76ea1d6e16fe",
+      "id": "72b3aac2-3f0b-4b33-923f-5afc28691a7c",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "2db003fa-f6dd-44c0-8c64-932bd23c5612",
+      "id": "ee899473-43dc-49f9-a9c0-f06cb2e00ffc",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "9ac55346-2988-4659-bfe6-fdb3b921c2a0",
+      "id": "5559e4bd-dbab-419c-87fd-e9c5a8971d86",
       "key": "pass",
       "value": "",
       "type": "string"
     },
     {
-      "id": "fe47eb1a-3964-46cd-bad3-3add3bbacb7d",
+      "id": "834238de-cfa4-4df0-b049-2d54a9dffc43",
       "key": "rolePayload",
       "value": "",
       "type": "string"
