@@ -1561,7 +1561,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"name\": \"WDC vCenter Adapter - vSAN\",\n    \"adapterKindKey\": \"VirtualAndPhysicalSANAdapter\",\n    \"resourceKindKey\": \"VirtualAndPhysicalSANAdapter Instance\",\n    \"resourceIdentifiers\": [\n        {\n            \"name\": \"AutoDiscovery\",\n            \"value\": \"true\"\n        },\n        {\n            \"name\": \"EnableCimApi\",\n            \"value\": \"false\"\n        },\n        {\n            \"name\": \"VCID\",\n            \"value\": \"\"\n        },\n        {\n            \"name\": \"VCServer\",\n            \"value\": \"10.196.206.10\"\n        }\n    ],\n    \"credential\": {\n        \"id\": \"5bca76bc-90da-4af0-b9b9-8b523e5fde79\",\n        \"name\": \"vSAN Creds\",\n        \"adapterKindKey\": \"VirtualAndPhysicalSANAdapter\",\n        \"credentialKindKey\": \"VCCredential\"\n    }\n}",
+              "raw": "{\n    \"name\": \"WDC vCenter Adapter - vSAN\",\n    \"adapterKindKey\": \"VirtualAndPhysicalSANAdapter\",\n    \"resourceKindKey\": \"VirtualAndPhysicalSANAdapter Instance\",\n    \"resourceIdentifiers\": [\n        {\n            \"name\": \"AutoDiscovery\",\n            \"value\": \"true\"\n        },\n        {\n            \"name\": \"EnableCimApi\",\n            \"value\": \"false\"\n        },\n        {\n            \"name\": \"VCID\",\n            \"value\": \"\"\n        },\n        {\n            \"name\": \"VCServer\",\n            \"value\": \"10.196.206.10\"\n        }\n    ],\n    \"credential\": {\n        \"id\": null,\n        \"name\": \"vSAN Creds\",\n        \"adapterKindKey\": \"VirtualAndPhysicalSANAdapter\",\n        \"credentialKindKey\": \"VCCredential\",\n        \"vcuser\":\"username\",\n        \"vcpassword\":\"password\"\n    }\n}",
               "options": {}
             },
             "url": "https://{{vrops}}/suite-api/api/adapters"
@@ -5140,25 +5140,25 @@
   ],
   "variable": [
     {
-      "id": "c907a557-676f-45a7-b4cd-43d2866b6667",
+      "id": "ebdad19d-ced2-4ef1-a813-581e252ef24f",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "80000191-fcf6-4e72-a409-070f9fc084d3",
+      "id": "46a74484-e7aa-4f4a-9d5f-a75bf16d6f5c",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "988e957c-5b43-44be-ad46-51d9ccd95afe",
+      "id": "067e6248-80f0-4cd6-b32a-76654fe582ee",
       "key": "pass",
       "value": "",
       "type": "string"
     },
     {
-      "id": "dd778ecc-dbef-4f1a-82c4-dd19cab4fd2f",
+      "id": "32939873-4361-4e8f-af66-9071f5cb9b6a",
       "key": "rolePayload",
       "value": "",
       "type": "string"
