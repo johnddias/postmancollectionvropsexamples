@@ -1592,7 +1592,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"name\": \"Dummy Account\",\n    \"adapterKindKey\": \"AmazonAWSAdapter\",\n    \"resourceKindKey\": \"AmazonAWSAdapter Instance\",\n    \"resourceIdentifiers\": [\n        {\n            \"name\": \"BLACKLIST\",\n            \"value\": \"\"\n        },\n        {\n            \"name\": \"COLLECT_CUSTOM_METRICS\",\n            \"value\": \"false\"\n        },\n        {\n            \"name\": \"REGIONS\",\n            \"value\": \"\"\n        },\n        {\n            \"name\": \"SERVICES\",\n            \"value\": \"\"\n        },\n        {\n            \"name\": \"SUPPORT_AUTODISCOVERY\",\n            \"value\": \"true\"\n        },\n        {\n            \"name\": \"WHITELIST\",\n            \"value\": \"\"\n        }\n    ],\n    \"description\": \"\",\n    \"credential\": {\n        \"id\": null,\n        \"name\": \"vSAN Creds\",\n        \"adapterKindKey\": \"VirtualAndPhysicalSANAdapter\",\n        \"credentialKindKey\": \"VCCredential\"\n    }\n}",
+              "raw": "{\n    \"name\": \"Dummy Account\",\n    \"adapterKindKey\": \"AmazonAWSAdapter\",\n    \"resourceKindKey\": \"AmazonAWSAdapter Instance\",\n    \"resourceIdentifiers\": [\n        {\n            \"name\": \"BLACKLIST\",\n            \"value\": \"\"\n        },\n        {\n            \"name\": \"COLLECT_CUSTOM_METRICS\",\n            \"value\": \"false\"\n        },\n        {\n            \"name\": \"REGIONS\",\n            \"value\": \"\"\n        },\n        {\n            \"name\": \"SERVICES\",\n            \"value\": \"\"\n        },\n        {\n            \"name\": \"SUPPORT_AUTODISCOVERY\",\n            \"value\": \"true\"\n        },\n        {\n            \"name\": \"WHITELIST\",\n            \"value\": \"\"\n        }\n    ],\n    \"description\": \"\",\n    \"credential\": {\n        \"id\": null,\n        \"name\": \"AWS Creds\",\n        \"adapterKindKey\": \"AmazonAWSAdapter\",\n        \"credentialKindKey\": \"AWSCREDENTIALS\",\n        \"fields\": [\n            {\n                \"name\": \"ACCESSKEY\",\n                \"value\": \"accesskeyvalue\"\n            },\n            {\n                \"name\": \"SECRETKEY\",\n                \"value\": \"secretkeyvalue\"\n            },\n            {\n                \"name\": \"PROXYHOST\",\n                \"value\": null\n            },\n            {\n                \"name\": \"PROXYPORT\",\n                \"value\": null\n            },\n            {\n                \"name\": \"PROXYUSERNAME\",\n                \"value\": null\n            },\n            {\n                \"name\": \"PROXYPASSWORD\",\n                \"value\": null\n            },\n            {\n                \"name\": \"PROXYWORKSTATION\",\n                \"value\": null\n            },\n            {\n                \"name\": \"PROXYDOMAIN\",\n                \"value\": null\n            }\n        ]\n    }\n}",
               "options": {}
             },
             "url": "https://{{vrops}}/suite-api/api/adapters"
@@ -5140,25 +5140,25 @@
   ],
   "variable": [
     {
-      "id": "ebdad19d-ced2-4ef1-a813-581e252ef24f",
+      "id": "1735e46d-baf3-4736-bddf-e5c28dbc8a41",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "46a74484-e7aa-4f4a-9d5f-a75bf16d6f5c",
+      "id": "69f3474c-3f86-4fbc-9da6-3c4022235949",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "067e6248-80f0-4cd6-b32a-76654fe582ee",
+      "id": "725b8ac3-ebc7-445a-8ed6-c1acf99a0953",
       "key": "pass",
       "value": "",
       "type": "string"
     },
     {
-      "id": "32939873-4361-4e8f-af66-9071f5cb9b6a",
+      "id": "dc94b5d4-342a-4acd-b5bc-47db6b02a4ff",
       "key": "rolePayload",
       "value": "",
       "type": "string"
