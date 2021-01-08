@@ -77,6 +77,28 @@
                 "url": "https://{{vrops}}/suite-api/api/credentials"
               },
               "response": []
+            },
+            {
+              "name": "Create a new credential instance",
+              "_postman_id": "27f0ca9a-e225-4ff8-a503-2951bebd4bfe",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "{{bearerToken}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "url": "https://{{vrops}}/suite-api/api/credentialkinds"
+              },
+              "response": []
             }
           ],
           "_postman_id": "39e8301c-3cd7-4afa-9434-ebfa4eb392be",
@@ -5101,25 +5123,25 @@
   ],
   "variable": [
     {
-      "id": "1676c12b-2962-4dac-adea-265b83057ade",
+      "id": "aaa8df1f-deba-4583-8117-ea9779b0d744",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "cc31cc7e-3fb4-48de-b165-b7e183a91c8b",
+      "id": "dfcbd4a0-2d8f-41db-880b-3c75bbd18a89",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "63fdbd88-a602-4aa0-9983-01ca86c9dd67",
+      "id": "8514d27f-675c-4770-8973-b5cd8f9a19f8",
       "key": "pass",
       "value": "",
       "type": "string"
     },
     {
-      "id": "9afc66dd-d640-40fb-9afe-326b2bb7a315",
+      "id": "9df24861-42e4-44ea-8453-998acd2f75f1",
       "key": "rolePayload",
       "value": "",
       "type": "string"
