@@ -1673,7 +1673,7 @@
           "response": []
         },
         {
-          "name": "Create a vSAN Adapter Instance Copy",
+          "name": "Create an AWS Adapter Instance",
           "_postman_id": "92986256-249a-47c3-8e3f-3fa109e13e05",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -5163,25 +5163,25 @@
   ],
   "variable": [
     {
-      "id": "61ae8f8f-5ad4-4b80-9499-c6713ac963f4",
+      "id": "ba85cbcd-35bf-4b84-b28a-e46e98506822",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "09c3ef39-08ac-413a-99ca-fb4d0ec03c42",
+      "id": "fee2390b-3461-4e5c-b690-98fbb90e165f",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "81ac763c-af37-439a-980a-50da443b9078",
+      "id": "dfa8d8f3-3196-4f53-b950-fc89e574d45b",
       "key": "pass",
       "value": "",
       "type": "string"
     },
     {
-      "id": "56dfb4d3-3c1a-48a8-a5cc-4ebe88eef258",
+      "id": "bc904022-9019-47ca-8bbe-d3d6d9a9cd99",
       "key": "rolePayload",
       "value": "",
       "type": "string"
