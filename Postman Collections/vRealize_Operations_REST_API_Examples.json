@@ -1469,7 +1469,7 @@
               "raw": "",
               "options": {}
             },
-            "url": "https://{{vrops}}/suite-api/api/adapters/617d20fd-536a-4bea-9f5e-4c01dd845ddc/monitoringstate/start",
+            "url": "https://{{vrops}}/suite-api/api/adapters/{{adapterId}}/monitoringstate/start",
             "description": "Replace the UUID with the ID of the adapter instance you want to start\nThis can be retrieved using Get Adapter Instances"
           },
           "response": []
@@ -5171,25 +5171,25 @@
   ],
   "variable": [
     {
-      "id": "9af24fb7-ee09-468e-9352-5a968fd7f50c",
+      "id": "6296e850-ee48-4e65-88f6-833d8dc48a76",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "fbd9572b-f4b0-4081-ac07-930b807b9b75",
+      "id": "176cc4b3-b49d-4f43-9ab9-3a680c4dc207",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "429cd836-ca6e-445a-be91-e57fee30b85b",
+      "id": "ae0a0d55-e819-4bde-8d79-b5d0eb93ceba",
       "key": "pass",
       "value": "",
       "type": "string"
     },
     {
-      "id": "d18b5ccd-bd5b-4392-bfef-3b615405be38",
+      "id": "e4adc479-28dd-4034-9e14-0bbf091ca56a",
       "key": "rolePayload",
       "value": "",
       "type": "string"
