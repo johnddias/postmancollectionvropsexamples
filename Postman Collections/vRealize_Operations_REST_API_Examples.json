@@ -1574,7 +1574,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"name\": \"WDC vCenter Adapter\",\n  \"description\": \"A vCenter Adapter Instance\",\n  \"collectorId\": \"1\",\n  \"adapterKindKey\": \"VMWARE\",\n  \"resourceIdentifiers\": [\n    {\n      \"name\": \"AUTODISCOVERY\",\n      \"value\": \"true\"\n    },\n    {\n      \"name\": \"PROCESSCHANGEEVENTS\",\n      \"value\": \"true\"\n    },\n    {\n      \"name\": \"VCURL\",\n      \"value\": \"wdcvc01.cmbu.local\"\n    },\n    {\n      \"name\": \"CLOUD_TYPE\",\n      \"value\": \"PRIVATE_CLOUD\"\n    }\n  ],\n  \"credential\": {\n    \"id\": null,\n    \"name\": \"WDC Credentials\",\n    \"adapterKindKey\": \"VMWARE\",\n    \"credentialKindKey\": \"PRINCIPALCREDENTIAL\",\n    \"fields\": [\n      {\n        \"name\": \"USER\",\n        \"value\": \"diasj@cmbu.local\"\n      },\n      {\n        \"name\": \"PASSWORD\",\n        \"value\": \"VMware1!\"\n      }\n    ],\n    \"others\": [],\n    \"otherAttributes\": {}\n  },\n  \"others\": [],\n  \"otherAttributes\": {}\n}",
+              "raw": "{\n  \"name\": \"WDC vCenter Adapter\",\n  \"description\": \"A vCenter Adapter Instance\",\n  \"collectorId\": \"1\",\n  \"adapterKindKey\": \"VMWARE\",\n  \"resourceIdentifiers\": [\n    {\n      \"name\": \"AUTODISCOVERY\",\n      \"value\": \"true\"\n    },\n    {\n      \"name\": \"PROCESSCHANGEEVENTS\",\n      \"value\": \"true\"\n    },\n    {\n      \"name\": \"VCURL\",\n      \"value\": \"wdcvc01.cmbu.local\"\n    },\n    {\n      \"name\": \"CLOUD_TYPE\",\n      \"value\": \"PRIVATE_CLOUD\"\n    }\n  ],\n  \"credential\": {\n    \"id\": null,\n    \"name\": \"WDC Credentials\",\n    \"adapterKindKey\": \"VMWARE\",\n    \"credentialKindKey\": \"PRINCIPALCREDENTIAL\",\n    \"fields\": [\n      {\n        \"name\": \"USER\",\n        \"value\": \"diasj@cmbu.local\"\n      },\n      {\n        \"name\": \"PASSWORD\",\n        \"value\": \"secret\"\n      }\n    ],\n    \"others\": [],\n    \"otherAttributes\": {}\n  },\n  \"others\": [],\n  \"otherAttributes\": {}\n}",
               "options": {}
             },
             "url": "https://{{vrops}}/suite-api/api/adapters",
@@ -5200,25 +5200,25 @@
   ],
   "variable": [
     {
-      "id": "0dbad597-6570-499d-ad31-21b959cde5d7",
+      "id": "33621ce8-cab3-45c6-a309-ba62acd63ac9",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "a11854fb-8e91-45ae-8e39-10204df0c219",
+      "id": "0dc42011-0f9e-4d60-90af-d1078ab303ea",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "24c355cd-8a02-43c6-b1db-d9d63ffc593e",
+      "id": "70190906-f1fd-47cd-8076-a896d8a028a7",
       "key": "pass",
       "value": "",
       "type": "string"
     },
     {
-      "id": "67c9d26d-b442-4314-b3fb-44b8d0b37741",
+      "id": "90086716-78f4-45c5-8bc2-0d3c81095a1b",
       "key": "rolePayload",
       "value": "",
       "type": "string"
