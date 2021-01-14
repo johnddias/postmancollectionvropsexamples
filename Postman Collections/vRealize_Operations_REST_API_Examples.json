@@ -1538,6 +1538,20 @@
         },
         {
           "name": "Create a vCenter Adapter Instance",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "824399b6-af02-483c-89a2-c0bd60e109b6",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);\r",
+                  "postman.setEnvironmentVariable(\"adapterId\", jsonData.id);\r",
+                  "postman.setEnvironmentVariable(\"adapterPatchPayload\", responseBody);"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
           "_postman_id": "25514a6b-e712-4f4a-b5ed-bfb4ab7e08cc",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -1560,7 +1574,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"name\": \"WDC vCenter Adapter\",\n  \"description\": \"A vCenter Adapter Instance\",\n  \"collectorId\": \"1\",\n  \"adapterKindKey\": \"VMWARE\",\n  \"resourceIdentifiers\": [\n    {\n      \"name\": \"AUTODISCOVERY\",\n      \"value\": \"true\"\n    },\n    {\n      \"name\": \"PROCESSCHANGEEVENTS\",\n      \"value\": \"true\"\n    },\n    {\n      \"name\": \"VCURL\",\n      \"value\": \"10.196.206.10\"\n    },\n    {\n      \"name\": \"CLOUD_TYPE\",\n      \"value\": \"PRIVATE_CLOUD\"\n    }\n  ],\n  \"credential\": {\n    \"id\": null,\n    \"name\": \"WDC Credentials\",\n    \"adapterKindKey\": \"VMWARE\",\n    \"credentialKindKey\": \"PRINCIPALCREDENTIAL\",\n    \"fields\": [\n      {\n        \"name\": \"USER\",\n        \"value\": \"administrator@vsphere.local\"\n      },\n      {\n        \"name\": \"PASSWORD\",\n        \"value\": \"xxxxxx\"\n      }\n    ],\n    \"others\": [],\n    \"otherAttributes\": {}\n  },\n  \"others\": [],\n  \"otherAttributes\": {}\n}",
+              "raw": "{\n  \"name\": \"WDC vCenter Adapter\",\n  \"description\": \"A vCenter Adapter Instance\",\n  \"collectorId\": \"1\",\n  \"adapterKindKey\": \"VMWARE\",\n  \"resourceIdentifiers\": [\n    {\n      \"name\": \"AUTODISCOVERY\",\n      \"value\": \"true\"\n    },\n    {\n      \"name\": \"PROCESSCHANGEEVENTS\",\n      \"value\": \"true\"\n    },\n    {\n      \"name\": \"VCURL\",\n      \"value\": \"wdcvc01.cmbu.local\"\n    },\n    {\n      \"name\": \"CLOUD_TYPE\",\n      \"value\": \"PRIVATE_CLOUD\"\n    }\n  ],\n  \"credential\": {\n    \"id\": null,\n    \"name\": \"WDC Credentials\",\n    \"adapterKindKey\": \"VMWARE\",\n    \"credentialKindKey\": \"PRINCIPALCREDENTIAL\",\n    \"fields\": [\n      {\n        \"name\": \"USER\",\n        \"value\": \"diasj@cmbu.local\"\n      },\n      {\n        \"name\": \"PASSWORD\",\n        \"value\": \"VMware1!\"\n      }\n    ],\n    \"others\": [],\n    \"otherAttributes\": {}\n  },\n  \"others\": [],\n  \"otherAttributes\": {}\n}",
               "options": {}
             },
             "url": "https://{{vrops}}/suite-api/api/adapters",
@@ -5186,25 +5200,25 @@
   ],
   "variable": [
     {
-      "id": "eead00a9-729f-4cbf-80f4-bd7525bf7973",
+      "id": "0dbad597-6570-499d-ad31-21b959cde5d7",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "61a3d4f5-a374-47f5-9549-1bc8948dc873",
+      "id": "a11854fb-8e91-45ae-8e39-10204df0c219",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "eb3d5671-6000-4ae6-91c4-550542533679",
+      "id": "24c355cd-8a02-43c6-b1db-d9d63ffc593e",
       "key": "pass",
       "value": "",
       "type": "string"
     },
     {
-      "id": "512958f1-e6cc-4a2f-935a-2fbd5cc00d32",
+      "id": "67c9d26d-b442-4314-b3fb-44b8d0b37741",
       "key": "rolePayload",
       "value": "",
       "type": "string"
