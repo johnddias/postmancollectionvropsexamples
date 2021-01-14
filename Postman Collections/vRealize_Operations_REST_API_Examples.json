@@ -1498,7 +1498,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"resourceKey\": {\r\n        \"name\": \"WDC vCenter Adapter\",\r\n        \"adapterKindKey\": \"VMWARE\",\r\n        \"resourceKindKey\": \"VMwareAdapter Instance\",\r\n        \"resourceIdentifiers\": [\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"AUTODISCOVERY\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": false\r\n                },\r\n                \"value\": \"true\"\r\n            },\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"CLOUD_TYPE\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": false\r\n                },\r\n                \"value\": \"Private Cloud\"\r\n            },\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"DV_PORT_GROUP_DISABLED\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": false\r\n                },\r\n                \"value\": \"\"\r\n            },\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"DVS_DISABLED\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": false\r\n                },\r\n                \"value\": \"\"\r\n            },\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"ENABLE_ACTIONS\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": false\r\n                },\r\n                \"value\": \"\"\r\n            },\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"GFS_SKIP_PATTERNS\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": false\r\n                },\r\n                \"value\": \"\"\r\n            },\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"PDRS_STATS_PROVIDER\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": false\r\n                },\r\n                \"value\": \"\"\r\n            },\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"PROCESSCHANGEEVENTS\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": false\r\n                },\r\n                \"value\": \"true\"\r\n            },\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"VCURL\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": true\r\n                },\r\n                \"value\": \"10.196.206.10\"\r\n            },\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"VM_FOLDER_DISABLED\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": false\r\n                },\r\n                \"value\": \"\"\r\n            },\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"VM_LIMIT\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": false\r\n                },\r\n                \"value\": \"\"\r\n            },\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"VMEntityVCID\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": false\r\n                },\r\n                \"value\": \"\"\r\n            }\r\n        ]\r\n    },\r\n    \"description\": \"A vCenter Adapter Instance\",\r\n    \"collectorId\": 1,\r\n    \"credentialInstanceId\": \"ce8fbe8d-925f-4fff-8b90-03cded8a78a2\",\r\n    \"monitoringInterval\": 5,\r\n    \"adapter-certificates\": [\r\n        {\r\n            \"thumbprint\": \"3b0159211dc724a5acf5a0f8bd8883a75830cc9e\",\r\n            \"certificateDetails\": \"[ Version: V3 Subject: C=US, CN=wdcvc01.cmbu.local Signature Algorithm: SHA256withRSA, OID = 1.2.840.113549.1.1.11 Key: Sun RSA public key, 2048 bits params: null modulus: 27390865702927242077980562064256799579957111080108672193599313829309084559060333522317949572057444009109275050177742922927035904544057724874284253768970675059150076875543754247598854080935092710355465018642092376089725689615363634542035050226510994351875482562736451045207392817780549198613470635003575076216758187607456365897373917112755320470672758746548328279029926964768718520248267029907064054354555375070162247590825858483081056274140601075502606744672780769839106924755638674730499892644755694710157326647840023084185780601621387323838789834446012009916002449270200565296965902933976231612456599831449657001391 public exponent: 65537 Validity: [From: Sun Aug 02 17:24:42 UTC 2020, To: Tue Aug 02 17:24:42 UTC 2022] Issuer: OU=VMware Engineering, O=wdcvc01.cmbu.local, ST=California, C=US, DC=local, DC=vsphere, CN=CA SerialNumber: [ c668b52d 369d94c2] Certificate Extensions: 5 [1]: ObjectId: 1.3.6.1.5.5.7.1.1 Criticality=false AuthorityInfoAccess [ [ accessMethod: caIssuers accessLocation: URIName: https://wdcvc01.cmbu.local/afd/vecs/ca ] ] [2]: ObjectId: 2.5.29.35 Criticality=false AuthorityKeyIdentifier [ KeyIdentifier [ 0000: 4A 73 BF 9A AD F3 CE 8A 32 B6 30 4F 4F 2A 1F A0 Js......2.0OO*.. 0010: 27 A2 56 DD '.V. ] ] [3]: ObjectId: 2.5.29.15 Criticality=false KeyUsage [ DigitalSignature Key_Encipherment Key_Agreement ] [4]: ObjectId: 2.5.29.17 Criticality=false SubjectAlternativeName [ DNSName: wdcvc01.cmbu.local ] [5]: ObjectId: 2.5.29.14 Criticality=false SubjectKeyIdentifier [ KeyIdentifier [ 0000: AA 2E 0F 12 14 88 F4 2B 19 E3 0B A2 92 3B 71 D7 .......+.....;q. 0010: 3E 69 1B D0 &gt;i.. ] ] ]SHA256withRSA[B@2f23316f[B@1feead\"\r\n        }\r\n    ],\r\n    \"links\": [\r\n        {\r\n            \"href\": \"/suite-api/api/adapters/4f25cee6-e011-4450-8de5-8e9b5f46cf7f\",\r\n            \"rel\": \"SELF\",\r\n            \"name\": \"linkToSelf\"\r\n        },\r\n        {\r\n            \"href\": \"/suite-api/api/credentials/ce8fbe8d-925f-4fff-8b90-03cded8a78a2\",\r\n            \"rel\": \"RELATED\",\r\n            \"name\": \"linkToCredential\"\r\n        }\r\n    ],\r\n    \"id\": \"4f25cee6-e011-4450-8de5-8e9b5f46cf7f\"\r\n}",
+              "raw": "{{adapterPatchPayload}}",
               "options": {}
             },
             "url": "https://{{vrops}}/suite-api/api/adapters"
@@ -5171,25 +5171,25 @@
   ],
   "variable": [
     {
-      "id": "6296e850-ee48-4e65-88f6-833d8dc48a76",
+      "id": "a4d56676-0557-4891-a7fb-c00a6849d1ac",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "176cc4b3-b49d-4f43-9ab9-3a680c4dc207",
+      "id": "b0d49216-afa9-4f84-8bbf-b24fa3e55fbe",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "ae0a0d55-e819-4bde-8d79-b5d0eb93ceba",
+      "id": "3e6863d1-f478-4fb9-9645-659af10f0db9",
       "key": "pass",
       "value": "",
       "type": "string"
     },
     {
-      "id": "e4adc479-28dd-4034-9e14-0bbf091ca56a",
+      "id": "d86519e0-f6b2-4d0c-9df0-4af7eecb3880",
       "key": "rolePayload",
       "value": "",
       "type": "string"
