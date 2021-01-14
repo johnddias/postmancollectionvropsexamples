@@ -1529,7 +1529,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\"resourceKey\":{\"name\":\"SC2VC01 vSAN\",\"adapterKindKey\":\"VirtualAndPhysicalSANAdapter\",\"resourceKindKey\":\"VirtualAndPhysicalSANAdapter Instance\",\"resourceIdentifiers\":[{\"identifierType\":{\"name\":\"AutoDiscovery\",\"dataType\":\"STRING\",\"isPartOfUniqueness\":false},\"value\":\"true\"},{\"identifierType\":{\"name\":\"EnableCimApi\",\"dataType\":\"STRING\",\"isPartOfUniqueness\":false},\"value\":\"false\"},{\"identifierType\":{\"name\":\"VCID\",\"dataType\":\"STRING\",\"isPartOfUniqueness\":false},\"value\":\"\"},{\"identifierType\":{\"name\":\"VCServer\",\"dataType\":\"STRING\",\"isPartOfUniqueness\":true},\"value\":\"sc2vc01.cmbu.local\"}]},\"description\":\"Santa Clara\",\"collectorId\":1,\"collectorGroupId\":\"67684416-2e37-44a8-9520-68e6cf515867\",\"credentialInstanceId\":\"2de947cd-6e2a-4b59-bb9a-31afc8149ae4\",\"monitoringInterval\":5,\"adapter-certificates\":[{\"thumbprint\":\"48ef24f322626e2b87dbd690b016db08d23da702\",\"certificateDetails\":\"[ Version: V3 Subject: CN=sc2vc01.cmbu.local, OU=IT, OU=Applications, O=VMware, C=US Signature Algorithm: SHA256withRSA, OID = 1.2.840.113549.1.1.11 Key: Sun RSA public key, 2048 bits params: null modulus: 28315741658838014444269755583157948998877513062542912211963334458211141717791138792934037542951617012364524238413269752602933029214754166520894679685855071297639644089932038275595975265027822321139823679540228333324318040460410073712179117911310324354805936785040526382633270916495743703576856385389382579135623337755370078475088248190071190379289277214376846497246187404189151258000793306098659987492025182780394493192371532941799218913351747670307887191075469747807549102921785953167311438358388081569852984143534662077351208796848203896656748049759335681065086617621420598781438711100239698104868321666782845598883 public exponent: 65537 Validity: [From: Fri Jul 06 23:51:43 UTC 2018, To: Wed Jul 07 00:21:43 UTC 2021] Issuer: CN=VMware Issuing CA, OU=Certification Authorities, O=VMware, C=US SerialNumber: [ 56438b85] Certificate Extensions: 8 [1]: ObjectId: 1.2.840.113533.7.65.0 Criticality=false Extension unknown: DER encoded OCTET string = 0000: 04 0C 30 0A 1B 04 56 38 2E 32 03 02 03 A8 ..0...V8.2.... [2]: ObjectId: 1.3.6.1.5.5.7.1.1 Criticality=false AuthorityInfoAccess [ [ accessMethod: caIssuers accessLocation: URIName: http://vmwarecrl.managed.entrust.com/AIA/CertsIssuedtoVMwareIssuingCA.p7c , accessMethod: ocsp accessLocation: URIName: http://vmwareocsp.managed.entrust.com ] ] [3]: ObjectId: 2.5.29.35 Criticality=false AuthorityKeyIdentifier [ KeyIdentifier [ 0000: DD EA AD 51 2F ED FF 10 86 03 21 A9 47 F1 FA A7 ...Q/.....!.G... 0010: 23 10 40 29 #.@) ] ] [4]: ObjectId: 2.5.29.31 Criticality=false CRLDistributionPoints [ [DistributionPoint: [URIName: http://vmwarecrl.managed.entrust.com/CRLs/VMwareIssuingCA.crl, URIName: http://crl.vmware.com/CRLs/VMwareIssuingCA.crl] , DistributionPoint: [CN=CRL614, CN=VMware Issuing CA, OU=Certification Authorities, O=VMware, C=US] ]] [5]: ObjectId: 2.5.29.37 Criticality=false ExtendedKeyUsages [ serverAuth ] [6]: ObjectId: 2.5.29.15 Criticality=true KeyUsage [ DigitalSignature Key_Encipherment ] [7]: ObjectId: 2.5.29.17 Criticality=false SubjectAlternativeName [ DNSName: sc2vc01.cmbu.local IPAddress: 10.173.22.10 ] [8]: ObjectId: 2.5.29.14 Criticality=false SubjectKeyIdentifier [ KeyIdentifier [ 0000: 0D 95 77 8D 63 EB EB 45 11 99 49 16 F0 62 DB 73 ..w.c..E..I..b.s 0010: E8 04 DA BA .... ] ] ]SHA256withRSA[B@20b5fc25[B@624a0634\"}],\"links\":[{\"href\":\"/suite-api/api/adapters/5016e4a5-04dd-473b-878a-8913a02f89c9\",\"rel\":\"SELF\",\"name\":\"linkToSelf\"},{\"href\":\"/suite-api/api/credentials/2de947cd-6e2a-4b59-bb9a-31afc8149ae4\",\"rel\":\"RELATED\",\"name\":\"linkToCredential\"}],\"id\":\"5016e4a5-04dd-473b-878a-8913a02f89c9\"}",
+              "raw": "{{adapterPatchPayload}}",
               "options": {}
             },
             "url": "https://{{vrops}}/suite-api/api/adapters/testConnection"
@@ -5171,25 +5171,25 @@
   ],
   "variable": [
     {
-      "id": "a4d56676-0557-4891-a7fb-c00a6849d1ac",
+      "id": "4c580277-f95b-4e6b-a0b3-a384e258df59",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "b0d49216-afa9-4f84-8bbf-b24fa3e55fbe",
+      "id": "f27bf9ca-4579-487d-9116-1b50aee1ed0a",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "3e6863d1-f478-4fb9-9645-659af10f0db9",
+      "id": "fe64c926-bd37-4c5d-a59c-226736337e3e",
       "key": "pass",
       "value": "",
       "type": "string"
     },
     {
-      "id": "d86519e0-f6b2-4d0c-9df0-4af7eecb3880",
+      "id": "7f08c95e-1c82-41ed-8415-501ccfa87e1c",
       "key": "rolePayload",
       "value": "",
       "type": "string"
