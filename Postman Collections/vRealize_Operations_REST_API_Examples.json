@@ -1631,6 +1631,20 @@
         },
         {
           "name": "Create an AWS Adapter Instance",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "19b3c035-4cc2-44ab-a070-128291bf426b",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);\r",
+                  "postman.setEnvironmentVariable(\"adapterId\", jsonData.id);\r",
+                  "postman.setEnvironmentVariable(\"adapterPatchPayload\", jsonData);"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
           "_postman_id": "92986256-249a-47c3-8e3f-3fa109e13e05",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
@@ -5233,25 +5247,25 @@
   ],
   "variable": [
     {
-      "id": "b3ce0f96-c93c-43b1-b829-e2f5cd12a50e",
+      "id": "a1e931f5-118d-4ee6-97ca-fb04a6f8bdd8",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "0c62150e-8c9b-43d0-81c0-eca6e4e97420",
+      "id": "965c44f4-909a-4b9c-a183-5664bcbb4bd2",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "99681a86-99f7-47ca-b85a-36ad06694129",
+      "id": "103b56d5-be18-414c-85d8-9621bcc8ab60",
       "key": "pass",
       "value": "",
       "type": "string"
     },
     {
-      "id": "828de24b-d182-46d7-afae-f25e4ef210d4",
+      "id": "1b5b6bb7-2b83-4c63-9b5e-ec827a3d506f",
       "key": "rolePayload",
       "value": "",
       "type": "string"
