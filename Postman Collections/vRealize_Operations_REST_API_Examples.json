@@ -1546,6 +1546,7 @@
                 "exec": [
                   "var jsonData = JSON.parse(responseBody);\r",
                   "postman.setEnvironmentVariable(\"adapterId\", jsonData.id);\r",
+                  "postman.setEnvironmentVariable(\"credentialId\", jasonData.credentialInstanceId);\r",
                   "postman.setEnvironmentVariable(\"adapterPatchPayload\", responseBody);"
                 ],
                 "type": "text/javascript"
@@ -5268,6 +5269,28 @@
             "url": "https://{{vrops}}/suite-api/api/credentials"
           },
           "response": []
+        },
+        {
+          "name": "Delete a Credential",
+          "_postman_id": "974077c1-64ff-454c-8c1c-379c8a54828a",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{bearerToken}}"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": "https://{{vrops}}/suite-api/api/credentials/{{credentialId}}"
+          },
+          "response": []
         }
       ],
       "_postman_id": "39e8301c-3cd7-4afa-9434-ebfa4eb392be"
@@ -5297,25 +5320,25 @@
   ],
   "variable": [
     {
-      "id": "69682057-a5c3-4c6f-b64e-adc64d80693e",
+      "id": "35ed2730-3f02-4828-b3cd-4d7041416446",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "07ce7ac1-6244-4b0f-8ec2-72f72d31f51a",
+      "id": "6faf56ad-a6d1-4738-980a-32e03ae0fba4",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "6ed74aa9-df8c-4e46-9510-c0cf497c167b",
+      "id": "07bfe9cd-ab8a-42af-b89d-34a87e6b4603",
       "key": "pass",
       "value": "",
       "type": "string"
     },
     {
-      "id": "ab8d7fd1-93f7-4526-b5b5-c17c4c3cbfee",
+      "id": "9b39764b-5ae3-4272-ada1-26811802144c",
       "key": "rolePayload",
       "value": "",
       "type": "string"
