@@ -1592,7 +1592,8 @@
                 "exec": [
                   "var jsonData = JSON.parse(responseBody);\r",
                   "postman.setEnvironmentVariable(\"adapterId\", jsonData.id);\r",
-                  "postman.setEnvironmentVariable(\"adapterPatchPayload\", jsonData);\r",
+                  "postman.setEnvironmentVariable(\"credentialId\", jasonData.credentialInstanceId);\r",
+                  "postman.setEnvironmentVariable(\"adapterPatchPayload\", responseBody);\r",
                   ""
                 ],
                 "type": "text/javascript"
@@ -1621,7 +1622,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"name\": \"WDC vCenter Adapter - vSAN\",\n    \"adapterKindKey\": \"VirtualAndPhysicalSANAdapter\",\n    \"resourceKindKey\": \"VirtualAndPhysicalSANAdapter Instance\",\n    \"resourceIdentifiers\": [\n        {\n            \"name\": \"AutoDiscovery\",\n            \"value\": \"true\"\n        },\n        {\n            \"name\": \"EnableCimApi\",\n            \"value\": \"false\"\n        },\n        {\n            \"name\": \"VCID\",\n            \"value\": \"\"\n        },\n        {\n            \"name\": \"VCServer\",\n            \"value\": \"wdcvc01.cmbu.local\"\n        }\n    ],\n    \"credential\": {\n        \"id\": null,\n        \"name\": \"vSAN WDC Creds\",\n        \"adapterKindKey\": \"VirtualAndPhysicalSANAdapter\",\n        \"credentialKindKey\": \"VCCredential\",\n        \"fields\": [\n            {\n                \"name\": \"VCUser\",\n                \"value\": \"diasj@cmbu.local\"\n            },\n            {\n                \"name\": \"VCPassword\",\n                \"value\": \"secret\"\n            }\n        ]\n    }\n}",
+              "raw": "{\n    \"name\": \"WDC vCenter Adapter - vSAN\",\n    \"adapterKindKey\": \"VirtualAndPhysicalSANAdapter\",\n    \"resourceKindKey\": \"VirtualAndPhysicalSANAdapter Instance\",\n    \"resourceIdentifiers\": [\n        {\n            \"name\": \"AutoDiscovery\",\n            \"value\": \"true\"\n        },\n        {\n            \"name\": \"EnableCimApi\",\n            \"value\": \"false\"\n        },\n        {\n            \"name\": \"VCID\",\n            \"value\": \"\"\n        },\n        {\n            \"name\": \"VCServer\",\n            \"value\": \"wdcvc01.cmbu.local\"\n        }\n    ],\n    \"credential\": {\n        \"id\": null,\n        \"name\": \"vSAN WDC Creds\",\n        \"adapterKindKey\": \"VirtualAndPhysicalSANAdapter\",\n        \"credentialKindKey\": \"VCCredential\",\n        \"fields\": [\n            {\n                \"name\": \"VCUser\",\n                \"value\": \"username\"\n            },\n            {\n                \"name\": \"VCPassword\",\n                \"value\": \"password\"\n            }\n        ]\n    }\n}",
               "options": {}
             },
             "url": "https://{{vrops}}/suite-api/api/adapters",
@@ -5296,25 +5297,25 @@
   ],
   "variable": [
     {
-      "id": "39a83262-7098-43b0-adb5-1ce5ad14eec3",
+      "id": "69682057-a5c3-4c6f-b64e-adc64d80693e",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "278a28eb-ddbb-47dd-bef7-d6f8e811fb6b",
+      "id": "07ce7ac1-6244-4b0f-8ec2-72f72d31f51a",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "d97ad431-3bfd-45bb-88df-608e13078313",
+      "id": "6ed74aa9-df8c-4e46-9510-c0cf497c167b",
       "key": "pass",
       "value": "",
       "type": "string"
     },
     {
-      "id": "64c04062-7fd5-40d7-9a50-154725ecacc9",
+      "id": "ab8d7fd1-93f7-4526-b5b5-c17c4c3cbfee",
       "key": "rolePayload",
       "value": "",
       "type": "string"
