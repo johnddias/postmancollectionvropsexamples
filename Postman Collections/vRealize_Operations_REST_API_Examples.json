@@ -1713,7 +1713,7 @@
             "disableBodyPruning": true
           },
           "request": {
-            "method": "PATCH",
+            "method": "DELETE",
             "header": [
               {
                 "key": "Authorization",
@@ -1733,7 +1733,25 @@
               "raw": "{{adapterPatchPayload}}",
               "options": {}
             },
-            "url": "https://{{vrops}}/suite-api/api/adapters"
+            "url": {
+              "raw": "https://{{vrops}}/suite-api/api/adapters/{{adapterId}}?deleteResources=true",
+              "protocol": "https",
+              "host": [
+                "{{vrops}}"
+              ],
+              "path": [
+                "suite-api",
+                "api",
+                "adapters",
+                "{{adapterId}}"
+              ],
+              "query": [
+                {
+                  "key": "deleteResources",
+                  "value": "true"
+                }
+              ]
+            }
           },
           "response": []
         }
@@ -5278,25 +5296,25 @@
   ],
   "variable": [
     {
-      "id": "d7659224-9aad-4db3-bd32-c51b993cd410",
+      "id": "39a83262-7098-43b0-adb5-1ce5ad14eec3",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "720261ef-55f6-4532-a127-bb71c758030f",
+      "id": "278a28eb-ddbb-47dd-bef7-d6f8e811fb6b",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "9e6fd713-cb5f-4c70-8574-611b2ef5002f",
+      "id": "d97ad431-3bfd-45bb-88df-608e13078313",
       "key": "pass",
       "value": "",
       "type": "string"
     },
     {
-      "id": "27b188a7-82c6-49e5-99a5-a39128d52f0e",
+      "id": "64c04062-7fd5-40d7-9a50-154725ecacc9",
       "key": "rolePayload",
       "value": "",
       "type": "string"
