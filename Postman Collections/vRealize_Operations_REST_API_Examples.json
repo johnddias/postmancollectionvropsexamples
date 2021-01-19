@@ -1705,6 +1705,37 @@
             "url": "https://{{vrops}}/suite-api/api/adapters/{{adapterId}}"
           },
           "response": []
+        },
+        {
+          "name": "Delete an Adapter Instance",
+          "_postman_id": "56e36a4a-db00-4519-8a79-87452dd80514",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{bearerToken}}"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{{adapterPatchPayload}}",
+              "options": {}
+            },
+            "url": "https://{{vrops}}/suite-api/api/adapters"
+          },
+          "response": []
         }
       ],
       "_postman_id": "81428591-dd37-f8d8-279e-4d8837465cd9"
@@ -5247,25 +5278,25 @@
   ],
   "variable": [
     {
-      "id": "a1e931f5-118d-4ee6-97ca-fb04a6f8bdd8",
+      "id": "ebb2f4af-acbd-4391-84e4-38fa115447b3",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "965c44f4-909a-4b9c-a183-5664bcbb4bd2",
+      "id": "cdcc2d84-83a3-4cef-a8c1-594f9f9a0647",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "103b56d5-be18-414c-85d8-9621bcc8ab60",
+      "id": "35a45d17-0f61-4137-9e09-fd55358d1c3f",
       "key": "pass",
       "value": "",
       "type": "string"
     },
     {
-      "id": "1b5b6bb7-2b83-4c63-9b5e-ec827a3d506f",
+      "id": "86af192d-dbdb-461f-b399-b18a8839b46f",
       "key": "rolePayload",
       "value": "",
       "type": "string"
