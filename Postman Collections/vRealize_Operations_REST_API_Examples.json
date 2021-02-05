@@ -1756,6 +1756,53 @@
             }
           },
           "response": []
+        },
+        {
+          "name": "Create a vCenter Adapter Instance Copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "1bf9add8-ee63-4fa1-a8c8-ccdca3ddde36",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);\r",
+                  "postman.setEnvironmentVariable(\"adapterId\", jsonData.id);\r",
+                  "postman.setEnvironmentVariable(\"credentialId\", jsonData.credentialInstanceId);\r",
+                  "postman.setEnvironmentVariable(\"adapterPatchPayload\", responseBody);"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "c68924a1-885d-4f97-bab8-8fb7584377d5",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{bearerToken}}"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"WDC vCenter Adapter\",\n  \"description\": \"A vCenter Adapter Instance\",\n  \"collectorId\": \"1\",\n  \"adapterKindKey\": \"VMWARE\",\n  \"resourceIdentifiers\": [\n    {\n      \"name\": \"AUTODISCOVERY\",\n      \"value\": \"true\"\n    },\n    {\n      \"name\": \"PROCESSCHANGEEVENTS\",\n      \"value\": \"true\"\n    },\n    {\n      \"name\": \"VCURL\",\n      \"value\": \"wdcvc01.cmbu.local\"\n    },\n    {\n      \"name\": \"CLOUD_TYPE\",\n      \"value\": \"PRIVATE_CLOUD\"\n    }\n  ],\n  \"credential\": {\n    \"id\": null,\n    \"name\": \"WDC Credentials\",\n    \"adapterKindKey\": \"VMWARE\",\n    \"credentialKindKey\": \"PRINCIPALCREDENTIAL\",\n    \"fields\": [\n      {\n        \"name\": \"USER\",\n        \"value\": \"username\"\n      },\n      {\n        \"name\": \"PASSWORD\",\n        \"value\": \"secret\"\n      }\n    ],\n    \"others\": [],\n    \"otherAttributes\": {}\n  },\n  \"others\": [],\n  \"otherAttributes\": {}\n}",
+              "options": {}
+            },
+            "url": "https://{{vrops}}/suite-api/api/adapters",
+            "description": "Be sure to check values in the JSON body for credentials.\nAlso note you will need to start the adapter using \"Star an adapter instance\" \nafter creation using the UUID from the response.\n\nIf you aren't using a CA, the certificate will have to be added via the UI\nI do not know of a way to do this via the REST API"
+          },
+          "response": []
         }
       ],
       "_postman_id": "81428591-dd37-f8d8-279e-4d8837465cd9"
@@ -5320,25 +5367,25 @@
   ],
   "variable": [
     {
-      "id": "c0c2056d-73a9-46ee-aeb5-6a36d03eaba5",
+      "id": "12312aad-e624-44c4-a42b-14f7159a7d0b",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "bc29d644-5f79-4f3c-89f4-3816fd461553",
+      "id": "23944378-3b4e-473f-ae40-8ffacb3c04c1",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "c6f49903-8307-4812-adf1-5b30e08a45d6",
+      "id": "24ca86b7-04ff-4061-a775-ca0f98976e2b",
       "key": "pass",
       "value": "",
       "type": "string"
     },
     {
-      "id": "c4f97ae3-e1d3-4e66-ad57-770f608c551f",
+      "id": "81b4afbe-baf1-4863-b7be-a5c71d9a81c9",
       "key": "rolePayload",
       "value": "",
       "type": "string"
