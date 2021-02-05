@@ -1669,7 +1669,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"name\": \"VMC vCenter Adapter\",\n  \"description\": \"A VMC vCenter Adapter Instance\",\n  \"collectorId\": \"1\",\n  \"adapterKindKey\": \"VMWARE\",\n  \"resourceIdentifiers\": [\n    {\n      \"name\": \"AUTODISCOVERY\",\n      \"value\": \"true\"\n    },\n    {\n      \"name\": \"PROCESSCHANGEEVENTS\",\n      \"value\": \"true\"\n    },\n    {\n      \"name\": \"VCURL\",\n      \"value\": \"wdcvc01.cmbu.local\"\n    },\n    {\n      \"name\": \"CLOUD_TYPE\",\n      \"value\": \"PRIVATE_CLOUD\"\n    }\n  ],\n  \"credential\": {\n    \"id\": null,\n    \"name\": \"WDC Credentials\",\n    \"adapterKindKey\": \"VMWARE\",\n    \"credentialKindKey\": \"PRINCIPALCREDENTIAL\",\n    \"fields\": [\n      {\n        \"name\": \"USER\",\n        \"value\": \"username\"\n      },\n      {\n        \"name\": \"PASSWORD\",\n        \"value\": \"secret\"\n      }\n    ],\n    \"others\": [],\n    \"otherAttributes\": {}\n  },\n  \"others\": [],\n  \"otherAttributes\": {}\n}",
+              "raw": "{\n  \"name\": \"VMC SDDC\",\n  \"collectorId\": \"1\",\n  \"adapterKindKey\": \"VmcAdapter\",\n  \"resourceIdentifiers\": [\n    {\n        \"identifierType\": {\n            \"name\": \"COSTING_ENABLED\",\n            \"dataType\": \"STRING\",\n            \"isPartOfUniqueness\": false\n        },\n        \"value\": \"true\"\n    },\n    {\n        \"identifierType\": {\n            \"name\": \"OrgId\",\n            \"dataType\": \"STRING\",\n            \"isPartOfUniqueness\": true\n        },\n        \"value\": \"2acf4023-1778-4e6a-a892-7635b8c7f4fb\"\n    }\n    \n  ],\n  \"credential\": {\n    \"id\": null,\n    \"name\": \"VMC CSP Toekn\",\n    \"adapterKindKey\": \"VmcAdapter\",\n    \"credentialKindKey\": \"Credentials\",\n    \"fields\": [\n        {\n            \"name\": \"refresh_token\"\n            \"value\":\n        },\n        {\n            \"name\": \"proxy_host\",\n            \"value\": \"\"\n        },\n        {\n            \"name\": \"proxy_port\",\n            \"value\": \"\"\n        },\n        {\n            \"name\": \"proxy_username\",\n            \"value\": \"\"\n        },\n        {\n            \"name\": \"proxy_password\"\n        },\n        {\n            \"name\": \"proxy_domain\",\n            \"value\": \"\"\n        }\n    ],\n    \"others\": [],\n    \"otherAttributes\": {}\n  },\n  \"others\": [],\n  \"otherAttributes\": {}\n}",
               "options": {}
             },
             "url": "https://{{vrops}}/suite-api/api/adapters",
@@ -5414,25 +5414,25 @@
   ],
   "variable": [
     {
-      "id": "2bdc9494-7c25-4870-b126-bd4d5280ce2f",
+      "id": "f4e91e35-13d3-41a7-90e4-719620a4def9",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "f6ab40c0-2d30-40fc-8b41-c6a11f98b25a",
+      "id": "bd89222d-c347-40bd-a80b-6950cd5b4f36",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "9b31a5e5-ef02-4624-adb5-35cd11304d91",
+      "id": "bb2310bb-f966-4dbe-8923-9499f78f1f7d",
       "key": "pass",
       "value": "",
       "type": "string"
     },
     {
-      "id": "cf718e2b-e276-484b-8466-22fcc6e939c7",
+      "id": "d213550e-58e7-41b9-9be9-76d84023c858",
       "key": "rolePayload",
       "value": "",
       "type": "string"
