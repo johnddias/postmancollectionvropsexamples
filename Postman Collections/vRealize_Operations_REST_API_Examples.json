@@ -1631,6 +1631,53 @@
           "response": []
         },
         {
+          "name": "Create a VMC on AWS Adapter Instance Copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "0584645d-f53f-4333-97e1-a14564cfda75",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);\r",
+                  "postman.setEnvironmentVariable(\"adapterId\", jsonData.id);\r",
+                  "postman.setEnvironmentVariable(\"credentialId\", jsonData.credentialInstanceId);\r",
+                  "postman.setEnvironmentVariable(\"adapterPatchPayload\", responseBody);"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "05598848-c627-4c9a-9a73-3a40e877a8ef",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{bearerToken}}"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"VMC vCenter Adapter\",\n  \"description\": \"A VMC vCenter Adapter Instance\",\n  \"collectorId\": \"1\",\n  \"adapterKindKey\": \"VMWARE\",\n  \"resourceIdentifiers\": [\n    {\n      \"name\": \"AUTODISCOVERY\",\n      \"value\": \"true\"\n    },\n    {\n      \"name\": \"PROCESSCHANGEEVENTS\",\n      \"value\": \"true\"\n    },\n    {\n      \"name\": \"VCURL\",\n      \"value\": \"wdcvc01.cmbu.local\"\n    },\n    {\n      \"name\": \"CLOUD_TYPE\",\n      \"value\": \"PRIVATE_CLOUD\"\n    }\n  ],\n  \"credential\": {\n    \"id\": null,\n    \"name\": \"WDC Credentials\",\n    \"adapterKindKey\": \"VMWARE\",\n    \"credentialKindKey\": \"PRINCIPALCREDENTIAL\",\n    \"fields\": [\n      {\n        \"name\": \"USER\",\n        \"value\": \"username\"\n      },\n      {\n        \"name\": \"PASSWORD\",\n        \"value\": \"secret\"\n      }\n    ],\n    \"others\": [],\n    \"otherAttributes\": {}\n  },\n  \"others\": [],\n  \"otherAttributes\": {}\n}",
+              "options": {}
+            },
+            "url": "https://{{vrops}}/suite-api/api/adapters",
+            "description": "Be sure to check values in the JSON body for credentials.\nAlso note you will need to start the adapter using \"Star an adapter instance\" \nafter creation using the UUID from the response.\n\nIf you aren't using a CA, the certificate will have to be added via the UI\nI do not know of a way to do this via the REST API"
+          },
+          "response": []
+        },
+        {
           "name": "Create a vSAN Adapter Instance",
           "event": [
             {
@@ -1801,53 +1848,6 @@
                 }
               ]
             }
-          },
-          "response": []
-        },
-        {
-          "name": "Create a VMC on AWS Adapter Instance Copy",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "0584645d-f53f-4333-97e1-a14564cfda75",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);\r",
-                  "postman.setEnvironmentVariable(\"adapterId\", jsonData.id);\r",
-                  "postman.setEnvironmentVariable(\"credentialId\", jsonData.credentialInstanceId);\r",
-                  "postman.setEnvironmentVariable(\"adapterPatchPayload\", responseBody);"
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "_postman_id": "05598848-c627-4c9a-9a73-3a40e877a8ef",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "{{bearerToken}}"
-              },
-              {
-                "key": "Accept",
-                "value": "application/json"
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"name\": \"VMC vCenter Adapter\",\n  \"description\": \"A VMC vCenter Adapter Instance\",\n  \"collectorId\": \"1\",\n  \"adapterKindKey\": \"VMWARE\",\n  \"resourceIdentifiers\": [\n    {\n      \"name\": \"AUTODISCOVERY\",\n      \"value\": \"true\"\n    },\n    {\n      \"name\": \"PROCESSCHANGEEVENTS\",\n      \"value\": \"true\"\n    },\n    {\n      \"name\": \"VCURL\",\n      \"value\": \"wdcvc01.cmbu.local\"\n    },\n    {\n      \"name\": \"CLOUD_TYPE\",\n      \"value\": \"PRIVATE_CLOUD\"\n    }\n  ],\n  \"credential\": {\n    \"id\": null,\n    \"name\": \"WDC Credentials\",\n    \"adapterKindKey\": \"VMWARE\",\n    \"credentialKindKey\": \"PRINCIPALCREDENTIAL\",\n    \"fields\": [\n      {\n        \"name\": \"USER\",\n        \"value\": \"username\"\n      },\n      {\n        \"name\": \"PASSWORD\",\n        \"value\": \"secret\"\n      }\n    ],\n    \"others\": [],\n    \"otherAttributes\": {}\n  },\n  \"others\": [],\n  \"otherAttributes\": {}\n}",
-              "options": {}
-            },
-            "url": "https://{{vrops}}/suite-api/api/adapters",
-            "description": "Be sure to check values in the JSON body for credentials.\nAlso note you will need to start the adapter using \"Star an adapter instance\" \nafter creation using the UUID from the response.\n\nIf you aren't using a CA, the certificate will have to be added via the UI\nI do not know of a way to do this via the REST API"
           },
           "response": []
         }
@@ -5414,25 +5414,25 @@
   ],
   "variable": [
     {
-      "id": "6753d0f6-c9fb-4b5d-9fe5-6f7f1cfd5493",
+      "id": "29534745-f0ce-457d-b895-70369fb0734a",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "0aa64093-dd2d-4439-bb9a-12cc17d1a4d3",
+      "id": "d486125a-e28c-4a03-8b4d-f83f39a8d704",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "110bbd31-e74d-46df-91ce-64571e75be09",
+      "id": "2d7802c6-fa22-4c5d-82fe-f0e3c66a59bf",
       "key": "pass",
       "value": "",
       "type": "string"
     },
     {
-      "id": "25041216-ffc3-4eab-809c-51141681b08b",
+      "id": "10671345-be54-433d-8d1d-8863e48c2557",
       "key": "rolePayload",
       "value": "",
       "type": "string"
