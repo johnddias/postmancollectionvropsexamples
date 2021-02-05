@@ -1584,7 +1584,7 @@
           "response": []
         },
         {
-          "name": "Create a VMC on AWS vCenter Adapter Instance",
+          "name": "VMC Step 2 - Create a VMC on AWS vCenter Adapter Instance",
           "event": [
             {
               "listen": "test",
@@ -1622,7 +1622,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"name\": \"VMC vCenter Adapter\",\n  \"description\": \"A VMC vCenter Adapter Instance\",\n  \"collectorId\": \"1\",\n  \"adapterKindKey\": \"VMWARE\",\n  \"resourceIdentifiers\": [\n    {\n      \"name\": \"AUTODISCOVERY\",\n      \"value\": \"true\"\n    },\n    {\n      \"name\": \"PROCESSCHANGEEVENTS\",\n      \"value\": \"true\"\n    },\n    {\n      \"name\": \"VCURL\",\n      \"value\": \"wdcvc01.cmbu.local\"\n    },\n    {\n      \"name\": \"CLOUD_TYPE\",\n      \"value\": \"PRIVATE_CLOUD\"\n    }\n  ],\n  \"credential\": {\n    \"id\": null,\n    \"name\": \"WDC Credentials\",\n    \"adapterKindKey\": \"VMWARE\",\n    \"credentialKindKey\": \"PRINCIPALCREDENTIAL\",\n    \"fields\": [\n      {\n        \"name\": \"USER\",\n        \"value\": \"username\"\n      },\n      {\n        \"name\": \"PASSWORD\",\n        \"value\": \"secret\"\n      }\n    ],\n    \"others\": [],\n    \"otherAttributes\": {}\n  },\n  \"others\": [],\n  \"otherAttributes\": {}\n}",
+              "raw": "{\n  \"name\": \"VMC vCenter Adapter\",\n  \"description\": \"A VMC vCenter Adapter Instance\",\n  \"collectorId\": \"1\",\n  \"adapterKindKey\": \"VMWARE\",\n  \"resourceIdentifiers\": [\n            {\n                \"identifierType\": {\n                    \"name\": \"AUTODISCOVERY\",\n                    \"dataType\": \"STRING\",\n                    \"isPartOfUniqueness\": false\n                },\n                \"value\": \"true\"\n            },\n            {\n                \"identifierType\": {\n                    \"name\": \"CLOUD_TYPE\",\n                    \"dataType\": \"STRING\",\n                    \"isPartOfUniqueness\": false\n                },\n                \"value\": \"VMWARE_CLOUD_ON_AWS\"\n            },\n            {\n                \"identifierType\": {\n                    \"name\": \"DV_PORT_GROUP_DISABLED\",\n                    \"dataType\": \"STRING\",\n                    \"isPartOfUniqueness\": false\n                },\n                \"value\": \"false\"\n            },\n            {\n                \"identifierType\": {\n                    \"name\": \"DVS_DISABLED\",\n                    \"dataType\": \"STRING\",\n                    \"isPartOfUniqueness\": false\n                },\n                \"value\": \"false\"\n            },\n            {\n                \"identifierType\": {\n                    \"name\": \"ENABLE_ACTIONS\",\n                    \"dataType\": \"STRING\",\n                    \"isPartOfUniqueness\": false\n                },\n                \"value\": \"false\"\n            },\n            {\n                \"identifierType\": {\n                    \"name\": \"GFS_SKIP_PATTERNS\",\n                    \"dataType\": \"STRING\",\n                    \"isPartOfUniqueness\": false\n                },\n                \"value\": \"docker/devicemapper/mnt\"\n            },\n            {\n                \"identifierType\": {\n                    \"name\": \"PDRS_STATS_PROVIDER\",\n                    \"dataType\": \"STRING\",\n                    \"isPartOfUniqueness\": false\n                },\n                \"value\": \"false\"\n            },\n            {\n                \"identifierType\": {\n                    \"name\": \"PROCESSCHANGEEVENTS\",\n                    \"dataType\": \"STRING\",\n                    \"isPartOfUniqueness\": false\n                },\n                \"value\": \"true\"\n            },\n            {\n                \"identifierType\": {\n                    \"name\": \"VCURL\",\n                    \"dataType\": \"STRING\",\n                    \"isPartOfUniqueness\": true\n                },\n                \"value\": \"vcenter.sddc-54-203-176-241.vmwarevmc.com\"\n            },\n            {\n                \"identifierType\": {\n                    \"name\": \"VM_FOLDER_DISABLED\",\n                    \"dataType\": \"STRING\",\n                    \"isPartOfUniqueness\": false\n                },\n                \"value\": \"false\"\n            },\n            {\n                \"identifierType\": {\n                    \"name\": \"VM_LIMIT\",\n                    \"dataType\": \"STRING\",\n                    \"isPartOfUniqueness\": false\n                },\n                \"value\": \"2000000000\"\n            },\n            {\n                \"identifierType\": {\n                    \"name\": \"VMEntityVCID\",\n                    \"dataType\": \"STRING\",\n                    \"isPartOfUniqueness\": false\n                },\n                \"value\": \"ddda4fc2-356d-4b0a-8256-cf02748a9fc2\"\n            }\n        ],\n  \"credential\": {\n    \"id\": null,\n    \"name\": \"VMC Credentials\",\n    \"adapterKindKey\": \"VMWARE\",\n    \"credentialKindKey\": \"PRINCIPALCREDENTIAL\",\n    \"fields\": [\n      {\n        \"name\": \"USER\",\n        \"value\": \"username\"\n      },\n      {\n        \"name\": \"PASSWORD\",\n        \"value\": \"secret\"\n      }\n    ],\n    \"others\": [],\n    \"otherAttributes\": {}\n  },\n  \"others\": [],\n  \"otherAttributes\": {}\n}",
               "options": {}
             },
             "url": "https://{{vrops}}/suite-api/api/adapters",
@@ -5414,25 +5414,25 @@
   ],
   "variable": [
     {
-      "id": "f4e91e35-13d3-41a7-90e4-719620a4def9",
+      "id": "18184828-2c5c-410e-ac83-64f970b61daa",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "bd89222d-c347-40bd-a80b-6950cd5b4f36",
+      "id": "781204e2-f57f-4231-bf36-1ca66dddd31f",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "bb2310bb-f966-4dbe-8923-9499f78f1f7d",
+      "id": "de0ae3c5-0e74-4ed7-b9d3-0862141da6f3",
       "key": "pass",
       "value": "",
       "type": "string"
     },
     {
-      "id": "d213550e-58e7-41b9-9be9-76d84023c858",
+      "id": "24c81807-144b-4a0b-9dfd-7438b0239df3",
       "key": "rolePayload",
       "value": "",
       "type": "string"
