@@ -1808,7 +1808,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"name\": \"Dummy Account\",\n    \"adapterKindKey\": \"AmazonAWSAdapter\",\n    \"resourceKindKey\": \"AmazonAWSAdapter Instance\",\n    \"resourceIdentifiers\": [\n        {\n            \"name\": \"BLACKLIST\",\n            \"value\": \"\"\n        },\n        {\n            \"name\": \"COLLECT_CUSTOM_METRICS\",\n            \"value\": \"false\"\n        },\n        {\n            \"name\": \"REGIONS\",\n            \"value\": \"\"\n        },\n        {\n            \"name\": \"SERVICES\",\n            \"value\": \"\"\n        },\n        {\n            \"name\": \"SUPPORT_AUTODISCOVERY\",\n            \"value\": \"true\"\n        },\n        {\n            \"name\": \"WHITELIST\",\n            \"value\": \"\"\n        }\n    ],\n    \"description\": \"\",\n    \"credential\": {\n        \"id\": null,\n        \"name\": \"AWS Creds\",\n        \"adapterKindKey\": \"AmazonAWSAdapter\",\n        \"credentialKindKey\": \"AWSCREDENTIALS\",\n        \"fields\": [\n            {\n                \"name\": \"ACCESSKEY\",\n                \"value\": \"accesskeyvalue\"\n            },\n            {\n                \"name\": \"SECRETKEY\",\n                \"value\": \"secretkeyvalue\"\n            },\n            {\n                \"name\": \"PROXYHOST\",\n                \"value\": null\n            },\n            {\n                \"name\": \"PROXYPORT\",\n                \"value\": null\n            },\n            {\n                \"name\": \"PROXYUSERNAME\",\n                \"value\": null\n            },\n            {\n                \"name\": \"PROXYPASSWORD\",\n                \"value\": null\n            },\n            {\n                \"name\": \"PROXYWORKSTATION\",\n                \"value\": null\n            },\n            {\n                \"name\": \"PROXYDOMAIN\",\n                \"value\": null\n            }\n        ]\n    }\n}",
+              "raw": "{\n    \"name\": \"Dummy Account\",\n    \"adapterKindKey\": \"MicrosoftAzureAdapter\",\n    \"resourceKindKey\": \"MicrosoftAzureAdapter Instance\",\n    \"resourceIdentifiers\": [\n        {\n            \"name\": \"AZURE_SUBSCRIPTION_ID\",\n            \"value\": \"\"\n        },\n        {\n            \"name\": \"AZURE_TENANT_ID\",\n            \"value\": \"false\"\n        },\n        {\n            \"name\": \"REGIONS\",\n            \"value\": \"\"\n        },\n        {\n            \"name\": \"SERVICES\",\n            \"value\": \"\"\n        }\n    ],\n    \"description\": \"\",\n    \"credential\": {\n        \"id\": null,\n        \"name\": \"Azure Creds\",\n        \"adapterKindKey\": \"MicrosoftAzureAdapter\",\n        \"credentialKindKey\": \"AZURE_CLIENT_CREDENTIALS\",\n        \"fields\": [\n            {\n                \"name\": \"AZURE_CLIENT_ID\",\n                \"value\": \"accesskeyvalue\"\n            },\n            {\n                \"name\": \"CLIENT_SECRET\",\n                \"value\": \"secretkeyvalue\"\n            },\n            {\n                \"name\": \"PROXY_HOST\",\n                \"value\": null\n            },\n            {\n                \"name\": \"PROXY_PORT\",\n                \"value\": null\n            },\n            {\n                \"name\": \"PROXY_USERNAME\",\n                \"value\": null\n            },\n            {\n                \"name\": \"PROXY_PASSWORD\",\n                \"value\": null\n            }\n        ]\n    }\n}",
               "options": {}
             },
             "url": "https://{{vrops}}/suite-api/api/adapters"
@@ -5459,25 +5459,25 @@
   ],
   "variable": [
     {
-      "id": "054e0f21-8b66-4fa3-bfbb-072d3cffb052",
+      "id": "3f5e7f3f-2a1c-40e3-bc96-c56875882a07",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "d42da197-a64a-4152-b661-b70eeb59fa5f",
+      "id": "9902805f-84c9-4156-af78-62f7252e4f0f",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "48e28499-3a8f-4fea-9bc1-7b5bdf707785",
+      "id": "0f0e6512-5a94-4192-8814-dbbb410dfaad",
       "key": "pass",
       "value": "",
       "type": "string"
     },
     {
-      "id": "22b1e461-874a-447f-bd0f-df5dbd0a1d59",
+      "id": "c5ed8775-5559-4bb5-b2f0-1acd9a783dda",
       "key": "rolePayload",
       "value": "",
       "type": "string"
