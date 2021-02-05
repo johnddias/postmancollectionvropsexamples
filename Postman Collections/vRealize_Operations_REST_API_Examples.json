@@ -1771,7 +1771,7 @@
           "response": []
         },
         {
-          "name": "Create an AWS Adapter Instance Copy",
+          "name": "Create an Azure Adapter Instance",
           "event": [
             {
               "listen": "test",
@@ -5459,25 +5459,25 @@
   ],
   "variable": [
     {
-      "id": "2501053c-cb5a-4b25-bbe2-7a18dd8f1154",
+      "id": "054e0f21-8b66-4fa3-bfbb-072d3cffb052",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "4764bdc3-29e8-4250-a86d-187a850f5fb2",
+      "id": "d42da197-a64a-4152-b661-b70eeb59fa5f",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "dc96c681-76fb-4c31-8d85-3718003df46b",
+      "id": "48e28499-3a8f-4fea-9bc1-7b5bdf707785",
       "key": "pass",
       "value": "",
       "type": "string"
     },
     {
-      "id": "19ff4730-e814-4902-b6ed-36ed196bff13",
+      "id": "22b1e461-874a-447f-bd0f-df5dbd0a1d59",
       "key": "rolePayload",
       "value": "",
       "type": "string"
