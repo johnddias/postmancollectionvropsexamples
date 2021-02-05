@@ -1584,7 +1584,7 @@
           "response": []
         },
         {
-          "name": "Create a vCenter Adapter Instance Copy",
+          "name": "Create a VMC on AWS Adapter Instance",
           "event": [
             {
               "listen": "test",
@@ -5367,25 +5367,25 @@
   ],
   "variable": [
     {
-      "id": "40b58d2d-51f4-4e0b-8953-3cba54d00d18",
+      "id": "eb78123d-213e-45b6-87e2-5c025b3b0be5",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "e85d3931-7132-4de1-8c5a-8bdb630b5efd",
+      "id": "53f82933-9d05-4ae6-b9f7-02daef62dd40",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "6414b358-2bd3-493c-a72d-6d9df10f0582",
+      "id": "b208cb43-bb7a-49e6-b90e-e98f3915d995",
       "key": "pass",
       "value": "",
       "type": "string"
     },
     {
-      "id": "77fef6d0-09b4-41bc-a4c0-22dabcef4e6f",
+      "id": "65523904-ffe4-434b-8732-bed3715b269f",
       "key": "rolePayload",
       "value": "",
       "type": "string"
