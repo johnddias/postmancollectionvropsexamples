@@ -1631,7 +1631,7 @@
           "response": []
         },
         {
-          "name": "Create a VMC on AWS Adapter Instance (Do this first)",
+          "name": "VMC Step 1 - Create a VMC on AWS Adapter Instance",
           "event": [
             {
               "listen": "test",
@@ -5414,25 +5414,25 @@
   ],
   "variable": [
     {
-      "id": "13471dcc-816c-4bce-841f-b94fd9fb46fa",
+      "id": "0ea07f45-ce4a-4f54-a368-10f6eee5bd35",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "aef4971e-03b9-49e4-81fe-1e977a12c1ea",
+      "id": "57daaa9b-c301-41d9-8f2c-b9f9e94c8ca8",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "d5a67007-d535-45b1-bb6a-d00e421c9842",
+      "id": "92ead73d-581e-4c91-b5e8-62310ffc921a",
       "key": "pass",
       "value": "",
       "type": "string"
     },
     {
-      "id": "2613496e-8d42-4f15-88a6-69db411f6ea4",
+      "id": "66f6a810-01b1-45bc-9783-348106453463",
       "key": "rolePayload",
       "value": "",
       "type": "string"
