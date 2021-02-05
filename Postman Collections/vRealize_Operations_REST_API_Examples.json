@@ -1756,6 +1756,54 @@
             }
           },
           "response": []
+        },
+        {
+          "name": "Create a vSAN Adapter Instance Copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "376e6547-74d6-4fe1-9a78-89bfc200e9a3",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);\r",
+                  "postman.setEnvironmentVariable(\"adapterId\", jsonData.id);\r",
+                  "postman.setEnvironmentVariable(\"credentialId\", jasonData.credentialInstanceId);\r",
+                  "postman.setEnvironmentVariable(\"adapterPatchPayload\", responseBody);\r",
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "76b60b3a-a7ab-41ce-969b-83cb18bf4e06",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{bearerToken}}"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"WDC vCenter Adapter - vSAN\",\n    \"adapterKindKey\": \"VirtualAndPhysicalSANAdapter\",\n    \"resourceKindKey\": \"VirtualAndPhysicalSANAdapter Instance\",\n    \"resourceIdentifiers\": [\n        {\n            \"name\": \"AutoDiscovery\",\n            \"value\": \"true\"\n        },\n        {\n            \"name\": \"EnableCimApi\",\n            \"value\": \"false\"\n        },\n        {\n            \"name\": \"VCID\",\n            \"value\": \"\"\n        },\n        {\n            \"name\": \"VCServer\",\n            \"value\": \"wdcvc01.cmbu.local\"\n        }\n    ],\n    \"credential\": {\n        \"id\": null,\n        \"name\": \"vSAN WDC Creds\",\n        \"adapterKindKey\": \"VirtualAndPhysicalSANAdapter\",\n        \"credentialKindKey\": \"VCCredential\",\n        \"fields\": [\n            {\n                \"name\": \"VCUser\",\n                \"value\": \"username\"\n            },\n            {\n                \"name\": \"VCPassword\",\n                \"value\": \"password\"\n            }\n        ]\n    }\n}",
+              "options": {}
+            },
+            "url": "https://{{vrops}}/suite-api/api/adapters",
+            "description": "Note that you may need to run both \"Patch an Adapter Instance\" and \"Patch an Adapter Instance with Connection Test\" before running \"Start an adapter intance\""
+          },
+          "response": []
         }
       ],
       "_postman_id": "81428591-dd37-f8d8-279e-4d8837465cd9"
@@ -5320,25 +5368,25 @@
   ],
   "variable": [
     {
-      "id": "2b8716c6-50e1-40aa-a784-98a20ea25587",
+      "id": "d433e912-3b97-4816-a913-67d49edb0e49",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "d8930b88-82d7-4bb5-9173-7aacc68d645c",
+      "id": "f5964838-4d96-4838-b87f-f7c9ab12e259",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "470302de-3f5e-4514-afef-8b40b440aad2",
+      "id": "1bb189a0-4e13-42ad-890b-dd47d6ecf4bc",
       "key": "pass",
       "value": "",
       "type": "string"
     },
     {
-      "id": "04b893c2-d3ba-4813-b322-1aad09b72361",
+      "id": "3e237916-e307-4ede-80eb-b3de49e7e022",
       "key": "rolePayload",
       "value": "",
       "type": "string"
