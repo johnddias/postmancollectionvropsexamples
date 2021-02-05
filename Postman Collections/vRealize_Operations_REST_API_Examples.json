@@ -1850,6 +1850,51 @@
             }
           },
           "response": []
+        },
+        {
+          "name": "Create an AWS Adapter Instance Copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "45e42fed-2e84-467c-9e14-cbe57d7706b9",
+                "exec": [
+                  "var jsonData = JSON.parse(responseBody);\r",
+                  "postman.setEnvironmentVariable(\"adapterId\", jsonData.id);\r",
+                  "postman.setEnvironmentVariable(\"adapterPatchPayload\", jsonData);"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "_postman_id": "80895d93-3bff-4962-82e4-c2a9c6d0b1b4",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{bearerToken}}"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Dummy Account\",\n    \"adapterKindKey\": \"AmazonAWSAdapter\",\n    \"resourceKindKey\": \"AmazonAWSAdapter Instance\",\n    \"resourceIdentifiers\": [\n        {\n            \"name\": \"BLACKLIST\",\n            \"value\": \"\"\n        },\n        {\n            \"name\": \"COLLECT_CUSTOM_METRICS\",\n            \"value\": \"false\"\n        },\n        {\n            \"name\": \"REGIONS\",\n            \"value\": \"\"\n        },\n        {\n            \"name\": \"SERVICES\",\n            \"value\": \"\"\n        },\n        {\n            \"name\": \"SUPPORT_AUTODISCOVERY\",\n            \"value\": \"true\"\n        },\n        {\n            \"name\": \"WHITELIST\",\n            \"value\": \"\"\n        }\n    ],\n    \"description\": \"\",\n    \"credential\": {\n        \"id\": null,\n        \"name\": \"AWS Creds\",\n        \"adapterKindKey\": \"AmazonAWSAdapter\",\n        \"credentialKindKey\": \"AWSCREDENTIALS\",\n        \"fields\": [\n            {\n                \"name\": \"ACCESSKEY\",\n                \"value\": \"accesskeyvalue\"\n            },\n            {\n                \"name\": \"SECRETKEY\",\n                \"value\": \"secretkeyvalue\"\n            },\n            {\n                \"name\": \"PROXYHOST\",\n                \"value\": null\n            },\n            {\n                \"name\": \"PROXYPORT\",\n                \"value\": null\n            },\n            {\n                \"name\": \"PROXYUSERNAME\",\n                \"value\": null\n            },\n            {\n                \"name\": \"PROXYPASSWORD\",\n                \"value\": null\n            },\n            {\n                \"name\": \"PROXYWORKSTATION\",\n                \"value\": null\n            },\n            {\n                \"name\": \"PROXYDOMAIN\",\n                \"value\": null\n            }\n        ]\n    }\n}",
+              "options": {}
+            },
+            "url": "https://{{vrops}}/suite-api/api/adapters"
+          },
+          "response": []
         }
       ],
       "_postman_id": "81428591-dd37-f8d8-279e-4d8837465cd9"
@@ -5414,25 +5459,25 @@
   ],
   "variable": [
     {
-      "id": "a6104cc1-8a0c-4505-a75a-b55da45a678d",
+      "id": "10a71808-a5a5-4022-80a4-abc137e355ba",
       "key": "vrops",
       "value": "",
       "type": "string"
     },
     {
-      "id": "ac0593b8-eb5d-403b-984a-8fb1fb110ba6",
+      "id": "4f748270-750c-4dbf-9be4-0d2b5d7f9c65",
       "key": "user",
       "value": "",
       "type": "string"
     },
     {
-      "id": "5ae487b3-d8b5-4baa-a53b-c1e0846bd405",
+      "id": "abbf0fe7-bb48-4db3-8019-9725f3a029a2",
       "key": "pass",
       "value": "",
       "type": "string"
     },
     {
-      "id": "6fd9ba7f-fbac-4260-9fec-5a6178d1bc43",
+      "id": "938dd329-cb20-458e-88aa-90f1980a9668",
       "key": "rolePayload",
       "value": "",
       "type": "string"
