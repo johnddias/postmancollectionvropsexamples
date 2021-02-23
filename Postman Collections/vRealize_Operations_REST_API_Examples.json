@@ -2394,7 +2394,7 @@
           "response": []
         },
         {
-          "name": "Add or Update Stats of a Resource Copy",
+          "name": "Add or Update Stats for Multiple Resources",
           "event": [
             {
               "listen": "prerequest",
@@ -5404,22 +5404,22 @@
   ],
   "variable": [
     {
-      "id": "6d3f3868-d513-4829-89d1-811fef9c211c",
+      "id": "58e27c9f-7a02-4296-adca-fde9e9c1d4dd",
       "key": "vrops",
       "value": ""
     },
     {
-      "id": "21c457d1-a9b5-4f91-95eb-7a7e085e7549",
+      "id": "66cc74d4-4e24-40be-8346-c9117b338e33",
       "key": "user",
       "value": ""
     },
     {
-      "id": "1f3e88d3-ff59-4bb6-9014-48211c209ef1",
+      "id": "41110838-2b7f-43c2-a0ab-284a88e83d16",
       "key": "pass",
       "value": ""
     },
     {
-      "id": "043b186c-21bb-4977-9cdf-d5754aa94cc6",
+      "id": "af3f9f6a-0f6c-45e4-b795-77f145277320",
       "key": "rolePayload",
       "value": ""
     }
