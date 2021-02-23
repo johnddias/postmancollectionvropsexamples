@@ -2394,6 +2394,49 @@
           "response": []
         },
         {
+          "name": "Add or Update Stats of a Resource Copy",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var epoch = (new Date).getTime();",
+                  "postman.setEnvironmentVariable(\"epoch\", epoch);"
+                ],
+                "id": "6e2c23a0-ac10-4b18-a5de-cfe5acff72d8"
+              }
+            }
+          ],
+          "id": "69803472-0cda-43ed-b14c-5a9d728b5ade",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{bearerToken}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"stat-content\" : [ {\r\n    \"statKey\" : \"apiInjected|random5\",\r\n    \"timestamps\" : [ {{epoch}} ],\r\n    \"data\" : [ 6 ],\r\n    \"others\" : [ ],\r\n    \"otherAttributes\" : {\r\n    }\r\n  } ]\r\n}"
+            },
+            "url": "https://{{vrops}}/suite-api/api/resources/{{resourceId}}/stats"
+          },
+          "response": []
+        },
+        {
           "name": "Query Symptoms",
           "id": "826af6fa-9969-0e09-c6e3-0ce849d123f1",
           "protocolProfileBehavior": {
@@ -2698,49 +2741,6 @@
                 }
               ]
             }
-          },
-          "response": []
-        },
-        {
-          "name": "Add or Update Stats of a Resource Copy",
-          "event": [
-            {
-              "listen": "prerequest",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var epoch = (new Date).getTime();",
-                  "postman.setEnvironmentVariable(\"epoch\", epoch);"
-                ],
-                "id": "6e2c23a0-ac10-4b18-a5de-cfe5acff72d8"
-              }
-            }
-          ],
-          "id": "69803472-0cda-43ed-b14c-5a9d728b5ade",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "POST",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "{{bearerToken}}"
-              },
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              },
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n  \"stat-content\" : [ {\r\n    \"statKey\" : \"apiInjected|random5\",\r\n    \"timestamps\" : [ {{epoch}} ],\r\n    \"data\" : [ 6 ],\r\n    \"others\" : [ ],\r\n    \"otherAttributes\" : {\r\n    }\r\n  } ]\r\n}"
-            },
-            "url": "https://{{vrops}}/suite-api/api/resources/{{resourceId}}/stats"
           },
           "response": []
         }
@@ -5404,22 +5404,22 @@
   ],
   "variable": [
     {
-      "id": "aeae8f5e-b895-454c-be1c-68a6658ed57c",
+      "id": "6d3f3868-d513-4829-89d1-811fef9c211c",
       "key": "vrops",
       "value": ""
     },
     {
-      "id": "396711bd-76d5-4de2-8d80-8dd52d26f100",
+      "id": "21c457d1-a9b5-4f91-95eb-7a7e085e7549",
       "key": "user",
       "value": ""
     },
     {
-      "id": "641b99d7-4e93-49b2-9c3a-7eab68c5b1cc",
+      "id": "1f3e88d3-ff59-4bb6-9014-48211c209ef1",
       "key": "pass",
       "value": ""
     },
     {
-      "id": "19fcda82-fd00-43eb-afef-0279bbff051f",
+      "id": "043b186c-21bb-4977-9cdf-d5754aa94cc6",
       "key": "rolePayload",
       "value": ""
     }
