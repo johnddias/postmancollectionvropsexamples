@@ -25,7 +25,7 @@
               }
             }
           ],
-          "_postman_id": "f3d1ffe3-8bcf-4625-9138-d30b3540f894",
+          "id": "f3d1ffe3-8bcf-4625-9138-d30b3540f894",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -43,10 +43,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"username\" : \"{{user}}\",\r\n  \"authSource\" : \"{{authSource}}\",\r\n  \"password\" : \"{{pass}}\"\r\n}",
-              "options": {
-                "raw": {}
-              }
+              "raw": "{\r\n  \"username\" : \"{{user}}\",\r\n  \"authSource\" : \"{{authSource}}\",\r\n  \"password\" : \"{{pass}}\"\r\n}"
             },
             "url": "https://{{vrops}}/suite-api/api/auth/token/acquire"
           },
@@ -68,7 +65,7 @@
               }
             }
           ],
-          "_postman_id": "09952c72-e29a-4952-ba17-e54c609fcfa2",
+          "id": "09952c72-e29a-4952-ba17-e54c609fcfa2",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -96,17 +93,14 @@
                   "type": "text",
                   "value": "{{refresh_token}}"
                 }
-              ],
-              "options": {
-                "urlencoded": {}
-              }
+              ]
             },
             "url": "https://console.cloud.vmware.com/csp/gateway/am/api/auth/api-tokens/authorize"
           },
           "response": []
         }
       ],
-      "_postman_id": "2ef60b54-fec1-4453-9109-cf614aea6196"
+      "id": "2ef60b54-fec1-4453-9109-cf614aea6196"
     },
     {
       "name": "Full Alert Info",
@@ -135,7 +129,7 @@
               }
             }
           ],
-          "_postman_id": "84da7d84-57e2-7a50-fda5-abe420ba9a9c",
+          "id": "84da7d84-57e2-7a50-fda5-abe420ba9a9c",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -157,8 +151,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"resource-query\": {\n       \"resourceKind\": [\"virtualmachine\"]\n        },\n    \"activeOnly\": \"True\",\n    \"alertCriticality\": [\"CRITICAL\",\"IMMEDIATE\",\"WARNING\",\"INFORMATION\"],\n    \"alertImpact\": [\"risk\"]\n  \n}",
-              "options": {}
+              "raw": "{\n    \"resource-query\": {\n       \"resourceKind\": [\"virtualmachine\"]\n        },\n    \"activeOnly\": \"True\",\n    \"alertCriticality\": [\"CRITICAL\",\"IMMEDIATE\",\"WARNING\",\"INFORMATION\"],\n    \"alertImpact\": [\"risk\"]\n  \n}"
             },
             "url": "https://{{vrops}}/suite-api/api/alerts/query"
           },
@@ -179,7 +172,7 @@
               }
             }
           ],
-          "_postman_id": "5543f9bf-dc60-762a-a214-8f0781a53f5d",
+          "id": "5543f9bf-dc60-762a-a214-8f0781a53f5d",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -217,7 +210,7 @@
               }
             }
           ],
-          "_postman_id": "272f50b8-7d9d-cc61-97e6-442f1fb2db47",
+          "id": "272f50b8-7d9d-cc61-97e6-442f1fb2db47",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -258,7 +251,7 @@
               }
             }
           ],
-          "_postman_id": "c71fac69-19d4-f34a-e736-df9edc9fe70c",
+          "id": "c71fac69-19d4-f34a-e736-df9edc9fe70c",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -297,7 +290,7 @@
         },
         {
           "name": "Get Alert Contributing Symptoms",
-          "_postman_id": "76c96828-6f63-4257-9289-df32842c7d36",
+          "id": "76c96828-6f63-4257-9289-df32842c7d36",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -345,7 +338,7 @@
         },
         {
           "name": "Update an Alert Definition with Multiple Symptom Sets",
-          "_postman_id": "529f50df-a98f-42c2-acfd-f1ae24fa27dc",
+          "id": "529f50df-a98f-42c2-acfd-f1ae24fa27dc",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -369,8 +362,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"id\": \"AlertDefinition-1e94bdb0-3457-49c8-8abf-ff2324eb11d7\",\n    \"name\": \"Autoscale Web Traffic Changed\",\n    \"adapterKindKey\": \"VMWARE\",\n    \"resourceKindKey\": \"VirtualMachine\",\n    \"waitCycles\": 1,\n    \"cancelCycles\": 1,\n    \"type\": 15,\n    \"subType\": 19,\n    \"states\": [\n        {\n            \"severity\": \"AUTO\",\n            \"base-symptom-set\": {\n                \"type\": \"SYMPTOM_SET_COMPOSITE\",\n                \"operator\": \"AND\",\n                \"symptom-sets\": [\n                    {\n                        \"type\": \"SYMPTOM_SET\",\n                        \"relation\": \"SELF\",\n                        \"aggregation\": \"ANY\",\n                        \"symptomSetOperator\": \"AND\",\n                        \"symptomDefinitionIds\": [\n                            \"SymptomDefinition-a0fed9b7-d4f4-4e7d-ba39-f91d6a2bf17e\"\n                        ]\n                    },\n                    {\n                        \"type\": \"SYMPTOM_SET\",\n                        \"relation\": \"PARENT\",\n                        \"symptomSetOperator\": \"OR\",\n                        \"aggregation\": \"ANY\",\n                        \"symptomDefinitionIds\": [\n                            \"SymptomDefinition-992eefd8-e9bb-45ff-a788-2072e67120ab\",\n                            \"SymptomDefinition-56d26c37-b852-4df7-841c-23dc97be93dc\"\n                        ]\n                    }\n                ]\n            },\n            \"impact\": {\n                \"impactType\": \"BADGE\",\n                \"detail\": \"health\"\n            }\n            \n        }\n    ]\n}",
-              "options": {}
+              "raw": "{\n    \"id\": \"AlertDefinition-1e94bdb0-3457-49c8-8abf-ff2324eb11d7\",\n    \"name\": \"Autoscale Web Traffic Changed\",\n    \"adapterKindKey\": \"VMWARE\",\n    \"resourceKindKey\": \"VirtualMachine\",\n    \"waitCycles\": 1,\n    \"cancelCycles\": 1,\n    \"type\": 15,\n    \"subType\": 19,\n    \"states\": [\n        {\n            \"severity\": \"AUTO\",\n            \"base-symptom-set\": {\n                \"type\": \"SYMPTOM_SET_COMPOSITE\",\n                \"operator\": \"AND\",\n                \"symptom-sets\": [\n                    {\n                        \"type\": \"SYMPTOM_SET\",\n                        \"relation\": \"SELF\",\n                        \"aggregation\": \"ANY\",\n                        \"symptomSetOperator\": \"AND\",\n                        \"symptomDefinitionIds\": [\n                            \"SymptomDefinition-a0fed9b7-d4f4-4e7d-ba39-f91d6a2bf17e\"\n                        ]\n                    },\n                    {\n                        \"type\": \"SYMPTOM_SET\",\n                        \"relation\": \"PARENT\",\n                        \"symptomSetOperator\": \"OR\",\n                        \"aggregation\": \"ANY\",\n                        \"symptomDefinitionIds\": [\n                            \"SymptomDefinition-992eefd8-e9bb-45ff-a788-2072e67120ab\",\n                            \"SymptomDefinition-56d26c37-b852-4df7-841c-23dc97be93dc\"\n                        ]\n                    }\n                ]\n            },\n            \"impact\": {\n                \"impactType\": \"BADGE\",\n                \"detail\": \"health\"\n            }\n            \n        }\n    ]\n}"
             },
             "url": {
               "raw": "https://{{vrops}}/suite-api/api/alertdefinitions/?AlertDefinition-1e94bdb0-3457-49c8-8abf-ff2324eb11d7",
@@ -396,7 +388,7 @@
           "response": []
         }
       ],
-      "_postman_id": "00204451-2d7d-9d8e-221a-0bf0e83aa00f"
+      "id": "00204451-2d7d-9d8e-221a-0bf0e83aa00f"
     },
     {
       "name": "Endpoint Operations",
@@ -406,7 +398,7 @@
           "item": [
             {
               "name": "Get All EP Ops Agents",
-              "_postman_id": "20987c22-7262-f710-2fd7-b963d6262585",
+              "id": "20987c22-7262-f710-2fd7-b963d6262585",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -449,7 +441,7 @@
             },
             {
               "name": "Get EP Ops Agent ID by FQDN",
-              "_postman_id": "a7f22526-d733-fce7-8175-2c1a7b49cf9e",
+              "id": "a7f22526-d733-fce7-8175-2c1a7b49cf9e",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -492,7 +484,7 @@
             },
             {
               "name": "Update EP Ops Agent",
-              "_postman_id": "8a61f988-e137-6d43-bd2e-372831c2fdab",
+              "id": "8a61f988-e137-6d43-bd2e-372831c2fdab",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -518,8 +510,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\r\n  \"agentId\" : \"1451538219583-2983685990625162095-598612646798980120\",\r\n  \"fileLocation\" : \"bundles/6.2.1\",\r\n  \"agentBundleFile\" : \"agent-x86-64-win-6.2.1.zip\"\r\n}",
-                  "options": {}
+                  "raw": "{\r\n  \"agentId\" : \"1451538219583-2983685990625162095-598612646798980120\",\r\n  \"fileLocation\" : \"bundles/6.2.1\",\r\n  \"agentBundleFile\" : \"agent-x86-64-win-6.2.1.zip\"\r\n}"
                 },
                 "url": "https://{{vrops}}/suite-api/internal/agent/upgrade"
               },
@@ -527,7 +518,7 @@
             },
             {
               "name": "Get Agent Status on Upgrade",
-              "_postman_id": "b1368c8f-4d89-81c1-43f1-4dc0e4dc5848",
+              "id": "b1368c8f-4d89-81c1-43f1-4dc0e4dc5848",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -570,8 +561,7 @@
               "response": []
             }
           ],
-          "_postman_id": "e378710c-ba99-f796-003e-3cbc4a367088",
-          "_postman_isSubFolder": true
+          "id": "e378710c-ba99-f796-003e-3cbc4a367088"
         },
         {
           "name": "Monitors",
@@ -602,7 +592,7 @@
                   }
                 }
               ],
-              "_postman_id": "21f351d0-9316-84e3-0b35-462e04829c99",
+              "id": "21f351d0-9316-84e3-0b35-462e04829c99",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -666,7 +656,7 @@
                   }
                 }
               ],
-              "_postman_id": "b7421e3e-3bf1-d968-4d36-7cf8b7b82614",
+              "id": "b7421e3e-3bf1-d968-4d36-7cf8b7b82614",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -702,7 +692,7 @@
                   }
                 }
               ],
-              "_postman_id": "63312491-9531-7605-ebe0-1849a3d5aed9",
+              "id": "63312491-9531-7605-ebe0-1849a3d5aed9",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -724,8 +714,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n      \"description\": \"\",\n      \"creationTime\": null,\n      \"resourceKey\": {\n        \"name\": \"vc-east-icmp\",\n        \"adapterKindKey\": \"EP Ops Adapter\",\n        \"resourceKindKey\": \"ICMP Check\",\n        \"resourceIdentifiers\": [\n          {\n            \"identifierType\": {\n              \"name\": \"agentID\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": false\n            },\n            \"value\": \"{{agentID}}\"\n            },\n          {\n            \"identifierType\": {\n              \"name\": \"discoveryMode\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": false\n            },\n            \"value\": \"MANUAL\"\n          },\n          {\n            \"identifierType\": {\n              \"name\": \"hostname\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": false\n            },\n            \"value\": \"msbu-vc-east.mgmt.local\"\n          },\n          {\n            \"identifierType\": {\n              \"name\": \"monitoredResourceID\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": true\n            },\n            \"value\": \"vc-west\"\n          },\n          {\n            \"identifierType\": {\n              \"name\": \"Override_agent_configuration_data\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": false\n            },\n            \"value\": \"0\"\n          },\n          {\n            \"identifierType\": {\n              \"name\": \"parentID\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": true\n            },\n            \"value\": \"|{{agentID}}\"\n          },\n          {\n            \"identifierType\": {\n              \"name\": \"sotimeout\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": false\n            },\n            \"value\": \"10\"\n          }\n        ]\n      }\n}",
-                  "options": {}
+                  "raw": "{\n      \"description\": \"\",\n      \"creationTime\": null,\n      \"resourceKey\": {\n        \"name\": \"vc-east-icmp\",\n        \"adapterKindKey\": \"EP Ops Adapter\",\n        \"resourceKindKey\": \"ICMP Check\",\n        \"resourceIdentifiers\": [\n          {\n            \"identifierType\": {\n              \"name\": \"agentID\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": false\n            },\n            \"value\": \"{{agentID}}\"\n            },\n          {\n            \"identifierType\": {\n              \"name\": \"discoveryMode\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": false\n            },\n            \"value\": \"MANUAL\"\n          },\n          {\n            \"identifierType\": {\n              \"name\": \"hostname\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": false\n            },\n            \"value\": \"msbu-vc-east.mgmt.local\"\n          },\n          {\n            \"identifierType\": {\n              \"name\": \"monitoredResourceID\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": true\n            },\n            \"value\": \"vc-west\"\n          },\n          {\n            \"identifierType\": {\n              \"name\": \"Override_agent_configuration_data\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": false\n            },\n            \"value\": \"0\"\n          },\n          {\n            \"identifierType\": {\n              \"name\": \"parentID\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": true\n            },\n            \"value\": \"|{{agentID}}\"\n          },\n          {\n            \"identifierType\": {\n              \"name\": \"sotimeout\",\n              \"dataType\": \"STRING\",\n              \"isPartOfUniqueness\": false\n            },\n            \"value\": \"10\"\n          }\n        ]\n      }\n}"
                 },
                 "url": "https://{{vrops}}/suite-api/api/resources/adapters/{{adapterInstanceId}}"
               },
@@ -871,7 +860,7 @@
                   }
                 }
               ],
-              "_postman_id": "ee0aca3b-3f10-4d65-56b9-7f1b8083a4bc",
+              "id": "ee0aca3b-3f10-4d65-56b9-7f1b8083a4bc",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -893,8 +882,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\r\n    \"description\": \"Windows Time Service Monitor\",\r\n    \"creationTime\": null,\r\n    \"resourceKey\": {\r\n        \"name\": \"Windows Time Service\",\r\n        \"adapterKindKey\": \"EP Ops Adapter\",\r\n        \"resourceKindKey\": \"Windows Service\",\r\n        \"resourceIdentifiers\": [\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"agentID\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": false\r\n                },\r\n                \"value\": \"{{agentID}}\"\r\n            },\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"discoveryMode\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": false\r\n                },\r\n                \"value\": \"MANUAL\"\r\n            },\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"monitoredResourceID\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": true\r\n                },\r\n                \"value\": \"Windows Time Service\"\r\n            },\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"Override_agent_configuration_data\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": false\r\n                },\r\n                \"value\": \"0\"\r\n            },\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"parentID\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": true\r\n                },\r\n                \"value\": \"|{{agentID}}\"\r\n            },\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"service_name\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": false\r\n                },\r\n                \"value\": \"W32Time\"\r\n            }\r\n        ]\r\n    },\r\n    \"identifier\": null\r\n}",
-                  "options": {}
+                  "raw": "{\r\n    \"description\": \"Windows Time Service Monitor\",\r\n    \"creationTime\": null,\r\n    \"resourceKey\": {\r\n        \"name\": \"Windows Time Service\",\r\n        \"adapterKindKey\": \"EP Ops Adapter\",\r\n        \"resourceKindKey\": \"Windows Service\",\r\n        \"resourceIdentifiers\": [\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"agentID\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": false\r\n                },\r\n                \"value\": \"{{agentID}}\"\r\n            },\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"discoveryMode\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": false\r\n                },\r\n                \"value\": \"MANUAL\"\r\n            },\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"monitoredResourceID\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": true\r\n                },\r\n                \"value\": \"Windows Time Service\"\r\n            },\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"Override_agent_configuration_data\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": false\r\n                },\r\n                \"value\": \"0\"\r\n            },\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"parentID\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": true\r\n                },\r\n                \"value\": \"|{{agentID}}\"\r\n            },\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"service_name\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": false\r\n                },\r\n                \"value\": \"W32Time\"\r\n            }\r\n        ]\r\n    },\r\n    \"identifier\": null\r\n}"
                 },
                 "url": "https://{{vrops}}/suite-api/api/resources/adapters/{{adapterInstanceId}}"
               },
@@ -915,7 +903,7 @@
                   }
                 }
               ],
-              "_postman_id": "13343777-9923-5f1f-1af7-3990eaac4b71",
+              "id": "13343777-9923-5f1f-1af7-3990eaac4b71",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -937,8 +925,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\r\n    \"description\": \"VMTools\",\r\n    \"creationTime\": null,\r\n    \"resourceKey\": {\r\n        \"name\": \"vmtoolsd\",\r\n        \"adapterKindKey\": \"EP Ops Adapter\",\r\n        \"resourceKindKey\": \"MultiProcess\",\r\n        \"resourceIdentifiers\": [\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"agentID\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": false\r\n                },\r\n                \"value\": \"{{agentID}}\"\r\n            },\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"discoveryMode\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": false\r\n                },\r\n                \"value\": \"MANUAL\"\r\n            },\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"monitoredResourceID\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": true\r\n                },\r\n                \"value\": \"VMtools\"\r\n            },\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"Override_agent_configuration_data\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": false\r\n                },\r\n                \"value\": \"0\"\r\n            },\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"parentID\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": true\r\n                },\r\n                \"value\": \"|{{agentID}}\"\r\n            },\r\n                {\r\n                    \"identifierType\": {\r\n                        \"name\": \"process.query\",\r\n                        \"dataType\": \"STRING\",\r\n                        \"isPartOfUniqueness\": false\r\n                    },\r\n                    \"value\": \"State.Name.eq=vmtoolsd\"\r\n                    \r\n            }\r\n        ]\r\n    },\r\n    \"identifier\": null\r\n}",
-                  "options": {}
+                  "raw": "{\r\n    \"description\": \"VMTools\",\r\n    \"creationTime\": null,\r\n    \"resourceKey\": {\r\n        \"name\": \"vmtoolsd\",\r\n        \"adapterKindKey\": \"EP Ops Adapter\",\r\n        \"resourceKindKey\": \"MultiProcess\",\r\n        \"resourceIdentifiers\": [\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"agentID\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": false\r\n                },\r\n                \"value\": \"{{agentID}}\"\r\n            },\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"discoveryMode\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": false\r\n                },\r\n                \"value\": \"MANUAL\"\r\n            },\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"monitoredResourceID\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": true\r\n                },\r\n                \"value\": \"VMtools\"\r\n            },\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"Override_agent_configuration_data\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": false\r\n                },\r\n                \"value\": \"0\"\r\n            },\r\n            {\r\n                \"identifierType\": {\r\n                    \"name\": \"parentID\",\r\n                    \"dataType\": \"STRING\",\r\n                    \"isPartOfUniqueness\": true\r\n                },\r\n                \"value\": \"|{{agentID}}\"\r\n            },\r\n                {\r\n                    \"identifierType\": {\r\n                        \"name\": \"process.query\",\r\n                        \"dataType\": \"STRING\",\r\n                        \"isPartOfUniqueness\": false\r\n                    },\r\n                    \"value\": \"State.Name.eq=vmtoolsd\"\r\n                    \r\n            }\r\n        ]\r\n    },\r\n    \"identifier\": null\r\n}"
                 },
                 "url": "https://{{vrops}}/suite-api/api/resources/adapters/{{adapterInstanceId}}"
               },
@@ -946,7 +933,7 @@
             },
             {
               "name": "Add Child Resource to a Resource",
-              "_postman_id": "366f661b-f918-8bf1-b82a-cec96de2de7e",
+              "id": "366f661b-f918-8bf1-b82a-cec96de2de7e",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -968,8 +955,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n    \"uuids\" : [\"{{epopsMonitorResourceId}}\"]\n}",
-                  "options": {}
+                  "raw": "{\n    \"uuids\" : [\"{{epopsMonitorResourceId}}\"]\n}"
                 },
                 "url": "https://{{vrops}}/suite-api/api/resources/{{osResourceId}}/relationships/children",
                 "description": "This operation adds a child resource to a resource.  \n\nAPI documentation states that POST is additive while PUT is destructive (i.e. overwites existing relationships).\n\nJSON body includes an array of child objects to add.  \n\nThe call does not provide a lot of detail for failure, but it seems\nthat if you have an invalid UUID for a child or the child is already related\nthen it will fail with 400.\n\n204 is a successful call."
@@ -995,7 +981,7 @@
                   }
                 }
               ],
-              "_postman_id": "d032894e-cce7-d7eb-a92e-ea11530ceeac",
+              "id": "d032894e-cce7-d7eb-a92e-ea11530ceeac",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -1017,26 +1003,24 @@
                 ],
                 "body": {
                   "mode": "formdata",
-                  "formdata": [],
-                  "options": {}
+                  "formdata": []
                 },
                 "url": "https://{{vrops}}/suite-api/api/resources/{{epopsMonitorResourceId}}/monitoringstate/start"
               },
               "response": []
             }
           ],
-          "_postman_id": "12ed9d9f-5f63-6cba-0187-4f0dd8c76f10",
-          "_postman_isSubFolder": true
+          "id": "12ed9d9f-5f63-6cba-0187-4f0dd8c76f10"
         }
       ],
-      "_postman_id": "4ebc1974-707e-bbca-71ec-a436b853905f"
+      "id": "4ebc1974-707e-bbca-71ec-a436b853905f"
     },
     {
       "name": "Internal API Calls",
       "item": [
         {
           "name": "Get Custom Groups",
-          "_postman_id": "46710acf-4048-767e-0fa3-221027f950d2",
+          "id": "46710acf-4048-767e-0fa3-221027f950d2",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -1062,7 +1046,7 @@
         },
         {
           "name": "Create Custom Group",
-          "_postman_id": "00d6cf99-eab9-1b6a-5be4-4353ffc5e1a5",
+          "id": "00d6cf99-eab9-1b6a-5be4-4353ffc5e1a5",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -1088,8 +1072,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "    {\n      \"resourceKey\": {\n        \"name\": \"test group 100\",\n        \"adapterKindKey\": \"Container\",\n        \"resourceKindKey\": \"Function\",\n        \"resourceIdentifiers\": []\n      },\n      \"membershipDefinition\": {\n        \"includedResources\": [],\n        \"excludedResources\": [],\n        \"rules\" : [ {\n      \"resourceKindKey\" : {\n        \"resourceKind\" : \"VirtualMachine\",\n        \"adapterKind\" : \"VMWARE\"\n      },\n      \"attributeRules\" : [],\n      \"resourceNameRules\" : [ {\n        \"name\" : \"lnx\",\n        \"compareOperator\" : \"CONTAINS\"\n        } ],\n      \"relationshipRules\" : [],\n      \"others\" : [],\n      \"otherAttributes\" : {\n      }\n        }]\n      } \n    }",
-              "options": {}
+              "raw": "    {\n      \"resourceKey\": {\n        \"name\": \"test group 100\",\n        \"adapterKindKey\": \"Container\",\n        \"resourceKindKey\": \"Function\",\n        \"resourceIdentifiers\": []\n      },\n      \"membershipDefinition\": {\n        \"includedResources\": [],\n        \"excludedResources\": [],\n        \"rules\" : [ {\n      \"resourceKindKey\" : {\n        \"resourceKind\" : \"VirtualMachine\",\n        \"adapterKind\" : \"VMWARE\"\n      },\n      \"attributeRules\" : [],\n      \"resourceNameRules\" : [ {\n        \"name\" : \"lnx\",\n        \"compareOperator\" : \"CONTAINS\"\n        } ],\n      \"relationshipRules\" : [],\n      \"others\" : [],\n      \"otherAttributes\" : {\n      }\n        }]\n      } \n    }"
             },
             "url": "https://{{vrops}}/suite-api/internal/resources/groups"
           },
@@ -1097,7 +1080,7 @@
         },
         {
           "name": "Enable Basic Auth",
-          "_postman_id": "c28ddf22-b949-4733-a2f7-0e5784ab1d68",
+          "id": "c28ddf22-b949-4733-a2f7-0e5784ab1d68",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -1153,14 +1136,14 @@
           "response": []
         }
       ],
-      "_postman_id": "a8cc01de-3d04-38b0-557c-9552105a3efe"
+      "id": "a8cc01de-3d04-38b0-557c-9552105a3efe"
     },
     {
       "name": "Reports",
       "item": [
         {
           "name": "Get Report Definitions",
-          "_postman_id": "716312eb-aeaa-a42f-6915-850fbbed2754",
+          "id": "716312eb-aeaa-a42f-6915-850fbbed2754",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -1187,7 +1170,7 @@
         },
         {
           "name": "Generate a report",
-          "_postman_id": "f0391ec2-c0a4-b205-84b7-dbb65b5113c3",
+          "id": "f0391ec2-c0a4-b205-84b7-dbb65b5113c3",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -1209,8 +1192,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"resourceId\" : \"24f55311-3d86-41fd-9c73-1c4c0e0dcbb6\",\r\n  \"reportDefinitionId\" : \"97d19754-0ad3-4de1-b35b-d8ad5d07be24\",\r\n  \"traversalSpec\" :       {\r\n        \"name\": \"vSphere Hosts and Clusters\",\r\n        \"description\": \"Enables view of resources imported from vCenter like Clusters, Hosts, VMs and ResourcePools\",\r\n        \"rootAdapterKindKey\": \"VMWARE\",\r\n        \"rootResourceKindKey\": \"vSphere World\",\r\n        \"adapterInstanceAssociation\": false\r\n  },\r\n  \"others\" : [ ],\r\n  \"otherAttributes\" : {\r\n  },\r\n  \"id\" : null\r\n}",
-              "options": {}
+              "raw": "{\r\n  \"resourceId\" : \"24f55311-3d86-41fd-9c73-1c4c0e0dcbb6\",\r\n  \"reportDefinitionId\" : \"97d19754-0ad3-4de1-b35b-d8ad5d07be24\",\r\n  \"traversalSpec\" :       {\r\n        \"name\": \"vSphere Hosts and Clusters\",\r\n        \"description\": \"Enables view of resources imported from vCenter like Clusters, Hosts, VMs and ResourcePools\",\r\n        \"rootAdapterKindKey\": \"VMWARE\",\r\n        \"rootResourceKindKey\": \"vSphere World\",\r\n        \"adapterInstanceAssociation\": false\r\n  },\r\n  \"others\" : [ ],\r\n  \"otherAttributes\" : {\r\n  },\r\n  \"id\" : null\r\n}"
             },
             "url": "https://{{vrops}}/suite-api/api/reports",
             "description": "You will need to update several items in the body such as:\n  - ID of resource you wish to run this report on\n  - ID of the report you wish to run\n  - Traversal Spec for the report (you can get this from the API query\n\"Get Report Definitions\", the travesal spec must match the resource type.\n"
@@ -1219,7 +1201,7 @@
         },
         {
           "name": "Get Generated Reports",
-          "_postman_id": "ec4c9a7b-d435-6eaa-c4ba-9df29e7a6bbb",
+          "id": "ec4c9a7b-d435-6eaa-c4ba-9df29e7a6bbb",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -1246,7 +1228,7 @@
         },
         {
           "name": "Download Report",
-          "_postman_id": "7235446c-bfca-d4ef-20b6-f358fbb1583c",
+          "id": "7235446c-bfca-d4ef-20b6-f358fbb1583c",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -1290,14 +1272,14 @@
           "response": []
         }
       ],
-      "_postman_id": "a6a2fc4d-edf9-fc5b-97fb-b71bd2eb4ec2"
+      "id": "a6a2fc4d-edf9-fc5b-97fb-b71bd2eb4ec2"
     },
     {
       "name": "Manage Adapters",
       "item": [
         {
           "name": "Get Adapter Types (Kinds)",
-          "_postman_id": "189dee7e-796f-fa79-316b-554a00810133",
+          "id": "189dee7e-796f-fa79-316b-554a00810133",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -1319,7 +1301,7 @@
         },
         {
           "name": "Get Adapter Instances ",
-          "_postman_id": "3b38346f-db2f-3d04-2c1c-fb7ef440556a",
+          "id": "3b38346f-db2f-3d04-2c1c-fb7ef440556a",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -1341,7 +1323,7 @@
         },
         {
           "name": "Get An Adapter Instance(s) of Type (Kind)",
-          "_postman_id": "1b42e0cf-5fbf-bb1b-bc73-48eadb66e445",
+          "id": "1b42e0cf-5fbf-bb1b-bc73-48eadb66e445",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -1380,7 +1362,7 @@
         },
         {
           "name": "Create a vCenter Adapter Instance",
-          "_postman_id": "0d740c83-d24a-fc27-b4fb-b21e42b2dec8",
+          "id": "0d740c83-d24a-fc27-b4fb-b21e42b2dec8",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -1402,8 +1384,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"name\" : \"Santa Clara\",\r\n  \"description\" : \"\",\r\n  \"collectorId\" : \"1\",\r\n  \"adapterKindKey\" : \"VMWARE\",\r\n  \"resourceIdentifiers\" : [ {\r\n    \"name\" : \"AUTODISCOVERY\",\r\n    \"value\" : \"true\"\r\n  }, {\r\n    \"name\" : \"PROCESSCHANGEEVENTS\",\r\n    \"value\" : \"true\"\r\n  }, {\r\n    \"name\" : \"VCURL\",\r\n    \"value\" : \"https://sc2vc01.cmbu.local/sdk\"\r\n  } ],\r\n  \"credential\" : {\r\n    \"id\" : null,\r\n    \"name\" : \"sc2vc01\",\r\n    \"adapterKindKey\" : \"VMWARE\",\r\n    \"credentialKindKey\" : \"PRINCIPALCREDENTIAL\",\r\n    \"fields\" : [ {\r\n      \"name\" : \"USER\",\r\n      \"value\" : \"vropsro@cmbu.local\"\r\n    }, {\r\n      \"name\" : \"PASSWORD\",\r\n      \"value\" : \"VMware1!\"\r\n    } ],\r\n    \"others\" : [ ],\r\n    \"otherAttributes\" : {\r\n    }\r\n  },\r\n  \"adapter-certificates\" : {\r\n    \"thumbprint:\"\r\n  }\r\n  \"others\" : [ ],\r\n  \"otherAttributes\" : {\r\n  }\r\n}",
-              "options": {}
+              "raw": "{\r\n  \"name\" : \"Santa Clara\",\r\n  \"description\" : \"\",\r\n  \"collectorId\" : \"1\",\r\n  \"adapterKindKey\" : \"VMWARE\",\r\n  \"resourceIdentifiers\" : [ {\r\n    \"name\" : \"AUTODISCOVERY\",\r\n    \"value\" : \"true\"\r\n  }, {\r\n    \"name\" : \"PROCESSCHANGEEVENTS\",\r\n    \"value\" : \"true\"\r\n  }, {\r\n    \"name\" : \"VCURL\",\r\n    \"value\" : \"https://sc2vc01.cmbu.local/sdk\"\r\n  } ],\r\n  \"credential\" : {\r\n    \"id\" : null,\r\n    \"name\" : \"sc2vc01\",\r\n    \"adapterKindKey\" : \"VMWARE\",\r\n    \"credentialKindKey\" : \"PRINCIPALCREDENTIAL\",\r\n    \"fields\" : [ {\r\n      \"name\" : \"USER\",\r\n      \"value\" : \"vropsro@cmbu.local\"\r\n    }, {\r\n      \"name\" : \"PASSWORD\",\r\n      \"value\" : \"VMware1!\"\r\n    } ],\r\n    \"others\" : [ ],\r\n    \"otherAttributes\" : {\r\n    }\r\n  },\r\n  \"adapter-certificates\" : {\r\n    \"thumbprint:\"\r\n  }\r\n  \"others\" : [ ],\r\n  \"otherAttributes\" : {\r\n  }\r\n}"
             },
             "url": "https://{{vrops}}/suite-api/api/adapters",
             "description": "Be sure to check values in the JSON body for credentials.\nAlso note you will need to start the adapter using \"Star an adapter instance\" \nafter creation using the UUID from the response.\n\nIf you aren't using a CA, the certificate will have to be added via the UI\nI do not know of a way to do this via the REST API"
@@ -1412,7 +1393,7 @@
         },
         {
           "name": "Create a Python Adapter Instance",
-          "_postman_id": "43d26944-4742-928e-13a9-b85e2afa7ff9",
+          "id": "43d26944-4742-928e-13a9-b85e2afa7ff9",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -1434,8 +1415,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"name\" : \"Python Adapter Instance\",\r\n  \"description\" : \"A Python Adapter Instance\",\r\n  \"collectorId\" : \"1\",\r\n  \"adapterKindKey\" : \"PythonRemediationVcenterAdapter\",\r\n  \"resourceIdentifiers\" : [ {\r\n    \"name\" : \"AUTODISCOVERY\",\r\n    \"value\" : \"true\"\r\n  }, {\r\n    \"name\" : \"PROCESSCHANGEEVENTS\",\r\n    \"value\" : \"true\"\r\n  }, {\r\n    \"name\" : \"VCURL\",\r\n    \"value\" : \"https://vc-vapp.mylab.dias\"\r\n  } ],\r\n  \"credential\" : {\r\n    \"id\" : null,\r\n    \"name\" : \"Python Credential\",\r\n    \"adapterKindKey\" : \"PythonRemediationVcenterAdapter\",\r\n    \"credentialKindKey\" : \"PRINCIPALCREDENTIAL\",\r\n    \"fields\" : [ {\r\n      \"name\" : \"UserName\",\r\n      \"value\" : \"administrator@mylab.dias\"\r\n    }, {\r\n      \"name\" : \"Password\",\r\n      \"value\" : \"VMware1!\"\r\n    } ],\r\n    \"others\" : [ ],\r\n    \"otherAttributes\" : {\r\n    }\r\n  },\r\n  \"others\" : [ ],\r\n  \"otherAttributes\" : {\r\n  }\r\n}",
-              "options": {}
+              "raw": "{\r\n  \"name\" : \"Python Adapter Instance\",\r\n  \"description\" : \"A Python Adapter Instance\",\r\n  \"collectorId\" : \"1\",\r\n  \"adapterKindKey\" : \"PythonRemediationVcenterAdapter\",\r\n  \"resourceIdentifiers\" : [ {\r\n    \"name\" : \"AUTODISCOVERY\",\r\n    \"value\" : \"true\"\r\n  }, {\r\n    \"name\" : \"PROCESSCHANGEEVENTS\",\r\n    \"value\" : \"true\"\r\n  }, {\r\n    \"name\" : \"VCURL\",\r\n    \"value\" : \"https://vc-vapp.mylab.dias\"\r\n  } ],\r\n  \"credential\" : {\r\n    \"id\" : null,\r\n    \"name\" : \"Python Credential\",\r\n    \"adapterKindKey\" : \"PythonRemediationVcenterAdapter\",\r\n    \"credentialKindKey\" : \"PRINCIPALCREDENTIAL\",\r\n    \"fields\" : [ {\r\n      \"name\" : \"UserName\",\r\n      \"value\" : \"administrator@mylab.dias\"\r\n    }, {\r\n      \"name\" : \"Password\",\r\n      \"value\" : \"VMware1!\"\r\n    } ],\r\n    \"others\" : [ ],\r\n    \"otherAttributes\" : {\r\n    }\r\n  },\r\n  \"others\" : [ ],\r\n  \"otherAttributes\" : {\r\n  }\r\n}"
             },
             "url": "https://{{vrops}}/suite-api/api/adapters",
             "description": "Be sure to check values in the JSON body for credentials.\nAlso note you will need to start the adapter using \"Star an adapter instance\" \nafter creation using the UUID from the response.\n\nIf you aren't using a CA, the certificate will have to be added via the UI\nI do not know of a way to do this via the REST API"
@@ -1444,7 +1424,7 @@
         },
         {
           "name": "Start an adapter instance",
-          "_postman_id": "341cf5ec-5795-d852-1ed1-39cd7e54e328",
+          "id": "341cf5ec-5795-d852-1ed1-39cd7e54e328",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -1466,8 +1446,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "",
-              "options": {}
+              "raw": ""
             },
             "url": "https://{{vrops}}/suite-api/api/adapters/{{adapterId}}/monitoringstate/start",
             "description": "Replace the UUID with the ID of the adapter instance you want to start\nThis can be retrieved using Get Adapter Instances"
@@ -1476,7 +1455,7 @@
         },
         {
           "name": "Patch an Adapter Instance",
-          "_postman_id": "2e88c1cd-2728-4041-9238-a1c32cb57e8b",
+          "id": "2e88c1cd-2728-4041-9238-a1c32cb57e8b",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -1498,8 +1477,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{{adapterPatchPayload}}",
-              "options": {}
+              "raw": "{{adapterPatchPayload}}"
             },
             "url": "https://{{vrops}}/suite-api/api/adapters"
           },
@@ -1507,7 +1485,7 @@
         },
         {
           "name": "Patch an Adapter Instance with Connection Test",
-          "_postman_id": "e9dc5579-e2bd-475e-990a-13bf4d61c08e",
+          "id": "e9dc5579-e2bd-475e-990a-13bf4d61c08e",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -1529,8 +1507,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{{adapterPatchPayload}}",
-              "options": {}
+              "raw": "{{adapterPatchPayload}}"
             },
             "url": "https://{{vrops}}/suite-api/api/adapters/testConnection"
           },
@@ -1553,7 +1530,7 @@
               }
             }
           ],
-          "_postman_id": "25514a6b-e712-4f4a-b5ed-bfb4ab7e08cc",
+          "id": "25514a6b-e712-4f4a-b5ed-bfb4ab7e08cc",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -1575,8 +1552,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"name\": \"WDC vCenter Adapter\",\n  \"description\": \"A vCenter Adapter Instance\",\n  \"collectorId\": \"1\",\n  \"adapterKindKey\": \"VMWARE\",\n  \"resourceIdentifiers\": [\n    {\n      \"name\": \"AUTODISCOVERY\",\n      \"value\": \"true\"\n    },\n    {\n      \"name\": \"PROCESSCHANGEEVENTS\",\n      \"value\": \"true\"\n    },\n    {\n      \"name\": \"VCURL\",\n      \"value\": \"wdcvc01.cmbu.local\"\n    },\n    {\n      \"name\": \"CLOUD_TYPE\",\n      \"value\": \"PRIVATE_CLOUD\"\n    }\n  ],\n  \"credential\": {\n    \"id\": null,\n    \"name\": \"WDC Credentials\",\n    \"adapterKindKey\": \"VMWARE\",\n    \"credentialKindKey\": \"PRINCIPALCREDENTIAL\",\n    \"fields\": [\n      {\n        \"name\": \"USER\",\n        \"value\": \"username\"\n      },\n      {\n        \"name\": \"PASSWORD\",\n        \"value\": \"secret\"\n      }\n    ],\n    \"others\": [],\n    \"otherAttributes\": {}\n  },\n  \"others\": [],\n  \"otherAttributes\": {}\n}",
-              "options": {}
+              "raw": "{\n  \"name\": \"WDC vCenter Adapter\",\n  \"description\": \"A vCenter Adapter Instance\",\n  \"collectorId\": \"1\",\n  \"adapterKindKey\": \"VMWARE\",\n  \"resourceIdentifiers\": [\n    {\n      \"name\": \"AUTODISCOVERY\",\n      \"value\": \"true\"\n    },\n    {\n      \"name\": \"PROCESSCHANGEEVENTS\",\n      \"value\": \"true\"\n    },\n    {\n      \"name\": \"VCURL\",\n      \"value\": \"wdcvc01.cmbu.local\"\n    },\n    {\n      \"name\": \"CLOUD_TYPE\",\n      \"value\": \"PRIVATE_CLOUD\"\n    }\n  ],\n  \"credential\": {\n    \"id\": null,\n    \"name\": \"WDC Credentials\",\n    \"adapterKindKey\": \"VMWARE\",\n    \"credentialKindKey\": \"PRINCIPALCREDENTIAL\",\n    \"fields\": [\n      {\n        \"name\": \"USER\",\n        \"value\": \"username\"\n      },\n      {\n        \"name\": \"PASSWORD\",\n        \"value\": \"secret\"\n      }\n    ],\n    \"others\": [],\n    \"otherAttributes\": {}\n  },\n  \"others\": [],\n  \"otherAttributes\": {}\n}"
             },
             "url": "https://{{vrops}}/suite-api/api/adapters",
             "description": "Be sure to check values in the JSON body for credentials.\nAlso note you will need to start the adapter using \"Star an adapter instance\" \nafter creation using the UUID from the response.\n\nIf you aren't using a CA, the certificate will have to be added via the UI\nI do not know of a way to do this via the REST API"
@@ -1600,7 +1576,7 @@
               }
             }
           ],
-          "_postman_id": "c68924a1-885d-4f97-bab8-8fb7584377d5",
+          "id": "c68924a1-885d-4f97-bab8-8fb7584377d5",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -1622,8 +1598,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"name\": \"VMC vCenter Adapter\",\n  \"description\": \"A VMC vCenter Adapter Instance\",\n  \"collectorId\": \"1\",\n  \"adapterKindKey\": \"VMWARE\",\n  \"resourceIdentifiers\": [\n            {\n                \"identifierType\": {\n                    \"name\": \"AUTODISCOVERY\",\n                    \"dataType\": \"STRING\",\n                    \"isPartOfUniqueness\": false\n                },\n                \"value\": \"true\"\n            },\n            {\n                \"identifierType\": {\n                    \"name\": \"CLOUD_TYPE\",\n                    \"dataType\": \"STRING\",\n                    \"isPartOfUniqueness\": false\n                },\n                \"value\": \"VMWARE_CLOUD_ON_AWS\"\n            },\n            {\n                \"identifierType\": {\n                    \"name\": \"DV_PORT_GROUP_DISABLED\",\n                    \"dataType\": \"STRING\",\n                    \"isPartOfUniqueness\": false\n                },\n                \"value\": \"false\"\n            },\n            {\n                \"identifierType\": {\n                    \"name\": \"DVS_DISABLED\",\n                    \"dataType\": \"STRING\",\n                    \"isPartOfUniqueness\": false\n                },\n                \"value\": \"false\"\n            },\n            {\n                \"identifierType\": {\n                    \"name\": \"ENABLE_ACTIONS\",\n                    \"dataType\": \"STRING\",\n                    \"isPartOfUniqueness\": false\n                },\n                \"value\": \"false\"\n            },\n            {\n                \"identifierType\": {\n                    \"name\": \"GFS_SKIP_PATTERNS\",\n                    \"dataType\": \"STRING\",\n                    \"isPartOfUniqueness\": false\n                },\n                \"value\": \"docker/devicemapper/mnt\"\n            },\n            {\n                \"identifierType\": {\n                    \"name\": \"PDRS_STATS_PROVIDER\",\n                    \"dataType\": \"STRING\",\n                    \"isPartOfUniqueness\": false\n                },\n                \"value\": \"false\"\n            },\n            {\n                \"identifierType\": {\n                    \"name\": \"PROCESSCHANGEEVENTS\",\n                    \"dataType\": \"STRING\",\n                    \"isPartOfUniqueness\": false\n                },\n                \"value\": \"true\"\n            },\n            {\n                \"identifierType\": {\n                    \"name\": \"VCURL\",\n                    \"dataType\": \"STRING\",\n                    \"isPartOfUniqueness\": true\n                },\n                \"value\": \"vcenter.sddc-54-203-176-241.vmwarevmc.com\"\n            },\n            {\n                \"identifierType\": {\n                    \"name\": \"VM_FOLDER_DISABLED\",\n                    \"dataType\": \"STRING\",\n                    \"isPartOfUniqueness\": false\n                },\n                \"value\": \"false\"\n            },\n            {\n                \"identifierType\": {\n                    \"name\": \"VM_LIMIT\",\n                    \"dataType\": \"STRING\",\n                    \"isPartOfUniqueness\": false\n                },\n                \"value\": \"2000000000\"\n            },\n            {\n                \"identifierType\": {\n                    \"name\": \"VMEntityVCID\",\n                    \"dataType\": \"STRING\",\n                    \"isPartOfUniqueness\": false\n                },\n                \"value\": \"ddda4fc2-356d-4b0a-8256-cf02748a9fc2\"\n            }\n        ],\n  \"credential\": {\n    \"id\": null,\n    \"name\": \"VMC Credentials\",\n    \"adapterKindKey\": \"VMWARE\",\n    \"credentialKindKey\": \"PRINCIPALCREDENTIAL\",\n    \"fields\": [\n      {\n        \"name\": \"USER\",\n        \"value\": \"username\"\n      },\n      {\n        \"name\": \"PASSWORD\",\n        \"value\": \"secret\"\n      }\n    ],\n    \"others\": [],\n    \"otherAttributes\": {}\n  },\n  \"others\": [],\n  \"otherAttributes\": {}\n}",
-              "options": {}
+              "raw": "{\n  \"name\": \"VMC vCenter Adapter\",\n  \"description\": \"A VMC vCenter Adapter Instance\",\n  \"collectorId\": \"1\",\n  \"adapterKindKey\": \"VMWARE\",\n  \"resourceIdentifiers\": [\n            {\n                \"identifierType\": {\n                    \"name\": \"AUTODISCOVERY\",\n                    \"dataType\": \"STRING\",\n                    \"isPartOfUniqueness\": false\n                },\n                \"value\": \"true\"\n            },\n            {\n                \"identifierType\": {\n                    \"name\": \"CLOUD_TYPE\",\n                    \"dataType\": \"STRING\",\n                    \"isPartOfUniqueness\": false\n                },\n                \"value\": \"VMWARE_CLOUD_ON_AWS\"\n            },\n            {\n                \"identifierType\": {\n                    \"name\": \"DV_PORT_GROUP_DISABLED\",\n                    \"dataType\": \"STRING\",\n                    \"isPartOfUniqueness\": false\n                },\n                \"value\": \"false\"\n            },\n            {\n                \"identifierType\": {\n                    \"name\": \"DVS_DISABLED\",\n                    \"dataType\": \"STRING\",\n                    \"isPartOfUniqueness\": false\n                },\n                \"value\": \"false\"\n            },\n            {\n                \"identifierType\": {\n                    \"name\": \"ENABLE_ACTIONS\",\n                    \"dataType\": \"STRING\",\n                    \"isPartOfUniqueness\": false\n                },\n                \"value\": \"false\"\n            },\n            {\n                \"identifierType\": {\n                    \"name\": \"GFS_SKIP_PATTERNS\",\n                    \"dataType\": \"STRING\",\n                    \"isPartOfUniqueness\": false\n                },\n                \"value\": \"docker/devicemapper/mnt\"\n            },\n            {\n                \"identifierType\": {\n                    \"name\": \"PDRS_STATS_PROVIDER\",\n                    \"dataType\": \"STRING\",\n                    \"isPartOfUniqueness\": false\n                },\n                \"value\": \"false\"\n            },\n            {\n                \"identifierType\": {\n                    \"name\": \"PROCESSCHANGEEVENTS\",\n                    \"dataType\": \"STRING\",\n                    \"isPartOfUniqueness\": false\n                },\n                \"value\": \"true\"\n            },\n            {\n                \"identifierType\": {\n                    \"name\": \"VCURL\",\n                    \"dataType\": \"STRING\",\n                    \"isPartOfUniqueness\": true\n                },\n                \"value\": \"vcenter.sddc-54-203-176-241.vmwarevmc.com\"\n            },\n            {\n                \"identifierType\": {\n                    \"name\": \"VM_FOLDER_DISABLED\",\n                    \"dataType\": \"STRING\",\n                    \"isPartOfUniqueness\": false\n                },\n                \"value\": \"false\"\n            },\n            {\n                \"identifierType\": {\n                    \"name\": \"VM_LIMIT\",\n                    \"dataType\": \"STRING\",\n                    \"isPartOfUniqueness\": false\n                },\n                \"value\": \"2000000000\"\n            },\n            {\n                \"identifierType\": {\n                    \"name\": \"VMEntityVCID\",\n                    \"dataType\": \"STRING\",\n                    \"isPartOfUniqueness\": false\n                },\n                \"value\": \"ddda4fc2-356d-4b0a-8256-cf02748a9fc2\"\n            }\n        ],\n  \"credential\": {\n    \"id\": null,\n    \"name\": \"VMC Credentials\",\n    \"adapterKindKey\": \"VMWARE\",\n    \"credentialKindKey\": \"PRINCIPALCREDENTIAL\",\n    \"fields\": [\n      {\n        \"name\": \"USER\",\n        \"value\": \"username\"\n      },\n      {\n        \"name\": \"PASSWORD\",\n        \"value\": \"secret\"\n      }\n    ],\n    \"others\": [],\n    \"otherAttributes\": {}\n  },\n  \"others\": [],\n  \"otherAttributes\": {}\n}"
             },
             "url": "https://{{vrops}}/suite-api/api/adapters",
             "description": "Be sure to check values in the JSON body for credentials.\nAlso note you will need to start the adapter using \"Star an adapter instance\" \nafter creation using the UUID from the response.\n\nIf you aren't using a CA, the certificate will have to be added via the UI\nI do not know of a way to do this via the REST API"
@@ -1647,7 +1622,7 @@
               }
             }
           ],
-          "_postman_id": "05598848-c627-4c9a-9a73-3a40e877a8ef",
+          "id": "05598848-c627-4c9a-9a73-3a40e877a8ef",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -1669,8 +1644,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"name\": \"VMC SDDC\",\n  \"collectorId\": \"1\",\n  \"adapterKindKey\": \"VmcAdapter\",\n  \"resourceIdentifiers\": [\n    {\n        \"identifierType\": {\n            \"name\": \"COSTING_ENABLED\",\n            \"dataType\": \"STRING\",\n            \"isPartOfUniqueness\": false\n        },\n        \"value\": \"true\"\n    },\n    {\n        \"identifierType\": {\n            \"name\": \"OrgId\",\n            \"dataType\": \"STRING\",\n            \"isPartOfUniqueness\": true\n        },\n        \"value\": \"2acf4023-1778-4e6a-a892-7635b8c7f4fb\"\n    }\n    \n  ],\n  \"credential\": {\n    \"id\": null,\n    \"name\": \"VMC CSP Toekn\",\n    \"adapterKindKey\": \"VmcAdapter\",\n    \"credentialKindKey\": \"Credentials\",\n    \"fields\": [\n        {\n            \"name\": \"refresh_token\"\n            \"value\":\n        },\n        {\n            \"name\": \"proxy_host\",\n            \"value\": \"\"\n        },\n        {\n            \"name\": \"proxy_port\",\n            \"value\": \"\"\n        },\n        {\n            \"name\": \"proxy_username\",\n            \"value\": \"\"\n        },\n        {\n            \"name\": \"proxy_password\"\n        },\n        {\n            \"name\": \"proxy_domain\",\n            \"value\": \"\"\n        }\n    ],\n    \"others\": [],\n    \"otherAttributes\": {}\n  },\n  \"others\": [],\n  \"otherAttributes\": {}\n}",
-              "options": {}
+              "raw": "{\n  \"name\": \"VMC SDDC\",\n  \"collectorId\": \"1\",\n  \"adapterKindKey\": \"VmcAdapter\",\n  \"resourceIdentifiers\": [\n    {\n        \"identifierType\": {\n            \"name\": \"COSTING_ENABLED\",\n            \"dataType\": \"STRING\",\n            \"isPartOfUniqueness\": false\n        },\n        \"value\": \"true\"\n    },\n    {\n        \"identifierType\": {\n            \"name\": \"OrgId\",\n            \"dataType\": \"STRING\",\n            \"isPartOfUniqueness\": true\n        },\n        \"value\": \"2acf4023-1778-4e6a-a892-7635b8c7f4fb\"\n    }\n    \n  ],\n  \"credential\": {\n    \"id\": null,\n    \"name\": \"VMC CSP Toekn\",\n    \"adapterKindKey\": \"VmcAdapter\",\n    \"credentialKindKey\": \"Credentials\",\n    \"fields\": [\n        {\n            \"name\": \"refresh_token\"\n            \"value\":\n        },\n        {\n            \"name\": \"proxy_host\",\n            \"value\": \"\"\n        },\n        {\n            \"name\": \"proxy_port\",\n            \"value\": \"\"\n        },\n        {\n            \"name\": \"proxy_username\",\n            \"value\": \"\"\n        },\n        {\n            \"name\": \"proxy_password\"\n        },\n        {\n            \"name\": \"proxy_domain\",\n            \"value\": \"\"\n        }\n    ],\n    \"others\": [],\n    \"otherAttributes\": {}\n  },\n  \"others\": [],\n  \"otherAttributes\": {}\n}"
             },
             "url": "https://{{vrops}}/suite-api/api/adapters",
             "description": "Be sure to check values in the JSON body for credentials.\nAlso note you will need to start the adapter using \"Star an adapter instance\" \nafter creation using the UUID from the response.\n\nIf you aren't using a CA, the certificate will have to be added via the UI\nI do not know of a way to do this via the REST API"
@@ -1695,7 +1669,7 @@
               }
             }
           ],
-          "_postman_id": "c1192cec-5bd3-40bd-afef-7bde9b7afdf8",
+          "id": "c1192cec-5bd3-40bd-afef-7bde9b7afdf8",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -1717,8 +1691,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"name\": \"WDC vCenter Adapter - vSAN\",\n    \"adapterKindKey\": \"VirtualAndPhysicalSANAdapter\",\n    \"resourceKindKey\": \"VirtualAndPhysicalSANAdapter Instance\",\n    \"resourceIdentifiers\": [\n        {\n            \"name\": \"AutoDiscovery\",\n            \"value\": \"true\"\n        },\n        {\n            \"name\": \"EnableCimApi\",\n            \"value\": \"false\"\n        },\n        {\n            \"name\": \"VCID\",\n            \"value\": \"\"\n        },\n        {\n            \"name\": \"VCServer\",\n            \"value\": \"wdcvc01.cmbu.local\"\n        }\n    ],\n    \"credential\": {\n        \"id\": null,\n        \"name\": \"vSAN WDC Creds\",\n        \"adapterKindKey\": \"VirtualAndPhysicalSANAdapter\",\n        \"credentialKindKey\": \"VCCredential\",\n        \"fields\": [\n            {\n                \"name\": \"VCUser\",\n                \"value\": \"username\"\n            },\n            {\n                \"name\": \"VCPassword\",\n                \"value\": \"password\"\n            }\n        ]\n    }\n}",
-              "options": {}
+              "raw": "{\n    \"name\": \"WDC vCenter Adapter - vSAN\",\n    \"adapterKindKey\": \"VirtualAndPhysicalSANAdapter\",\n    \"resourceKindKey\": \"VirtualAndPhysicalSANAdapter Instance\",\n    \"resourceIdentifiers\": [\n        {\n            \"name\": \"AutoDiscovery\",\n            \"value\": \"true\"\n        },\n        {\n            \"name\": \"EnableCimApi\",\n            \"value\": \"false\"\n        },\n        {\n            \"name\": \"VCID\",\n            \"value\": \"\"\n        },\n        {\n            \"name\": \"VCServer\",\n            \"value\": \"wdcvc01.cmbu.local\"\n        }\n    ],\n    \"credential\": {\n        \"id\": null,\n        \"name\": \"vSAN WDC Creds\",\n        \"adapterKindKey\": \"VirtualAndPhysicalSANAdapter\",\n        \"credentialKindKey\": \"VCCredential\",\n        \"fields\": [\n            {\n                \"name\": \"VCUser\",\n                \"value\": \"username\"\n            },\n            {\n                \"name\": \"VCPassword\",\n                \"value\": \"password\"\n            }\n        ]\n    }\n}"
             },
             "url": "https://{{vrops}}/suite-api/api/adapters",
             "description": "Note that you may need to run both \"Patch an Adapter Instance\" and \"Patch an Adapter Instance with Connection Test\" before running \"Start an adapter intance\""
@@ -1741,7 +1714,7 @@
               }
             }
           ],
-          "_postman_id": "92986256-249a-47c3-8e3f-3fa109e13e05",
+          "id": "92986256-249a-47c3-8e3f-3fa109e13e05",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -1763,8 +1736,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"name\": \"Dummy Account\",\n    \"adapterKindKey\": \"AmazonAWSAdapter\",\n    \"resourceKindKey\": \"AmazonAWSAdapter Instance\",\n    \"resourceIdentifiers\": [\n        {\n            \"name\": \"BLACKLIST\",\n            \"value\": \"\"\n        },\n        {\n            \"name\": \"COLLECT_CUSTOM_METRICS\",\n            \"value\": \"false\"\n        },\n        {\n            \"name\": \"REGIONS\",\n            \"value\": \"\"\n        },\n        {\n            \"name\": \"SERVICES\",\n            \"value\": \"\"\n        },\n        {\n            \"name\": \"SUPPORT_AUTODISCOVERY\",\n            \"value\": \"true\"\n        },\n        {\n            \"name\": \"WHITELIST\",\n            \"value\": \"\"\n        }\n    ],\n    \"description\": \"\",\n    \"credential\": {\n        \"id\": null,\n        \"name\": \"AWS Creds\",\n        \"adapterKindKey\": \"AmazonAWSAdapter\",\n        \"credentialKindKey\": \"AWSCREDENTIALS\",\n        \"fields\": [\n            {\n                \"name\": \"ACCESSKEY\",\n                \"value\": \"accesskeyvalue\"\n            },\n            {\n                \"name\": \"SECRETKEY\",\n                \"value\": \"secretkeyvalue\"\n            },\n            {\n                \"name\": \"PROXYHOST\",\n                \"value\": null\n            },\n            {\n                \"name\": \"PROXYPORT\",\n                \"value\": null\n            },\n            {\n                \"name\": \"PROXYUSERNAME\",\n                \"value\": null\n            },\n            {\n                \"name\": \"PROXYPASSWORD\",\n                \"value\": null\n            },\n            {\n                \"name\": \"PROXYWORKSTATION\",\n                \"value\": null\n            },\n            {\n                \"name\": \"PROXYDOMAIN\",\n                \"value\": null\n            }\n        ]\n    }\n}",
-              "options": {}
+              "raw": "{\n    \"name\": \"Dummy Account\",\n    \"adapterKindKey\": \"AmazonAWSAdapter\",\n    \"resourceKindKey\": \"AmazonAWSAdapter Instance\",\n    \"resourceIdentifiers\": [\n        {\n            \"name\": \"BLACKLIST\",\n            \"value\": \"\"\n        },\n        {\n            \"name\": \"COLLECT_CUSTOM_METRICS\",\n            \"value\": \"false\"\n        },\n        {\n            \"name\": \"REGIONS\",\n            \"value\": \"\"\n        },\n        {\n            \"name\": \"SERVICES\",\n            \"value\": \"\"\n        },\n        {\n            \"name\": \"SUPPORT_AUTODISCOVERY\",\n            \"value\": \"true\"\n        },\n        {\n            \"name\": \"WHITELIST\",\n            \"value\": \"\"\n        }\n    ],\n    \"description\": \"\",\n    \"credential\": {\n        \"id\": null,\n        \"name\": \"AWS Creds\",\n        \"adapterKindKey\": \"AmazonAWSAdapter\",\n        \"credentialKindKey\": \"AWSCREDENTIALS\",\n        \"fields\": [\n            {\n                \"name\": \"ACCESSKEY\",\n                \"value\": \"accesskeyvalue\"\n            },\n            {\n                \"name\": \"SECRETKEY\",\n                \"value\": \"secretkeyvalue\"\n            },\n            {\n                \"name\": \"PROXYHOST\",\n                \"value\": null\n            },\n            {\n                \"name\": \"PROXYPORT\",\n                \"value\": null\n            },\n            {\n                \"name\": \"PROXYUSERNAME\",\n                \"value\": null\n            },\n            {\n                \"name\": \"PROXYPASSWORD\",\n                \"value\": null\n            },\n            {\n                \"name\": \"PROXYWORKSTATION\",\n                \"value\": null\n            },\n            {\n                \"name\": \"PROXYDOMAIN\",\n                \"value\": null\n            }\n        ]\n    }\n}"
             },
             "url": "https://{{vrops}}/suite-api/api/adapters"
           },
@@ -1786,7 +1758,7 @@
               }
             }
           ],
-          "_postman_id": "80895d93-3bff-4962-82e4-c2a9c6d0b1b4",
+          "id": "80895d93-3bff-4962-82e4-c2a9c6d0b1b4",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -1808,8 +1780,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"name\": \"Dummy Account\",\n    \"adapterKindKey\": \"MicrosoftAzureAdapter\",\n    \"resourceKindKey\": \"MicrosoftAzureAdapter Instance\",\n    \"resourceIdentifiers\": [\n        {\n            \"name\": \"AZURE_SUBSCRIPTION_ID\",\n            \"value\": \"\"\n        },\n        {\n            \"name\": \"AZURE_TENANT_ID\",\n            \"value\": \"false\"\n        },\n        {\n            \"name\": \"REGIONS\",\n            \"value\": \"\"\n        },\n        {\n            \"name\": \"SERVICES\",\n            \"value\": \"\"\n        }\n    ],\n    \"description\": \"\",\n    \"credential\": {\n        \"id\": null,\n        \"name\": \"Azure Creds\",\n        \"adapterKindKey\": \"MicrosoftAzureAdapter\",\n        \"credentialKindKey\": \"AZURE_CLIENT_CREDENTIALS\",\n        \"fields\": [\n            {\n                \"name\": \"AZURE_CLIENT_ID\",\n                \"value\": \"accesskeyvalue\"\n            },\n            {\n                \"name\": \"CLIENT_SECRET\",\n                \"value\": \"secretkeyvalue\"\n            },\n            {\n                \"name\": \"PROXY_HOST\",\n                \"value\": null\n            },\n            {\n                \"name\": \"PROXY_PORT\",\n                \"value\": null\n            },\n            {\n                \"name\": \"PROXY_USERNAME\",\n                \"value\": null\n            },\n            {\n                \"name\": \"PROXY_PASSWORD\",\n                \"value\": null\n            }\n        ]\n    }\n}",
-              "options": {}
+              "raw": "{\n    \"name\": \"Dummy Account\",\n    \"adapterKindKey\": \"MicrosoftAzureAdapter\",\n    \"resourceKindKey\": \"MicrosoftAzureAdapter Instance\",\n    \"resourceIdentifiers\": [\n        {\n            \"name\": \"AZURE_SUBSCRIPTION_ID\",\n            \"value\": \"\"\n        },\n        {\n            \"name\": \"AZURE_TENANT_ID\",\n            \"value\": \"false\"\n        },\n        {\n            \"name\": \"REGIONS\",\n            \"value\": \"\"\n        },\n        {\n            \"name\": \"SERVICES\",\n            \"value\": \"\"\n        }\n    ],\n    \"description\": \"\",\n    \"credential\": {\n        \"id\": null,\n        \"name\": \"Azure Creds\",\n        \"adapterKindKey\": \"MicrosoftAzureAdapter\",\n        \"credentialKindKey\": \"AZURE_CLIENT_CREDENTIALS\",\n        \"fields\": [\n            {\n                \"name\": \"AZURE_CLIENT_ID\",\n                \"value\": \"accesskeyvalue\"\n            },\n            {\n                \"name\": \"CLIENT_SECRET\",\n                \"value\": \"secretkeyvalue\"\n            },\n            {\n                \"name\": \"PROXY_HOST\",\n                \"value\": null\n            },\n            {\n                \"name\": \"PROXY_PORT\",\n                \"value\": null\n            },\n            {\n                \"name\": \"PROXY_USERNAME\",\n                \"value\": null\n            },\n            {\n                \"name\": \"PROXY_PASSWORD\",\n                \"value\": null\n            }\n        ]\n    }\n}"
             },
             "url": "https://{{vrops}}/suite-api/api/adapters"
           },
@@ -1817,7 +1788,7 @@
         },
         {
           "name": "Get an Adapter Instance",
-          "_postman_id": "56fcdb88-6120-49cd-a67e-66e9a8e60938",
+          "id": "56fcdb88-6120-49cd-a67e-66e9a8e60938",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -1849,7 +1820,7 @@
         },
         {
           "name": "Delete an Adapter Instance",
-          "_postman_id": "56e36a4a-db00-4519-8a79-87452dd80514",
+          "id": "56e36a4a-db00-4519-8a79-87452dd80514",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -1871,8 +1842,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{{adapterPatchPayload}}",
-              "options": {}
+              "raw": "{{adapterPatchPayload}}"
             },
             "url": {
               "raw": "https://{{vrops}}/suite-api/api/adapters/{{adapterId}}?deleteResources=true",
@@ -1897,14 +1867,14 @@
           "response": []
         }
       ],
-      "_postman_id": "81428591-dd37-f8d8-279e-4d8837465cd9"
+      "id": "81428591-dd37-f8d8-279e-4d8837465cd9"
     },
     {
       "name": "Resources",
       "item": [
         {
           "name": "Get Virtual Machine by Resource Identifier",
-          "_postman_id": "ca821a9b-40bd-4765-a510-c738857a4386",
+          "id": "ca821a9b-40bd-4765-a510-c738857a4386",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -1932,10 +1902,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"propertyConditions\" : {\n    \t\"conditions\" : [{\n    \t\t\"key\": \"summary|UUID\",\n    \t\t\"operator\":\"EQ\",\n    \t\t\"stringValue\":\"dae3aaf1-b603-40ee-af83-06be4e87a5bb\"\n    \t}]\n\n    \t\n    }\n}",
-              "options": {
-                "raw": {}
-              }
+              "raw": "{\n    \"propertyConditions\" : {\n    \t\"conditions\" : [{\n    \t\t\"key\": \"summary|UUID\",\n    \t\t\"operator\":\"EQ\",\n    \t\t\"stringValue\":\"dae3aaf1-b603-40ee-af83-06be4e87a5bb\"\n    \t}]\n\n    \t\n    }\n}"
             },
             "url": "https://{{vrops}}/suite-api/api/resources/query "
           },
@@ -1943,7 +1910,7 @@
         },
         {
           "name": "Get Resources",
-          "_postman_id": "c20e1aa7-84c9-0711-059b-d50e82825882",
+          "id": "c20e1aa7-84c9-0711-059b-d50e82825882",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -1965,8 +1932,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n\"resourceIds\":[\"daee892f-6938-45dd-9ee9-e6669b5150a5\", \n        \"4541356a-2d54-411c-b276-312552f92c52\", \n        \"4a0d7bfa-e095-45f4-b158-6a0090e4684a\", \n        \"59773bb2-960d-48b9-a3a4-ca3de52a2ade\", \n        \"fe5d227e-fba3-4d5f-97ad-8c6f7c02534a\", \n        \"37045610-a3f2-4489-8bdd-4c223a243552\", \n        \"3ad8fed7-0aa1-4aee-a79b-f01cd62e96cf\", \n        \"a7e59f4f-d59c-4593-b9bd-1a8dfd4b5587\", \n        \"273e71a2-5b0e-4fae-903b-e0a7b26608e2\", \n        \"7ded588f-637c-48a6-a4e4-cbfc6b6d5713\"]\n}",
-              "options": {}
+              "raw": "{\n\"resourceIds\":[\"daee892f-6938-45dd-9ee9-e6669b5150a5\", \n        \"4541356a-2d54-411c-b276-312552f92c52\", \n        \"4a0d7bfa-e095-45f4-b158-6a0090e4684a\", \n        \"59773bb2-960d-48b9-a3a4-ca3de52a2ade\", \n        \"fe5d227e-fba3-4d5f-97ad-8c6f7c02534a\", \n        \"37045610-a3f2-4489-8bdd-4c223a243552\", \n        \"3ad8fed7-0aa1-4aee-a79b-f01cd62e96cf\", \n        \"a7e59f4f-d59c-4593-b9bd-1a8dfd4b5587\", \n        \"273e71a2-5b0e-4fae-903b-e0a7b26608e2\", \n        \"7ded588f-637c-48a6-a4e4-cbfc6b6d5713\"]\n}"
             },
             "url": "https://{{vrops}}/suite-api/api/resources/query"
           },
@@ -1974,7 +1940,7 @@
         },
         {
           "name": "Get VirtualMachine Res by Name",
-          "_postman_id": "2f348843-de21-c497-f693-a28210702ea0",
+          "id": "2f348843-de21-c497-f693-a28210702ea0",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -2017,7 +1983,7 @@
         },
         {
           "name": "Get StatKeys of a Resource",
-          "_postman_id": "a63941a7-1f0d-c12d-a3cb-0f415de9718b",
+          "id": "a63941a7-1f0d-c12d-a3cb-0f415de9718b",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -2050,7 +2016,7 @@
               }
             }
           ],
-          "_postman_id": "93538040-a08d-a16f-d7a1-ace1033b5013",
+          "id": "93538040-a08d-a16f-d7a1-ace1033b5013",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -2112,7 +2078,7 @@
         },
         {
           "name": "Add or Update Properties of a Resource",
-          "_postman_id": "5cf05895-9cea-4c80-c720-dcb622037228",
+          "id": "5cf05895-9cea-4c80-c720-dcb622037228",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -2134,8 +2100,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"property-content\" : [ {\r\n    \"statKey\" : \"apiInjected|random\",\r\n    \"timestamps\" : [ 1477432000 ],\r\n    \"values\" : [ 0 ],\r\n    \"others\" : [ ],\r\n    \"otherAttributes\" : {\r\n    }\r\n  } ]\r\n}",
-              "options": {}
+              "raw": "{\r\n  \"property-content\" : [ {\r\n    \"statKey\" : \"apiInjected|random\",\r\n    \"timestamps\" : [ 1477432000 ],\r\n    \"values\" : [ 0 ],\r\n    \"others\" : [ ],\r\n    \"otherAttributes\" : {\r\n    }\r\n  } ]\r\n}"
             },
             "url": "https://{{vrops}}/suite-api/api/resources/{{resourceId}}/properties"
           },
@@ -2164,7 +2129,7 @@
               }
             }
           ],
-          "_postman_id": "64439376-20c6-f13c-4f26-021e662006fd",
+          "id": "64439376-20c6-f13c-4f26-021e662006fd",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -2227,7 +2192,7 @@
               }
             }
           ],
-          "_postman_id": "f30e4efc-31ff-4953-99f9-7adff2f53667",
+          "id": "f30e4efc-31ff-4953-99f9-7adff2f53667",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -2292,7 +2257,7 @@
               }
             }
           ],
-          "_postman_id": "a96af710-9a33-7e74-c579-096ba276ee9b",
+          "id": "a96af710-9a33-7e74-c579-096ba276ee9b",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -2327,7 +2292,7 @@
               }
             }
           ],
-          "_postman_id": "c88dbe9c-b2b6-3a6c-c728-9b90d3a47a92",
+          "id": "c88dbe9c-b2b6-3a6c-c728-9b90d3a47a92",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -2400,7 +2365,7 @@
               }
             }
           ],
-          "_postman_id": "b6734870-9672-9ba2-0562-d178511db3e0",
+          "id": "b6734870-9672-9ba2-0562-d178511db3e0",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -2422,8 +2387,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"stat-content\" : [ {\r\n    \"statKey\" : \"apiInjected|random5\",\r\n    \"timestamps\" : [ {{epoch}} ],\r\n    \"data\" : [ 6 ],\r\n    \"others\" : [ ],\r\n    \"otherAttributes\" : {\r\n    }\r\n  } ]\r\n}",
-              "options": {}
+              "raw": "{\r\n  \"stat-content\" : [ {\r\n    \"statKey\" : \"apiInjected|random5\",\r\n    \"timestamps\" : [ {{epoch}} ],\r\n    \"data\" : [ 6 ],\r\n    \"others\" : [ ],\r\n    \"otherAttributes\" : {\r\n    }\r\n  } ]\r\n}"
             },
             "url": "https://{{vrops}}/suite-api/api/resources/{{resourceId}}/stats"
           },
@@ -2431,7 +2395,7 @@
         },
         {
           "name": "Query Symptoms",
-          "_postman_id": "826af6fa-9969-0e09-c6e3-0ce849d123f1",
+          "id": "826af6fa-9969-0e09-c6e3-0ce849d123f1",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -2449,8 +2413,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"compositeOperator\" : \"AND\",\r\n  \"symptomId\" : [ ],\r\n  \"resource-query\" : {\r\n    \"name\" : null,\r\n    \"regex\" : null,\r\n    \"adapterKind\" : null,\r\n    \"resourceKind\" : null,\r\n    \"collectorName\" : null,\r\n    \"collectorId\" : null,\r\n    \"maintenanceScheduleId\" : null,\r\n    \"adapterInstanceId\" : null,\r\n    \"recentlyAdded\" : null,\r\n    \"resourceState\" : null,\r\n    \"resourceStatus\" : null,\r\n    \"resourceHealth\" : null,\r\n    \"parentId\" : null,\r\n    \"credentialId\" : null,\r\n    \"resourceId\" : [ \"5748438c-41d5-4397-a59b-efe973674653\" ],\r\n    \"propertyName\" : null,\r\n    \"propertyValue\" : null,\r\n    \"statKey\" : null,\r\n    \"statKeyLowerBound\" : null,\r\n    \"statKeyUpperBound\" : null,\r\n    \"statKeyInclusive\" : true,\r\n    \"others\" : [ ],\r\n    \"otherAttributes\" : {\r\n    }\r\n  },\r\n  \"includeChildrenResources\" : false,\r\n  \"activeOnly\" : true,\r\n  \"alarmType\" : [ ],\r\n  \"alarmCriticality\" : [ \"CRITICAL\", \"IMMEDIATE\", \"WARNING\", \"INFORMATION\" ],\r\n  \"symptomDefinitionId\" : [ ],\r\n  \"statKey\" : [ ],\r\n  \"others\" : [ ],\r\n  \"otherAttributes\" : {\r\n  }\r\n}",
-              "options": {}
+              "raw": "{\r\n  \"compositeOperator\" : \"AND\",\r\n  \"symptomId\" : [ ],\r\n  \"resource-query\" : {\r\n    \"name\" : null,\r\n    \"regex\" : null,\r\n    \"adapterKind\" : null,\r\n    \"resourceKind\" : null,\r\n    \"collectorName\" : null,\r\n    \"collectorId\" : null,\r\n    \"maintenanceScheduleId\" : null,\r\n    \"adapterInstanceId\" : null,\r\n    \"recentlyAdded\" : null,\r\n    \"resourceState\" : null,\r\n    \"resourceStatus\" : null,\r\n    \"resourceHealth\" : null,\r\n    \"parentId\" : null,\r\n    \"credentialId\" : null,\r\n    \"resourceId\" : [ \"5748438c-41d5-4397-a59b-efe973674653\" ],\r\n    \"propertyName\" : null,\r\n    \"propertyValue\" : null,\r\n    \"statKey\" : null,\r\n    \"statKeyLowerBound\" : null,\r\n    \"statKeyUpperBound\" : null,\r\n    \"statKeyInclusive\" : true,\r\n    \"others\" : [ ],\r\n    \"otherAttributes\" : {\r\n    }\r\n  },\r\n  \"includeChildrenResources\" : false,\r\n  \"activeOnly\" : true,\r\n  \"alarmType\" : [ ],\r\n  \"alarmCriticality\" : [ \"CRITICAL\", \"IMMEDIATE\", \"WARNING\", \"INFORMATION\" ],\r\n  \"symptomDefinitionId\" : [ ],\r\n  \"statKey\" : [ ],\r\n  \"others\" : [ ],\r\n  \"otherAttributes\" : {\r\n  }\r\n}"
             },
             "url": "https://{{vrops}}/suite-api/api/symptoms/query"
           },
@@ -2458,7 +2421,7 @@
         },
         {
           "name": "Query Properties of Resources",
-          "_postman_id": "9dea563c-e57e-443c-9c61-1f0fb9418085",
+          "id": "9dea563c-e57e-443c-9c61-1f0fb9418085",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -2486,8 +2449,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"resourceIds\" : [ {{resourceIds}} ],\n    \"propertyKeys\" : [ \"summary|ParentHost\",\"summary|guest|toolsVersion\"]\n}",
-              "options": {}
+              "raw": "{\n    \"resourceIds\" : [ {{resourceIds}} ],\n    \"propertyKeys\" : [ \"summary|ParentHost\",\"summary|guest|toolsVersion\"]\n}"
             },
             "url": "https://{{vrops}}/suite-api/api/resources/properties/latest/query",
             "description": "Example that uses \"Get Resources by resourceKind and Load var\" to provide a list of resource IDs using the {{resourceId}} env var."
@@ -2521,7 +2483,7 @@
               }
             }
           ],
-          "_postman_id": "44b6d296-c85b-4337-90d1-6930c2befc59",
+          "id": "44b6d296-c85b-4337-90d1-6930c2befc59",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -2548,8 +2510,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"begin\": {{epochPrev24}},\n    \"end\": {{epoch}},\n    \"intervalType\": \"HOURS\",\n    \"intervalQuantifier\": 1,\n    \"rollUpType\": \"AVG\",\n    \"resourceId\": [ \n    \t{{resourceIds}} \n    ],\n    \"statKey\": [\n    \t{{cpuStatsJSON}} \n    ]\n}",
-              "options": {}
+              "raw": "{\n    \"begin\": {{epochPrev24}},\n    \"end\": {{epoch}},\n    \"intervalType\": \"HOURS\",\n    \"intervalQuantifier\": 1,\n    \"rollUpType\": \"AVG\",\n    \"resourceId\": [ \n    \t{{resourceIds}} \n    ],\n    \"statKey\": [\n    \t{{cpuStatsJSON}} \n    ]\n}"
             },
             "url": "https://{{vrops}}/suite-api/api/resources/stats/query",
             "description": "Example that uses \"Get Resources by resourceKind and Load var\" to provide a list of resource IDs using the {{resourceId}} env var."
@@ -2570,7 +2531,7 @@
               }
             }
           ],
-          "_postman_id": "bb065373-2c8e-469b-9a50-ee31eedab0a3",
+          "id": "bb065373-2c8e-469b-9a50-ee31eedab0a3",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -2592,7 +2553,7 @@
         },
         {
           "name": "Get Custom Groups",
-          "_postman_id": "8ab15040-b1cc-4664-81d9-fc6d3800c3e5",
+          "id": "8ab15040-b1cc-4664-81d9-fc6d3800c3e5",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -2624,7 +2585,7 @@
         },
         {
           "name": "Create Custom Group",
-          "_postman_id": "9689238f-f4a4-47fa-895d-d2187b49d977",
+          "id": "9689238f-f4a4-47fa-895d-d2187b49d977",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -2637,7 +2598,7 @@
         },
         {
           "name": "Get Matching Resources",
-          "_postman_id": "6fdb67ef-cb5e-40b4-a24c-720b437114b7",
+          "id": "6fdb67ef-cb5e-40b4-a24c-720b437114b7",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -2665,8 +2626,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"propertyConditions\" : {\n    \t\"conditions\" : [{\n    \t\t\"key\": \"summary|guest|ipAddress\",\n    \t\t\"operator\":\"EQ\",\n    \t\t\"stringValue\":\"172.18.0.1\"\n    \t}]\n\n    \t\n    }\n}",
-              "options": {}
+              "raw": "{\n    \"propertyConditions\" : {\n    \t\"conditions\" : [{\n    \t\t\"key\": \"summary|guest|ipAddress\",\n    \t\t\"operator\":\"EQ\",\n    \t\t\"stringValue\":\"172.18.0.1\"\n    \t}]\n\n    \t\n    }\n}"
             },
             "url": "https://{{vrops}}/suite-api/api/resources/query "
           },
@@ -2674,7 +2634,7 @@
         },
         {
           "name": "Get All Stat Keys for Virtual Machines",
-          "_postman_id": "c3d746db-645c-4338-ad2e-4dec8b081644",
+          "id": "c3d746db-645c-4338-ad2e-4dec8b081644",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -2696,7 +2656,7 @@
         },
         {
           "name": "Get VMC SDDC by Identifier[Id]",
-          "_postman_id": "d9d59370-6484-47d2-bdba-db7a6fcd6f78",
+          "id": "d9d59370-6484-47d2-bdba-db7a6fcd6f78",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -2714,10 +2674,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "",
-              "options": {
-                "raw": {}
-              }
+              "raw": ""
             },
             "url": {
               "raw": "https://{{vrops}}/suite-api/api/adapterkinds/VmcAdapter/resourcekinds/SDDC/resources?identifiers[Id]=00000000-0000-0000-0000-000000000000",
@@ -2743,9 +2700,52 @@
             }
           },
           "response": []
+        },
+        {
+          "name": "Add or Update Stats of a Resource Copy",
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var epoch = (new Date).getTime();",
+                  "postman.setEnvironmentVariable(\"epoch\", epoch);"
+                ],
+                "id": "6e2c23a0-ac10-4b18-a5de-cfe5acff72d8"
+              }
+            }
+          ],
+          "id": "69803472-0cda-43ed-b14c-5a9d728b5ade",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{bearerToken}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"stat-content\" : [ {\r\n    \"statKey\" : \"apiInjected|random5\",\r\n    \"timestamps\" : [ {{epoch}} ],\r\n    \"data\" : [ 6 ],\r\n    \"others\" : [ ],\r\n    \"otherAttributes\" : {\r\n    }\r\n  } ]\r\n}"
+            },
+            "url": "https://{{vrops}}/suite-api/api/resources/{{resourceId}}/stats"
+          },
+          "response": []
         }
       ],
-      "_postman_id": "f8811ef5-0250-82fd-4214-0f6404e27adc"
+      "id": "f8811ef5-0250-82fd-4214-0f6404e27adc"
     },
     {
       "name": "Users and Authentication",
@@ -2769,7 +2769,7 @@
                   }
                 }
               ],
-              "_postman_id": "a5b94cc7-82ef-409b-af1b-49b13e0ba495",
+              "id": "a5b94cc7-82ef-409b-af1b-49b13e0ba495",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -2831,7 +2831,7 @@
                   }
                 }
               ],
-              "_postman_id": "57bb3e95-f11c-406b-a844-42369e2b36b0",
+              "id": "57bb3e95-f11c-406b-a844-42369e2b36b0",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -2859,10 +2859,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{{rolePayload}}",
-                  "options": {
-                    "raw": {}
-                  }
+                  "raw": "{{rolePayload}}"
                 },
                 "url": "https://{{vrops}}/suite-api/api/auth/roles"
               },
@@ -2884,7 +2881,7 @@
                   }
                 }
               ],
-              "_postman_id": "2a489192-0a6a-42ea-a36a-2c984db2d843",
+              "id": "2a489192-0a6a-42ea-a36a-2c984db2d843",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -2924,7 +2921,7 @@
               "response": []
             }
           ],
-          "_postman_id": "e1b514a9-1fde-45f2-be7b-f30b99236d6c",
+          "id": "e1b514a9-1fde-45f2-be7b-f30b99236d6c",
           "description": "In these examples, you can export a user role from one vROps instance and import it into another. \r\n\r\n* Get User Role on the source vROps to populate a collection variable with the payload for the POST. Be sure to update the role name in the URL template with the role name you wish (i.e. suite-api/api/auth/roles?roleName=userRoleName).\r\n* Create User Role on the destination vROps (which uses the above collection variable).\r\n\r\nOptionally, you can update an existing user role permissions. For example, if you have a permission change on the source vROps instance and you want to update the destination:\r\n\r\n* Get user Role on the source to fetch the role properties.\r\n* Set User Role Privileges on the destination will parse the properties and update with the new permission set.\r\n\r\n",
           "event": [
             {
@@ -2947,12 +2944,11 @@
                 ]
               }
             }
-          ],
-          "_postman_isSubFolder": true
+          ]
         },
         {
           "name": "Get Auth Sources",
-          "_postman_id": "3ed7c42a-6f3d-84d5-3942-a5e3312f0192",
+          "id": "3ed7c42a-6f3d-84d5-3942-a5e3312f0192",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -2984,7 +2980,7 @@
         },
         {
           "name": "Create Local User",
-          "_postman_id": "46abbc30-bc7c-9a95-cc2c-21476fb2e684",
+          "id": "46abbc30-bc7c-9a95-cc2c-21476fb2e684",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -3006,8 +3002,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"username\" : \"frank\",\r\n  \"firstName\" : \"Frank\",\r\n  \"lastName\" : \"Barnes\",\r\n  \"password\" : \"VMware1!\",\r\n  \"enabled\" : \"true\",\r\n  \"role-permissions\": [\r\n    {\r\n        \"roleName\": \"GeneralUser-1\",\r\n        \"allowAllObjects\": true\r\n    }]\r\n}",
-              "options": {}
+              "raw": "{\r\n  \"username\" : \"frank\",\r\n  \"firstName\" : \"Frank\",\r\n  \"lastName\" : \"Barnes\",\r\n  \"password\" : \"VMware1!\",\r\n  \"enabled\" : \"true\",\r\n  \"role-permissions\": [\r\n    {\r\n        \"roleName\": \"GeneralUser-1\",\r\n        \"allowAllObjects\": true\r\n    }]\r\n}"
             },
             "url": "https://{{vrops}}/suite-api/api/auth/users"
           },
@@ -3015,7 +3010,7 @@
         },
         {
           "name": "Change User Password",
-          "_postman_id": "d4a0a2ee-88d9-bb2b-68b9-7d8586141148",
+          "id": "d4a0a2ee-88d9-bb2b-68b9-7d8586141148",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -3059,7 +3054,7 @@
           "response": []
         }
       ],
-      "_postman_id": "c69789db-a16c-a935-5c96-c0080d74b688"
+      "id": "c69789db-a16c-a935-5c96-c0080d74b688"
     },
     {
       "name": "vRealize Operations CASA REST API",
@@ -3078,7 +3073,7 @@
               }
             }
           ],
-          "_postman_id": "b117d906-7a29-48ef-b3b5-fb5a2d7a8cfc",
+          "id": "b117d906-7a29-48ef-b3b5-fb5a2d7a8cfc",
           "request": {
             "auth": {
               "type": "noauth"
@@ -3095,7 +3090,7 @@
         },
         {
           "name": "Configure cluster",
-          "_postman_id": "0a68a1ac-153b-4064-b850-8d36661e8fed",
+          "id": "0a68a1ac-153b-4064-b850-8d36661e8fed",
           "request": {
             "auth": {
               "type": "noauth"
@@ -3121,7 +3116,7 @@
         },
         {
           "name": "Upload Certificate",
-          "_postman_id": "6fc32f22-22e7-4b7b-a788-a268358c6f51",
+          "id": "6fc32f22-22e7-4b7b-a788-a268358c6f51",
           "request": {
             "method": "POST",
             "header": [
@@ -3147,8 +3142,7 @@
                   "value": "true",
                   "type": "text"
                 }
-              ],
-              "options": {}
+              ]
             },
             "url": "https://{{vrops}}/casa/cluster/security/uploadcert"
           },
@@ -3156,7 +3150,7 @@
         },
         {
           "name": "Activate Certificate",
-          "_postman_id": "77a08298-7af8-43fa-9d31-73f3dcf47a9d",
+          "id": "77a08298-7af8-43fa-9d31-73f3dcf47a9d",
           "request": {
             "method": "POST",
             "header": [
@@ -3201,7 +3195,7 @@
         },
         {
           "name": "Get cluster config status",
-          "_postman_id": "6105cf5f-277d-4edd-8bfd-7c93d4b10871",
+          "id": "6105cf5f-277d-4edd-8bfd-7c93d4b10871",
           "request": {
             "method": "GET",
             "header": [
@@ -3237,7 +3231,7 @@
               }
             }
           ],
-          "_postman_id": "112ca1c1-08ef-4b66-b05a-278e8df0fbb5",
+          "id": "112ca1c1-08ef-4b66-b05a-278e8df0fbb5",
           "request": {
             "method": "POST",
             "header": [
@@ -3260,7 +3254,7 @@
         },
         {
           "name": "Start an adapter instance",
-          "_postman_id": "3a976d54-e845-4f3e-bce9-19e200f8824d",
+          "id": "3a976d54-e845-4f3e-bce9-19e200f8824d",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -3282,8 +3276,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "",
-              "options": {}
+              "raw": ""
             },
             "url": "https://{{vrops}}/suite-api/api/adapters/15464308-f586-4a93-b772-8656d0a7e5f5/monitoringstate/start",
             "description": "Replace the UUID with the ID of the adapter instance you want to start\nThis can be retrieved using Get Adapter Instances"
@@ -3292,7 +3285,7 @@
         },
         {
           "name": "Post Custom Cert vROps",
-          "_postman_id": "1979dc0a-1dbb-444a-a81d-8376821ab64f",
+          "id": "1979dc0a-1dbb-444a-a81d-8376821ab64f",
           "request": {
             "method": "POST",
             "header": [
@@ -3311,7 +3304,7 @@
         },
         {
           "name": "Apply License Key to Weekly vROps",
-          "_postman_id": "08928f24-77f6-4d14-9414-2178b415869c",
+          "id": "08928f24-77f6-4d14-9414-2178b415869c",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -3333,8 +3326,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"solutionLicenses\" : [ {\n    \"licenseKey\" : \"XXXXX-XXXXX-XXXXX-XXXXX-XXXXX\"\n  } ]\n}",
-              "options": {}
+              "raw": "{\n  \"solutionLicenses\" : [ {\n    \"licenseKey\" : \"XXXXX-XXXXX-XXXXX-XXXXX-XXXXX\"\n  } ]\n}"
             },
             "url": "https://{{vrops}}/suite-api/api/deployment/licenses",
             "description": "Be sure to check values in the JSON body for credentials.\nAlso note you will need to start the adapter using \"Star an adapter instance\" \nafter creation using the UUID from the response.\n\nIf you aren't using a CA, the certificate will have to be added via the UI\nI do not know of a way to do this via the REST API"
@@ -3343,7 +3335,7 @@
         },
         {
           "name": "Remove Inital Config Wizard",
-          "_postman_id": "e9b35cb8-f4ec-4f21-bf7f-4428ff1bdbd5",
+          "id": "e9b35cb8-f4ec-4f21-bf7f-4428ff1bdbd5",
           "request": {
             "method": "POST",
             "header": [
@@ -3370,7 +3362,7 @@
         },
         {
           "name": "Change Admin Password",
-          "_postman_id": "68c08a50-a3c4-4dc0-8efc-9e6bf9891695",
+          "id": "68c08a50-a3c4-4dc0-8efc-9e6bf9891695",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -3399,7 +3391,7 @@
           "response": []
         }
       ],
-      "_postman_id": "b8060959-8d0a-4c6d-ab25-1aad0775277a",
+      "id": "b8060959-8d0a-4c6d-ab25-1aad0775277a",
       "auth": {
         "type": "basic",
         "basic": {
@@ -3435,7 +3427,7 @@
       "item": [
         {
           "name": "Get All Actions Definitions",
-          "_postman_id": "09d31d6b-7e6f-4694-b645-a2f2053fd414",
+          "id": "09d31d6b-7e6f-4694-b645-a2f2053fd414",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -3467,7 +3459,7 @@
         },
         {
           "name": "Populate Action (run before perform)",
-          "_postman_id": "43deb4fc-cf09-4bd8-8efb-6b8bfcc65172",
+          "id": "43deb4fc-cf09-4bd8-8efb-6b8bfcc65172",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -3495,8 +3487,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"contextResourceId\" : [ \"bc14eb84-05df-47f9-979c-f811f0da1c1d\" ],\r\n  \"others\" : [ ],\r\n  \"otherAttributes\" : { }\r\n}",
-              "options": {}
+              "raw": "{\r\n  \"contextResourceId\" : [ \"bc14eb84-05df-47f9-979c-f811f0da1c1d\" ],\r\n  \"others\" : [ ],\r\n  \"otherAttributes\" : { }\r\n}"
             },
             "url": "https://{{vrops}}/suite-api/api/actions/{{actionId}}/query",
             "description": "You will need to have populated \n\n* resourceId env var\n* actionId env var\n\nResponse is parsed and saved as input for the performAction API"
@@ -3505,7 +3496,7 @@
         },
         {
           "name": "Perform Action (modify body first)",
-          "_postman_id": "9c97e036-d1ac-4054-8a77-5184dab96de9",
+          "id": "9c97e036-d1ac-4054-8a77-5184dab96de9",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -3533,8 +3524,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n        \"contextId\": \"importPackage\",\n        \"contextResourceId\": [\n            \"bc14eb84-05df-47f9-979c-f811f0da1c1d\"\n        ],\n        \"parameterGroup\": [\n            {\n                \"resourceId\": \"bc14eb84-05df-47f9-979c-f811f0da1c1d\",\n                \"parameterValue\": [\n                    {\n                        \"name\": \"overwrite\",\n                        \"value\": \"1\"\n                    }\n                ]\n            }\n        ]\n    }",
-              "options": {}
+              "raw": "{\n        \"contextId\": \"importPackage\",\n        \"contextResourceId\": [\n            \"bc14eb84-05df-47f9-979c-f811f0da1c1d\"\n        ],\n        \"parameterGroup\": [\n            {\n                \"resourceId\": \"bc14eb84-05df-47f9-979c-f811f0da1c1d\",\n                \"parameterValue\": [\n                    {\n                        \"name\": \"overwrite\",\n                        \"value\": \"1\"\n                    }\n                ]\n            }\n        ]\n    }"
             },
             "url": "https://{{vrops}}/suite-api/api/actions/{{actionId}}",
             "description": "Run Populate Action first get body - copy and paste the \"action-execution\" value in the body of this request.  Update values in body as desired."
@@ -3543,7 +3533,7 @@
         },
         {
           "name": "Get Task Status",
-          "_postman_id": "9ba9ab7f-9453-4693-99f7-1083690d75df",
+          "id": "9ba9ab7f-9453-4693-99f7-1083690d75df",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -3556,7 +3546,7 @@
           "response": []
         }
       ],
-      "_postman_id": "9400fe88-fd66-49b7-8424-1ee66f6cb51b"
+      "id": "9400fe88-fd66-49b7-8424-1ee66f6cb51b"
     },
     {
       "name": "Application Monitoring Agent LCM",
@@ -3580,7 +3570,7 @@
                   }
                 }
               ],
-              "_postman_id": "20e8a838-ad24-4c4b-b22c-83ff25688cc4",
+              "id": "20e8a838-ad24-4c4b-b22c-83ff25688cc4",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -3625,7 +3615,7 @@
             },
             {
               "name": "2 - Sign Client Certificate",
-              "_postman_id": "2e6f9290-cd94-4b5a-b1a5-3ca40803b95c",
+              "id": "2e6f9290-cd94-4b5a-b1a5-3ca40803b95c",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -3651,9 +3641,6 @@
                   "mode": "file",
                   "file": {
                     "src": ""
-                  },
-                  "options": {
-                    "file": {}
                   }
                 },
                 "url": "https://{{vrops}}/suite-api/api/applications/clientCertificate/{{cloudProxyId}}",
@@ -3662,12 +3649,11 @@
               "response": []
             }
           ],
-          "_postman_id": "90dd3d21-e416-4cf9-af65-eafa0ccb4809",
-          "_postman_isSubFolder": true
+          "id": "90dd3d21-e416-4cf9-af65-eafa0ccb4809"
         },
         {
           "name": "Install Agent",
-          "_postman_id": "19d4889c-c439-4654-8ce5-dd6a50250bf9",
+          "id": "19d4889c-c439-4654-8ce5-dd6a50250bf9",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -3705,7 +3691,7 @@
         },
         {
           "name": "Stop Agent",
-          "_postman_id": "08cb3085-dd7c-474b-b90c-f774579f8904",
+          "id": "08cb3085-dd7c-474b-b90c-f774579f8904",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -3743,7 +3729,7 @@
         },
         {
           "name": "Get Agent Task Status",
-          "_postman_id": "84a7a6b2-716f-407d-82fc-5febc5c83fd1",
+          "id": "84a7a6b2-716f-407d-82fc-5febc5c83fd1",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -3774,7 +3760,7 @@
           "response": []
         }
       ],
-      "_postman_id": "1d7249e1-8718-4873-a9b1-dee08efe20f6",
+      "id": "1d7249e1-8718-4873-a9b1-dee08efe20f6",
       "event": [
         {
           "listen": "prerequest",
@@ -3817,7 +3803,7 @@
               }
             }
           ],
-          "_postman_id": "9a737a3e-5766-4bf0-952a-0a1126045c55",
+          "id": "9a737a3e-5766-4bf0-952a-0a1126045c55",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -3870,7 +3856,7 @@
               }
             }
           ],
-          "_postman_id": "dbcb6ab7-542c-4302-a87b-575af7f8946d",
+          "id": "dbcb6ab7-542c-4302-a87b-575af7f8946d",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -3892,10 +3878,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"creationTime\": null,\r\n  \"resourceKey\": {\r\n    \"name\": \"Postman\",\r\n    \"adapterKindKey\": \"Container\",\r\n    \"resourceKindKey\": \"BusinessService\",\r\n    \"resourceIdentifiers\": []\r\n  },\r\n  \"resourceStatusStates\": [],\r\n  \"resourceHealth\": null,\r\n  \"resourceHealthValue\": null,\r\n  \"dtEnabled\": true,\r\n  \"monitoringInterval\": 5,\r\n  \"badges\": [],\r\n  \"relatedResources\": [],\r\n  \"identifier\": null\r\n}\r\n",
-              "options": {
-                "raw": {}
-              }
+              "raw": "{\r\n  \"creationTime\": null,\r\n  \"resourceKey\": {\r\n    \"name\": \"Postman\",\r\n    \"adapterKindKey\": \"Container\",\r\n    \"resourceKindKey\": \"BusinessService\",\r\n    \"resourceIdentifiers\": []\r\n  },\r\n  \"resourceStatusStates\": [],\r\n  \"resourceHealth\": null,\r\n  \"resourceHealthValue\": null,\r\n  \"dtEnabled\": true,\r\n  \"monitoringInterval\": 5,\r\n  \"badges\": [],\r\n  \"relatedResources\": [],\r\n  \"identifier\": null\r\n}\r\n"
             },
             "url": "https://{{vrops}}/suite-api/api/resources/adapters/{{containerAdapterInstanceId}}"
           },
@@ -3903,7 +3886,7 @@
         },
         {
           "name": "Start Collecting Application Object",
-          "_postman_id": "2bec40c8-cbb6-4f08-9dc5-0cf0ac8ec409",
+          "id": "2bec40c8-cbb6-4f08-9dc5-0cf0ac8ec409",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -3947,7 +3930,7 @@
               }
             }
           ],
-          "_postman_id": "eeb66d64-1ea4-4d6b-b672-b5be463b1c18",
+          "id": "eeb66d64-1ea4-4d6b-b672-b5be463b1c18",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -3969,10 +3952,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"creationTime\": null,\r\n  \"resourceKey\": {\r\n    \"name\": \"App\",\r\n    \"adapterKindKey\": \"Container\",\r\n    \"resourceKindKey\": \"Tier\",\r\n    \"resourceIdentifiers\": [\r\n      {\r\n        \"identifierType\": {\r\n          \"name\": \"BS_Tier Name\",\r\n          \"dataType\": \"STRING\",\r\n          \"isPartOfUniqueness\": true\r\n        },\r\n        \"value\": \"{{applicationObjectId}}_App\"\r\n      }\r\n    ]\r\n  },\r\n  \"resourceStatusStates\": [],\r\n  \"resourceHealth\": null,\r\n  \"resourceHealthValue\": null,\r\n  \"dtEnabled\": true,\r\n  \"monitoringInterval\": 5,\r\n  \"badges\": [],\r\n  \"relatedResources\": [],\r\n  \"identifier\": null\r\n}",
-              "options": {
-                "raw": {}
-              }
+              "raw": "{\r\n  \"creationTime\": null,\r\n  \"resourceKey\": {\r\n    \"name\": \"App\",\r\n    \"adapterKindKey\": \"Container\",\r\n    \"resourceKindKey\": \"Tier\",\r\n    \"resourceIdentifiers\": [\r\n      {\r\n        \"identifierType\": {\r\n          \"name\": \"BS_Tier Name\",\r\n          \"dataType\": \"STRING\",\r\n          \"isPartOfUniqueness\": true\r\n        },\r\n        \"value\": \"{{applicationObjectId}}_App\"\r\n      }\r\n    ]\r\n  },\r\n  \"resourceStatusStates\": [],\r\n  \"resourceHealth\": null,\r\n  \"resourceHealthValue\": null,\r\n  \"dtEnabled\": true,\r\n  \"monitoringInterval\": 5,\r\n  \"badges\": [],\r\n  \"relatedResources\": [],\r\n  \"identifier\": null\r\n}"
             },
             "url": "https://{{vrops}}/suite-api/api/resources/adapters/{{containerAdapterInstanceId}}"
           },
@@ -3980,7 +3960,7 @@
         },
         {
           "name": "Start Collection Application Tier Object",
-          "_postman_id": "f3309e71-a968-4eaf-8ade-0dbae48a85dd",
+          "id": "f3309e71-a968-4eaf-8ade-0dbae48a85dd",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -4010,7 +3990,7 @@
         },
         {
           "name": "Make Application Tier Object a child of the Application Object",
-          "_postman_id": "50879452-590d-4a2b-b172-da74e460ed8e",
+          "id": "50879452-590d-4a2b-b172-da74e460ed8e",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -4038,10 +4018,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"uuids\" : [ \"{{applicationObjectId}}\" ]\r\n}",
-              "options": {
-                "raw": {}
-              }
+              "raw": "{\r\n  \"uuids\" : [ \"{{applicationObjectId}}\" ]\r\n}"
             },
             "url": "https://{{vrops}}/suite-api/api/resources/{{applicationTierObjectId}}/relationships/parents"
           },
@@ -4049,7 +4026,7 @@
         },
         {
           "name": "Add Objects as child of Application Tier Object",
-          "_postman_id": "9f04d158-5c39-4132-8324-0cdcff02e77c",
+          "id": "9f04d158-5c39-4132-8324-0cdcff02e77c",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -4077,17 +4054,14 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"uuids\" : [ \"832e49a8-e85d-4777-9a83-1c15b4660ec1\", \"f2c1d832-91e6-44fc-9499-3aff354c199f\" ]\r\n}",
-              "options": {
-                "raw": {}
-              }
+              "raw": "{\r\n  \"uuids\" : [ \"832e49a8-e85d-4777-9a83-1c15b4660ec1\", \"f2c1d832-91e6-44fc-9499-3aff354c199f\" ]\r\n}"
             },
             "url": "https://{{vrops}}/suite-api/api/resources/{{applicationTierObjectId}}/relationships/children"
           },
           "response": []
         }
       ],
-      "_postman_id": "d8cd271e-659a-4c23-aa34-c74999ed6f27"
+      "id": "d8cd271e-659a-4c23-aa34-c74999ed6f27"
     },
     {
       "name": "Kim Bottu's Collection",
@@ -4112,7 +4086,7 @@
                   }
                 }
               ],
-              "_postman_id": "dbbfbe3b-5bc8-4dda-b6b2-b9f9f5c5d051",
+              "id": "dbbfbe3b-5bc8-4dda-b6b2-b9f9f5c5d051",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -4137,10 +4111,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "",
-                  "options": {
-                    "raw": {}
-                  }
+                  "raw": ""
                 },
                 "url": "https://{{vrops}}/suite-api/api/auth/token/acquire",
                 "description": "Type = Basic Authentication\r\nUser = admin\r\npassword = password of local vROps admin"
@@ -4164,7 +4135,7 @@
                   }
                 }
               ],
-              "_postman_id": "5efbb757-fe87-4682-b6c8-9af47fa4ab01",
+              "id": "5efbb757-fe87-4682-b6c8-9af47fa4ab01",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
               },
@@ -4182,10 +4153,7 @@
                 ],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\r\n    \"username\": \"user@system domain\",\r\n\t\"password\" : \"VMw@re1!\",\r\n\t\"authSource\" : \"vIDMAuthSource\"\r\n}",
-                  "options": {
-                    "raw": {}
-                  }
+                  "raw": "{\r\n    \"username\": \"user@system domain\",\r\n\t\"password\" : \"VMw@re1!\",\r\n\t\"authSource\" : \"vIDMAuthSource\"\r\n}"
                 },
                 "url": "https://{{vrops}}/suite-api/api/auth/token/acquire",
                 "description": "content-type= application json\r\n\r\nChange the BODY as needed. Format is raw JSON. \r\n{\r\n  \"username\" : \"{{user}}@system domain\" ( replace \"{{user}}\" and leave \"@system domain\" in place, this is the local VIDM Authentication Source),\r\n  \"authSource\" : \"vIDMAuthSource\",\r\n  \"password\" : \"yourpassword\"\r\n}"
@@ -4193,8 +4161,7 @@
               "response": []
             }
           ],
-          "_postman_id": "40b08a36-1c3b-47b0-aeb5-58d833113ab2",
-          "_postman_isSubFolder": true
+          "id": "40b08a36-1c3b-47b0-aeb5-58d833113ab2"
         },
         {
           "name": "2 vIDM Authentication Source",
@@ -4204,7 +4171,7 @@
               "item": [
                 {
                   "name": "Find all configured Authorization Sources in vROps",
-                  "_postman_id": "243c5bde-9f67-41ca-ba2d-0a5f27b11021",
+                  "id": "243c5bde-9f67-41ca-ba2d-0a5f27b11021",
                   "protocolProfileBehavior": {
                     "disableBodyPruning": true
                   },
@@ -4224,7 +4191,7 @@
                 },
                 {
                   "name": "Create vIDM Authentication Source",
-                  "_postman_id": "83119256-cee8-49d5-9a54-1c31eace3b7e",
+                  "id": "83119256-cee8-49d5-9a54-1c31eace3b7e",
                   "protocolProfileBehavior": {
                     "disableBodyPruning": true
                   },
@@ -4255,15 +4222,14 @@
                   "response": []
                 }
               ],
-              "_postman_id": "fe203663-0f4b-4d26-81de-f2e57c8afde3",
-              "_postman_isSubFolder": true
+              "id": "fe203663-0f4b-4d26-81de-f2e57c8afde3"
             },
             {
               "name": "2 Use a vIDM user to connect to vROps",
               "item": [
                 {
                   "name": "Get Users from vROps using a VIDM AD user",
-                  "_postman_id": "07d9a5dc-8931-4266-ae35-f946e8bdb06e",
+                  "id": "07d9a5dc-8931-4266-ae35-f946e8bdb06e",
                   "protocolProfileBehavior": {
                     "disableBodyPruning": true
                   },
@@ -4315,7 +4281,7 @@
                 },
                 {
                   "name": "Get Users using VIDM local user",
-                  "_postman_id": "a548a5ee-5c29-4702-b5d7-c4c60a3d09b0",
+                  "id": "a548a5ee-5c29-4702-b5d7-c4c60a3d09b0",
                   "protocolProfileBehavior": {
                     "disableBodyPruning": true
                   },
@@ -4348,15 +4314,14 @@
                   "response": []
                 }
               ],
-              "_postman_id": "5830f9e5-cf98-4801-80ce-c1a10fb647b2",
-              "_postman_isSubFolder": true
+              "id": "5830f9e5-cf98-4801-80ce-c1a10fb647b2"
             },
             {
               "name": "3 Create vCenter7.0 Cloud Account",
               "item": [
                 {
                   "name": "Find the Collector Group ID",
-                  "_postman_id": "52637a3d-29ee-4512-923b-ec7eb9533ba6",
+                  "id": "52637a3d-29ee-4512-923b-ec7eb9533ba6",
                   "protocolProfileBehavior": {
                     "disableBodyPruning": true
                   },
@@ -4379,7 +4344,7 @@
                 },
                 {
                   "name": "Find the resources of the Collector Group ID you want to use",
-                  "_postman_id": "7a32f299-5289-4eda-b38f-0501fc6de9ec",
+                  "id": "7a32f299-5289-4eda-b38f-0501fc6de9ec",
                   "protocolProfileBehavior": {
                     "disableBodyPruning": true
                   },
@@ -4402,7 +4367,7 @@
                 },
                 {
                   "name": "Create the vCenter Cloud Account + Credential",
-                  "_postman_id": "86bce4e9-a431-4915-bcc0-6dec60e0a2e5",
+                  "id": "86bce4e9-a431-4915-bcc0-6dec60e0a2e5",
                   "protocolProfileBehavior": {
                     "disableBodyPruning": true
                   },
@@ -4433,12 +4398,10 @@
                   "response": []
                 }
               ],
-              "_postman_id": "52ee6b5d-aa24-4488-b2a4-9a3e00a62335",
-              "_postman_isSubFolder": true
+              "id": "52ee6b5d-aa24-4488-b2a4-9a3e00a62335"
             }
           ],
-          "_postman_id": "e5e96b49-a083-41da-968e-aa892afe07b7",
-          "_postman_isSubFolder": true
+          "id": "e5e96b49-a083-41da-968e-aa892afe07b7"
         },
         {
           "name": "3 Adapters, Accounts and Credentials",
@@ -4448,7 +4411,7 @@
               "item": [
                 {
                   "name": "Find the Collector Group ID",
-                  "_postman_id": "0c0cb247-e861-41fb-9867-6c80ce0ae61f",
+                  "id": "0c0cb247-e861-41fb-9867-6c80ce0ae61f",
                   "protocolProfileBehavior": {
                     "disableBodyPruning": true
                   },
@@ -4471,7 +4434,7 @@
                 },
                 {
                   "name": "Find the resources of the Collector Group ID you want to use",
-                  "_postman_id": "4330f52c-5eaf-4b49-9421-b9f2306434a8",
+                  "id": "4330f52c-5eaf-4b49-9421-b9f2306434a8",
                   "protocolProfileBehavior": {
                     "disableBodyPruning": true
                   },
@@ -4494,7 +4457,7 @@
                 },
                 {
                   "name": "Create the NSX-T Cloud Account + Credential",
-                  "_postman_id": "de3cc3c9-555f-42e2-96f9-4a787b112964",
+                  "id": "de3cc3c9-555f-42e2-96f9-4a787b112964",
                   "protocolProfileBehavior": {
                     "disableBodyPruning": true
                   },
@@ -4525,7 +4488,7 @@
                   "response": []
                 }
               ],
-              "_postman_id": "e6728a37-5945-4f16-81c0-af022fa72779",
+              "id": "e6728a37-5945-4f16-81c0-af022fa72779",
               "event": [
                 {
                   "listen": "prerequest",
@@ -4547,15 +4510,14 @@
                     ]
                   }
                 }
-              ],
-              "_postman_isSubFolder": true
+              ]
             },
             {
               "name": "2 Create vIDM 332 Adapter",
               "item": [
                 {
                   "name": "Find the Collector Group ID Copy",
-                  "_postman_id": "d5bb42d7-c570-4471-b1b0-9ed3f8335866",
+                  "id": "d5bb42d7-c570-4471-b1b0-9ed3f8335866",
                   "protocolProfileBehavior": {
                     "disableBodyPruning": true
                   },
@@ -4578,7 +4540,7 @@
                 },
                 {
                   "name": "Find the resources of the Collector Group ID you want to use",
-                  "_postman_id": "57949d0c-7780-4c7e-b892-c018f9fe906f",
+                  "id": "57949d0c-7780-4c7e-b892-c018f9fe906f",
                   "protocolProfileBehavior": {
                     "disableBodyPruning": true
                   },
@@ -4601,7 +4563,7 @@
                 },
                 {
                   "name": "Create the vIDM332 adapter and credentials",
-                  "_postman_id": "c5fbcfb5-3185-478b-897f-1ec5002a115b",
+                  "id": "c5fbcfb5-3185-478b-897f-1ec5002a115b",
                   "protocolProfileBehavior": {
                     "disableBodyPruning": true
                   },
@@ -4632,7 +4594,7 @@
                   "response": []
                 }
               ],
-              "_postman_id": "b1d0439d-f1f6-4d25-a5c9-c28fd49fb48b",
+              "id": "b1d0439d-f1f6-4d25-a5c9-c28fd49fb48b",
               "event": [
                 {
                   "listen": "prerequest",
@@ -4654,12 +4616,10 @@
                     ]
                   }
                 }
-              ],
-              "_postman_isSubFolder": true
+              ]
             }
           ],
-          "_postman_id": "e3ba5d56-0638-4d81-90ef-492a81b188c8",
-          "_postman_isSubFolder": true
+          "id": "e3ba5d56-0638-4d81-90ef-492a81b188c8"
         },
         {
           "name": "4 Integrations",
@@ -4669,7 +4629,7 @@
               "item": [
                 {
                   "name": "Find the Collector Group ID",
-                  "_postman_id": "a9039453-f517-48ec-9d10-8057771a50e0",
+                  "id": "a9039453-f517-48ec-9d10-8057771a50e0",
                   "protocolProfileBehavior": {
                     "disableBodyPruning": true
                   },
@@ -4692,7 +4652,7 @@
                 },
                 {
                   "name": "Find the resources of the Collector Group ID you want to use",
-                  "_postman_id": "c3dcc8c9-ef36-4080-95ad-151820cce2f2",
+                  "id": "c3dcc8c9-ef36-4080-95ad-151820cce2f2",
                   "protocolProfileBehavior": {
                     "disableBodyPruning": true
                   },
@@ -4715,7 +4675,7 @@
                 },
                 {
                   "name": "Create the vRLI81 Integration",
-                  "_postman_id": "bf3c02e2-7c04-4692-b926-780a03421bd9",
+                  "id": "bf3c02e2-7c04-4692-b926-780a03421bd9",
                   "protocolProfileBehavior": {
                     "disableBodyPruning": true
                   },
@@ -4746,7 +4706,7 @@
                   "response": []
                 }
               ],
-              "_postman_id": "31baba91-1954-41c5-b818-a6eb21d53288",
+              "id": "31baba91-1954-41c5-b818-a6eb21d53288",
               "event": [
                 {
                   "listen": "prerequest",
@@ -4768,15 +4728,14 @@
                     ]
                   }
                 }
-              ],
-              "_postman_isSubFolder": true
+              ]
             },
             {
               "name": "2 Create vRA8.1 Integration",
               "item": [
                 {
                   "name": "Find the Collector Group ID",
-                  "_postman_id": "168d58d9-8e2d-47e9-8ba9-ba5e2a348e51",
+                  "id": "168d58d9-8e2d-47e9-8ba9-ba5e2a348e51",
                   "protocolProfileBehavior": {
                     "disableBodyPruning": true
                   },
@@ -4799,7 +4758,7 @@
                 },
                 {
                   "name": "Find the resources of the Collector Group ID you want to use",
-                  "_postman_id": "2c191d1e-dbbe-40e3-a270-15b8f7c02f34",
+                  "id": "2c191d1e-dbbe-40e3-a270-15b8f7c02f34",
                   "protocolProfileBehavior": {
                     "disableBodyPruning": true
                   },
@@ -4822,7 +4781,7 @@
                 },
                 {
                   "name": "Create the vRA81 Integration + Credential",
-                  "_postman_id": "548e5f45-1ddf-4046-998c-694a22e2a940",
+                  "id": "548e5f45-1ddf-4046-998c-694a22e2a940",
                   "protocolProfileBehavior": {
                     "disableBodyPruning": true
                   },
@@ -4853,7 +4812,7 @@
                   "response": []
                 }
               ],
-              "_postman_id": "80c66bc1-ac62-4a40-87b1-dd8bdf36bbc6",
+              "id": "80c66bc1-ac62-4a40-87b1-dd8bdf36bbc6",
               "event": [
                 {
                   "listen": "prerequest",
@@ -4875,16 +4834,14 @@
                     ]
                   }
                 }
-              ],
-              "_postman_isSubFolder": true
+              ]
             }
           ],
-          "_postman_id": "5ee0d608-1049-4854-9ad7-edf1b20ad258",
-          "_postman_isSubFolder": true
+          "id": "5ee0d608-1049-4854-9ad7-edf1b20ad258"
         },
         {
           "name": "Get Users Copy",
-          "_postman_id": "0c13c848-459a-45a0-a7fb-66f878b60fd8",
+          "id": "0c13c848-459a-45a0-a7fb-66f878b60fd8",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -4928,7 +4885,7 @@
           "response": []
         }
       ],
-      "_postman_id": "f77a8b22-4618-4c91-b597-478ead647072",
+      "id": "f77a8b22-4618-4c91-b597-478ead647072",
       "description": "vROps API examples from vExpert Kim Bottu \r\n@Kim_Bottu\r\nhttps://vmusketeers.com/",
       "event": [
         {
@@ -4972,7 +4929,7 @@
               }
             }
           ],
-          "_postman_id": "cf7e0b8f-9e23-4ddd-ac24-36f02dd9dd59",
+          "id": "cf7e0b8f-9e23-4ddd-ac24-36f02dd9dd59",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -5039,7 +4996,7 @@
               }
             }
           ],
-          "_postman_id": "3af397f3-bb56-4724-9b78-0ed28aae3537",
+          "id": "3af397f3-bb56-4724-9b78-0ed28aae3537",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -5061,10 +5018,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"creationTime\": null,\r\n  \"resourceKey\": {\r\n    \"name\": \"{{applicationName}}\",\r\n    \"adapterKindKey\": \"Container\",\r\n    \"resourceKindKey\": \"BusinessService\",\r\n    \"resourceIdentifiers\": []\r\n  },\r\n  \"resourceStatusStates\": [],\r\n  \"resourceHealth\": null,\r\n  \"resourceHealthValue\": null,\r\n  \"dtEnabled\": true,\r\n  \"monitoringInterval\": 5,\r\n  \"badges\": [],\r\n  \"relatedResources\": [],\r\n  \"identifier\": null\r\n}\r\n",
-              "options": {
-                "raw": {}
-              }
+              "raw": "{\r\n  \"creationTime\": null,\r\n  \"resourceKey\": {\r\n    \"name\": \"{{applicationName}}\",\r\n    \"adapterKindKey\": \"Container\",\r\n    \"resourceKindKey\": \"BusinessService\",\r\n    \"resourceIdentifiers\": []\r\n  },\r\n  \"resourceStatusStates\": [],\r\n  \"resourceHealth\": null,\r\n  \"resourceHealthValue\": null,\r\n  \"dtEnabled\": true,\r\n  \"monitoringInterval\": 5,\r\n  \"badges\": [],\r\n  \"relatedResources\": [],\r\n  \"identifier\": null\r\n}\r\n"
             },
             "url": "https://{{vrops}}/suite-api/api/resources/adapters/{{containerAdapterInstanceId}}"
           },
@@ -5072,7 +5026,7 @@
         },
         {
           "name": "Start Collecting Application Object",
-          "_postman_id": "84f52baa-c0e1-40a2-91db-343fcd535028",
+          "id": "84f52baa-c0e1-40a2-91db-343fcd535028",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -5130,7 +5084,7 @@
               }
             }
           ],
-          "_postman_id": "c51c0eca-19b3-4d4c-806d-231f260cffb5",
+          "id": "c51c0eca-19b3-4d4c-806d-231f260cffb5",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -5152,10 +5106,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"creationTime\": null,\r\n  \"resourceKey\": {\r\n    \"name\": \"{{applicationTierName}}\",\r\n    \"adapterKindKey\": \"Container\",\r\n    \"resourceKindKey\": \"Tier\",\r\n    \"resourceIdentifiers\": [\r\n      {\r\n        \"identifierType\": {\r\n          \"name\": \"BS_Tier Name\",\r\n          \"dataType\": \"STRING\",\r\n          \"isPartOfUniqueness\": true\r\n        },\r\n        \"value\": \"{{applicationObjectId}}_{{applicationTierName}}\"\r\n      }\r\n    ]\r\n  },\r\n  \"resourceStatusStates\": [],\r\n  \"resourceHealth\": null,\r\n  \"resourceHealthValue\": null,\r\n  \"dtEnabled\": true,\r\n  \"monitoringInterval\": 5,\r\n  \"badges\": [],\r\n  \"relatedResources\": [],\r\n  \"identifier\": null\r\n}",
-              "options": {
-                "raw": {}
-              }
+              "raw": "{\r\n  \"creationTime\": null,\r\n  \"resourceKey\": {\r\n    \"name\": \"{{applicationTierName}}\",\r\n    \"adapterKindKey\": \"Container\",\r\n    \"resourceKindKey\": \"Tier\",\r\n    \"resourceIdentifiers\": [\r\n      {\r\n        \"identifierType\": {\r\n          \"name\": \"BS_Tier Name\",\r\n          \"dataType\": \"STRING\",\r\n          \"isPartOfUniqueness\": true\r\n        },\r\n        \"value\": \"{{applicationObjectId}}_{{applicationTierName}}\"\r\n      }\r\n    ]\r\n  },\r\n  \"resourceStatusStates\": [],\r\n  \"resourceHealth\": null,\r\n  \"resourceHealthValue\": null,\r\n  \"dtEnabled\": true,\r\n  \"monitoringInterval\": 5,\r\n  \"badges\": [],\r\n  \"relatedResources\": [],\r\n  \"identifier\": null\r\n}"
             },
             "url": "https://{{vrops}}/suite-api/api/resources/adapters/{{containerAdapterInstanceId}}"
           },
@@ -5163,7 +5114,7 @@
         },
         {
           "name": "Start Collecting Application Tier Object",
-          "_postman_id": "13c3c6c4-a075-4c26-8374-5fcd431ac29e",
+          "id": "13c3c6c4-a075-4c26-8374-5fcd431ac29e",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -5193,7 +5144,7 @@
         },
         {
           "name": "Make Application Tier Object a child of Application Object",
-          "_postman_id": "8453372b-3d4e-4214-94fa-37a53e4e8890",
+          "id": "8453372b-3d4e-4214-94fa-37a53e4e8890",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -5221,10 +5172,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"uuids\" : [ \"{{applicationObjectId}}\" ]\r\n}",
-              "options": {
-                "raw": {}
-              }
+              "raw": "{\r\n  \"uuids\" : [ \"{{applicationObjectId}}\" ]\r\n}"
             },
             "url": "https://{{vrops}}/suite-api/api/resources/{{applicationTierObjectId}}/relationships/parents"
           },
@@ -5232,7 +5180,7 @@
         },
         {
           "name": "Add Objects as child of Application Tier Object",
-          "_postman_id": "2848f151-c463-4ce8-b4c1-888cd363dba0",
+          "id": "2848f151-c463-4ce8-b4c1-888cd363dba0",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -5260,17 +5208,14 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"uuids\" : [ \"832e49a8-e85d-4777-9a83-1c15b4660ec1\", \"f2c1d832-91e6-44fc-9499-3aff354c199f\" ]\r\n}",
-              "options": {
-                "raw": {}
-              }
+              "raw": "{\r\n  \"uuids\" : [ \"832e49a8-e85d-4777-9a83-1c15b4660ec1\", \"f2c1d832-91e6-44fc-9499-3aff354c199f\" ]\r\n}"
             },
             "url": "https://{{vrops}}/suite-api/api/resources/{{applicationTierObjectId}}/relationships/children"
           },
           "response": []
         }
       ],
-      "_postman_id": "b7fbe46b-7724-4ea1-800a-5f74a4b4ee1b",
+      "id": "b7fbe46b-7724-4ea1-800a-5f74a4b4ee1b",
       "event": [
         {
           "listen": "prerequest",
@@ -5299,7 +5244,7 @@
       "item": [
         {
           "name": "Get Pricing Policies",
-          "_postman_id": "5578861b-061f-4b34-8713-f9e34b7638da",
+          "id": "5578861b-061f-4b34-8713-f9e34b7638da",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -5324,19 +5269,19 @@
           "response": []
         }
       ],
-      "_postman_id": "3192e5ac-7c7c-412a-a08f-fa728817069f"
+      "id": "3192e5ac-7c7c-412a-a08f-fa728817069f"
     },
     {
       "name": "Cost",
       "item": [],
-      "_postman_id": "7f4145f7-a868-4237-86f9-169422ea8ab4"
+      "id": "7f4145f7-a868-4237-86f9-169422ea8ab4"
     },
     {
       "name": "Credentials",
       "item": [
         {
           "name": "Get Credential Kinds",
-          "_postman_id": "03c3869a-9842-4043-8672-dcd377dec6bf",
+          "id": "03c3869a-9842-4043-8672-dcd377dec6bf",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -5358,7 +5303,7 @@
         },
         {
           "name": "Get All Credentials",
-          "_postman_id": "e4b15f13-b7db-4ef3-9196-44b25966ef99",
+          "id": "e4b15f13-b7db-4ef3-9196-44b25966ef99",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -5380,7 +5325,7 @@
         },
         {
           "name": "Create a new vSAN credential instance",
-          "_postman_id": "27f0ca9a-e225-4ff8-a503-2951bebd4bfe",
+          "id": "27f0ca9a-e225-4ff8-a503-2951bebd4bfe",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -5411,7 +5356,7 @@
         },
         {
           "name": "Delete a Credential",
-          "_postman_id": "974077c1-64ff-454c-8c1c-379c8a54828a",
+          "id": "974077c1-64ff-454c-8c1c-379c8a54828a",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -5432,7 +5377,7 @@
           "response": []
         }
       ],
-      "_postman_id": "39e8301c-3cd7-4afa-9434-ebfa4eb392be"
+      "id": "39e8301c-3cd7-4afa-9434-ebfa4eb392be"
     }
   ],
   "event": [
@@ -5459,28 +5404,24 @@
   ],
   "variable": [
     {
-      "id": "3f5e7f3f-2a1c-40e3-bc96-c56875882a07",
+      "id": "aeae8f5e-b895-454c-be1c-68a6658ed57c",
       "key": "vrops",
-      "value": "",
-      "type": "string"
+      "value": ""
     },
     {
-      "id": "9902805f-84c9-4156-af78-62f7252e4f0f",
+      "id": "396711bd-76d5-4de2-8d80-8dd52d26f100",
       "key": "user",
-      "value": "",
-      "type": "string"
+      "value": ""
     },
     {
-      "id": "0f0e6512-5a94-4192-8814-dbbb410dfaad",
+      "id": "641b99d7-4e93-49b2-9c3a-7eab68c5b1cc",
       "key": "pass",
-      "value": "",
-      "type": "string"
+      "value": ""
     },
     {
-      "id": "c5ed8775-5559-4bb5-b2f0-1acd9a783dda",
+      "id": "19fcda82-fd00-43eb-afef-0279bbff051f",
       "key": "rolePayload",
-      "value": "",
-      "type": "string"
+      "value": ""
     }
   ]
 }
